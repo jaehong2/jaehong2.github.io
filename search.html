@@ -248,6 +248,24 @@ into the {body} of the default.hbs template -->
     }
     ,
     
+    "java-getter-setter": {
+        "title": "Getter와 Setter",
+            "author": "jaehong",
+            "category": "",
+            "content": "     Getter            일반적으로 클래스선언시 필드는 prvite 접근제한을 한다.   (외부로 부터 변경을 막기위해)        때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다.        Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다.        getFieldName() 또는 isFieldName() 메소드의 이름을 가진다.        Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다.              Setter            외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.        필요할경우 유효성검사 가능        setFiledName(타입변수)             CODE     123456789101112131415161718private&nbsp;int&nbsp;num;&nbsp;public&nbsp;int&nbsp;getNum()&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;num;}public&nbsp;void&nbsp;setNum(int&nbsp;num){&nbsp;&nbsp;&nbsp;&nbsp;this.num&nbsp;=&nbsp;num;}//---------------------------------private&nbsp;Boolean&nbsp;success;&nbsp;public&nbsp;Boolean&nbsp;isSuccess(){&nbsp;&nbsp;&nbsp;&nbsp;//boolean&nbsp;일때는&nbsp;is&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;success;}&nbsp;public&nbsp;void&nbsp;setSuceess(Boolean&nbsp;success){&nbsp;&nbsp;&nbsp;&nbsp;this.success&nbsp;=&nbsp;success;}&nbsp;Colored by Color Scriptercs    출처 및 참조    https://www.hanbit.co.kr/",
+        "url": "/java-getter-setter"
+    }
+    ,
+    
+    "java-annotation": {
+        "title": "Getter와 Setter",
+            "author": "jaehong",
+            "category": "",
+            "content": "     어노테이션(Annotation)    프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.            컴파일러에게 코드 작성 문법에러 체크하도록 정보제공                                                ex) Override                                            개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공                                                ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능                                            실행시(런타임시) 특정 기능을 실행하도록 정보 제공                                                ex) Servlet 이나 Controller 객체 사용시                                                 Setter            외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.        필요할경우 유효성검사 가능        setFiledName(타입변수)            출처 및 참조    https://www.hanbit.co.kr/",
+        "url": "/java-annotation"
+    }
+    ,
+    
     "java-access-modifier": {
         "title": "접근 제한자(Access Modifier)",
             "author": "jaehong",
@@ -270,7 +288,7 @@ into the {body} of the default.hbs template -->
         "title": "final and final static(상수)",
             "author": "jaehong",
             "category": "",
-            "content": "     final 필드            한번의 초기화로 인하여 값을 변경할수 없는 필드        메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행             CODE 123456789public&nbsp;class&nbsp;Person&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;String&nbsp;nation&nbsp;=&nbsp;\"kr\";&nbsp;//값을&nbsp;초기에&nbsp;할당하거나&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;String&nbsp;ssn;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;Person(String&nbsp;ssn)&nbsp;{//생성자&nbsp;선언시&nbsp;할당하거나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ssn&nbsp;=&nbsp;ssn;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//final은&nbsp;최초한번만&nbsp;값대입가능&nbsp;&nbsp;&nbsp;&nbsp;}}&nbsp;Colored by Color Scriptercs     상수 (Static final)            final 필드가 객체 마다 가지는 인스턴스 필드라고 하면         상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드        공용데이터로 관리             CODE 12345678910static&nbsp;final&nbsp;dobule&nbsp;EARTH_RADIUS&nbsp;=&nbsp;6400;//상수의&nbsp;이름은&nbsp;전부&nbsp;대문자로&nbsp;작성&nbsp;단어와&nbsp;연결시&nbsp;_(언더바)&nbsp;static&nbsp;final&nbsp;double&nbsp;EARTH_SURFACE_AREA;&nbsp;static{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EARTH_SURFACE_AREA&nbsp;=&nbsp;4&nbsp;*&nbsp;Math.PI&nbsp;*&nbsp;&nbsp;EARTH_RADIUS&nbsp;*&nbsp;&nbsp;EARTH_RADIUS;}&nbsp;&nbsp;Colored by Color Scriptercs",
+            "content": "     final 필드            한번의 초기화로 인하여 값을 변경할수 없는 필드        메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행             CODE 123456789public&nbsp;class&nbsp;Person&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;String&nbsp;nation&nbsp;=&nbsp;\"kr\";&nbsp;//값을&nbsp;초기에&nbsp;할당하거나&nbsp;&nbsp;&nbsp;&nbsp;final&nbsp;String&nbsp;ssn;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;Person(String&nbsp;ssn)&nbsp;{//생성자&nbsp;선언시&nbsp;할당하거나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ssn&nbsp;=&nbsp;ssn;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//final은&nbsp;최초한번만&nbsp;값대입가능&nbsp;&nbsp;&nbsp;&nbsp;}}&nbsp;Colored by Color Scriptercs     상수 (Static final)            final 필드가 객체 마다 가지는 인스턴스 필드라고 하면         상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드        공용데이터로 관리             CODE 12345678910static&nbsp;final&nbsp;dobule&nbsp;EARTH_RADIUS&nbsp;=&nbsp;6400;//상수의&nbsp;이름은&nbsp;전부&nbsp;대문자로&nbsp;작성&nbsp;단어와&nbsp;연결시&nbsp;_(언더바)&nbsp;static&nbsp;final&nbsp;double&nbsp;EARTH_SURFACE_AREA;&nbsp;static{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EARTH_SURFACE_AREA&nbsp;=&nbsp;4&nbsp;*&nbsp;Math.PI&nbsp;*&nbsp;&nbsp;EARTH_RADIUS&nbsp;*&nbsp;&nbsp;EARTH_RADIUS;}&nbsp;&nbsp;Colored by Color Scriptercs    출처            네이버    ",
         "url": "/java-final"
     }
     
