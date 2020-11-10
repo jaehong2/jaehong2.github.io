@@ -11,7 +11,7 @@
 
 
 
-    <title>Getter와 Setter</title>
+    <title>어노테이션 (Annotation)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -27,6 +27,7 @@
 
     <!-- 웹폰트 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"/>
+
 
     <!-- syntax.css 추가 -->
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
@@ -55,8 +56,8 @@
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="IT Study" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Getter와 Setter" />
-    <meta property="og:description" content="어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 Setter" />
+    <meta property="og:title" content="어노테이션 (Annotation)" />
+    <meta property="og:description" content="어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본" />
     <meta property="og:url" content="https://JaeHong2.github.io//java-annotation" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -65,8 +66,8 @@
     <meta property="article:modified_time" content="2020-10-08T10:31:00+09:00" />
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Getter와 Setter" />
-    <meta name="twitter:description" content="어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 Setter" />
+    <meta name="twitter:title" content="어노테이션 (Annotation)" />
+    <meta name="twitter:description" content="어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -98,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//java-annotation"
     },
-    "description": "어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 Setter"
+    "description": "어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본"
 }
     </script>
 
@@ -111,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Getter와 Setter" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="어노테이션 (Annotation)" href="/feed.xml" />
 
 
 </head>
@@ -186,7 +187,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Getter와 Setter</h1>
+                <h1 class="post-full-title">어노테이션 (Annotation)</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
@@ -197,8 +198,9 @@ into the {body} of the default.hbs template -->
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <blockquote>
-    <p> 어노테이션(Annotation)
+                    
+<blockquote>
+    <h2>어노테이션(Annotation)</h2>
     <p>프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.</p>
     <ul>
         <li>컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
@@ -211,7 +213,7 @@ into the {body} of the default.hbs template -->
         <li>개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
             <ul>
                 <li>
-                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능
+                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 <br />자동생성가능
                 </li>
             </ul>
         </li>
@@ -223,29 +225,58 @@ into the {body} of the default.hbs template -->
             </ul>
         </li>
     </ul>
-    </p>
 </blockquote>
 
 <hr />
 
 <blockquote>
-    <p> Setter
-    <ul>
-        <li>외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.</li>
-        <li>필요할경우 유효성검사 가능</li>
-        <li>setFiledName(타입변수)</li>
-    </ul>
-    </p>
+
 </blockquote>
 
-<hr />
+<blockquote>
+    <h3>기본 엘리먼트 value</h3>
 
-<hr />
+</blockquote>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nd">@interface</span> <span class="n">AnnotationName</span><span class="o">{</span>
+<span class="n">String</span> <span class="n">value</span><span class="o">;</span>
+<span class="kt">int</span> <span class="nf">elementName</span><span class="o">()</span> <span class="k">default</span> <span class="mi">5</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<blockquote>
+    <ul>어노테이션을 적용할때 엘리먼트명을 생략가능
+            <li>@AnnotationName("값입니다") //value에 "값입니다" 저장</li>
+    </ul>
+    <ul>두개 이상의 속성을 기술할때는 value=값 형태로 기술
+        <li>@AnnotationName(value="값입니다", elementName = 4);</li>
+    </ul>
+</blockquote>
 
-<div class="authorship">
-    <p>출처 및 참조</p>
-    <p><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></p>
-</div>
+<blockquote>
+    <h2>어노테이션 적용대상</h2>
+
+    <ul>
+        <li>java.lang.annotationElementType 열거 상수로 정의</li>
+    </ul>
+</blockquote>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="./assets/built/images/annotation.JPG"&gt;
+
+
+&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;@Target 어노테이션으로 적용대상지정&lt;/li&gt;
+    ~~~java
+        //예시
+        @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
+        public @interface AnnotationName{
+        }
+    ~~~
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<h1>References.</h1>
+<ul>
+    <li><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
+</ul>
 
                 </div>
             </section>
@@ -313,7 +344,7 @@ into the {body} of the default.hbs template -->
                         var disqus_config = function () {
                             this.page.url = 'https://JaeHong2.github.io//java-annotation';
                             this.page.identifier = '/java-annotation';
-                            this.page.title = 'Getter와 Setter';
+                            this.page.title = '어노테이션 (Annotation)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -397,6 +428,9 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -555,13 +589,13 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Getter와 Setter</div>
+    <div class="floating-header-title">어노테이션 (Annotation)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Getter%EC%99%80+Setter&amp;url=https://JaeHong2.github.io/java-annotation"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98+%28Annotation%29&amp;url=https://JaeHong2.github.io/java-annotation"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
