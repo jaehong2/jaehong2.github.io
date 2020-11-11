@@ -1,4 +1,205 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-10T23:32:13+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">싱글톤 패턴(Singleton-Pattern)</title><link href="https://jaehong2.github.io//dp-singletonPattern" rel="alternate" type="text/html" title="싱글톤 패턴(Singleton-Pattern)" /><published>2020-11-03T04:01:10+09:00</published><updated>2020-11-03T04:01:10+09:00</updated><id>https://jaehong2.github.io//dp-singletonPattern</id><content type="html" xml:base="https://jaehong2.github.io//dp-singletonPattern">&lt;!-- 생성자--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-11T22:29:49+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">Getter와 Setter</title><link href="https://jaehong2.github.io//java-getter-setter" rel="alternate" type="text/html" title="Getter와 Setter" /><published>2020-11-08T15:31:00+09:00</published><updated>2020-11-08T15:31:00+09:00</updated><id>https://jaehong2.github.io//java-getter-setter</id><content type="html" xml:base="https://jaehong2.github.io//java-getter-setter">&lt;blockquote&gt;
+    &lt;p&gt; Getter
+    &lt;ul&gt;
+        &lt;li&gt;일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. &lt;br /&gt;  (외부로 부터 변경을 막기위해)&lt;/li&gt;
+        &lt;li&gt;때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다.&lt;/li&gt;
+        &lt;li&gt;Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다.&lt;/li&gt;
+        &lt;li&gt;&lt;b style=&quot;color:red&quot;&gt;get&lt;/b&gt;FieldName() 또는 &lt;b style=&quot;color:red&quot;&gt;is&lt;/b&gt;FieldName() 메소드의 이름을 가진다.&lt;/li&gt;
+        &lt;li&gt;Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt; Setter
+    &lt;ul&gt;
+        &lt;li&gt;외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.&lt;/li&gt;
+        &lt;li&gt;필요할경우 유효성검사 가능&lt;/li&gt;
+        &lt;li&gt;setFiledName(타입변수)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;
+    &lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; CODE &lt;/strong&gt;
+    &lt;div class=&quot;colorscripter-code&quot; style=&quot;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto&quot;&gt;&lt;table class=&quot;colorscripter-code-table&quot; style=&quot;margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;border-right:2px solid #e5e5e5&quot;&gt;&lt;div style=&quot;margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;line-height:130%&quot;&gt;1&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;2&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;3&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;4&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;5&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;6&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;7&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;8&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;9&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;10&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;11&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;12&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;13&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;14&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;15&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;16&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;17&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;18&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;padding:6px 0;text-align:left&quot;&gt;&lt;div style=&quot;margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;private&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;return&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;void&lt;/span&gt;&amp;nbsp;setNum(&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;num){&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;this&lt;/span&gt;.num&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#999999&quot;&gt;//---------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;private&lt;/span&gt;&amp;nbsp;Boolean&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#999999&quot;&gt;//boolean&amp;nbsp;일때는&amp;nbsp;is&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;return&lt;/span&gt;&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;void&lt;/span&gt;&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;this&lt;/span&gt;.success&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;color:#e5e5e5text-decoration:none&quot;&gt;Colored by Color Scripter&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:bottom;padding:0 2px 4px 0&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;text-decoration:none;color:white&quot;&gt;&lt;span style=&quot;font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px&quot;&gt;cs&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을 가진다. Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. Setter 외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다. 필요할경우 유효성검사 가능 setFiledName(타입변수) CODE 123456789101112131415161718private&amp;nbsp;int&amp;nbsp;num;&amp;nbsp;public&amp;nbsp;int&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;num;}public&amp;nbsp;void&amp;nbsp;setNum(int&amp;nbsp;num){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.num&amp;nbsp;=&amp;nbsp;num;}//---------------------------------private&amp;nbsp;Boolean&amp;nbsp;success;&amp;nbsp;public&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//boolean&amp;nbsp;일때는&amp;nbsp;is&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;success;}&amp;nbsp;public&amp;nbsp;void&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.success&amp;nbsp;=&amp;nbsp;success;}&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">어노테이션 (Annotation)</title><link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" /><published>2020-11-08T10:31:00+09:00</published><updated>2020-11-08T10:31:00+09:00</updated><id>https://jaehong2.github.io//java-annotation</id><content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;blockquote&gt;
+    &lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
+    &lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
+            &lt;ul&gt;
+                &lt;li&gt;
+                    ex) Override
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
+            &lt;ul&gt;
+                &lt;li&gt;
+                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
+            &lt;ul&gt;
+                &lt;li&gt;
+                    ex) Servlet 이나 Controller 객체 사용시
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+    &lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
+
+&lt;/blockquote&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+    &lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
+            &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
+        &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+    &lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/annotation.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;mark&gt;@Target&lt;/mark&gt; 어노테이션으로 적용대상지정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//예시&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table class=&quot;type&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;cols&quot;&gt;타이틀&lt;/th&gt;
+            &lt;th scope=&quot;cols&quot;&gt;타이틀&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td scope=&quot;cols&quot;&gt;타이틀&lt;/td&gt;
+            &lt;td scope=&quot;cols&quot;&gt;타이틀&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;어노테이션 유지정책&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 어노테이션 적용 대상 방법 @Target 어노테이션으로 적용대상지정 //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } 타이틀 타이틀 타이틀 타이틀 어노테이션 유지정책 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">접근 제한자(Access Modifier)</title><link href="https://jaehong2.github.io//java-access-modifier" rel="alternate" type="text/html" title="접근 제한자(Access Modifier)" /><published>2020-11-07T06:02:00+09:00</published><updated>2020-11-07T06:02:00+09:00</updated><id>https://jaehong2.github.io//java-access-modifier</id><content type="html" xml:base="https://jaehong2.github.io//java-access-modifier">&lt;blockquote&gt;
+    &lt;p&gt; 접근 제한자(Access Modifier)
+    &lt;ul&gt;
+        &lt;li&gt;클래스       제한&lt;/li&gt;
+        &lt;li&gt;생성자       제한&lt;/li&gt;
+        &lt;li&gt;필드와 메소드 제한&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한</summary></entry><entry><title type="html">패키지(Pakage)</title><link href="https://jaehong2.github.io//java-pakage" rel="alternate" type="text/html" title="패키지(Pakage)" /><published>2020-11-06T22:00:00+09:00</published><updated>2020-11-06T22:00:00+09:00</updated><id>https://jaehong2.github.io//java-pakage</id><content type="html" xml:base="https://jaehong2.github.io//java-pakage">&lt;blockquote&gt;
+    &lt;p&gt; 패키지(Pakage)
+    &lt;ul&gt;
+        &lt;li&gt;상위 패키지와 하위 패키지는 도트(.)로 구분&lt;/li&gt;
+        &lt;li&gt;패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt; 명령 라인 환경에서(CLI) 컴파일
+    &lt;ul&gt;
+        &lt;li&gt;javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨&lt;/li&gt;
+        &lt;li&gt;javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 &lt;/li&gt;
+        &lt;li&gt;클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator  &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">패키지(Pakage) 상위 패키지와 하위 패키지는 도트(.)로 구분 패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname) 명령 라인 환경에서(CLI) 컴파일 javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨 javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">final and final static(상수)</title><link href="https://jaehong2.github.io//java-final" rel="alternate" type="text/html" title="final and final static(상수)" /><published>2020-11-05T07:02:00+09:00</published><updated>2020-11-05T07:02:00+09:00</updated><id>https://jaehong2.github.io//java-final</id><content type="html" xml:base="https://jaehong2.github.io//java-final">&lt;blockquote&gt;
+    &lt;p&gt; final 필드
+    &lt;ul&gt;
+        &lt;li&gt;한번의 초기화로 인하여 값을 변경할수 없는 필드&lt;/li&gt;
+        &lt;li&gt;메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+    &lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; CODE &lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;!-- 코드--&gt;
+&lt;div class=&quot;colorscripter-code&quot; style=&quot;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto&quot;&gt;&lt;table class=&quot;colorscripter-code-table&quot; style=&quot;margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;border-right:2px solid #e5e5e5&quot;&gt;&lt;div style=&quot;margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;line-height:130%&quot;&gt;1&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;2&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;3&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;4&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;5&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;6&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;7&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;8&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;9&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;padding:6px 0;text-align:left&quot;&gt;&lt;div style=&quot;margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;class&lt;/span&gt;&amp;nbsp;Person&amp;nbsp;{&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;final&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;String&lt;/span&gt;&amp;nbsp;nation&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#63a35c&quot;&gt;&quot;kr&quot;&lt;/span&gt;;&amp;nbsp;&lt;span style=&quot;color:#999999&quot;&gt;//값을&amp;nbsp;초기에&amp;nbsp;할당하거나&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;final&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;String&lt;/span&gt;&amp;nbsp;ssn;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;Person(&lt;span style=&quot;color:#066de2&quot;&gt;String&lt;/span&gt;&amp;nbsp;ssn)&amp;nbsp;{&lt;span style=&quot;color:#999999&quot;&gt;//생성자&amp;nbsp;선언시&amp;nbsp;할당하거나&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;this&lt;/span&gt;.ssn&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;ssn;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#999999&quot;&gt;//final은&amp;nbsp;최초한번만&amp;nbsp;값대입가능&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;color:#e5e5e5text-decoration:none&quot;&gt;Colored by Color Scripter&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:bottom;padding:0 2px 4px 0&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;text-decoration:none;color:white&quot;&gt;&lt;span style=&quot;font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px&quot;&gt;cs&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt; 상수 (Static final)
+    &lt;ul&gt;
+        &lt;li&gt;final 필드가 객체 마다 가지는 인스턴스 필드라고 하면 &lt;/li&gt;
+        &lt;li&gt;상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드&lt;/li&gt;
+        &lt;li&gt;공용데이터로 관리&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+    &lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; CODE &lt;/strong&gt;
+&lt;/p&gt;
+&lt;div class=&quot;colorscripter-code&quot; style=&quot;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto&quot;&gt;&lt;table class=&quot;colorscripter-code-table&quot; style=&quot;margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;border-right:2px solid #e5e5e5&quot;&gt;&lt;div style=&quot;margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;line-height:130%&quot;&gt;1&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;2&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;3&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;4&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;5&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;6&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;7&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;8&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;9&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;10&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;padding:6px 0;text-align:left&quot;&gt;&lt;div style=&quot;margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;static&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;final&lt;/span&gt;&amp;nbsp;dobule&amp;nbsp;EARTH_RADIUS&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#0099cc&quot;&gt;6400&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#999999&quot;&gt;//상수의&amp;nbsp;이름은&amp;nbsp;전부&amp;nbsp;대문자로&amp;nbsp;작성&amp;nbsp;단어와&amp;nbsp;연결시&amp;nbsp;_(언더바)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;static&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;final&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;double&lt;/span&gt;&amp;nbsp;EARTH_SURFACE_AREA;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;static&lt;/span&gt;{&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EARTH_SURFACE_AREA&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#0099cc&quot;&gt;4&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;*&lt;/span&gt;&amp;nbsp;Math.PI&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;*&lt;/span&gt;&amp;nbsp;&amp;nbsp;EARTH_RADIUS&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;*&lt;/span&gt;&amp;nbsp;&amp;nbsp;EARTH_RADIUS;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;color:#e5e5e5text-decoration:none&quot;&gt;Colored by Color Scripter&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:bottom;padding:0 2px 4px 0&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;text-decoration:none;color:white&quot;&gt;&lt;span style=&quot;font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px&quot;&gt;cs&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE 123456789public&amp;nbsp;class&amp;nbsp;Person&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;final&amp;nbsp;String&amp;nbsp;nation&amp;nbsp;=&amp;nbsp;&quot;kr&quot;;&amp;nbsp;//값을&amp;nbsp;초기에&amp;nbsp;할당하거나&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;final&amp;nbsp;String&amp;nbsp;ssn;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;public&amp;nbsp;Person(String&amp;nbsp;ssn)&amp;nbsp;{//생성자&amp;nbsp;선언시&amp;nbsp;할당하거나&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.ssn&amp;nbsp;=&amp;nbsp;ssn;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//final은&amp;nbsp;최초한번만&amp;nbsp;값대입가능&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}}&amp;nbsp;Colored by Color Scriptercs 상수 (Static final) final 필드가 객체 마다 가지는 인스턴스 필드라고 하면 상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드 공용데이터로 관리 CODE 12345678910static&amp;nbsp;final&amp;nbsp;dobule&amp;nbsp;EARTH_RADIUS&amp;nbsp;=&amp;nbsp;6400;//상수의&amp;nbsp;이름은&amp;nbsp;전부&amp;nbsp;대문자로&amp;nbsp;작성&amp;nbsp;단어와&amp;nbsp;연결시&amp;nbsp;_(언더바)&amp;nbsp;static&amp;nbsp;final&amp;nbsp;double&amp;nbsp;EARTH_SURFACE_AREA;&amp;nbsp;static{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EARTH_SURFACE_AREA&amp;nbsp;=&amp;nbsp;4&amp;nbsp;*&amp;nbsp;Math.PI&amp;nbsp;*&amp;nbsp;&amp;nbsp;EARTH_RADIUS&amp;nbsp;*&amp;nbsp;&amp;nbsp;EARTH_RADIUS;}&amp;nbsp;&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">싱글톤 패턴(Singleton-Pattern)</title><link href="https://jaehong2.github.io//dp-singletonPattern" rel="alternate" type="text/html" title="싱글톤 패턴(Singleton-Pattern)" /><published>2020-11-03T04:01:10+09:00</published><updated>2020-11-03T04:01:10+09:00</updated><id>https://jaehong2.github.io//dp-singletonPattern</id><content type="html" xml:base="https://jaehong2.github.io//dp-singletonPattern">&lt;!-- 생성자--&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;디자인 패턴(Design Pattern List)&lt;/span&gt;&lt;/p&gt;
 
@@ -58,127 +259,4 @@
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">생성자(Constractor) new 클래스(); 필드의 값을 설정하거나 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 생성자(Constractor) References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">jekyll 강좌(1) - jekyll 기본</title><link href="https://jaehong2.github.io//jekyll-basic" rel="alternate" type="text/html" title="jekyll 강좌(1) - jekyll 기본" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//jekyll-basic</id><content type="html" xml:base="https://jaehong2.github.io//jekyll-basic">&lt;p&gt;이글은 jekyll에 관한 내용이 있습니다 .&lt;/p&gt;</content><author><name>jaehong</name></author><category term="jekyll" /><summary type="html">이글은 jekyll에 관한 내용이 있습니다 .</summary></entry><entry><title type="html">java 강좌(1) - java 기본</title><link href="https://jaehong2.github.io//java-basic" rel="alternate" type="text/html" title="java 강좌(1) - java 기본" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//java-basic</id><content type="html" xml:base="https://jaehong2.github.io//java-basic">&lt;p&gt;이글은 java에 관한 내용이 있습니다.11&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">이글은 java에 관한 내용이 있습니다.11</summary></entry><entry><title type="html">git 강좌(1) - git 기본</title><link href="https://jaehong2.github.io//git-basic" rel="alternate" type="text/html" title="git 강좌(1) - git 기본" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//git-basic</id><content type="html" xml:base="https://jaehong2.github.io//git-basic">&lt;p&gt;이글은 git 관한 내용이 있습니다 .&lt;/p&gt;</content><author><name>jaehong</name></author><category term="git" /><summary type="html">이글은 git 관한 내용이 있습니다 .</summary></entry><entry><title type="html">algorithm (1) - algorithm</title><link href="https://jaehong2.github.io//jekyll-algorithm" rel="alternate" type="text/html" title="algorithm (1) - algorithm" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//jekyll-algorithm</id><content type="html" xml:base="https://jaehong2.github.io//jekyll-algorithm">&lt;p&gt;이글은 algorithm에 관한 내용이 있습니다 .&lt;/p&gt;</content><author><name>jaehong</name></author><category term="algorithm" /><summary type="html">이글은 algorithm에 관한 내용이 있습니다 .</summary></entry><entry><title type="html">Getter와 Setter</title><link href="https://jaehong2.github.io//java-getter-setter" rel="alternate" type="text/html" title="Getter와 Setter" /><published>2020-10-08T15:31:00+09:00</published><updated>2020-10-08T15:31:00+09:00</updated><id>https://jaehong2.github.io//java-getter-setter</id><content type="html" xml:base="https://jaehong2.github.io//java-getter-setter">&lt;blockquote&gt;
-    &lt;p&gt; Getter
-    &lt;ul&gt;
-        &lt;li&gt;일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. &lt;br /&gt;  (외부로 부터 변경을 막기위해)&lt;/li&gt;
-        &lt;li&gt;때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다.&lt;/li&gt;
-        &lt;li&gt;Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다.&lt;/li&gt;
-        &lt;li&gt;&lt;b style=&quot;color:red&quot;&gt;get&lt;/b&gt;FieldName() 또는 &lt;b style=&quot;color:red&quot;&gt;is&lt;/b&gt;FieldName() 메소드의 이름을 가진다.&lt;/li&gt;
-        &lt;li&gt;Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-    &lt;p&gt; Setter
-    &lt;ul&gt;
-        &lt;li&gt;외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.&lt;/li&gt;
-        &lt;li&gt;필요할경우 유효성검사 가능&lt;/li&gt;
-        &lt;li&gt;setFiledName(타입변수)&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;
-    &lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; CODE &lt;/strong&gt;
-    &lt;div class=&quot;colorscripter-code&quot; style=&quot;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto&quot;&gt;&lt;table class=&quot;colorscripter-code-table&quot; style=&quot;margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:6px;border-right:2px solid #e5e5e5&quot;&gt;&lt;div style=&quot;margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;line-height:130%&quot;&gt;1&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;2&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;3&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;4&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;5&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;6&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;7&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;8&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;9&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;10&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;11&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;12&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;13&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;14&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;15&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;16&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;17&lt;/div&gt;&lt;div style=&quot;line-height:130%&quot;&gt;18&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;padding:6px 0;text-align:left&quot;&gt;&lt;div style=&quot;margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%&quot;&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;private&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;return&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;void&lt;/span&gt;&amp;nbsp;setNum(&lt;span style=&quot;color:#066de2&quot;&gt;int&lt;/span&gt;&amp;nbsp;num){&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;this&lt;/span&gt;.num&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;num;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#999999&quot;&gt;//---------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;private&lt;/span&gt;&amp;nbsp;Boolean&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#999999&quot;&gt;//boolean&amp;nbsp;일때는&amp;nbsp;is&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;return&lt;/span&gt;&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;public&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;void&lt;/span&gt;&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#a71d5d&quot;&gt;this&lt;/span&gt;.success&amp;nbsp;&lt;span style=&quot;color:#0086b3&quot;&gt;&lt;/span&gt;&lt;span style=&quot;color:#a71d5d&quot;&gt;=&lt;/span&gt;&amp;nbsp;success;&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;}&lt;/div&gt;&lt;div style=&quot;padding:0 6px; white-space:pre; line-height:130%&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;color:#e5e5e5text-decoration:none&quot;&gt;Colored by Color Scripter&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align:bottom;padding:0 2px 4px 0&quot;&gt;&lt;a href=&quot;http://colorscripter.com/info#e&quot; target=&quot;_blank&quot; style=&quot;text-decoration:none;color:white&quot;&gt;&lt;span style=&quot;font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px&quot;&gt;cs&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을 가진다. Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. Setter 외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다. 필요할경우 유효성검사 가능 setFiledName(타입변수) CODE 123456789101112131415161718private&amp;nbsp;int&amp;nbsp;num;&amp;nbsp;public&amp;nbsp;int&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;num;}public&amp;nbsp;void&amp;nbsp;setNum(int&amp;nbsp;num){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.num&amp;nbsp;=&amp;nbsp;num;}//---------------------------------private&amp;nbsp;Boolean&amp;nbsp;success;&amp;nbsp;public&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//boolean&amp;nbsp;일때는&amp;nbsp;is&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;success;}&amp;nbsp;public&amp;nbsp;void&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.success&amp;nbsp;=&amp;nbsp;success;}&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">어노테이션 (Annotation)</title><link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" /><published>2020-10-08T10:31:00+09:00</published><updated>2020-10-08T10:31:00+09:00</updated><id>https://jaehong2.github.io//java-annotation</id><content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;blockquote&gt;
-    &lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
-    &lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.&lt;/p&gt;
-    &lt;ul&gt;
-        &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) Override
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) Servlet 이나 Controller 객체 사용시
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-    &lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
-
-&lt;/blockquote&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-    &lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
-            &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
-        &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-    &lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
-
-    &lt;ul&gt;
-        &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;./assets/built/images/annotation.JPG&quot;&amp;gt;
-
-
-&amp;lt;h2&amp;gt;어노테이션 적용 대상 방법&amp;lt;/h2&amp;gt;
-&amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;@Target 어노테이션으로 적용대상지정&amp;lt;/li&amp;gt;
-    ~~~java
-        //예시
-        @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
-        public @interface AnnotationName{
-        }
-    ~~~
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 &amp;lt;img src=&quot;./assets/built/images/annotation.JPG&quot;&amp;gt; &amp;lt;h2&amp;gt;어노테이션 적용 대상 방법&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;@Target 어노테이션으로 적용대상지정&amp;lt;/li&amp;gt; ~~~java //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } ~~~ &amp;lt;/ul&amp;gt; References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">접근 제한자(Access Modifier)</title><link href="https://jaehong2.github.io//java-access-modifier" rel="alternate" type="text/html" title="접근 제한자(Access Modifier)" /><published>2020-10-07T06:02:00+09:00</published><updated>2020-10-07T06:02:00+09:00</updated><id>https://jaehong2.github.io//java-access-modifier</id><content type="html" xml:base="https://jaehong2.github.io//java-access-modifier">&lt;blockquote&gt;
-    &lt;p&gt; 접근 제한자(Access Modifier)
-    &lt;ul&gt;
-        &lt;li&gt;클래스       제한&lt;/li&gt;
-        &lt;li&gt;생성자       제한&lt;/li&gt;
-        &lt;li&gt;필드와 메소드 제한&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">생성자(Constractor) new 클래스(); 필드의 값을 설정하거나 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 생성자(Constractor) References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">jekyll 강좌(1) - jekyll 기본</title><link href="https://jaehong2.github.io//jekyll-basic" rel="alternate" type="text/html" title="jekyll 강좌(1) - jekyll 기본" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//jekyll-basic</id><content type="html" xml:base="https://jaehong2.github.io//jekyll-basic">&lt;p&gt;이글은 jekyll에 관한 내용이 있습니다 .&lt;/p&gt;</content><author><name>jaehong</name></author><category term="jekyll" /><summary type="html">이글은 jekyll에 관한 내용이 있습니다 .</summary></entry><entry><title type="html">java 강좌(1) - java 기본</title><link href="https://jaehong2.github.io//java-basic" rel="alternate" type="text/html" title="java 강좌(1) - java 기본" /><published>2020-10-29T08:52:00+09:00</published><updated>2020-10-29T08:52:00+09:00</updated><id>https://jaehong2.github.io//java-basic</id><content type="html" xml:base="https://jaehong2.github.io//java-basic">&lt;p&gt;이글은 java에 관한 내용이 있습니다.11&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">이글은 java에 관한 내용이 있습니다.11</summary></entry></feed>

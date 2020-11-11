@@ -62,8 +62,8 @@
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-10-08T10:31:00+09:00" />
-    <meta property="article:modified_time" content="2020-10-08T10:31:00+09:00" />
+    <meta property="article:published_time" content="2020-11-08T10:31:00+09:00" />
+    <meta property="article:modified_time" content="2020-11-08T10:31:00+09:00" />
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="어노테이션 (Annotation)" />
@@ -177,7 +177,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 8 October 2020"> 8 October 2020</time>
+                    <time class="post-full-meta-date" datetime=" 8 November 2020"> 8 November 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -258,21 +258,40 @@ into the {body} of the default.hbs template -->
         <li>java.lang.annotationElementType 열거 상수로 정의</li>
     </ul>
 </blockquote>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="./assets/built/images/annotation.JPG"&gt;
+<p><img src="./assets/built/images/annotation.JPG" /></p>
 
+<h2>어노테이션 적용 대상 방법</h2>
+<ul>
+    <li><mark>@Target</mark> 어노테이션으로 적용대상지정</li>
+</ul>
 
-&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;@Target 어노테이션으로 적용대상지정&lt;/li&gt;
-    ~~~java
-        //예시
-        @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
-        public @interface AnnotationName{
-        }
-    ~~~
-&lt;/ul&gt;
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//예시</span>
+<span class="nd">@Target</span><span class="o">({</span><span class="n">ElementType</span><span class="o">.</span><span class="na">TYPE</span><span class="o">,</span> <span class="n">ElementType</span><span class="o">.</span><span class="na">FIELD</span><span class="o">,</span> <span class="n">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">})</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">AnnotationName</span><span class="o">{</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
+<table class="type">
+    <thead>
+        <tr>
+            <th scope="cols">타이틀</th>
+            <th scope="cols">타이틀</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="cols">타이틀</td>
+            <td scope="cols">타이틀</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>어노테이션 유지정책</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+    &lt;li&gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&lt;/li&gt;
+    &lt;li&gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
 <h1>References.</h1>
 <ul>
     <li><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
@@ -391,7 +410,20 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/dp-singletonPattern">싱글톤 패턴(Singleton-Pattern)</a></li>
+                                            <li><a href="/java-getter-setter">Getter와 Setter</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/java-access-modifier">접근 제한자(Access Modifier)</a></li>
                                         
                                     
                                   
@@ -400,41 +432,8 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/dp-design-pattern">디자인 패턴 리스트(Design-Pattern-List)</a></li>
+                                            <li><a href="/java-pakage">패키지(Pakage)</a></li>
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/java-constructor">생성자(Constructor)</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -457,6 +456,26 @@ into the {body} of the default.hbs template -->
                                         
                                         
                                     
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
                                   
                                 
                             </ul>
