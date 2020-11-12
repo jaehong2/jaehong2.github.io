@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-11T22:29:49+09:00</updated>
+  <updated>2020-11-12T18:05:54+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -30,6 +30,155 @@
   
   
 
+  
+    <entry>
+      <title type="html">어노테이션 (Annotation)</title>
+      <link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" />
+      <published>2020-11-09T07:31:00+09:00</published>
+      <updated>2020-11-09T07:31:00+09:00</updated>
+      <id>https://jaehong2.github.io//java-annotation</id>
+      <content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
+&lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 &lt;mark&gt;메타데이터(metadata)&lt;/mark&gt;이다.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
+        &lt;ul&gt;
+            &lt;li&gt;
+                ex) Override
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
+        &lt;ul&gt;
+            &lt;li&gt;
+                ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
+        &lt;ul&gt;
+            &lt;li&gt;
+                ex) Servlet 이나 Controller 객체 사용시
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
+        &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
+    &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/built/images/annotation.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;mark&gt;@Target&lt;/mark&gt; 어노테이션으로 적용대상지정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//예시&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;어노테이션 유지정책&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&lt;/li&gt;
+    &lt;li&gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table class=&quot;type&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;RetenionPolicy 열거 상수&lt;/th&gt;
+        &lt;th&gt;설명&lt;/th&gt;
+
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;SOURCE&lt;/td&gt;
+        &lt;td&gt;바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서&lt;br /&gt;어떤 정보를 얻을 목적으로 유지하는 정책&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;CLASS&lt;/td&gt;
+        &lt;td&gt;컴파일러가 바이트 코드를 만들때 까지는 유지&lt;br /&gt;그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.&lt;br /&gt;클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;RUNTIME&lt;/td&gt;
+        &lt;td&gt;바이트 코드 까지 유지가 되고&lt;br /&gt; 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시&lt;br /&gt; 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책&lt;br /&gt; 대부분사용&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다.&lt;/li&gt;
+    &lt;li&gt;Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;유지 정책 지정방법&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;@Retention 어노테이션으로 유지정책을 지정&lt;/li&gt;
+    &lt;li&gt;@Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Retention&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetentionPolicy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RUNTIME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 어노테이션 적용 대상 방법 @Target 어노테이션으로 적용대상지정 //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } 어노테이션 유지정책 어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것 java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음 RetenionPolicy 열거 상수 설명 SOURCE 바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서어떤 정보를 얻을 목적으로 유지하는 정책 CLASS 컴파일러가 바이트 코드를 만들때 까지는 유지그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책 RUNTIME 바이트 코드 까지 유지가 되고 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책 대부분사용 리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능 클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다. Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨 유지 정책 지정방법 @Retention 어노테이션으로 유지정책을 지정 @Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) @Retention(RetentionPolicy.RUNTIME) public @interface AnnotationName{ } References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Getter와 Setter</title>
@@ -95,136 +244,6 @@
 
       
         <summary type="html">Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을 가진다. Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. Setter 외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다. 필요할경우 유효성검사 가능 setFiledName(타입변수) CODE 123456789101112131415161718private&amp;nbsp;int&amp;nbsp;num;&amp;nbsp;public&amp;nbsp;int&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;num;}public&amp;nbsp;void&amp;nbsp;setNum(int&amp;nbsp;num){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.num&amp;nbsp;=&amp;nbsp;num;}//---------------------------------private&amp;nbsp;Boolean&amp;nbsp;success;&amp;nbsp;public&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//boolean&amp;nbsp;일때는&amp;nbsp;is&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;success;}&amp;nbsp;public&amp;nbsp;void&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.success&amp;nbsp;=&amp;nbsp;success;}&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">어노테이션 (Annotation)</title>
-      <link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" />
-      <published>2020-11-08T10:31:00+09:00</published>
-      <updated>2020-11-08T10:31:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-annotation</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;blockquote&gt;
-    &lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
-    &lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.&lt;/p&gt;
-    &lt;ul&gt;
-        &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) Override
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
-            &lt;ul&gt;
-                &lt;li&gt;
-                    ex) Servlet 이나 Controller 객체 사용시
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-    &lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
-
-&lt;/blockquote&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-    &lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
-            &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
-        &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-    &lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
-
-    &lt;ul&gt;
-        &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/annotation.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;mark&gt;@Target&lt;/mark&gt; 어노테이션으로 적용대상지정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//예시&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table class=&quot;type&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;cols&quot;&gt;타이틀&lt;/th&gt;
-            &lt;th scope=&quot;cols&quot;&gt;타이틀&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td scope=&quot;cols&quot;&gt;타이틀&lt;/td&gt;
-            &lt;td scope=&quot;cols&quot;&gt;타이틀&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2&gt;어노테이션 유지정책&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 어노테이션 적용 대상 방법 @Target 어노테이션으로 적용대상지정 //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } 타이틀 타이틀 타이틀 타이틀 어노테이션 유지정책 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; References. https://www.hanbit.co.kr/</summary>
       
 
       

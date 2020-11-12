@@ -186,21 +186,21 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "java-annotation": {
+        "title": "어노테이션 (Annotation)",
+            "author": "jaehong",
+            "category": "",
+            "content": "어노테이션(Annotation)프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.    컴파일러에게 코드 작성 문법에러 체크하도록 정보제공                                    ex) Override                            개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공                                    ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능                            실행시(런타임시) 특정 기능을 실행하도록 정보 제공                                    ex) Servlet 이나 Controller 객체 사용시                        기본 엘리먼트 valuepublic @interface AnnotationName{String value;int elementName() default 5;}어노테이션을 적용할때 엘리먼트명을 생략가능        @AnnotationName(\"값입니다\") //value에 \"값입니다\" 저장두개 이상의 속성을 기술할때는 value=값 형태로 기술    @AnnotationName(value=\"값입니다\", elementName = 4);어노테이션 적용대상    java.lang.annotationElementType 열거 상수로 정의어노테이션 적용 대상 방법    @Target 어노테이션으로 적용대상지정//예시@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})public @interface AnnotationName{}어노테이션 유지정책    어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것    java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음                RetenionPolicy 열거 상수        설명                        SOURCE        바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서어떤 정보를 얻을 목적으로 유지하는 정책                CLASS        컴파일러가 바이트 코드를 만들때 까지는 유지그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책                RUNTIME        바이트 코드 까지 유지가 되고 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책 대부분사용        리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능    클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다.    Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨유지 정책 지정방법    @Retention 어노테이션으로 유지정책을 지정    @Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})@Retention(RetentionPolicy.RUNTIME)public @interface AnnotationName{}References.    https://www.hanbit.co.kr/",
+        "url": "/java-annotation"
+    }
+    ,
+    
     "java-getter-setter": {
         "title": "Getter와 Setter",
             "author": "jaehong",
             "category": "",
             "content": "     Getter            일반적으로 클래스선언시 필드는 prvite 접근제한을 한다.   (외부로 부터 변경을 막기위해)        때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다.        Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다.        getFieldName() 또는 isFieldName() 메소드의 이름을 가진다.        Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다.              Setter            외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다.        필요할경우 유효성검사 가능        setFiledName(타입변수)             CODE     123456789101112131415161718private&nbsp;int&nbsp;num;&nbsp;public&nbsp;int&nbsp;getNum()&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;num;}public&nbsp;void&nbsp;setNum(int&nbsp;num){&nbsp;&nbsp;&nbsp;&nbsp;this.num&nbsp;=&nbsp;num;}//---------------------------------private&nbsp;Boolean&nbsp;success;&nbsp;public&nbsp;Boolean&nbsp;isSuccess(){&nbsp;&nbsp;&nbsp;&nbsp;//boolean&nbsp;일때는&nbsp;is&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;success;}&nbsp;public&nbsp;void&nbsp;setSuceess(Boolean&nbsp;success){&nbsp;&nbsp;&nbsp;&nbsp;this.success&nbsp;=&nbsp;success;}&nbsp;Colored by Color ScriptercsReferences.    https://www.hanbit.co.kr/",
         "url": "/java-getter-setter"
-    }
-    ,
-    
-    "java-annotation": {
-        "title": "어노테이션 (Annotation)",
-            "author": "jaehong",
-            "category": "",
-            "content": "    어노테이션(Annotation)    프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다.            컴파일러에게 코드 작성 문법에러 체크하도록 정보제공                                                ex) Override                                            개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공                                                ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능                                            실행시(런타임시) 특정 기능을 실행하도록 정보 제공                                                ex) Servlet 이나 Controller 객체 사용시                                            기본 엘리먼트 valuepublic @interface AnnotationName{String value;int elementName() default 5;}    어노테이션을 적용할때 엘리먼트명을 생략가능            @AnnotationName(\"값입니다\") //value에 \"값입니다\" 저장        두개 이상의 속성을 기술할때는 value=값 형태로 기술        @AnnotationName(value=\"값입니다\", elementName = 4);        어노테이션 적용대상            java.lang.annotationElementType 열거 상수로 정의    어노테이션 적용 대상 방법    @Target 어노테이션으로 적용대상지정//예시@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})public @interface AnnotationName{}                        타이틀            타이틀                                    타이틀            타이틀            어노테이션 유지정책&lt;ul&gt;    &lt;li&gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&lt;/li&gt;    &lt;li&gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&lt;/li&gt;&lt;/ul&gt;References.    https://www.hanbit.co.kr/",
-        "url": "/java-annotation"
     }
     ,
     
