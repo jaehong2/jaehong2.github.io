@@ -186,6 +186,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "java-no-parameter-number": {
+        "title": "메소드에서 매개변수의 수를 모르는 경우",
+            "author": "jaehong",
+            "category": "",
+            "content": "메소드에서 매개변수의 수를 모르는 경우    메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용    매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성public class Parameter {    public static void main(String args[]) {        Cal cal = new Cal();        int[] data = new int[] {1,2,3};        System.out.println(\"sum1 : \" + cal.sum1(data));        System.out.println(\"sum2 : \" + cal.sum2(1,2,3));        System.out.println(\"sum2 : \" + cal.sum2(1,2,3,4,5));    }}class Cal{    int sum1(int[] n) {    int sum=0;        for(int i :n) {        sum += i;        }    return sum;    }    int sum2(int ... n) { //매개변수의 개수를 모를때    int sum=0;    for(int i : n) {    sum += i;    }    return sum;    }}",
+        "url": "/java-no-parameter-number"
+    }
+    ,
+    
     "java-annotation": {
         "title": "어노테이션 (Annotation)",
             "author": "jaehong",
