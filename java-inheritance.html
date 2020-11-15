@@ -198,7 +198,7 @@ into the {body} of the default.hbs template -->
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2>상속(Inheritance)</h2>
+                    <h1>상속(Inheritance)</h1>
 <p>
 <blockquote>
     <ul>
@@ -209,7 +209,7 @@ into the {body} of the default.hbs template -->
 </blockquote>
 </p>
 
-<h3>상속 대상의 제한</h3>
+<h2>상속 대상의 제한</h2>
 <ul>
     <li>부모클래스의 <b>private</b> 접근 제한을 가지는 필드와 메소드는 제외</li>
     <li>부모클래스가 <b>다른 패키지에 있을때</b> default 접근 제한을 가지는 필드와 메소드는 제외</li>
@@ -217,7 +217,7 @@ into the {body} of the default.hbs template -->
 
 <hr />
 
-<h3>extends 키워드</h3>
+<h2>extends 키워드</h2>
 <ul>
     <li>부모클래스를 상속받기위한 키워드</li>
     <li>자바는 <mark>다중상속을 허락하지 않아</mark> 한클래스에 하나만 상속가능</li>
@@ -225,12 +225,48 @@ into the {body} of the default.hbs template -->
 
 <hr />
 
-<h3>자식 객체를 생성하면 부모 객체도 생성될까?</h3>
+<h2>자식 객체를 생성하면 부모 객체도 생성될까?</h2>
 <p><strong class="subtitle_fontAwesome">정답은 생성된다!!</strong></p>
 <ul>
     <li>자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다.</li>
     <li>부모 <mark>생성자</mark>가 호출이 완료되고 자식 <mark>생성자</mark>가 나중에 호출 완료된다.</li>
-    <li>컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 </li>
+    <li>자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 </li>
+</ul>
+
+<hr />
+
+<h2>부모 생성자 호출 super()</h2>
+
+<ul>
+    <li>super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출</li>
+    <li>부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다.</li>
+    <li>반드시 자식생성자 첫 줄에 위치 해야된다.</li>
+    <li>자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!!</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="n">String</span> <span class="n">ssn</span><span class="o">,</span> <span class="kt">int</span> <span class="n">studentNo</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">this</span><span class="o">.</span><span class="na">studentNo</span> <span class="o">=</span><span class="n">studentNo</span><span class="o">;</span>
+<span class="kd">super</span><span class="o">(</span><span class="s">"jaehong"</span><span class="o">,</span><span class="s">"93-12-23"</span><span class="o">);</span> <span class="c1">//컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함!</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2>Override 매소드 재정의</h2>
+<blockquote>
+<ul>
+    <li>부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다.</li>
+    <li>접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&gt; private, default <b>(X)</b> 반대로는 가능</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<h2>@Override 어노테이션 </h2>
+<ul>
+    <li>컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시</li>
+    <li>접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&gt; private, default <b>(X)</b> 반대로는 가능</li>
+    <li>super.부모메소드() : 부모메소드 호출방법</li>
 </ul>
 
 <!-- 출처 -->
