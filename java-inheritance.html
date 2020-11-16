@@ -269,6 +269,48 @@ into the {body} of the default.hbs template -->
     <li>super.부모메소드() : 부모메소드 호출방법</li>
 </ul>
 
+<hr />
+
+<h2>다형성(Ployorphism)</h2>
+<ul>
+    <li>같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다.</li>
+    <li>A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태</li>
+    <li>자식 타입은 부모타입으로 자동 타입 변환된다.</li>
+    <li>객체를 부품화시킨다.! (타이어 예시 생각!)</li>
+    <li><mark>부모 클래스 변수 = 자식클래스타입</mark> 부모 클래스 변수는 자식과 같은 주소를 가진다.</li>
+</ul>
+
+<h2>자동 타입 변환 이후 효과</h2>
+<ul>
+    <li>부모 클래스에 선언된 필드와 메소드만 접근 가능</li>
+    <li>자식 클래스의 재정이된 메소드가 호출된다. (다형성관련)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Parent</span><span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">method1</span><span class="o">(){};</span>
+    <span class="kt">void</span> <span class="nf">method2</span><span class="o">(){};</span> <span class="c1">// 1번 !!!!!!!!!</span>
+<span class="o">}</span>
+<span class="c1">////////////////////</span>
+<span class="kd">class</span> <span class="nc">Child</span> <span class="kd">extends</span> <span class="n">Parent</span><span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">method2</span><span class="o">(){..}</span><span class="c1">//Overrideing // 2번 !!!!!!!!!</span>
+    <span class="kt">void</span> <span class="nf">method3</span><span class="o">(){}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ChildEx</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span>
+        <span class="n">Child</span> <span class="n">child</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Child</span><span class="o">();</span>
+
+        <span class="n">Parent</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">child</span><span class="o">;</span> <span class="c1">//Parent로 자동 타입 변환</span>
+
+        <span class="n">parent</span><span class="o">.</span><span class="na">method1</span><span class="o">();</span>
+
+        <span class="n">parent</span><span class="o">.</span><span class="na">method2</span><span class="o">();</span> <span class="c1">// 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요</span>
+
+        <span class="n">parent</span><span class="o">.</span><span class="na">method3</span><span class="o">();</span> <span class="c1">// 호출불가능</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 <!-- 출처 -->
 <h1>References.</h1>
 <ul>

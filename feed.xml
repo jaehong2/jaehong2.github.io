@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-15T18:52:15+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">상속</title><link href="https://jaehong2.github.io//java-inheritance" rel="alternate" type="text/html" title="상속" /><published>2020-11-13T13:45:00+09:00</published><updated>2020-11-13T13:45:00+09:00</updated><id>https://jaehong2.github.io//java-inheritance</id><content type="html" xml:base="https://jaehong2.github.io//java-inheritance">&lt;h1&gt;상속(Inheritance)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-16T17:07:22+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">상속</title><link href="https://jaehong2.github.io//java-inheritance" rel="alternate" type="text/html" title="상속" /><published>2020-11-13T13:45:00+09:00</published><updated>2020-11-13T13:45:00+09:00</updated><id>https://jaehong2.github.io//java-inheritance</id><content type="html" xml:base="https://jaehong2.github.io//java-inheritance">&lt;h1&gt;상속(Inheritance)&lt;/h1&gt;
 &lt;p&gt;
 &lt;blockquote&gt;
     &lt;ul&gt;
@@ -69,11 +69,53 @@
     &lt;li&gt;super.부모메소드() : 부모메소드 호출방법&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
+&lt;h2&gt;다형성(Ployorphism)&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다.&lt;/li&gt;
+    &lt;li&gt;A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태&lt;/li&gt;
+    &lt;li&gt;자식 타입은 부모타입으로 자동 타입 변환된다.&lt;/li&gt;
+    &lt;li&gt;객체를 부품화시킨다.! (타이어 예시 생각!)&lt;/li&gt;
+    &lt;li&gt;&lt;mark&gt;부모 클래스 변수 = 자식클래스타입&lt;/mark&gt; 부모 클래스 변수는 자식과 같은 주소를 가진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;자동 타입 변환 이후 효과&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;부모 클래스에 선언된 필드와 메소드만 접근 가능&lt;/li&gt;
+    &lt;li&gt;자식 클래스의 재정이된 메소드가 호출된다. (다형성관련)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){};&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1번 !!!!!!!!!&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;////////////////////&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){..}&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Overrideing // 2번 !!!!!!!!!&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChildEx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Parent로 자동 타입 변환&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출불가능&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;!-- 출처 --&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">상속(Inheritance) 자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp;amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근 제한을 가지는 필드와 메소드는 제외 부모클래스가 다른 패키지에 있을때 default 접근 제한을 가지는 필드와 메소드는 제외 extends 키워드 부모클래스를 상속받기위한 키워드 자바는 다중상속을 허락하지 않아 한클래스에 하나만 상속가능 자식 객체를 생성하면 부모 객체도 생성될까? 정답은 생성된다!! 자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다. 부모 생성자가 호출이 완료되고 자식 생성자가 나중에 호출 완료된다. 자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 부모 생성자 호출 super() super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출 부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다. 반드시 자식생성자 첫 줄에 위치 해야된다. 자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!! public Student(String name, String ssn, int studentNo) { this.studentNo =studentNo; super(&quot;jaehong&quot;,&quot;93-12-23&quot;); //컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함! } Override 매소드 재정의 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다. 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 @Override 어노테이션 컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 super.부모메소드() : 부모메소드 호출방법 References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">메소드에서 매개변수의 수를 모르는 경우</title><link href="https://jaehong2.github.io//java-no-parameter-number" rel="alternate" type="text/html" title="메소드에서 매개변수의 수를 모르는 경우" /><published>2020-11-12T18:31:00+09:00</published><updated>2020-11-12T18:31:00+09:00</updated><id>https://jaehong2.github.io//java-no-parameter-number</id><content type="html" xml:base="https://jaehong2.github.io//java-no-parameter-number">&lt;h4&gt;메소드에서 매개변수의 수를 모르는 경우&lt;/h4&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">상속(Inheritance) 자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp;amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근 제한을 가지는 필드와 메소드는 제외 부모클래스가 다른 패키지에 있을때 default 접근 제한을 가지는 필드와 메소드는 제외 extends 키워드 부모클래스를 상속받기위한 키워드 자바는 다중상속을 허락하지 않아 한클래스에 하나만 상속가능 자식 객체를 생성하면 부모 객체도 생성될까? 정답은 생성된다!! 자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다. 부모 생성자가 호출이 완료되고 자식 생성자가 나중에 호출 완료된다. 자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 부모 생성자 호출 super() super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출 부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다. 반드시 자식생성자 첫 줄에 위치 해야된다. 자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!! public Student(String name, String ssn, int studentNo) { this.studentNo =studentNo; super(&quot;jaehong&quot;,&quot;93-12-23&quot;); //컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함! } Override 매소드 재정의 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다. 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 @Override 어노테이션 컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 super.부모메소드() : 부모메소드 호출방법 다형성(Ployorphism) 같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다. A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태 자식 타입은 부모타입으로 자동 타입 변환된다. 객체를 부품화시킨다.! (타이어 예시 생각!) 부모 클래스 변수 = 자식클래스타입 부모 클래스 변수는 자식과 같은 주소를 가진다. 자동 타입 변환 이후 효과 부모 클래스에 선언된 필드와 메소드만 접근 가능 자식 클래스의 재정이된 메소드가 호출된다. (다형성관련) class Parent{ void method1(){}; void method2(){}; // 1번 !!!!!!!!! } //////////////////// class Child extends Parent{ void method2(){..}//Overrideing // 2번 !!!!!!!!! void method3(){} } class ChildEx{ public static void main(String args[]){ Child child = new Child(); Parent parent = child; //Parent로 자동 타입 변환 parent.method1(); parent.method2(); // 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요 parent.method3(); // 호출불가능 } } References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">메소드에서 매개변수의 수를 모르는 경우</title><link href="https://jaehong2.github.io//java-no-parameter-number" rel="alternate" type="text/html" title="메소드에서 매개변수의 수를 모르는 경우" /><published>2020-11-12T18:31:00+09:00</published><updated>2020-11-12T18:31:00+09:00</updated><id>https://jaehong2.github.io//java-no-parameter-number</id><content type="html" xml:base="https://jaehong2.github.io//java-no-parameter-number">&lt;h4&gt;메소드에서 매개변수의 수를 모르는 경우&lt;/h4&gt;
 
 &lt;ul&gt;
     &lt;li&gt;메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용&lt;/li&gt;
@@ -260,28 +302,37 @@
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을 가진다. Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. Setter 외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다. 필요할경우 유효성검사 가능 setFiledName(타입변수) CODE 123456789101112131415161718private&amp;nbsp;int&amp;nbsp;num;&amp;nbsp;public&amp;nbsp;int&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;num;}public&amp;nbsp;void&amp;nbsp;setNum(int&amp;nbsp;num){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.num&amp;nbsp;=&amp;nbsp;num;}//---------------------------------private&amp;nbsp;Boolean&amp;nbsp;success;&amp;nbsp;public&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//boolean&amp;nbsp;일때는&amp;nbsp;is&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;success;}&amp;nbsp;public&amp;nbsp;void&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.success&amp;nbsp;=&amp;nbsp;success;}&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">접근 제한자(Access Modifier)</title><link href="https://jaehong2.github.io//java-access-modifier" rel="alternate" type="text/html" title="접근 제한자(Access Modifier)" /><published>2020-11-07T06:02:00+09:00</published><updated>2020-11-07T06:02:00+09:00</updated><id>https://jaehong2.github.io//java-access-modifier</id><content type="html" xml:base="https://jaehong2.github.io//java-access-modifier">&lt;blockquote&gt;
-    &lt;p&gt; 접근 제한자(Access Modifier)
-    &lt;ul&gt;
-        &lt;li&gt;클래스       제한&lt;/li&gt;
-        &lt;li&gt;생성자       제한&lt;/li&gt;
-        &lt;li&gt;필드와 메소드 제한&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을 가진다. Field 타입이 boolean 일경우 isFieldName()로 나머지는 getFieldName()이 된다. Setter 외부에서 필드의 값을 수정할 때에 올바른 값만 필드에 저장할 수 있도록 도와준다. 필요할경우 유효성검사 가능 setFiledName(타입변수) CODE 123456789101112131415161718private&amp;nbsp;int&amp;nbsp;num;&amp;nbsp;public&amp;nbsp;int&amp;nbsp;getNum()&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;num;}public&amp;nbsp;void&amp;nbsp;setNum(int&amp;nbsp;num){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.num&amp;nbsp;=&amp;nbsp;num;}//---------------------------------private&amp;nbsp;Boolean&amp;nbsp;success;&amp;nbsp;public&amp;nbsp;Boolean&amp;nbsp;isSuccess(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//boolean&amp;nbsp;일때는&amp;nbsp;is&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;return&amp;nbsp;success;}&amp;nbsp;public&amp;nbsp;void&amp;nbsp;setSuceess(Boolean&amp;nbsp;success){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.success&amp;nbsp;=&amp;nbsp;success;}&amp;nbsp;Colored by Color Scriptercs References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">접근 제한자(Access Modifier)</title><link href="https://jaehong2.github.io//java-access-modifier" rel="alternate" type="text/html" title="접근 제한자(Access Modifier)" /><published>2020-11-07T06:02:00+09:00</published><updated>2020-11-07T06:02:00+09:00</updated><id>https://jaehong2.github.io//java-access-modifier</id><content type="html" xml:base="https://jaehong2.github.io//java-access-modifier">&lt;h2&gt;접근 제한자(Access Modifier)&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;클래스       제한&lt;/li&gt;
+    &lt;li&gt;생성자       제한&lt;/li&gt;
+    &lt;li&gt;필드와 메소드 제한&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/built/images/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;public&lt;/h2&gt;
 
 &lt;h2&gt;protected&lt;/h2&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;같은패키지:default와 동일
-       다른패키지:자식클래스만 접근 허용&lt;mark&gt;상속의 개념과 연관&lt;/mark&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;같은패키지:default와 동일&lt;/li&gt;
+        &lt;li&gt;다른패키지:자식클래스만 접근 허용&lt;mark&gt;상속의 개념과 연관&lt;/mark&gt;&lt;/li&gt;
+        &lt;li&gt;클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;p&gt;
 &lt;h2&gt;default&lt;/h2&gt;
 
-&lt;h2&gt;private&lt;/h2&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 default private</summary></entry><entry><title type="html">패키지(Pakage)</title><link href="https://jaehong2.github.io//java-pakage" rel="alternate" type="text/html" title="패키지(Pakage)" /><published>2020-11-06T22:00:00+09:00</published><updated>2020-11-06T22:00:00+09:00</updated><id>https://jaehong2.github.io//java-pakage</id><content type="html" xml:base="https://jaehong2.github.io//java-pakage">&lt;blockquote&gt;
+&lt;h2&gt;private&lt;/h2&gt;
+
+&lt;!-- 출처 --&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능 default private References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">패키지(Pakage)</title><link href="https://jaehong2.github.io//java-pakage" rel="alternate" type="text/html" title="패키지(Pakage)" /><published>2020-11-06T22:00:00+09:00</published><updated>2020-11-06T22:00:00+09:00</updated><id>https://jaehong2.github.io//java-pakage</id><content type="html" xml:base="https://jaehong2.github.io//java-pakage">&lt;blockquote&gt;
     &lt;p&gt; 패키지(Pakage)
     &lt;ul&gt;
         &lt;li&gt;상위 패키지와 하위 패키지는 도트(.)로 구분&lt;/li&gt;
