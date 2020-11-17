@@ -311,6 +311,17 @@ into the {body} of the default.hbs template -->
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+<hr />
+
+<h2>자식 타입인지 확인후 강제 타입</h2>
+<p><mark>instanceof</mark></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="n">Parent</span> <span class="n">parent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">parent</span> <span class="k">instanceof</span> <span class="n">Child</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//매개변수로 들어오는 객체가 Child 인지확인</span>
+        <span class="n">Child</span> <span class="n">Child</span> <span class="o">=</span> <span class="o">(</span><span class="n">Child</span><span class="o">)</span> <span class="n">parent</span><span class="o">;</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 <!-- 출처 -->
 <h1>References.</h1>
 <ul>
@@ -429,6 +440,24 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/jsp-servlet.html">jsp Servelt</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/jsp-introduce.html">jsp 테스트</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -444,16 +473,12 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/java-annotation">어노테이션 (Annotation)</a></li>
-                                        
                                     
                                   
                                 
                                   
                                     
                                         
-                                        
-                                            <li><a href="/java-getter-setter">Getter와 Setter</a></li>
                                         
                                     
                                   
@@ -518,7 +543,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/java/">
                                 
-                                    See all 10 posts  →
+                                    See all 12 posts  →
                                 
                             </a>
                         </footer>
@@ -527,6 +552,55 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/jsp-introduce.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/jsp-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-introduce.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">jsp 테스트</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
