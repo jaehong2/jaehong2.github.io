@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-17T23:49:59+09:00</updated>
+  <updated>2020-11-18T22:54:00+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -32,12 +32,82 @@
 
   
     <entry>
-      <title type="html">jsp Servelt</title>
-      <link href="https://jaehong2.github.io//jsp-servlet.html" rel="alternate" type="text/html" title="jsp Servelt" />
+      <title type="html">jsp Servelt 2</title>
+      <link href="https://jaehong2.github.io//jsp-servlet-2.html" rel="alternate" type="text/html" title="jsp Servelt 2" />
+      <published>2020-11-17T12:03:18+09:00</published>
+      <updated>2020-11-17T12:03:18+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-servlet-2.html</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-2.html">&lt;h2&gt;Servlet 작동순서&lt;/h2&gt;
+&lt;p&gt;클라이언트에서 servlet 요청이 들어오면 서버는 &lt;br /&gt;
+    servlet 컨테이너를 만들고, 요청이 있을때 마다 스레드가 생성&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp.3.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Servlet 라이프 사이클(생명주기)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp.4.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;한번생성된 객체는 재사용 -&amp;gt; 요청이 필요할때마다 객체를 생성하는게 아니라서 속도빠름&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@PostConstruct 선처리: 객체생성과 init()호출사이의 단계에서 메소드 실행&lt;/h4&gt;
+&lt;h4&gt;@PreDestroy 후처리: destroy() 호출 후에 메소드 실행&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;HTML form 태그&lt;/h2&gt;
+&lt;p&gt;Form 태그의 submit 버튼을 클릭하여 데이터를 서버로 전송하면, &lt;br /&gt;
+&lt;mark&gt;해당파일(Servlet)에서는 HttpRequest 객체를 이용하여 Parameter 값을 얻을 수 있다.&lt;/mark&gt;&lt;/p&gt;
+
+&lt;h2&gt;form 태그에서 Servlet 까지 흐름도&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp.5.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;한글처리 방식&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp.6.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">Servlet 작동순서 클라이언트에서 servlet 요청이 들어오면 서버는 servlet 컨테이너를 만들고, 요청이 있을때 마다 스레드가 생성 Servlet 라이프 사이클(생명주기) 한번생성된 객체는 재사용 -&amp;gt; 요청이 필요할때마다 객체를 생성하는게 아니라서 속도빠름 @PostConstruct 선처리: 객체생성과 init()호출사이의 단계에서 메소드 실행 @PreDestroy 후처리: destroy() 호출 후에 메소드 실행 HTML form 태그 Form 태그의 submit 버튼을 클릭하여 데이터를 서버로 전송하면, 해당파일(Servlet)에서는 HttpRequest 객체를 이용하여 Parameter 값을 얻을 수 있다. form 태그에서 Servlet 까지 흐름도 한글처리 방식 References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">jsp Servelt 1</title>
+      <link href="https://jaehong2.github.io//jsp-servlet-1.html" rel="alternate" type="text/html" title="jsp Servelt 1" />
       <published>2020-11-17T04:33:00+09:00</published>
       <updated>2020-11-17T04:33:00+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-servlet.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-servlet.html">&lt;h2&gt;Servlet&lt;/h2&gt;
+      <id>https://jaehong2.github.io//jsp-servlet-1.html</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-1.html">&lt;h2&gt;Servlet&lt;/h2&gt;
 
 &lt;p&gt;&lt;mark&gt;Servlet 클래스는 HttpServlet 클래스를 상속받음&lt;/mark&gt;&lt;/p&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -114,8 +184,8 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
     </entry>
   
     <entry>
-      <title type="html">jsp 테스트</title>
-      <link href="https://jaehong2.github.io//jsp-introduce.html" rel="alternate" type="text/html" title="jsp 테스트" />
+      <title type="html">jsp 입문</title>
+      <link href="https://jaehong2.github.io//jsp-introduce.html" rel="alternate" type="text/html" title="jsp 입문" />
       <published>2020-11-16T18:33:00+09:00</published>
       <updated>2020-11-16T18:33:00+09:00</updated>
       <id>https://jaehong2.github.io//jsp-introduce.html</id>
@@ -909,48 +979,6 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 
       
         <summary type="html">final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE public class Person { final String nation = &quot;kr&quot;; //값을 초기에 할당하거나 final String ssn; public Person(String ssn) {//생성자 선언시 할당하거나 this.ssn = ssn; //final은 최초한번만 값대입가능 } } 상수 (Static final) final 필드가 객체 마다 가지는 인스턴스 필드라고 하면 상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드 공용데이터로 관리 CODE static final dobule EARTH_RADIUS = 6400; //상수의 이름은 전부 대문자로 작성 단어와 연결시 _(언더바) static final double EARTH_SURFACE_AREA; static{ EARTH_SURFACE_AREA = 4 * Math.PI * EARTH_RADIUS * EARTH_RADIUS; } final 클래스 상속과 연관 부모로 사용할 수 없는 클래스 CODE public final class A{} //A라는 final 클래스가 있을때 /////////////////////////////////////////////// public class B extends A{} // A클래스가 final 클래스로 선언되어있어 상속을 받지못함 컴파일에러 발생 final 메소드 상속과 연관 자식이 재정의할 수 없는 메소드 CODE public class Car{ public int speed; public void speedUp(){ speed += 1; } public final void stop(){ //메소드도 final 클래스와 마찬가지로 final 메소드인 stop을 override하려고하면 컴파일 에러발생! System.out.println(&quot;차를 멈춤&quot;); speed =0; } } References. https://www.hanbit.co.kr/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">디자인 패턴 리스트(Design-Pattern-List)</title>
-      <link href="https://jaehong2.github.io//dp-design-pattern" rel="alternate" type="text/html" title="디자인 패턴 리스트(Design-Pattern-List)" />
-      <published>2020-11-03T04:01:10+09:00</published>
-      <updated>2020-11-03T04:01:10+09:00</updated>
-      <id>https://jaehong2.github.io//dp-design-pattern</id>
-      <content type="html" xml:base="https://jaehong2.github.io//dp-design-pattern">&lt;!-- 생성자--&gt;
-
-&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;디자인 패턴(Design Pattern List)&lt;/span&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-    &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;./dp-singletonPattern&quot;&gt;싱글톤 패턴 (Singleton pattern)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">디자인 패턴(Design Pattern List) 싱글톤 패턴 (Singleton pattern)</summary>
       
 
       
