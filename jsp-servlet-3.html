@@ -11,7 +11,7 @@
 
 
 
-    <title>final (field,Static final(상수),<br> Class, Method)</title>
+    <title>jsp Servelt 3</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,26 +50,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="오늘의 공부기록" />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://JaeHong2.github.io//java-final" />
+    <link rel="canonical" href="https://JaeHong2.github.io//jsp-servlet-3.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="IT Study" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="final (field,Static final(상수),<br> Class, Method)" />
-    <meta property="og:description" content="final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE public class Person { final String nation = "kr"; //값을 초기에 할당하거나 final String ssn; public Person(String ssn) {//생성자 선언시 할당하거나 this.ssn = ssn; //final은 최초한번만 값대입가능 } } 상수 (Static final) final" />
-    <meta property="og:url" content="https://JaeHong2.github.io//java-final" />
-    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
+    <meta property="og:title" content="jsp Servelt 3" />
+    <meta property="og:description" content="Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :" />
+    <meta property="og:url" content="https://JaeHong2.github.io//jsp-servlet-3.html" />
+    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/jsp-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-11-05T07:02:00+09:00" />
-    <meta property="article:modified_time" content="2020-11-05T07:02:00+09:00" />
+    <meta property="article:published_time" content="2020-11-18T09:41:18+09:00" />
+    <meta property="article:modified_time" content="2020-11-18T09:41:18+09:00" />
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="final (field,Static final(상수),<br> Class, Method)" />
-    <meta name="twitter:description" content="final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE public class Person { final String nation = "kr"; //값을 초기에 할당하거나 final String ssn; public Person(String ssn) {//생성자 선언시 할당하거나 this.ssn = ssn; //final은 최초한번만 값대입가능 } } 상수 (Static final) final" />
+    <meta name="twitter:title" content="jsp Servelt 3" />
+    <meta name="twitter:description" content="Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
-    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
+    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/jsp-logo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="IT Study" />
     <meta name="twitter:label2" content="Filed under" />
@@ -88,18 +88,18 @@
         "name": "IT Study",
         "logo": "https://JaeHong2.github.io//"
     },
-    "url": "https://JaeHong2.github.io//java-final",
+    "url": "https://JaeHong2.github.io//jsp-servlet-3.html",
     "image": {
         "@type": "ImageObject",
-        "url": "https://JaeHong2.github.io//assets/built/images/java-logo.jpg",
+        "url": "https://JaeHong2.github.io//assets/built/images/jsp-logo.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://JaeHong2.github.io//java-final"
+        "@id": "https://JaeHong2.github.io//jsp-servlet-3.html"
     },
-    "description": "final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE public class Person { final String nation = "kr"; //값을 초기에 할당하거나 final String ssn; public Person(String ssn) {//생성자 선언시 할당하거나 this.ssn = ssn; //final은 최초한번만 값대입가능 } } 상수 (Static final) final"
+    "description": "Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :"
 }
     </script>
 
@@ -112,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="final (field,Static final(상수),<br> Class, Method)" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="jsp Servelt 3" href="/feed.xml" />
 
 
 </head>
@@ -177,7 +177,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 5 November 2020"> 5 November 2020</time>
+                    <time class="post-full-meta-date" datetime="18 November 2020">18 November 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -187,107 +187,51 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">final (field,Static final(상수),<br> Class, Method)</h1>
+                <h1 class="post-full-title">jsp Servelt 3</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/java-logo.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/jsp-logo.png)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2> final 필드 </h2>
-<blockquote>
-    <ul>
-        <li>한번의 초기화로 인하여 값을 변경할수 없는 필드</li>
-        <li>메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행</li>
-    </ul>
-</blockquote>
-<p>
-    <strong class="subtitle_fontAwesome"> CODE </strong>
+                    <h2>Servlet 초기화 파라미터 : ServletConfig</h2>
+<p><mark>특정</mark> Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..<br />
+    이러한 데이터들을 초기화 파라미터라고 함
 </p>
 
-<!-- 코드-->
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">String</span> <span class="n">nation</span> <span class="o">=</span> <span class="s">"kr"</span><span class="o">;</span> <span class="c1">//값을 초기에 할당하거나</span>
-    <span class="kd">final</span> <span class="n">String</span> <span class="n">ssn</span><span class="o">;</span>
+<h2>1. web.xml 사용해서 초기화</h2>
+<p><img src="/assets/built/images/jsp/jsp.7.JPG" alt="" /></p>
 
-    <span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="n">String</span> <span class="n">ssn</span><span class="o">)</span> <span class="o">{</span><span class="c1">//생성자 선언시 할당하거나</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">ssn</span> <span class="o">=</span> <span class="n">ssn</span><span class="o">;</span>              <span class="c1">//final은 최초한번만 값대입가능</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<h2>2. Servlet 파일 사용해서 초기화</h2>
+<p>해당 Servlet에 @WebInitParam 사용해서 초기화</p>
+<p><img src="/assets/built/images/jsp/jsp.8.JPG" alt="" /></p>
 
 <hr />
 
-<h2> 상수 (Static final)  </h2>
-
-<blockquote>
-
-    <ul>
-        <li>final 필드가 객체 마다 가지는 인스턴스 필드라고 하면 </li>
-        <li>상수는 객체마다 가지고있지 않고 메소드 영역에서 클래스별로 관리되는 정적 필드</li>
-        <li>공용데이터로 관리</li>
-    </ul>
-</blockquote>
-
-<p>
-    <strong class="subtitle_fontAwesome"> CODE </strong>
-</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">static</span> <span class="kd">final</span> <span class="n">dobule</span> <span class="n">EARTH_RADIUS</span> <span class="o">=</span> <span class="mi">6400</span><span class="o">;</span>
-    <span class="c1">//상수의 이름은 전부 대문자로 작성 단어와 연결시 _(언더바)</span>
-
-    <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">EARTH_SURFACE_AREA</span><span class="o">;</span>
-
-    <span class="kd">static</span><span class="o">{</span>
-    <span class="n">EARTH_SURFACE_AREA</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="na">PI</span> <span class="o">*</span>  <span class="n">EARTH_RADIUS</span> <span class="o">*</span>  <span class="n">EARTH_RADIUS</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<h2>ServletContext</h2>
+<p> <mark>모든 서블릿에 </mark> 데이터를 공유 할 시 (web.xml에 기술)</p>
+<p><img src="/assets/built/images/jsp/jsp.9.JPG" alt="" /></p>
 
 <hr />
 
-<h2>final 클래스</h2>
-<ul>
-    <li><mark>상속</mark>과 연관</li>
-    <li>부모로 사용할 수 없는 클래스</li>
-</ul>
-<p>
-    <strong class="subtitle_fontAwesome"> CODE </strong>
-</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">A</span><span class="o">{}</span> <span class="c1">//A라는 final 클래스가 있을때</span>
-    <span class="c1">///////////////////////////////////////////////</span>
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">B</span> <span class="kd">extends</span> <span class="n">A</span><span class="o">{}</span> <span class="c1">// A클래스가 final 클래스로 선언되어있어 상속을 받지못함 컴파일에러 발생</span>
-</code></pre></div></div>
+<h2>웹어플리케이션 생명주기 감시 : ServletContextListner </h2>
+<p></p>
 
-<h2>final 메소드</h2>
-<ul>
-    <li><mark>상속</mark>과 연관</li>
-    <li>자식이 재정의할 수 없는 메소드</li>
-</ul>
+<p><b>xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나</b></p>
+<p><img src="/assets/built/images/jsp/jsp.10.JPG" alt="" /></p>
 
-<p>
-    <strong class="subtitle_fontAwesome"> CODE </strong>
-</p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">speed</span><span class="o">;</span>
+<h2>순서</h2>
+<p><img src="/assets/built/images/jsp/jsp.11.JPG" alt="" /></p>
 
-    <span class="kd">public</span>  <span class="kt">void</span> <span class="nf">speedUp</span><span class="o">(){</span>
-        <span class="n">speed</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">void</span> <span class="nf">stop</span><span class="o">(){</span>   <span class="c1">//메소드도 final 클래스와 마찬가지로 final 메소드인 stop을 override하려고하면 컴파일 에러발생!</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"차를 멈춤"</span><span class="o">);</span>
-        <span class="n">speed</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-
-</code></pre></div></div>
-<!-- 출처 -->
 <h1>References.</h1>
 <ul>
-    <li><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
+    <li><a href="http://www.ssitcenter.com/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
 </ul>
+
 
                 </div>
             </section>
@@ -353,9 +297,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://JaeHong2.github.io//java-final';
-                            this.page.identifier = '/java-final';
-                            this.page.title = 'final (field,Static final(상수),<br> Class, Method)';
+                            this.page.url = 'https://JaeHong2.github.io//jsp-servlet-3.html';
+                            this.page.identifier = '/jsp-servlet-3.html';
+                            this.page.title = 'jsp Servelt 3';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -400,11 +344,6 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/jsp-servlet-3.html">jsp Servelt 3</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -429,12 +368,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/jsp-introduce.html">jsp 입문</a></li>
                                         
                                     
                                   
@@ -475,6 +409,16 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -527,55 +471,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/java-pakage">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/java-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-pakage">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">패키지(Pakage)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -583,12 +478,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/dp-singletonPattern">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/Java-Design-Patterns.png)"></div>
+            <a class="post-card-image-link" href="/jsp-servlet-2.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/jsp-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/dp-singletonPattern">
+            <a class="post-card-content-link" href="/jsp-servlet-2.html">
                 <header class="post-card-header">
                     
                         
@@ -598,7 +493,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">싱글톤 패턴(Singleton-Pattern)</h2>
+                    <h2 class="post-card-title">jsp Servelt 2</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -642,18 +537,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">final (field,Static final(상수),<br> Class, Method)</div>
+    <div class="floating-header-title">jsp Servelt 3</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=final+%28field%2CStatic+final%28%EC%83%81%EC%88%98%29%2C%3Cbr%3E+Class%2C+Method%29&amp;url=https://JaeHong2.github.io/java-final"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=jsp+Servelt+3&amp;url=https://JaeHong2.github.io/jsp-servlet-3.html"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/java-final"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/jsp-servlet-3.html"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
