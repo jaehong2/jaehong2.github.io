@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-19T23:11:27+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">jsp Servelt 3</title><link href="https://jaehong2.github.io//jsp-servlet-3.html" rel="alternate" type="text/html" title="jsp Servelt 3" /><published>2020-11-18T09:41:18+09:00</published><updated>2020-11-18T09:41:18+09:00</updated><id>https://jaehong2.github.io//jsp-servlet-3.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-3.html">&lt;h2&gt;Servlet 초기화 파라미터 : ServletConfig&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-20T19:13:53+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">피보나치 수열2(fibonacci)</title><link href="https://jaehong2.github.io//algorithm-fibonacci" rel="alternate" type="text/html" title="피보나치 수열2(fibonacci)" /><published>2020-11-20T04:01:00+09:00</published><updated>2020-11-20T04:01:00+09:00</updated><id>https://jaehong2.github.io//algorithm-fibonacci</id><content type="html" xml:base="https://jaehong2.github.io//algorithm-fibonacci">&lt;h2&gt;피보나치 수열2&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;b&gt;문제 출처&lt;/b&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;fibonacci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;Scanner&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//int 범위(2,147,483,647)를 초과 long으로 선언&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//고정되어있는 값대입&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jaehong</name></author><category term="algorithm" /><summary type="html">피보나치 수열2 문제 출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt; import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } }</summary></entry><entry><title type="html">jsp Servelt 3</title><link href="https://jaehong2.github.io//jsp-servlet-3.html" rel="alternate" type="text/html" title="jsp Servelt 3" /><published>2020-11-18T09:41:18+09:00</published><updated>2020-11-18T09:41:18+09:00</updated><id>https://jaehong2.github.io//jsp-servlet-3.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-3.html">&lt;h2&gt;Servlet 초기화 파라미터 : ServletConfig&lt;/h2&gt;
 &lt;p&gt;&lt;mark&gt;특정&lt;/mark&gt; Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..&lt;br /&gt;
     이러한 데이터들을 초기화 파라미터라고 함
 &lt;/p&gt;
@@ -531,28 +560,4 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/p&gt;&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능 default private References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">패키지(Pakage)</title><link href="https://jaehong2.github.io//java-pakage" rel="alternate" type="text/html" title="패키지(Pakage)" /><published>2020-11-06T22:00:00+09:00</published><updated>2020-11-06T22:00:00+09:00</updated><id>https://jaehong2.github.io//java-pakage</id><content type="html" xml:base="https://jaehong2.github.io//java-pakage">&lt;blockquote&gt;
-    &lt;p&gt; 패키지(Pakage)
-    &lt;ul&gt;
-        &lt;li&gt;상위 패키지와 하위 패키지는 도트(.)로 구분&lt;/li&gt;
-        &lt;li&gt;패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname)&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-    &lt;p&gt; 명령 라인 환경에서(CLI) 컴파일
-    &lt;ul&gt;
-        &lt;li&gt;javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨&lt;/li&gt;
-        &lt;li&gt;javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 &lt;/li&gt;
-        &lt;li&gt;클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator  &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">패키지(Pakage) 상위 패키지와 하위 패키지는 도트(.)로 구분 패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname) 명령 라인 환경에서(CLI) 컴파일 javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨 javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator References. https://www.hanbit.co.kr/</summary></entry></feed>
+&lt;/p&gt;&lt;/p&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능 default private References. https://www.hanbit.co.kr/</summary></entry></feed>

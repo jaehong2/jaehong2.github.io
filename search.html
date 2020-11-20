@@ -137,7 +137,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-python" role="menuitem"><a href="/tag/java/">Java</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/git/">git</a></li>
 
-    <li class="nav-python" role="menuitem"><a href="/tag/java/">Algorithm</a></li>
+    <li class="nav-python" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -185,6 +185,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "algorithm-fibonacci": {
+        "title": "피보나치 수열2(fibonacci)",
+            "author": "jaehong",
+            "category": "",
+            "content": "피보나치 수열2문제 출처    백준알고리즘 https://www.acmicpc.net/problem/2748&gt;import java.util.Scanner;public class fibonacci {public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    int num = sc.nextInt();    long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언    //고정되어있는 값대입    array[0] = 0;    array[1] = 1;    for(int i=2; i&lt; array.length; i++) {        array[i] = array[i-1] + array[i-2];    }    System.out.println(array[num]);    }}",
+        "url": "/algorithm-fibonacci"
+    }
+    ,
     
     "jsp-servlet-3-html": {
         "title": "jsp Servelt 3",
@@ -336,15 +345,6 @@ into the {body} of the default.hbs template -->
             "category": "",
             "content": "이글은 git 관한 내용이 있습니다 .",
         "url": "/git-basic"
-    }
-    ,
-    
-    "jekyll-algorithm": {
-        "title": "algorithm (1) - algorithm",
-            "author": "jaehong",
-            "category": "",
-            "content": "이글은 algorithm에 관한 내용이 있습니다 .",
-        "url": "/jekyll-algorithm"
     }
     
     
