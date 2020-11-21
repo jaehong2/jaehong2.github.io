@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-20T19:13:53+09:00</updated>
+  <updated>2020-11-21T23:46:21+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -518,6 +518,77 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
     </entry>
   
     <entry>
+      <title type="html">추상클래스와 인터페이스</title>
+      <link href="https://jaehong2.github.io//java-abstract-interface" rel="alternate" type="text/html" title="추상클래스와 인터페이스" />
+      <published>2020-11-12T20:46:00+09:00</published>
+      <updated>2020-11-12T20:46:00+09:00</updated>
+      <id>https://jaehong2.github.io//java-abstract-interface</id>
+      <content type="html" xml:base="https://jaehong2.github.io//java-abstract-interface">&lt;h1&gt;추상클래스와 인터페이스&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h2&gt;추상&lt;/h2&gt;
+&lt;p&gt;실제들 간에 공통되는 특성을 추출
+삼성 현대 기아 ex) 회사&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2&gt;추상클래스&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;실제 클래스들의 공통되는 &lt;mark&gt;필드&lt;/mark&gt;, &lt;mark&gt;메소드&lt;/mark&gt;를 정의한 클래스&lt;/li&gt;
+    &lt;li&gt;공통된 필드와 메소드 이름을 통일할 목적&lt;/li&gt;
+    &lt;li&gt;부모 클래스로만 사용 되며 , 객체 생성 불가&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;public&lt;/h2&gt;
+
+&lt;h2&gt;protected&lt;/h2&gt;
+&lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;같은패키지:default와 동일&lt;/li&gt;
+        &lt;li&gt;다른패키지:자식클래스만 접근 허용&lt;mark&gt;상속의 개념과 연관&lt;/mark&gt;&lt;/li&gt;
+        &lt;li&gt;클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;p&gt;
+&lt;h2&gt;default&lt;/h2&gt;
+
+&lt;h2&gt;private&lt;/h2&gt;
+
+&lt;!-- 출처 --&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/p&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능 default private References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">메소드에서 매개변수의 수를 모르는 경우</title>
       <link href="https://jaehong2.github.io//java-no-parameter-number" rel="alternate" type="text/html" title="메소드에서 매개변수의 수를 모르는 경우" />
       <published>2020-11-12T18:31:00+09:00</published>
@@ -864,64 +935,6 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 
       
         <summary type="html">접근 제한자(Access Modifier) 클래스 제한 생성자 제한 필드와 메소드 제한 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능 default private References. https://www.hanbit.co.kr/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">패키지(Pakage)</title>
-      <link href="https://jaehong2.github.io//java-pakage" rel="alternate" type="text/html" title="패키지(Pakage)" />
-      <published>2020-11-06T22:00:00+09:00</published>
-      <updated>2020-11-06T22:00:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-pakage</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-pakage">&lt;blockquote&gt;
-    &lt;p&gt; 패키지(Pakage)
-    &lt;ul&gt;
-        &lt;li&gt;상위 패키지와 하위 패키지는 도트(.)로 구분&lt;/li&gt;
-        &lt;li&gt;패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname)&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-    &lt;p&gt; 명령 라인 환경에서(CLI) 컴파일
-    &lt;ul&gt;
-        &lt;li&gt;javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨&lt;/li&gt;
-        &lt;li&gt;javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 &lt;/li&gt;
-        &lt;li&gt;클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator  &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">패키지(Pakage) 상위 패키지와 하위 패키지는 도트(.)로 구분 패키지이름은 소문자 &amp;amp;&amp;amp; 숫자,특수문자 안됨 &amp;amp;&amp;amp; 도메인 역순(com.naver.projectname) 명령 라인 환경에서(CLI) 컴파일 javac XXX.java &amp;lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨 javac -d [패키지가 생성될위치] xxx.java &amp;lt;-- -d 옵션으로 패키지 생성될 위치 클래스파일 실행 명령어 -&amp;gt; ex) C:\eclispe-workspace\Test\bin&amp;gt; java com.test.Calculator References. https://www.hanbit.co.kr/</summary>
       
 
       
