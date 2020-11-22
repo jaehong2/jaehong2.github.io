@@ -57,17 +57,17 @@
     <meta property="og:site_name" content="IT Study" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="추상클래스와 인터페이스" />
-    <meta property="og:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는" />
+    <meta property="og:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발" />
     <meta property="og:url" content="https://JaeHong2.github.io//java-abstract-interface" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-11-12T20:46:00+09:00" />
-    <meta property="article:modified_time" content="2020-11-12T20:46:00+09:00" />
+    <meta property="article:published_time" content="2020-11-21T20:46:00+09:00" />
+    <meta property="article:modified_time" content="2020-11-21T20:46:00+09:00" />
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="추상클래스와 인터페이스" />
-    <meta name="twitter:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는" />
+    <meta name="twitter:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//java-abstract-interface"
     },
-    "description": "추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 public protected 같은패키지:default와 동일 다른패키지:자식클래스만 접근 허용상속의 개념과 연관 클래스 앞에는 선언할수없다. 필드 메서드 생성자는"
+    "description": "추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발"
 }
     </script>
 
@@ -177,7 +177,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="12 November 2020">12 November 2020</time>
+                    <time class="post-full-meta-date" datetime="21 November 2020">21 November 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -207,27 +207,42 @@ into the {body} of the default.hbs template -->
 <hr />
 
 <h2>추상클래스</h2>
+
 <ul>
     <li>실제 클래스들의 공통되는 <mark>필드</mark>, <mark>메소드</mark>를 정의한 클래스</li>
     <li>공통된 필드와 메소드 이름을 통일할 목적</li>
     <li>부모 클래스로만 사용 되며 , 객체 생성 불가</li>
+    <li>추상 메서드는 자식 클래스에서 오버라이딩! </li>
 </ul>
-<p><img src="/assets/built/images/java-access-modifier.jpg" alt="" /></p>
 
-<h2>public</h2>
+<hr />
 
-<h2>protected</h2>
-<p>
-    <ul>
-        <li>같은패키지:default와 동일</li>
-        <li>다른패키지:자식클래스만 접근 허용<mark>상속의 개념과 연관</mark></li>
-        <li>클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능</li>
-    </ul>
+<h2>인터페이스</h2>
+<ul>
+    <li>인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.</li>
+    <li>개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.</li>
+</ul>
 
-<p>
-<h2>default</h2>
+<h2>인터페이스 역할</h2>
+<ul>
+    <li>개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.</li>
+    <li>개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)</li>
+</ul>
 
-<h2>private</h2>
+<h2>인터페이스 구성멤버</h2>
+<ul>
+    <li>상수, 추상메소드</li>
+    <li>Java 8 부터는 default 메소드, 정적 메소드</li>
+</ul>
+
+<h2>상수 필드 선언</h2>
+<ul>
+    <li>인터페이스는 상수 필드만 선언가능</li>
+    <li>인터페이스에 선언된 모든 필드는 public static final의 특징을 가짐 </li>
+    <li>상수명은 대문자</li>
+    <li>선언과 동시에 초기화 (static 블록을 작성할수없으므로}</li>
+
+</ul>
 
 <!-- 출처 -->
 <h1>References.</h1>
@@ -235,7 +250,6 @@ into the {body} of the default.hbs template -->
     <li><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
 </ul>
 
-</p></p>
 
                 </div>
             </section>
@@ -347,6 +361,10 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
+                                    
+                                  
+                                
+                                  
                                 
                                   
                                     
@@ -386,10 +404,6 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -482,55 +496,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/java-inheritance">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/java-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-inheritance">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">상속</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -538,22 +503,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/java-no-parameter-number">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/java-logo.jpg)"></div>
+            <a class="post-card-image-link" href="/algorithm-fibonacci">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-no-parameter-number">
+            <a class="post-card-content-link" href="/algorithm-fibonacci">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Java</span>
+                                <span class="post-card-tags">Algorithm</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">메소드에서 매개변수의 수를 모르는 경우</h2>
+                    <h2 class="post-card-title">피보나치 수열2(fibonacci)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
