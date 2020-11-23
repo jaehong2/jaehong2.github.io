@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-22T18:57:49+09:00</updated>
+  <updated>2020-11-23T23:31:00+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -41,8 +41,8 @@
 &lt;hr /&gt;
 
 &lt;h2&gt;추상&lt;/h2&gt;
-&lt;p&gt;실제들 간에 공통되는 특성을 추출
-삼성 현대 기아 ex) 회사&lt;/p&gt;
+&lt;p&gt;실제들 간에 공통되는 특성을 추출&lt;br /&gt;
+ex) 삼성 현대 기아회사&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;h2&gt;추상클래스&lt;/h2&gt;
@@ -74,14 +74,59 @@
     &lt;li&gt;Java 8 부터는 default 메소드, 정적 메소드&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;h2&gt;상수 필드 선언&lt;/h2&gt;
 &lt;ul&gt;
     &lt;li&gt;인터페이스는 상수 필드만 선언가능&lt;/li&gt;
-    &lt;li&gt;인터페이스에 선언된 모든 필드는 public static final의 특징을 가짐 &lt;/li&gt;
+    &lt;li&gt;인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 &lt;/li&gt;
     &lt;li&gt;상수명은 대문자&lt;/li&gt;
     &lt;li&gt;선언과 동시에 초기화 (static 블록을 작성할수없으므로}&lt;/li&gt;
-
 &lt;/ul&gt;
+
+&lt;h2&gt;추상 메소드 선언&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;인터페이스의 메소드는 기본적으로 실행 블록이 없는 &lt;mark&gt;추상 메소드&lt;/mark&gt;로 선언한다.&lt;/li&gt;
+    &lt;li&gt;public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MIN_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;volume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;디폴트 메소드 선언&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;자바 8 에서 추가된 인터페이스의 새로운 멤버&lt;/li&gt;
+    &lt;li&gt;[public]이 기본타입으로 default를 붙어야 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 처리&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 해제&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;정적 메소드 선언&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;emptyBattery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;배터리가 다 소모 되었습니다.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;!-- 출처 --&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
@@ -108,7 +153,7 @@
       
 
       
-        <summary type="html">추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} References. https://www.hanbit.co.kr/</summary>
+        <summary type="html">추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} 추상 메소드 선언 인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다. public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음 public interface RemoteControl{ int MAX_VOLUME = 10; int MIN_VOLUME =0; public abstract void turnOn(); void turnOff(); //public abstract 생략 void setVolume(int volume); //public abstract 생략 } 디폴트 메소드 선언 자바 8 에서 추가된 인터페이스의 새로운 멤버 [public]이 기본타입으로 default를 붙어야 생성된다. public interface RemoteControl{ default void setMute(boolean mute){ if(mute){ System.out.println(&quot;무음 처리&quot;); }else{ System.out.println(&quot;무음 해제&quot;); } } 정적 메소드 선언 public interface RemoteControl{ static void emptyBattery(){ System.out.println(&quot;배터리가 다 소모 되었습니다.&quot;); } } References. https://www.hanbit.co.kr/</summary>
       
 
       
@@ -727,7 +772,7 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
     &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/built/images/annotation.JPG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/annotation.JPG&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -904,7 +949,7 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
     &lt;li&gt;필드와 메소드 제한&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/java/java-access-modifier.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;public&lt;/h2&gt;
 

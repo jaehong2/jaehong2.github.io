@@ -57,7 +57,7 @@
     <meta property="og:site_name" content="IT Study" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="추상클래스와 인터페이스" />
-    <meta property="og:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발" />
+    <meta property="og:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는" />
     <meta property="og:url" content="https://JaeHong2.github.io//java-abstract-interface" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -67,7 +67,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="추상클래스와 인터페이스" />
-    <meta name="twitter:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발" />
+    <meta name="twitter:description" content="추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/java-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//java-abstract-interface"
     },
-    "description": "추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 삼성 현대 기아 ex) 회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발"
+    "description": "추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는"
 }
     </script>
 
@@ -202,8 +202,8 @@ into the {body} of the default.hbs template -->
 <hr />
 
 <h2>추상</h2>
-<p>실제들 간에 공통되는 특성을 추출
-삼성 현대 기아 ex) 회사</p>
+<p>실제들 간에 공통되는 특성을 추출<br />
+ex) 삼성 현대 기아회사</p>
 <hr />
 
 <h2>추상클래스</h2>
@@ -235,14 +235,59 @@ into the {body} of the default.hbs template -->
     <li>Java 8 부터는 default 메소드, 정적 메소드</li>
 </ul>
 
+<hr />
+
 <h2>상수 필드 선언</h2>
 <ul>
     <li>인터페이스는 상수 필드만 선언가능</li>
-    <li>인터페이스에 선언된 모든 필드는 public static final의 특징을 가짐 </li>
+    <li>인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 </li>
     <li>상수명은 대문자</li>
     <li>선언과 동시에 초기화 (static 블록을 작성할수없으므로}</li>
-
 </ul>
+
+<h2>추상 메소드 선언</h2>
+<ul>
+    <li>인터페이스의 메소드는 기본적으로 실행 블록이 없는 <mark>추상 메소드</mark>로 선언한다.</li>
+    <li>public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+<span class="kt">int</span> <span class="n">MAX_VOLUME</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">MIN_VOLUME</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">turnOn</span><span class="o">();</span>
+<span class="kt">void</span> <span class="nf">turnOff</span><span class="o">();</span>	<span class="c1">//public abstract 생략</span>
+<span class="kt">void</span> <span class="nf">setVolume</span><span class="o">(</span><span class="kt">int</span> <span class="n">volume</span><span class="o">);</span> <span class="c1">//public abstract 생략</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2>디폴트 메소드 선언</h2>
+<ul>
+    <li>자바 8 에서 추가된 인터페이스의 새로운 멤버</li>
+    <li>[public]이 기본타입으로 default를 붙어야 생성된다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+    <span class="k">default</span> <span class="kt">void</span> <span class="nf">setMute</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">mute</span><span class="o">){</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">mute</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"무음 처리"</span><span class="o">);</span>
+    <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"무음 해제"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2>정적 메소드 선언</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">emptyBattery</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"배터리가 다 소모 되었습니다."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <!-- 출처 -->
 <h1>References.</h1>
@@ -362,6 +407,8 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                  
+                                
                                   
                                 
                                   
@@ -503,12 +550,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/algorithm-fibonacci">
+            <a class="post-card-image-link" href="/algorithm-star-02">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-fibonacci">
+            <a class="post-card-content-link" href="/algorithm-star-02">
                 <header class="post-card-header">
                     
                         
@@ -518,7 +565,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">피보나치 수열2(fibonacci)</h2>
+                    <h2 class="post-card-title">별 찍기 -2</h2>
                 </header>
                 <section class="post-card-excerpt">
                     

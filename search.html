@@ -190,8 +190,17 @@ into the {body} of the default.hbs template -->
         "title": "추상클래스와 인터페이스",
             "author": "jaehong",
             "category": "",
-            "content": "추상클래스와 인터페이스추상실제들 간에 공통되는 특성을 추출삼성 현대 기아 ex) 회사추상클래스    실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스    공통된 필드와 메소드 이름을 통일할 목적    부모 클래스로만 사용 되며 , 객체 생성 불가    추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스    인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.    개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.인터페이스 역할    개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.    개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)인터페이스 구성멤버    상수, 추상메소드    Java 8 부터는 default 메소드, 정적 메소드상수 필드 선언    인터페이스는 상수 필드만 선언가능    인터페이스에 선언된 모든 필드는 public static final의 특징을 가짐     상수명은 대문자    선언과 동시에 초기화 (static 블록을 작성할수없으므로}References.    https://www.hanbit.co.kr/",
+            "content": "추상클래스와 인터페이스추상실제들 간에 공통되는 특성을 추출ex) 삼성 현대 기아회사추상클래스    실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스    공통된 필드와 메소드 이름을 통일할 목적    부모 클래스로만 사용 되며 , 객체 생성 불가    추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스    인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.    개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.인터페이스 역할    개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.    개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)인터페이스 구성멤버    상수, 추상메소드    Java 8 부터는 default 메소드, 정적 메소드상수 필드 선언    인터페이스는 상수 필드만 선언가능    인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐     상수명은 대문자    선언과 동시에 초기화 (static 블록을 작성할수없으므로}추상 메소드 선언    인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다.    public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음public interface RemoteControl{int MAX_VOLUME = 10;int MIN_VOLUME =0;public abstract void turnOn();void turnOff();\t//public abstract 생략void setVolume(int volume); //public abstract 생략}디폴트 메소드 선언    자바 8 에서 추가된 인터페이스의 새로운 멤버    [public]이 기본타입으로 default를 붙어야 생성된다.public interface RemoteControl{    default void setMute(boolean mute){    if(mute){        System.out.println(\"무음 처리\");    }else{        System.out.println(\"무음 해제\");    }}정적 메소드 선언public interface RemoteControl{    static void emptyBattery(){        System.out.println(\"배터리가 다 소모 되었습니다.\");    }}References.    https://www.hanbit.co.kr/",
         "url": "/java-abstract-interface"
+    }
+    ,
+    
+    "algorithm-star-02": {
+        "title": "별 찍기 -2",
+            "author": "jaehong",
+            "category": "",
+            "content": "별찍기 2문제 출처    백준알고리즘 https://www.acmicpc.net/problem/2439&gt;import java.io.*;public class Main {public static void main(String[] args) throws IOException {    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n = Integer.parseInt(br.readLine());    int k = n;    for (int i = 0; i &lt; n; i++) {        for(int j=0; j &lt; n-i-1; j++ ) {          bw.write(\" \");        }         for (int j = 0; j &lt;= i; j++) {          bw.write(\"*\");        }        bw.write(\"\\n\");    }    br.close();    bw.flush();    bw.close();    }}",
+        "url": "/algorithm-star-02"
     }
     ,
     
