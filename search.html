@@ -186,6 +186,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "algorithm-pluscycle": {
+        "title": "플러스 사이클",
+            "author": "jaehong",
+            "category": "",
+            "content": "플러스 사이클import java.io.*;public class Main {public static void main(String[] args) throws IOException{    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n =  Integer.parseInt(br.readLine());    int sum =0;    int leftN =0;    int rightN =0;    int result = n;    int a =0;    while(true) {        leftN = result/10;        rightN = result%10;        sum = leftN + rightN;        result = rightN*10 + sum%10;        a++;        if(n == result) {            break;        }    }    bw.write(a +\"\\n\");    bw.flush();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/1110&gt;",
+        "url": "/algorithm-pluscycle"
+    }
+    ,
+    
     "java-abstract-interface": {
         "title": "추상클래스와 인터페이스",
             "author": "jaehong",
@@ -199,7 +208,7 @@ into the {body} of the default.hbs template -->
         "title": "별 찍기 -2",
             "author": "jaehong",
             "category": "",
-            "content": "별찍기 2문제 출처    백준알고리즘 https://www.acmicpc.net/problem/2439&gt;import java.io.*;public class Main {public static void main(String[] args) throws IOException {    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n = Integer.parseInt(br.readLine());    int k = n;    for (int i = 0; i &lt; n; i++) {        for(int j=0; j &lt; n-i-1; j++ ) {          bw.write(\" \");        }         for (int j = 0; j &lt;= i; j++) {          bw.write(\"*\");        }        bw.write(\"\\n\");    }    br.close();    bw.flush();    bw.close();    }}",
+            "content": "별찍기 2import java.io.*;public class Main {public static void main(String[] args) throws IOException {    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n = Integer.parseInt(br.readLine());    int k = n;    for (int i = 0; i &lt; n; i++) {        for(int j=0; j &lt; n-i-1; j++ ) {          bw.write(\" \");        }         for (int j = 0; j &lt;= i; j++) {          bw.write(\"*\");        }        bw.write(\"\\n\");    }    br.close();    bw.flush();    bw.close();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/2439&gt;",
         "url": "/algorithm-star-02"
     }
     ,
@@ -208,7 +217,7 @@ into the {body} of the default.hbs template -->
         "title": "피보나치 수열2(fibonacci)",
             "author": "jaehong",
             "category": "",
-            "content": "피보나치 수열2문제 출처    백준알고리즘 https://www.acmicpc.net/problem/2748&gt;import java.util.Scanner;public class fibonacci {public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    int num = sc.nextInt();    long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언    //고정되어있는 값대입    array[0] = 0;    array[1] = 1;    for(int i=2; i&lt; array.length; i++) {        array[i] = array[i-1] + array[i-2];    }    System.out.println(array[num]);    }}",
+            "content": "피보나치 수열2import java.util.Scanner;public class fibonacci {public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    int num = sc.nextInt();    long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언    //고정되어있는 값대입    array[0] = 0;    array[1] = 1;    for(int i=2; i&lt; array.length; i++) {        array[i] = array[i-1] + array[i-2];    }    System.out.println(array[num]);    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/2748&gt;",
         "url": "/algorithm-fibonacci"
     }
     ,

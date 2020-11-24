@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-23T23:31:00+09:00</updated>
+  <updated>2020-11-24T23:52:35+09:00</updated>
   <id>https://jaehong2.github.io//tag/algorithm/feed.xml</id>
 
   
@@ -32,17 +32,86 @@
 
   
     <entry>
+      <title type="html">플러스 사이클</title>
+      <link href="https://jaehong2.github.io//algorithm-pluscycle" rel="alternate" type="text/html" title="플러스 사이클" />
+      <published>2020-11-24T08:49:00+09:00</published>
+      <updated>2020-11-24T08:49:00+09:00</updated>
+      <id>https://jaehong2.github.io//algorithm-pluscycle</id>
+      <content type="html" xml:base="https://jaehong2.github.io//algorithm-pluscycle">&lt;h2&gt;플러스 사이클&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStreamWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">플러스 사이클 import java.io.*; public class Main { public static void main(String[] args) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int sum =0; int leftN =0; int rightN =0; int result = n; int a =0; while(true) { leftN = result/10; rightN = result%10; sum = leftN + rightN; result = rightN*10 + sum%10; a++; if(n == result) { break; } } bw.write(a +&quot;\n&quot;); bw.flush(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">피보나치 수열2(fibonacci)</title>
       <link href="https://jaehong2.github.io//algorithm-fibonacci" rel="alternate" type="text/html" title="피보나치 수열2(fibonacci)" />
       <published>2020-11-20T04:01:00+09:00</published>
       <updated>2020-11-20T04:01:00+09:00</updated>
       <id>https://jaehong2.github.io//algorithm-fibonacci</id>
       <content type="html" xml:base="https://jaehong2.github.io//algorithm-fibonacci">&lt;h2&gt;피보나치 수열2&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;b&gt;문제 출처&lt;/b&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;&lt;/a&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;fibonacci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -66,7 +135,12 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -87,7 +161,7 @@
       
 
       
-        <summary type="html">피보나치 수열2 문제 출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt; import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } }</summary>
+        <summary type="html">피보나치 수열2 import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;</summary>
       
 
       
@@ -101,11 +175,8 @@
       <updated>2020-11-20T04:01:00+09:00</updated>
       <id>https://jaehong2.github.io//algorithm-star-02</id>
       <content type="html" xml:base="https://jaehong2.github.io//algorithm-star-02">&lt;h2&gt;별찍기 2&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;b&gt;문제 출처&lt;/b&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;&lt;/a&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -131,7 +202,12 @@
     &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -152,7 +228,7 @@
       
 
       
-        <summary type="html">별찍기 2 문제 출처 백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt; import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int k = n; for (int i = 0; i &amp;lt; n; i++) { for(int j=0; j &amp;lt; n-i-1; j++ ) { bw.write(&quot; &quot;); } for (int j = 0; j &amp;lt;= i; j++) { bw.write(&quot;*&quot;); } bw.write(&quot;\n&quot;); } br.close(); bw.flush(); bw.close(); } }</summary>
+        <summary type="html">별찍기 2 import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int k = n; for (int i = 0; i &amp;lt; n; i++) { for(int j=0; j &amp;lt; n-i-1; j++ ) { bw.write(&quot; &quot;); } for (int j = 0; j &amp;lt;= i; j++) { bw.write(&quot;*&quot;); } bw.write(&quot;\n&quot;); } br.close(); bw.flush(); bw.close(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;</summary>
       
 
       

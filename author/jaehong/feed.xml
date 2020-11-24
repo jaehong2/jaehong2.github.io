@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-23T23:31:00+09:00</updated>
+  <updated>2020-11-24T23:52:35+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -30,6 +30,78 @@
   
   
 
+  
+    <entry>
+      <title type="html">플러스 사이클</title>
+      <link href="https://jaehong2.github.io//algorithm-pluscycle" rel="alternate" type="text/html" title="플러스 사이클" />
+      <published>2020-11-24T08:49:00+09:00</published>
+      <updated>2020-11-24T08:49:00+09:00</updated>
+      <id>https://jaehong2.github.io//algorithm-pluscycle</id>
+      <content type="html" xml:base="https://jaehong2.github.io//algorithm-pluscycle">&lt;h2&gt;플러스 사이클&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStreamWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leftN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rightN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">플러스 사이클 import java.io.*; public class Main { public static void main(String[] args) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int sum =0; int leftN =0; int rightN =0; int result = n; int a =0; while(true) { leftN = result/10; rightN = result%10; sum = leftN + rightN; result = rightN*10 + sum%10; a++; if(n == result) { break; } } bw.write(a +&quot;\n&quot;); bw.flush(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">추상클래스와 인터페이스</title>
@@ -167,11 +239,8 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
       <updated>2020-11-20T04:01:00+09:00</updated>
       <id>https://jaehong2.github.io//algorithm-fibonacci</id>
       <content type="html" xml:base="https://jaehong2.github.io//algorithm-fibonacci">&lt;h2&gt;피보나치 수열2&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;b&gt;문제 출처&lt;/b&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;&lt;/a&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;fibonacci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -195,7 +264,12 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -216,7 +290,7 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
       
 
       
-        <summary type="html">피보나치 수열2 문제 출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt; import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } }</summary>
+        <summary type="html">피보나치 수열2 import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;</summary>
       
 
       
@@ -230,11 +304,8 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
       <updated>2020-11-20T04:01:00+09:00</updated>
       <id>https://jaehong2.github.io//algorithm-star-02</id>
       <content type="html" xml:base="https://jaehong2.github.io//algorithm-star-02">&lt;h2&gt;별찍기 2&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;b&gt;문제 출처&lt;/b&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-    &lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;&lt;/a&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -260,7 +331,12 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2748&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -281,7 +357,7 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
       
 
       
-        <summary type="html">별찍기 2 문제 출처 백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt; import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int k = n; for (int i = 0; i &amp;lt; n; i++) { for(int j=0; j &amp;lt; n-i-1; j++ ) { bw.write(&quot; &quot;); } for (int j = 0; j &amp;lt;= i; j++) { bw.write(&quot;*&quot;); } bw.write(&quot;\n&quot;); } br.close(); bw.flush(); bw.close(); } }</summary>
+        <summary type="html">별찍기 2 import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int k = n; for (int i = 0; i &amp;lt; n; i++) { for(int j=0; j &amp;lt; n-i-1; j++ ) { bw.write(&quot; &quot;); } for (int j = 0; j &amp;lt;= i; j++) { bw.write(&quot;*&quot;); } bw.write(&quot;\n&quot;); } br.close(); bw.flush(); bw.close(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;</summary>
       
 
       
@@ -837,155 +913,6 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 
       
         <summary type="html">메소드에서 매개변수의 수를 모르는 경우 메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용 매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성 public class Parameter { public static void main(String args[]) { Cal cal = new Cal(); int[] data = new int[] {1,2,3}; System.out.println(&quot;sum1 : &quot; + cal.sum1(data)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3,4,5)); } } class Cal{ int sum1(int[] n) { int sum=0; for(int i :n) { sum += i; } return sum; } int sum2(int ... n) { //매개변수의 개수를 모를때 int sum=0; for(int i : n) { sum += i; } return sum; } }</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">어노테이션 (Annotation)</title>
-      <link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" />
-      <published>2020-11-09T07:31:00+09:00</published>
-      <updated>2020-11-09T07:31:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-annotation</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
-&lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 &lt;mark&gt;메타데이터(metadata)&lt;/mark&gt;이다.&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) Override
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) Servlet 이나 Controller 객체 사용시
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
-        &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
-    &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/annotation.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;mark&gt;@Target&lt;/mark&gt; 어노테이션으로 적용대상지정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//예시&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;어노테이션 유지정책&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&lt;/li&gt;
-    &lt;li&gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table class=&quot;type&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-        &lt;th&gt;RetenionPolicy 열거 상수&lt;/th&gt;
-        &lt;th&gt;설명&lt;/th&gt;
-
-    &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-    &lt;tr&gt;
-        &lt;td&gt;SOURCE&lt;/td&gt;
-        &lt;td&gt;바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서&lt;br /&gt;어떤 정보를 얻을 목적으로 유지하는 정책&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;CLASS&lt;/td&gt;
-        &lt;td&gt;컴파일러가 바이트 코드를 만들때 까지는 유지&lt;br /&gt;그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.&lt;br /&gt;클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;RUNTIME&lt;/td&gt;
-        &lt;td&gt;바이트 코드 까지 유지가 되고&lt;br /&gt; 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시&lt;br /&gt; 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책&lt;br /&gt; 대부분사용&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3&gt;리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다.&lt;/li&gt;
-    &lt;li&gt;Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;유지 정책 지정방법&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;@Retention 어노테이션으로 유지정책을 지정&lt;/li&gt;
-    &lt;li&gt;@Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Retention&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetentionPolicy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RUNTIME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 어노테이션 적용 대상 방법 @Target 어노테이션으로 적용대상지정 //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } 어노테이션 유지정책 어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것 java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음 RetenionPolicy 열거 상수 설명 SOURCE 바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서어떤 정보를 얻을 목적으로 유지하는 정책 CLASS 컴파일러가 바이트 코드를 만들때 까지는 유지그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책 RUNTIME 바이트 코드 까지 유지가 되고 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책 대부분사용 리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능 클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다. Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨 유지 정책 지정방법 @Retention 어노테이션으로 유지정책을 지정 @Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) @Retention(RetentionPolicy.RUNTIME) public @interface AnnotationName{ } References. https://www.hanbit.co.kr/</summary>
       
 
       
