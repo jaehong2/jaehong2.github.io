@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-24T23:52:35+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">플러스 사이클</title><link href="https://jaehong2.github.io//algorithm-pluscycle" rel="alternate" type="text/html" title="플러스 사이클" /><published>2020-11-24T08:49:00+09:00</published><updated>2020-11-24T08:49:00+09:00</updated><id>https://jaehong2.github.io//algorithm-pluscycle</id><content type="html" xml:base="https://jaehong2.github.io//algorithm-pluscycle">&lt;h2&gt;플러스 사이클&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-27T23:38:38+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">jsp cookie</title><link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="jsp cookie" /><published>2020-11-27T02:02:24+09:00</published><updated>2020-11-27T02:02:24+09:00</updated><id>https://jaehong2.github.io//jsp-cookie.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h2&gt;쿠키&lt;/h2&gt;
+&lt;p&gt;http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.&lt;br /&gt;
+    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.&lt;br /&gt;
+    쿠키는 서버에서 생성하여, &lt;mark&gt;서버가 아닌 클라이언트측에&lt;/mark&gt; 특정 정보를 저장 한다.&lt;br /&gt;
+    4kb로, 300개까지 데이터 정보를 가질 수 있다.
+&lt;/p&gt;
+
+&lt;h2&gt;쿠키 문법&lt;/h2&gt;
+&lt;p&gt; 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 서버가 아닌 클라이언트측에 특정 정보를 저장 한다. 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 문법 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">jsp action tag</title><link href="https://jaehong2.github.io//jsp-action-tag.html" rel="alternate" type="text/html" title="jsp action tag" /><published>2020-11-27T01:41:18+09:00</published><updated>2020-11-27T01:41:18+09:00</updated><id>https://jaehong2.github.io//jsp-action-tag.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-action-tag.html">&lt;h2&gt;액션태그란?&lt;/h2&gt;
+
+&lt;p&gt;JSP 페이지 내에서 동작을 지시하는 태그&lt;/p&gt;
+
+&lt;h2&gt;forward&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- main.jsp --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:foword&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sub.jsp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+    &lt;li&gt;url은 변경되지 않지만 내용은 forward한 .jsp파일을 따른다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;include&lt;/h2&gt;
+&lt;p&gt;현재페이지에서 다른 페이지 삽입&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:include&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;include02.jsp&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;flush =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;param&lt;/h2&gt;
+&lt;p&gt;forward 및 include 태그에 데이터 전달을 목적으로 사용되는 태그&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:foward&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sub.jsp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:param&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcd&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;jsp:param&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pw&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/jsp:foward&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!---값을 받을때-----&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;request.getParameter(&quot;id&quot;);&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;pw =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;request.getParameter(&quot;pw&quot;);&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">액션태그란? JSP 페이지 내에서 동작을 지시하는 태그 forward &amp;lt;!-- main.jsp --&amp;gt; &amp;lt;jsp:foword page=&quot;sub.jsp&quot;/&amp;gt; url은 변경되지 않지만 내용은 forward한 .jsp파일을 따른다. include 현재페이지에서 다른 페이지 삽입 &amp;lt;jsp:include page = &quot;include02.jsp&quot; flush =&quot;true&quot;/&amp;gt; param forward 및 include 태그에 데이터 전달을 목적으로 사용되는 태그 &amp;lt;jsp:foward page=&quot;sub.jsp&quot;&amp;gt; &amp;lt;jsp:param name=&quot;id&quot; value =&quot;abcd&quot;/&amp;gt; &amp;lt;jsp:param name=&quot;pw&quot; value=&quot;11&quot;/&amp;gt; &amp;lt;/jsp:foward&amp;gt; &amp;lt;!---값을 받을때-----&amp;gt; &amp;lt;% id = request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); %&amp;gt; References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">플러스 사이클</title><link href="https://jaehong2.github.io//algorithm-pluscycle" rel="alternate" type="text/html" title="플러스 사이클" /><published>2020-11-24T08:49:00+09:00</published><updated>2020-11-24T08:49:00+09:00</updated><id>https://jaehong2.github.io//algorithm-pluscycle</id><content type="html" xml:base="https://jaehong2.github.io//algorithm-pluscycle">&lt;h2&gt;플러스 사이클&lt;/h2&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -383,167 +430,4 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java Server Page): HTML 파일 내에 JAVA언어를 삽입한 문서 Servlet(Server Applet) JAVA언어로 이루어진 웹프로그래밍 문서 컴포넌트: JSP, Servlet, HTML 등의 웹 어플리케이션을 구현하기 위한 구성요소 Jsp 아키텍쳐 Servlet 특징 동적 웹어플리케이션 컴포넌트 .java 확장자 java thread 이용하여 동작 MVC패턴에서 Controller 맵핑 방법 왜 맵핑을하는가?(Why) :너무 길고, 보안에 노출될수 있기에.. 기존경로: http://localhost:8090/hello/servelt/com.javalec.ex.Helloworld URL맵핑시: http://localhost:8090/hello/HWrold MVC패턴에서 Controller 1. web.xml 이용하는방법 &amp;lt;servlet&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;servlet-class&amp;gt;com.javalec.ex.HelloWorld&amp;lt;/servlet-class&amp;gt; &amp;lt;/servlet&amp;gt; &amp;lt;servlet-mapping&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;url-pattern&amp;gt;/hw&amp;lt;/url-pattern&amp;gt; &amp;lt;/servlet-mapping&amp;gt; servlet-name : 임의의 이름을 만듬 servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력 url-parttern: servlet-class의 매핑할 임의의 이름입력. 반드시 /로시작해야됨! 2. java code의 어노테이션 이용 @WebServlet(&quot;/HWorld!!&quot;)// servlet 상단에 선언 web.xml과 어노테이션 동시사용시 web.xml이 적용된다. References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">상속</title><link href="https://jaehong2.github.io//java-inheritance" rel="alternate" type="text/html" title="상속" /><published>2020-11-13T13:45:00+09:00</published><updated>2020-11-13T13:45:00+09:00</updated><id>https://jaehong2.github.io//java-inheritance</id><content type="html" xml:base="https://jaehong2.github.io//java-inheritance">&lt;h1&gt;상속(Inheritance)&lt;/h1&gt;
-&lt;p&gt;
-&lt;blockquote&gt;
-    &lt;ul&gt;
-        &lt;li&gt;자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것&lt;/li&gt;
-        &lt;li&gt;상속 대상 : 부모의 필드 &amp;amp; 메소드&lt;/li&gt;
-        &lt;li&gt;개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!!&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/p&gt;
-
-&lt;h2&gt;상속 대상의 제한&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;부모클래스의 &lt;b&gt;private&lt;/b&gt; 접근 제한을 가지는 필드와 메소드는 제외&lt;/li&gt;
-    &lt;li&gt;부모클래스가 &lt;b&gt;다른 패키지에 있을때&lt;/b&gt; default 접근 제한을 가지는 필드와 메소드는 제외&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;extends 키워드&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;부모클래스를 상속받기위한 키워드&lt;/li&gt;
-    &lt;li&gt;자바는 &lt;mark&gt;다중상속을 허락하지 않아&lt;/mark&gt; 한클래스에 하나만 상속가능&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;자식 객체를 생성하면 부모 객체도 생성될까?&lt;/h2&gt;
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;정답은 생성된다!!&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다.&lt;/li&gt;
-    &lt;li&gt;부모 &lt;mark&gt;생성자&lt;/mark&gt;가 호출이 완료되고 자식 &lt;mark&gt;생성자&lt;/mark&gt;가 나중에 호출 완료된다.&lt;/li&gt;
-    &lt;li&gt;자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;부모 생성자 호출 super()&lt;/h2&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출&lt;/li&gt;
-    &lt;li&gt;부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다.&lt;/li&gt;
-    &lt;li&gt;반드시 자식생성자 첫 줄에 위치 해야된다.&lt;/li&gt;
-    &lt;li&gt;자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentNo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;studentNo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentNo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jaehong&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;93-12-23&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함!&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;Override 매소드 재정의&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-    &lt;li&gt;부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다.&lt;/li&gt;
-    &lt;li&gt;접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default &lt;b&gt;(X)&lt;/b&gt; 반대로는 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;@Override 어노테이션 &lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시&lt;/li&gt;
-    &lt;li&gt;접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default &lt;b&gt;(X)&lt;/b&gt; 반대로는 가능&lt;/li&gt;
-    &lt;li&gt;super.부모메소드() : 부모메소드 호출방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;다형성(Ployorphism)&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다.&lt;/li&gt;
-    &lt;li&gt;A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태&lt;/li&gt;
-    &lt;li&gt;자식 타입은 부모타입으로 자동 타입 변환된다.&lt;/li&gt;
-    &lt;li&gt;객체를 부품화시킨다.! (타이어 예시 생각!)&lt;/li&gt;
-    &lt;li&gt;&lt;mark&gt;부모 클래스 변수 = 자식클래스타입&lt;/mark&gt; 부모 클래스 변수는 자식과 같은 주소를 가진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;자동 타입 변환 이후 효과&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;부모 클래스에 선언된 필드와 메소드만 접근 가능&lt;/li&gt;
-    &lt;li&gt;자식 클래스의 재정이된 메소드가 호출된다. (다형성관련)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){};&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1번 !!!!!!!!!&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;////////////////////&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){..}&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//Overrideing // 2번 !!!!!!!!!&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChildEx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Parent로 자동 타입 변환&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 호출불가능&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
-&lt;h2&gt;자식 타입인지 확인후 강제 타입&lt;/h2&gt;
-&lt;p&gt;&lt;mark&gt;instanceof&lt;/mark&gt;&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//매개변수로 들어오는 객체가 Child 인지확인&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;!-- 출처 --&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">상속(Inheritance) 자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp;amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근 제한을 가지는 필드와 메소드는 제외 부모클래스가 다른 패키지에 있을때 default 접근 제한을 가지는 필드와 메소드는 제외 extends 키워드 부모클래스를 상속받기위한 키워드 자바는 다중상속을 허락하지 않아 한클래스에 하나만 상속가능 자식 객체를 생성하면 부모 객체도 생성될까? 정답은 생성된다!! 자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다. 부모 생성자가 호출이 완료되고 자식 생성자가 나중에 호출 완료된다. 자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 부모 생성자 호출 super() super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출 부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다. 반드시 자식생성자 첫 줄에 위치 해야된다. 자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!! public Student(String name, String ssn, int studentNo) { this.studentNo =studentNo; super(&quot;jaehong&quot;,&quot;93-12-23&quot;); //컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함! } Override 매소드 재정의 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다. 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 @Override 어노테이션 컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 super.부모메소드() : 부모메소드 호출방법 다형성(Ployorphism) 같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다. A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태 자식 타입은 부모타입으로 자동 타입 변환된다. 객체를 부품화시킨다.! (타이어 예시 생각!) 부모 클래스 변수 = 자식클래스타입 부모 클래스 변수는 자식과 같은 주소를 가진다. 자동 타입 변환 이후 효과 부모 클래스에 선언된 필드와 메소드만 접근 가능 자식 클래스의 재정이된 메소드가 호출된다. (다형성관련) class Parent{ void method1(){}; void method2(){}; // 1번 !!!!!!!!! } //////////////////// class Child extends Parent{ void method2(){..}//Overrideing // 2번 !!!!!!!!! void method3(){} } class ChildEx{ public static void main(String args[]){ Child child = new Child(); Parent parent = child; //Parent로 자동 타입 변환 parent.method1(); parent.method2(); // 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요 parent.method3(); // 호출불가능 } } 자식 타입인지 확인후 강제 타입 instanceof public void method(Parent parent) { if (parent instanceof Child) { //매개변수로 들어오는 객체가 Child 인지확인 Child Child = (Child) parent; } } References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">메소드에서 매개변수의 수를 모르는 경우</title><link href="https://jaehong2.github.io//java-no-parameter-number" rel="alternate" type="text/html" title="메소드에서 매개변수의 수를 모르는 경우" /><published>2020-11-12T18:31:00+09:00</published><updated>2020-11-12T18:31:00+09:00</updated><id>https://jaehong2.github.io//java-no-parameter-number</id><content type="html" xml:base="https://jaehong2.github.io//java-no-parameter-number">&lt;h4&gt;메소드에서 매개변수의 수를 모르는 경우&lt;/h4&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용&lt;/li&gt;
-    &lt;li&gt;매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parameter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Cal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum1 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//매개변수의 개수를 모를때&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">메소드에서 매개변수의 수를 모르는 경우 메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용 매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성 public class Parameter { public static void main(String args[]) { Cal cal = new Cal(); int[] data = new int[] {1,2,3}; System.out.println(&quot;sum1 : &quot; + cal.sum1(data)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3,4,5)); } } class Cal{ int sum1(int[] n) { int sum=0; for(int i :n) { sum += i; } return sum; } int sum2(int ... n) { //매개변수의 개수를 모를때 int sum=0; for(int i : n) { sum += i; } return sum; } }</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java Server Page): HTML 파일 내에 JAVA언어를 삽입한 문서 Servlet(Server Applet) JAVA언어로 이루어진 웹프로그래밍 문서 컴포넌트: JSP, Servlet, HTML 등의 웹 어플리케이션을 구현하기 위한 구성요소 Jsp 아키텍쳐 Servlet 특징 동적 웹어플리케이션 컴포넌트 .java 확장자 java thread 이용하여 동작 MVC패턴에서 Controller 맵핑 방법 왜 맵핑을하는가?(Why) :너무 길고, 보안에 노출될수 있기에.. 기존경로: http://localhost:8090/hello/servelt/com.javalec.ex.Helloworld URL맵핑시: http://localhost:8090/hello/HWrold MVC패턴에서 Controller 1. web.xml 이용하는방법 &amp;lt;servlet&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;servlet-class&amp;gt;com.javalec.ex.HelloWorld&amp;lt;/servlet-class&amp;gt; &amp;lt;/servlet&amp;gt; &amp;lt;servlet-mapping&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;url-pattern&amp;gt;/hw&amp;lt;/url-pattern&amp;gt; &amp;lt;/servlet-mapping&amp;gt; servlet-name : 임의의 이름을 만듬 servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력 url-parttern: servlet-class의 매핑할 임의의 이름입력. 반드시 /로시작해야됨! 2. java code의 어노테이션 이용 @WebServlet(&quot;/HWorld!!&quot;)// servlet 상단에 선언 web.xml과 어노테이션 동시사용시 web.xml이 적용된다. References. https://www.hanbit.co.kr/</summary></entry></feed>
