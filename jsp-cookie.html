@@ -207,6 +207,26 @@ into the {body} of the default.hbs template -->
 
 <h2>쿠키 문법</h2>
 <p> 쿠키 생성 -&gt; 속성 설정 -&gt; response 객체에 쿠키 탑재</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;</span><span class="err">%</span>
+    <span class="na">Cookie</span> <span class="na">cookie =</span><span class="err"> </span><span class="s">new</span> <span class="na">Cookie</span><span class="err">("</span><span class="na">id</span><span class="err">",</span><span class="na">id</span><span class="err">);</span> <span class="err">//쿠키</span> <span class="na">name</span><span class="err">,</span> <span class="na">value</span>
+    <span class="na">cookie</span><span class="err">.</span><span class="na">setMaxAge</span><span class="err">(</span><span class="na">60</span><span class="err">);</span> <span class="err">//</span><span class="na">60</span><span class="err">초간</span> <span class="err">지속</span>
+    <span class="na">response</span><span class="err">.</span><span class="na">addCookie</span><span class="err">(</span><span class="na">cookie</span><span class="err">);</span> <span class="err">//쿠키탑재</span>
+    <span class="na">response</span><span class="err">.</span><span class="na">sendRedirect</span><span class="err">("</span><span class="na">abc</span><span class="err">.</span><span class="na">jsp</span><span class="err">")</span> <span class="err">//</span> <span class="err">포워딩</span>
+    <span class="err">%</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--forwarding 후--&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span>
+    <span class="na">Cookie</span><span class="err">[]</span> <span class="na">cookies =</span><span class="err"> </span><span class="s">request.getCookies();</span> <span class="err">//</span> <span class="err">포워딩된</span> <span class="err">쿠키객체</span>
+
+    <span class="na">for</span><span class="err">(</span><span class="na">int</span> <span class="na">i=</span><span class="s">0;</span> <span class="na">i</span> <span class="err">&lt;</span> <span class="na">cookies</span><span class="err">.</span><span class="na">length</span><span class="err">;</span> <span class="na">i</span><span class="err">++){</span>
+        <span class="na">String</span> <span class="na">id =</span><span class="err"> </span><span class="s">cookies[i].getValue();</span>
+    <span class="err">}</span>
+</code></pre></div></div>
+
 <h1>References.</h1>
 <ul>
     <li><a href="http://www.ssitcenter.com/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
