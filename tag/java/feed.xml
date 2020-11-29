@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-28T23:42:45+09:00</updated>
+  <updated>2020-11-29T23:57:49+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -32,15 +32,19 @@
 
   
     <entry>
-      <title type="html">jsp cookie</title>
-      <link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="jsp cookie" />
+      <title type="html">cookie &amp;amp; session</title>
+      <link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="cookie &amp; session" />
       <published>2020-11-27T02:02:24+09:00</published>
       <updated>2020-11-27T02:02:24+09:00</updated>
       <id>https://jaehong2.github.io//jsp-cookie.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h2&gt;쿠키&lt;/h2&gt;
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;쿠키&lt;/h2&gt;
 &lt;p&gt;http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.&lt;br /&gt;
     연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.&lt;br /&gt;
-    쿠키는 서버에서 생성하여, &lt;mark&gt;서버가 아닌 클라이언트측에&lt;/mark&gt; 특정 정보를 저장 한다.&lt;br /&gt;
+    쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 &lt;br /&gt;
     4kb로, 300개까지 데이터 정보를 가질 수 있다.
 &lt;/p&gt;
 
@@ -64,6 +68,78 @@
     &lt;span class=&quot;na&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;++){&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;cookies[i].getValue();&lt;/span&gt;
     &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 궁금한점 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;쿠키가 보안상으로 취약한 이유 &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;세션&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단&lt;/li&gt;
+    &lt;li&gt;서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재)&lt;/li&gt;
+    &lt;li&gt;세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2&gt;세션 문법&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다.&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt; 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정&lt;/p&gt;
+
+&lt;p&gt;login.html&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;action =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;loginOk.jsp&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    아이디: &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+    비밀번호: &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pw&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;로그인&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;loginOk.jsp&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%!&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pw&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;12345&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendRedirect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;welcome.jsp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendRedirect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;login.html&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;welcome.jsp&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttributeNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMoreElements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;님 안녕하세요.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;br/&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;logout.jsp&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttributeNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMoreElements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;removeAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1&gt;References.&lt;/h1&gt;
@@ -90,7 +166,7 @@
       
 
       
-        <summary type="html">쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 서버가 아닌 클라이언트측에 특정 정보를 저장 한다. 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 문법 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } References. https://www.hanbit.co.kr/</summary>
+        <summary type="html">쿠키와 세션 쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 문법 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 궁금한점 쿠키가 보안상으로 취약한 이유 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 세션 문법 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; References. https://www.hanbit.co.kr/</summary>
       
 
       
@@ -98,8 +174,8 @@
     </entry>
   
     <entry>
-      <title type="html">jsp action tag</title>
-      <link href="https://jaehong2.github.io//jsp-action-tag.html" rel="alternate" type="text/html" title="jsp action tag" />
+      <title type="html">action tag</title>
+      <link href="https://jaehong2.github.io//jsp-action-tag.html" rel="alternate" type="text/html" title="action tag" />
       <published>2020-11-27T01:41:18+09:00</published>
       <updated>2020-11-27T01:41:18+09:00</updated>
       <id>https://jaehong2.github.io//jsp-action-tag.html</id>
@@ -296,8 +372,8 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">jsp Servelt 3</title>
-      <link href="https://jaehong2.github.io//jsp-servlet-3.html" rel="alternate" type="text/html" title="jsp Servelt 3" />
+      <title type="html">Servelt 3</title>
+      <link href="https://jaehong2.github.io//jsp-servlet-3.html" rel="alternate" type="text/html" title="Servelt 3" />
       <published>2020-11-18T09:41:18+09:00</published>
       <updated>2020-11-18T09:41:18+09:00</updated>
       <id>https://jaehong2.github.io//jsp-servlet-3.html</id>
@@ -362,8 +438,8 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">jsp Servelt 2</title>
-      <link href="https://jaehong2.github.io//jsp-servlet-2.html" rel="alternate" type="text/html" title="jsp Servelt 2" />
+      <title type="html">Servelt 2</title>
+      <link href="https://jaehong2.github.io//jsp-servlet-2.html" rel="alternate" type="text/html" title="Servelt 2" />
       <published>2020-11-17T12:03:18+09:00</published>
       <updated>2020-11-17T12:03:18+09:00</updated>
       <id>https://jaehong2.github.io//jsp-servlet-2.html</id>
@@ -432,8 +508,8 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">jsp Servelt 1</title>
-      <link href="https://jaehong2.github.io//jsp-servlet-1.html" rel="alternate" type="text/html" title="jsp Servelt 1" />
+      <title type="html">Servelt 1</title>
+      <link href="https://jaehong2.github.io//jsp-servlet-1.html" rel="alternate" type="text/html" title="Servelt 1" />
       <published>2020-11-17T04:33:00+09:00</published>
       <updated>2020-11-17T04:33:00+09:00</updated>
       <id>https://jaehong2.github.io//jsp-servlet-1.html</id>

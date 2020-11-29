@@ -187,16 +187,16 @@ into the {body} of the default.hbs template -->
     window.store = {
     
     "jsp-cookie-html": {
-        "title": "jsp cookie",
+        "title": "cookie &amp; session",
             "author": "jaehong",
             "category": "",
-            "content": "쿠키http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.    쿠키는 서버에서 생성하여, 서버가 아닌 클라이언트측에 특정 정보를 저장 한다.    4kb로, 300개까지 데이터 정보를 가질 수 있다.쿠키 문법 쿠키 생성 -&gt; 속성 설정 -&gt; response 객체에 쿠키 탑재    &lt;%    Cookie cookie = new Cookie(\"id\",id); //쿠키 name, value    cookie.setMaxAge(60); //60초간 지속    response.addCookie(cookie); //쿠키탑재    response.sendRedirect(\"abc.jsp\") // 포워딩    %&gt;&lt;!--forwarding 후--&gt;&lt;%    Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체    for(int i=0; i &lt; cookies.length; i++){        String id = cookies[i].getValue();    }References.    https://www.hanbit.co.kr/",
+            "content": "쿠키와 세션쿠키http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.    쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장     4kb로, 300개까지 데이터 정보를 가질 수 있다.쿠키 문법 쿠키 생성 -&gt; 속성 설정 -&gt; response 객체에 쿠키 탑재    &lt;%    Cookie cookie = new Cookie(\"id\",id); //쿠키 name, value    cookie.setMaxAge(60); //60초간 지속    response.addCookie(cookie); //쿠키탑재    response.sendRedirect(\"abc.jsp\") // 포워딩    %&gt;&lt;!--forwarding 후--&gt;&lt;%    Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체    for(int i=0; i &lt; cookies.length; i++){        String id = cookies[i].getValue();    } 궁금한점 쿠키가 보안상으로 취약한 이유 세션    쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단    서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재)    세션은 서버에서만 접근이 가능 -&gt; 보안이 좋다. , 데이터에 한계가 없다.세션 문법브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&gt; session 자동 생성 -&gt; Session 내부 객체로 속성 설정login.html&lt;form  action =\"loginOk.jsp\" method=\"post\"&gt;    아이디: &lt;input type=\"text\" name =\"id\" size=\"10\"&gt;&lt;br/&gt;    비밀번호: &lt;input type=\"password\" name =\"pw\" size=\"10\"&gt;&lt;br/&gt;    &lt;input type=\"submit\" value=\"로그인\"&gt;&lt;/form&gt;loginOk.jsp&lt;%!    String id,pw;%&gt;&lt;%    id =request.getParameter(\"id\");    pw = request.getParameter(\"pw\");    if(id.equals(\"abcde\")&amp;&amp; pw.equals(\"12345\")){        session.setAttribute(\"id\",id);        response.sendRedirect(\"welcome.jsp\");    }else{        response.sendRedirect(\"login.html\");    }%&gt;welcome.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){        String sName = enumeration.nextElement().toString();        String sValue = (String)session.getAttribute(sName);        if(sValue.equals(\"abcde\")){            out.println(sValue + \"님 안녕하세요.\" +\"&lt;br/&gt;\");        }    }%&gt;logout.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){    String sName = enumeration.nextElement().toString();    String sValue = (String)session.getAttribute(sName);    if(sValue.equals(\"abcde\")) session.removeAttribute(sName);    }%&gt;References.    https://www.hanbit.co.kr/",
         "url": "/jsp-cookie.html"
     }
     ,
     
     "jsp-action-tag-html": {
-        "title": "jsp action tag",
+        "title": "action tag",
             "author": "jaehong",
             "category": "",
             "content": "액션태그란?JSP 페이지 내에서 동작을 지시하는 태그forward&lt;!-- main.jsp --&gt;&lt;jsp:foword page=\"sub.jsp\"/&gt;    url은 변경되지 않지만 내용은 forward한 .jsp파일을 따른다.include현재페이지에서 다른 페이지 삽입&lt;jsp:include page = \"include02.jsp\" flush =\"true\"/&gt;paramforward 및 include 태그에 데이터 전달을 목적으로 사용되는 태그&lt;jsp:foward page=\"sub.jsp\"&gt;    &lt;jsp:param name=\"id\" value =\"abcd\"/&gt;    &lt;jsp:param name=\"pw\" value=\"11\"/&gt;&lt;/jsp:foward&gt;&lt;!---값을 받을때-----&gt;&lt;%    id = request.getParameter(\"id\");    pw = request.getParameter(\"pw\");%&gt;References.    https://www.hanbit.co.kr/",
@@ -241,7 +241,7 @@ into the {body} of the default.hbs template -->
     ,
     
     "jsp-servlet-3-html": {
-        "title": "jsp Servelt 3",
+        "title": "Servelt 3",
             "author": "jaehong",
             "category": "",
             "content": "Servlet 초기화 파라미터 : ServletConfig특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..    이러한 데이터들을 초기화 파라미터라고 함1. web.xml 사용해서 초기화2. Servlet 파일 사용해서 초기화해당 Servlet에 @WebInitParam 사용해서 초기화ServletContext 모든 서블릿에  데이터를 공유 할 시 (web.xml에 기술)웹어플리케이션 생명주기 감시 : ServletContextListner xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나순서References.    https://www.hanbit.co.kr/",
@@ -250,7 +250,7 @@ into the {body} of the default.hbs template -->
     ,
     
     "jsp-servlet-2-html": {
-        "title": "jsp Servelt 2",
+        "title": "Servelt 2",
             "author": "jaehong",
             "category": "",
             "content": "Servlet 작동순서클라이언트에서 servlet 요청이 들어오면 서버는     servlet 컨테이너를 만들고, 요청이 있을때 마다 스레드가 생성Servlet 라이프 사이클(생명주기)    한번생성된 객체는 재사용 -&gt; 요청이 필요할때마다 객체를 생성하는게 아니라서 속도빠름@PostConstruct 선처리: 객체생성과 init()호출사이의 단계에서 메소드 실행@PreDestroy 후처리: destroy() 호출 후에 메소드 실행HTML form 태그Form 태그의 submit 버튼을 클릭하여 데이터를 서버로 전송하면, 해당파일(Servlet)에서는 HttpRequest 객체를 이용하여 Parameter 값을 얻을 수 있다.form 태그에서 Servlet 까지 흐름도한글처리 방식References.    https://www.hanbit.co.kr/",
@@ -259,7 +259,7 @@ into the {body} of the default.hbs template -->
     ,
     
     "jsp-servlet-1-html": {
-        "title": "jsp Servelt 1",
+        "title": "Servelt 1",
             "author": "jaehong",
             "category": "",
             "content": "ServletServlet 클래스는 HttpServlet 클래스를 상속받음public class HelloWorld extends HttpServlet{}요청처리 및 응답처리객체를 톰캣에서 받음protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {//request 요청처리객체, response 응답처리 객체response.setContentType(\"text/html\"); //응답 처리시 html로PrintWriter writer = response.getWriter();GET &amp;P POST방식클라이언트에서 WAS로 요청(request)하는 2가지 방법html 태그안에 method = GET or POST 정함1.GET 방식    서블릿에서 doGet 메소드 호출    URL값으로 정보가 전송되어 보안취약2.POST 방식    서블릿에서 doPost 메소드 호출    header를 이용하여 정보가 전송되어 보안강함 깨달은것 response.setContentType(\"text/html\"); 이부분을 잘못입력하면response.setContentType(\"html/text\"); 이렇게입력시 실행시키면 웹페이지가 안뜨고 파일을 다운로드 받을 수도있다.Context PathWAS에서 웹어플리케이션을 구분하기 위한 path   이클립스에서 프로젝트생성시  자동으로 server.xml에 추가 References.    https://www.hanbit.co.kr/",
