@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-29T23:57:49+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">cookie &amp;amp; session</title><link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="cookie &amp; session" /><published>2020-11-27T02:02:24+09:00</published><updated>2020-11-27T02:02:24+09:00</updated><id>https://jaehong2.github.io//jsp-cookie.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-11-30T23:45:32+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">IT Study</title><subtitle>오늘의 공부기록</subtitle><entry><title type="html">exception</title><link href="https://jaehong2.github.io//jsp-bean.html" rel="alternate" type="text/html" title="exception" /><published>2020-11-30T05:30:44+09:00</published><updated>2020-11-30T05:30:44+09:00</updated><id>https://jaehong2.github.io//jsp-bean.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-bean.html">&lt;h2&gt;빈 태그&lt;/h2&gt;
+
+&lt;p&gt;Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스&lt;/p&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">빈 태그 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스 References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">exception</title><link href="https://jaehong2.github.io//jsp-exception.html" rel="alternate" type="text/html" title="exception" /><published>2020-11-29T23:15:24+09:00</published><updated>2020-11-29T23:15:24+09:00</updated><id>https://jaehong2.github.io//jsp-exception.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-exception.html">&lt;h1&gt;예외처리&lt;/h1&gt;
+
+&lt;h2&gt;1.페이지 지시자를 통한 예외 처리&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;errorPage.jsp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isErrorPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;해당&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;받을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;은&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;정상적인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;페이지를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;말함&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;예외페이지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;2.web.xml을 통한 예외 처리&lt;/h2&gt;
+&lt;p&gt;web.xml&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error404&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">예외처리 1.페이지 지시자를 통한 예외 처리 &amp;lt;%@ page errorPage = &quot;errorPage.jsp&quot; %&amp;gt; //1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력 &amp;lt;%@ page isErrorPage = &quot;true&quot; %&amp;gt; &amp;lt;!-- 해당page는 error를 받을 수 있습니다.--&amp;gt; &amp;lt;% response.setStatus(200); %&amp;gt; &amp;lt;!-- 200은 정상적인 페이지를 말함--&amp;gt; &amp;lt;body&amp;gt; 예외페이지 입니다.&amp;lt;br/&amp;gt; &amp;lt;% exception.getMessage(); %&amp;gt; &amp;lt;/body&amp;gt; 2.web.xml을 통한 예외 처리 web.xml &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;404&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error404.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;500&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error500.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">cookie &amp;amp; session</title><link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="cookie &amp; session" /><published>2020-11-27T02:02:24+09:00</published><updated>2020-11-27T02:02:24+09:00</updated><id>https://jaehong2.github.io//jsp-cookie.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -406,124 +443,4 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Servlet 작동순서 클라이언트에서 servlet 요청이 들어오면 서버는 servlet 컨테이너를 만들고, 요청이 있을때 마다 스레드가 생성 Servlet 라이프 사이클(생명주기) 한번생성된 객체는 재사용 -&amp;gt; 요청이 필요할때마다 객체를 생성하는게 아니라서 속도빠름 @PostConstruct 선처리: 객체생성과 init()호출사이의 단계에서 메소드 실행 @PreDestroy 후처리: destroy() 호출 후에 메소드 실행 HTML form 태그 Form 태그의 submit 버튼을 클릭하여 데이터를 서버로 전송하면, 해당파일(Servlet)에서는 HttpRequest 객체를 이용하여 Parameter 값을 얻을 수 있다. form 태그에서 Servlet 까지 흐름도 한글처리 방식 References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">Servelt 1</title><link href="https://jaehong2.github.io//jsp-servlet-1.html" rel="alternate" type="text/html" title="Servelt 1" /><published>2020-11-17T04:33:00+09:00</published><updated>2020-11-17T04:33:00+09:00</updated><id>https://jaehong2.github.io//jsp-servlet-1.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-1.html">&lt;h2&gt;Servlet&lt;/h2&gt;
-
-&lt;p&gt;&lt;mark&gt;Servlet 클래스는 HttpServlet 클래스를 상속받음&lt;/mark&gt;&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;요청처리 및 응답처리객체를 톰캣에서 받음&lt;/h2&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doGet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpServletResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ServletException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//request 요청처리객체, response 응답처리 객체&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/html&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//응답 처리시 html로&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;PrintWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;GET &amp;amp;P POST방식&lt;/h2&gt;
-
-&lt;p&gt;클라이언트에서 WAS로 &lt;mark&gt;요청(request)&lt;/mark&gt;하는 2가지 방법
-html 태그안에 method = GET or POST 정함&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;1.GET 방식&lt;/b&gt;&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;서블릿에서 doGet 메소드 호출&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;URL값으로 정보가 전송되어 보안취약&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;b&gt;2.POST 방식&lt;/b&gt;&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;서블릿에서 doPost 메소드 호출&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;header를 이용하여 정보가 전송되어 보안강함&lt;/b&gt;&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 깨달은것 &lt;/strong&gt;&lt;/p&gt;
-&lt;div&gt;
-response.setContentType(&quot;text/html&quot;); 이부분을 잘못입력하면
-&lt;br /&gt;
-response.setContentType(&quot;html/text&quot;); 이렇게입력시
- 실행시키면 웹페이지가 안뜨고 파일을 다운로드 받을 수도있다.
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;Context Path&lt;/h2&gt;
-&lt;p&gt;WAS에서 웹어플리케이션을 구분하기 위한 path&lt;br /&gt;
-   이클립스에서 프로젝트생성시  &lt;mark&gt;자동으로 server.xml&lt;/mark&gt;에 추가 &lt;/p&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Servlet Servlet 클래스는 HttpServlet 클래스를 상속받음 public class HelloWorld extends HttpServlet{ } 요청처리 및 응답처리객체를 톰캣에서 받음 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { //request 요청처리객체, response 응답처리 객체 response.setContentType(&quot;text/html&quot;); //응답 처리시 html로 PrintWriter writer = response.getWriter(); GET &amp;amp;P POST방식 클라이언트에서 WAS로 요청(request)하는 2가지 방법 html 태그안에 method = GET or POST 정함 1.GET 방식 서블릿에서 doGet 메소드 호출 URL값으로 정보가 전송되어 보안취약 2.POST 방식 서블릿에서 doPost 메소드 호출 header를 이용하여 정보가 전송되어 보안강함 깨달은것 response.setContentType(&quot;text/html&quot;); 이부분을 잘못입력하면 response.setContentType(&quot;html/text&quot;); 이렇게입력시 실행시키면 웹페이지가 안뜨고 파일을 다운로드 받을 수도있다. Context Path WAS에서 웹어플리케이션을 구분하기 위한 path 이클립스에서 프로젝트생성시 자동으로 server.xml에 추가 References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">jsp 입문</title><link href="https://jaehong2.github.io//jsp-introduce.html" rel="alternate" type="text/html" title="jsp 입문" /><published>2020-11-16T18:33:00+09:00</published><updated>2020-11-16T18:33:00+09:00</updated><id>https://jaehong2.github.io//jsp-introduce.html</id><content type="html" xml:base="https://jaehong2.github.io//jsp-introduce.html">&lt;h1&gt;JSP&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;프로토콜 : 네트워크상에서 약속한 통신 규약 &lt;/li&gt;
-    &lt;li&gt;(Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷)&lt;/li&gt;
-    &lt;li&gt;IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 &lt;/li&gt;
-    &lt;li&gt;DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 &lt;/li&gt;
-    &lt;li&gt;Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Java 웹&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.1.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;JSP(java Server Page): HTML 파일 내에 JAVA언어를 삽입한 문서&lt;/li&gt;
-    &lt;li&gt;Servlet(Server Applet) JAVA언어로 이루어진 웹프로그래밍 문서&lt;/li&gt;
-    &lt;li&gt;컴포넌트: JSP, Servlet, HTML 등의 웹 어플리케이션을 구현하기 위한 구성요소&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;Jsp 아키텍쳐&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.2.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;Servlet 특징&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;동적 웹어플리케이션 컴포넌트&lt;/li&gt;
-    &lt;li&gt;.java 확장자&lt;/li&gt;
-    &lt;li&gt;java thread 이용하여 동작&lt;/li&gt;
-    &lt;li&gt;MVC패턴에서 Controller&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;맵핑 방법&lt;/h2&gt;
-&lt;h3&gt;왜 맵핑을하는가?(Why) :너무 길고, 보안에 노출될수 있기에..&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;기존경로: http://localhost:8090/hello/servelt/com.javalec.ex.Helloworld&lt;/li&gt;
-    &lt;li&gt;URL맵핑시: http://localhost:8090/hello/HWrold&lt;/li&gt;
-    &lt;li&gt;MVC패턴에서 Controller&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;mark&gt;1. web.xml 이용하는방법&lt;/mark&gt;&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;helloworld&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;javalec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;helloworld&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-    &lt;li&gt;servlet-name : 임의의 이름을 만듬&lt;/li&gt;
-    &lt;li&gt;servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력&lt;/li&gt;
-    &lt;li&gt;url-parttern: servlet-class의 매핑할 임의의 이름입력. 반드시 &lt;mark&gt;/&lt;/mark&gt;로시작해야됨!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;mark&gt;2. java code의 어노테이션 이용&lt;/mark&gt;&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@WebServlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/HWorld!!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// servlet 상단에 선언&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; web.xml과 어노테이션 동시사용시 web.xml이 적용된다.  &lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java Server Page): HTML 파일 내에 JAVA언어를 삽입한 문서 Servlet(Server Applet) JAVA언어로 이루어진 웹프로그래밍 문서 컴포넌트: JSP, Servlet, HTML 등의 웹 어플리케이션을 구현하기 위한 구성요소 Jsp 아키텍쳐 Servlet 특징 동적 웹어플리케이션 컴포넌트 .java 확장자 java thread 이용하여 동작 MVC패턴에서 Controller 맵핑 방법 왜 맵핑을하는가?(Why) :너무 길고, 보안에 노출될수 있기에.. 기존경로: http://localhost:8090/hello/servelt/com.javalec.ex.Helloworld URL맵핑시: http://localhost:8090/hello/HWrold MVC패턴에서 Controller 1. web.xml 이용하는방법 &amp;lt;servlet&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;servlet-class&amp;gt;com.javalec.ex.HelloWorld&amp;lt;/servlet-class&amp;gt; &amp;lt;/servlet&amp;gt; &amp;lt;servlet-mapping&amp;gt; &amp;lt;servlet-name&amp;gt;helloworld&amp;lt;/servlet-name&amp;gt; &amp;lt;url-pattern&amp;gt;/hw&amp;lt;/url-pattern&amp;gt; &amp;lt;/servlet-mapping&amp;gt; servlet-name : 임의의 이름을 만듬 servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력 url-parttern: servlet-class의 매핑할 임의의 이름입력. 반드시 /로시작해야됨! 2. java code의 어노테이션 이용 @WebServlet(&quot;/HWorld!!&quot;)// servlet 상단에 선언 web.xml과 어노테이션 동시사용시 web.xml이 적용된다. References. https://www.hanbit.co.kr/</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">Servlet 작동순서 클라이언트에서 servlet 요청이 들어오면 서버는 servlet 컨테이너를 만들고, 요청이 있을때 마다 스레드가 생성 Servlet 라이프 사이클(생명주기) 한번생성된 객체는 재사용 -&amp;gt; 요청이 필요할때마다 객체를 생성하는게 아니라서 속도빠름 @PostConstruct 선처리: 객체생성과 init()호출사이의 단계에서 메소드 실행 @PreDestroy 후처리: destroy() 호출 후에 메소드 실행 HTML form 태그 Form 태그의 submit 버튼을 클릭하여 데이터를 서버로 전송하면, 해당파일(Servlet)에서는 HttpRequest 객체를 이용하여 Parameter 값을 얻을 수 있다. form 태그에서 Servlet 까지 흐름도 한글처리 방식 References. https://www.hanbit.co.kr/</summary></entry></feed>

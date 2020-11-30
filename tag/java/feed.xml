@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-11-29T23:57:49+09:00</updated>
+  <updated>2020-11-30T23:45:32+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -30,6 +30,111 @@
   
   
 
+  
+    <entry>
+      <title type="html">exception</title>
+      <link href="https://jaehong2.github.io//jsp-bean.html" rel="alternate" type="text/html" title="exception" />
+      <published>2020-11-30T05:30:44+09:00</published>
+      <updated>2020-11-30T05:30:44+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-bean.html</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-bean.html">&lt;h2&gt;빈 태그&lt;/h2&gt;
+
+&lt;p&gt;Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스&lt;/p&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">빈 태그 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스 References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">exception</title>
+      <link href="https://jaehong2.github.io//jsp-exception.html" rel="alternate" type="text/html" title="exception" />
+      <published>2020-11-29T23:15:24+09:00</published>
+      <updated>2020-11-29T23:15:24+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-exception.html</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-exception.html">&lt;h1&gt;예외처리&lt;/h1&gt;
+
+&lt;h2&gt;1.페이지 지시자를 통한 예외 처리&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;errorPage.jsp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isErrorPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;해당&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;받을&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;은&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;정상적인&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;페이지를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;말함&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;예외페이지&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;2.web.xml을 통한 예외 처리&lt;/h2&gt;
+&lt;p&gt;web.xml&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error404&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">예외처리 1.페이지 지시자를 통한 예외 처리 &amp;lt;%@ page errorPage = &quot;errorPage.jsp&quot; %&amp;gt; //1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력 &amp;lt;%@ page isErrorPage = &quot;true&quot; %&amp;gt; &amp;lt;!-- 해당page는 error를 받을 수 있습니다.--&amp;gt; &amp;lt;% response.setStatus(200); %&amp;gt; &amp;lt;!-- 200은 정상적인 페이지를 말함--&amp;gt; &amp;lt;body&amp;gt; 예외페이지 입니다.&amp;lt;br/&amp;gt; &amp;lt;% exception.getMessage(); %&amp;gt; &amp;lt;/body&amp;gt; 2.web.xml을 통한 예외 처리 web.xml &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;404&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error404.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;500&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error500.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">cookie &amp;amp; session</title>
@@ -851,224 +956,6 @@ response.setContentType(&quot;html/text&quot;); 이렇게입력시
 
       
         <summary type="html">상속(Inheritance) 자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp;amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근 제한을 가지는 필드와 메소드는 제외 부모클래스가 다른 패키지에 있을때 default 접근 제한을 가지는 필드와 메소드는 제외 extends 키워드 부모클래스를 상속받기위한 키워드 자바는 다중상속을 허락하지 않아 한클래스에 하나만 상속가능 자식 객체를 생성하면 부모 객체도 생성될까? 정답은 생성된다!! 자식 객체 생성시 부모 객체부터 생성되고 자식 객체가 생성된다. 부모 생성자가 호출이 완료되고 자식 생성자가 나중에 호출 완료된다. 자식 생성자가 부모생성자를 호출 하지 않아도 컴파일러가 자동적으로 super()를 통해 부모의 기본생성자를 호출 부모 생성자 호출 super() super(매개값)은 매개값과 동일한 타입, 개수, 순서가 맞는 부모 생성자 호출 부모 클래스에 기본생성자가 없다면 필수적으로 부모클래스에 맞는(매개변수) 생성자를 작성해야된다. 반드시 자식생성자 첫 줄에 위치 해야된다. 자식 생성자를 호출해서 자식객체를 생성시 부모 객체의 생성자 부터 호출한다.!! public Student(String name, String ssn, int studentNo) { this.studentNo =studentNo; super(&quot;jaehong&quot;,&quot;93-12-23&quot;); //컴파일오류.. 이유: 생성자의 첫줄에서 선언해주어야함! } Override 매소드 재정의 부모 클래스의 메소드를 자식 클래스에서 재정의 하는 것을 말한다. 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 @Override 어노테이션 컴파일러에게 부모 클래스의 메소드와 선언부와 동일한지 검사하도록 지시 접근 제한을 더 강하게 오버로딩 할 수 없다. ex) public -&amp;gt; private, default (X) 반대로는 가능 super.부모메소드() : 부모메소드 호출방법 다형성(Ployorphism) 같은 타입이지만 실행결과가 다양한 객체를 대입할수있는 성질을 말한다. A a = new B() //b는 부모객체 A클래스를 상속 받고있는 상태 자식 타입은 부모타입으로 자동 타입 변환된다. 객체를 부품화시킨다.! (타이어 예시 생각!) 부모 클래스 변수 = 자식클래스타입 부모 클래스 변수는 자식과 같은 주소를 가진다. 자동 타입 변환 이후 효과 부모 클래스에 선언된 필드와 메소드만 접근 가능 자식 클래스의 재정이된 메소드가 호출된다. (다형성관련) class Parent{ void method1(){}; void method2(){}; // 1번 !!!!!!!!! } //////////////////// class Child extends Parent{ void method2(){..}//Overrideing // 2번 !!!!!!!!! void method3(){} } class ChildEx{ public static void main(String args[]){ Child child = new Child(); Parent parent = child; //Parent로 자동 타입 변환 parent.method1(); parent.method2(); // 부모타입으로 형변환이 됬지만 1번이 아닌 오버라이딩된 2번이 실행된다!! 중요 parent.method3(); // 호출불가능 } } 자식 타입인지 확인후 강제 타입 instanceof public void method(Parent parent) { if (parent instanceof Child) { //매개변수로 들어오는 객체가 Child 인지확인 Child Child = (Child) parent; } } References. https://www.hanbit.co.kr/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">메소드에서 매개변수의 수를 모르는 경우</title>
-      <link href="https://jaehong2.github.io//java-no-parameter-number" rel="alternate" type="text/html" title="메소드에서 매개변수의 수를 모르는 경우" />
-      <published>2020-11-12T18:31:00+09:00</published>
-      <updated>2020-11-12T18:31:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-no-parameter-number</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-no-parameter-number">&lt;h4&gt;메소드에서 매개변수의 수를 모르는 경우&lt;/h4&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용&lt;/li&gt;
-    &lt;li&gt;매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parameter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Cal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum1 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sum2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//매개변수의 개수를 모를때&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">메소드에서 매개변수의 수를 모르는 경우 메소드에서 여러개의 매개변수를 넘기는 경우 배열을 이용 매개변수의 수가 몇개가 들어올지 모를때에 '...'을 사용함으로 넘겨받는 값의 수에 따라 자동으로 배열 생성 public class Parameter { public static void main(String args[]) { Cal cal = new Cal(); int[] data = new int[] {1,2,3}; System.out.println(&quot;sum1 : &quot; + cal.sum1(data)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3)); System.out.println(&quot;sum2 : &quot; + cal.sum2(1,2,3,4,5)); } } class Cal{ int sum1(int[] n) { int sum=0; for(int i :n) { sum += i; } return sum; } int sum2(int ... n) { //매개변수의 개수를 모를때 int sum=0; for(int i : n) { sum += i; } return sum; } }</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">어노테이션 (Annotation)</title>
-      <link href="https://jaehong2.github.io//java-annotation" rel="alternate" type="text/html" title="어노테이션 (Annotation)" />
-      <published>2020-11-09T07:31:00+09:00</published>
-      <updated>2020-11-09T07:31:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-annotation</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-annotation">&lt;h2&gt;어노테이션(Annotation)&lt;/h2&gt;
-&lt;p&gt;프로그램에게 추가적인 정보를 제공해주는 &lt;mark&gt;메타데이터(metadata)&lt;/mark&gt;이다.&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;컴파일러에게 코드 작성 문법에러 체크하도록 정보제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) Override
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 &lt;br /&gt;자동생성가능
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;실행시(런타임시) 특정 기능을 실행하도록 정보 제공
-        &lt;ul&gt;
-            &lt;li&gt;
-                ex) Servlet 이나 Controller 객체 사용시
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3&gt;기본 엘리먼트 value&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elementName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;어노테이션을 적용할때 엘리먼트명을 생략가능
-        &lt;li&gt;@AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;두개 이상의 속성을 기술할때는 value=값 형태로 기술
-    &lt;li&gt;@AnnotationName(value=&quot;값입니다&quot;, elementName = 4);&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;어노테이션 적용대상&lt;/h2&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;java.lang.annotationElementType 열거 상수로 정의&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/built/images/java/annotation.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;어노테이션 적용 대상 방법&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;mark&gt;@Target&lt;/mark&gt; 어노테이션으로 적용대상지정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//예시&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;어노테이션 유지정책&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것&lt;/li&gt;
-    &lt;li&gt;java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table class=&quot;type&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-        &lt;th&gt;RetenionPolicy 열거 상수&lt;/th&gt;
-        &lt;th&gt;설명&lt;/th&gt;
-
-    &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-    &lt;tr&gt;
-        &lt;td&gt;SOURCE&lt;/td&gt;
-        &lt;td&gt;바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서&lt;br /&gt;어떤 정보를 얻을 목적으로 유지하는 정책&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;CLASS&lt;/td&gt;
-        &lt;td&gt;컴파일러가 바이트 코드를 만들때 까지는 유지&lt;br /&gt;그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.&lt;br /&gt;클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;RUNTIME&lt;/td&gt;
-        &lt;td&gt;바이트 코드 까지 유지가 되고&lt;br /&gt; 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시&lt;br /&gt; 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책&lt;br /&gt; 대부분사용&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3&gt;리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다.&lt;/li&gt;
-    &lt;li&gt;Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;유지 정책 지정방법&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;@Retention 어노테이션으로 유지정책을 지정&lt;/li&gt;
-    &lt;li&gt;@Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;FIELD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElementType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;METHOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Retention&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetentionPolicy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RUNTIME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AnnotationName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR 압축 파일을 자동생성가능 실행시(런타임시) 특정 기능을 실행하도록 정보 제공 ex) Servlet 이나 Controller 객체 사용시 기본 엘리먼트 value public @interface AnnotationName{ String value; int elementName() default 5; } 어노테이션을 적용할때 엘리먼트명을 생략가능 @AnnotationName(&quot;값입니다&quot;) //value에 &quot;값입니다&quot; 저장 두개 이상의 속성을 기술할때는 value=값 형태로 기술 @AnnotationName(value=&quot;값입니다&quot;, elementName = 4); 어노테이션 적용대상 java.lang.annotationElementType 열거 상수로 정의 어노테이션 적용 대상 방법 @Target 어노테이션으로 적용대상지정 //예시 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) public @interface AnnotationName{ } 어노테이션 유지정책 어노테이션 적용 코드가 언제까지 유지될것인가를 기술한것 java.lang.annotation.RetentionPolicy 열거 상수로 정의되어 있음 RetenionPolicy 열거 상수 설명 SOURCE 바이트코드에서는 어노테이션이 유지되지 않는 정책, 개발자가 소스에서어떤 정보를 얻을 목적으로 유지하는 정책 CLASS 컴파일러가 바이트 코드를 만들때 까지는 유지그러나 어노테이션의 값을 클래스 실행시 얻을 수 없다.클래스상에서만 존재하고 실제 실행시 정보를 읽지 못하는 정책 RUNTIME 바이트 코드 까지 유지가 되고 바이트 코드파일을 로딩을 시키고 나서 실제프로그래밍 실행시 어노테이션의 정보를 읽고 이용을 할 수 있도록 하는 유지정책 대부분사용 리플렉션(reflection): 런타임에 클래스의 메타 정보를 얻는 기능 클래스가 가진 필드, 생성자, 메소드, 어노테이션 정보을 얻을 수 있다. Runtime(실행중에) 어노테이션 정보를 얻으려면 유지 정책을 RUNTIME으로 설정해야됨 유지 정책 지정방법 @Retention 어노테이션으로 유지정책을 지정 @Retention의 기본 엘리먼트인 value의 타입은 RetentionPolicy @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) @Retention(RetentionPolicy.RUNTIME) public @interface AnnotationName{ } References. https://www.hanbit.co.kr/</summary>
       
 
       

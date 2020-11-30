@@ -186,6 +186,24 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "jsp-bean-html": {
+        "title": "exception",
+            "author": "jaehong",
+            "category": "",
+            "content": "빈 태그Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스References.    https://www.hanbit.co.kr/",
+        "url": "/jsp-bean.html"
+    }
+    ,
+    
+    "jsp-exception-html": {
+        "title": "exception",
+            "author": "jaehong",
+            "category": "",
+            "content": "예외처리1.페이지 지시자를 통한 예외 처리    &lt;%@ page errorPage = \"errorPage.jsp\" %&gt; //1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력&lt;%@ page isErrorPage = \"true\" %&gt; &lt;!-- 해당page는 error를 받을 수 있습니다.--&gt;&lt;% response.setStatus(200); %&gt; &lt;!-- 200은 정상적인 페이지를 말함--&gt;&lt;body&gt;    예외페이지 입니다.&lt;br/&gt;    &lt;% exception.getMessage(); %&gt;&lt;/body&gt;2.web.xml을 통한 예외 처리web.xml    &lt;error-page&gt;        &lt;error-code&gt;404&lt;/error-code&gt;        &lt;location&gt;/error404.jsp&lt;/location&gt;    &lt;/error-page&gt;    &lt;error-page&gt;        &lt;error-code&gt;500&lt;/error-code&gt;        &lt;location&gt;/error500.jsp&lt;/location&gt;    &lt;/error-page&gt;References.    https://www.hanbit.co.kr/",
+        "url": "/jsp-exception.html"
+    }
+    ,
+    
     "jsp-cookie-html": {
         "title": "cookie &amp; session",
             "author": "jaehong",
