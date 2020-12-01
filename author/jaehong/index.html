@@ -171,7 +171,7 @@
                 <div class="author-meta">
                     
                     <div class="author-stats">
-                        25 posts <span class="bull">&bull;</span>
+                        26 posts <span class="bull">&bull;</span>
                     </div>
                     
                     
@@ -197,6 +197,52 @@
 
     <article class="post-card author-template">
         
+            <a class="post-card-image-link" href="/algorithm-ox-quiz">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/algorithm-ox-quiz">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Algorithm</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">OX퀴즈</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>OX 퀴즈 import java.io.*; import java.util.*; public class Main{ public static void main(String args[]) throws IOException { //1. List를 사용해서 동적배열로 입력받기 //2. 저장된 문자열을 split로 문자로 구분후 문자열배열에 저장 //3.O가 연속될때마다 값이</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card author-template">
+        
             <a class="post-card-image-link" href="/jsp-bean.html">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/jsp-logo.png)"></div>
             </a>
@@ -216,16 +262,7 @@
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>빈 태그
-
-Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스
-
-References.
-
-    https://www.hanbit.co.kr/
-
-
-</p>
+                        <p>빈 태그 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스 useBean setProperty getProperty useBean 특정 Bean을 사용한다고 명시 할떄 사용 //id(빈이름) , 클래스 이름 , 스코프 범위 &lt;jsp:userBean id ="student" class=""com.javalec.ex.Student scope="page"/&gt; set,getProperty java s/getter와 같은</p>
                     
                 </section>
             </a>
@@ -482,12 +519,12 @@ References.
 
     <article class="post-card author-template">
         
-            <a class="post-card-image-link" href="/algorithm-star-02">
+            <a class="post-card-image-link" href="/algorithm-fibonacci">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-star-02">
+            <a class="post-card-content-link" href="/algorithm-fibonacci">
                 <header class="post-card-header">
                     
                         
@@ -497,11 +534,11 @@ References.
                         
                     
 
-                    <h2 class="post-card-title">별 찍기 -2</h2>
+                    <h2 class="post-card-title">피보나치 수열2(fibonacci)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>별찍기 2 import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int</p>
+                        <p>피보나치 수열2 import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언</p>
                     
                 </section>
             </a>
@@ -528,12 +565,12 @@ References.
 
     <article class="post-card author-template">
         
-            <a class="post-card-image-link" href="/algorithm-fibonacci">
+            <a class="post-card-image-link" href="/algorithm-star-02">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/algorithm-fibonacci">
+            <a class="post-card-content-link" href="/algorithm-star-02">
                 <header class="post-card-header">
                     
                         
@@ -543,11 +580,11 @@ References.
                         
                     
 
-                    <h2 class="post-card-title">피보나치 수열2(fibonacci)</h2>
+                    <h2 class="post-card-title">별 찍기 -2</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>피보나치 수열2 import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언</p>
+                        <p>별찍기 2 import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int</p>
                     
                 </section>
             </a>
@@ -1086,52 +1123,6 @@ References.
                 <section class="post-card-excerpt">
                     
                         <p>final 필드 한번의 초기화로 인하여 값을 변경할수 없는 필드 메서드를 호출해서 객체가 사용할수있도록 준비하는 역할 수행 CODE public class Person { final String nation = "kr"; //값을 초기에 할당하거나 final String ssn; public</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card author-template">
-        
-            <a class="post-card-image-link" href="/dp-singletonPattern">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/Java-Design-Patterns.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/dp-singletonPattern">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">싱글톤 패턴(Singleton-Pattern)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>디자인 패턴(Design Pattern List) 싱글톤 패턴 (Singleton pattern) 싱글턴(Singleton) 이란 ? 싱글턴 패턴은 인스턴스가 오직 1개만 생성되야 하는 경우에 사용되는 패턴입니다. 예를들어 레지스트리 같은 설정 파일의 경우 객체가 여러개 생성되면 설정 값이 변경될</p>
                     
                 </section>
             </a>

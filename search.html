@@ -186,11 +186,20 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "algorithm-ox-quiz": {
+        "title": "OX퀴즈",
+            "author": "jaehong",
+            "category": "",
+            "content": "OX 퀴즈import java.io.*;import java.util.*;public class Main{    public static void main(String args[]) throws IOException {        //1. List를 사용해서 동적배열로 입력받기        //2. 저장된 문자열을 split로 문자로 구분후 문자열배열에 저장        //3.O가 연속될때마다 값이 1증감되고 X를 만나면 다시 0에서 시작        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        List&lt;Object&gt; Array = new ArrayList&lt;Object&gt;();        int n = Integer.parseInt(br.readLine());        int count =0;        int sum=0;        //1.        for(int i =0; i &lt; n; i++) {            Array.add(br.readLine());        }        //2.        String[] str;        for(Object aa : Array) {            count =0;            sum=0;            str = (aa.toString()).split(\"\");        //3.        for(String s : str) {            if(s.equals(\"O\")) {            sum\t+= ++count;            } else {            count =0;            }        }        bw.write(sum +\"\\n\");        }        br.close();        bw.flush();        bw.close();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/8958&gt;",
+        "url": "/algorithm-ox-quiz"
+    }
+    ,
+    
     "jsp-bean-html": {
         "title": "exception",
             "author": "jaehong",
             "category": "",
-            "content": "빈 태그Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스References.    https://www.hanbit.co.kr/",
+            "content": "빈 태그Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스    useBean    setProperty    getPropertyuseBean특정 Bean을 사용한다고 명시 할떄 사용              //id(빈이름) , 클래스 이름 , 스코프 범위&lt;jsp:userBean id =\"student\" class=\"\"com.javalec.ex.Student scope=\"page\"/&gt;set,getPropertyjava s/getter와 같은 역할&lt;jsp:setProperty name=\"student\" property=\"name\" value=\"홍길동\"/&gt;&lt;jsp:getProperty name=\"student\" property=\"name\"/&gt;References.    https://www.hanbit.co.kr/",
         "url": "/jsp-bean.html"
     }
     ,

@@ -61,6 +61,24 @@
 
 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스
 
+
+    useBean
+    setProperty
+    getProperty
+
+
+useBean
+특정 Bean을 사용한다고 명시 할떄 사용
+              //id(빈이름) , 클래스 이름 , 스코프 범위
+&lt;jsp:userBean id ="student" class=""com.javalec.ex.Student scope="page"/&gt;
+
+
+set,getProperty
+java s/getter와 같은 역할
+&lt;jsp:setProperty name="student" property="name" value="홍길동"/&gt;
+&lt;jsp:getProperty name="student" property="name"/&gt;
+
+
 References.
 
     https://www.hanbit.co.kr/
@@ -79,6 +97,24 @@ References.
     <meta name="twitter:description" content="빈 태그
 
 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스
+
+
+    useBean
+    setProperty
+    getProperty
+
+
+useBean
+특정 Bean을 사용한다고 명시 할떄 사용
+              //id(빈이름) , 클래스 이름 , 스코프 범위
+&lt;jsp:userBean id ="student" class=""com.javalec.ex.Student scope="page"/&gt;
+
+
+set,getProperty
+java s/getter와 같은 역할
+&lt;jsp:setProperty name="student" property="name" value="홍길동"/&gt;
+&lt;jsp:getProperty name="student" property="name"/&gt;
+
 
 References.
 
@@ -120,6 +156,24 @@ References.
     "description": "빈 태그
 
 Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스
+
+
+    useBean
+    setProperty
+    getProperty
+
+
+useBean
+특정 Bean을 사용한다고 명시 할떄 사용
+              //id(빈이름) , 클래스 이름 , 스코프 범위
+&lt;jsp:userBean id ="student" class=""com.javalec.ex.Student scope="page"/&gt;
+
+
+set,getProperty
+java s/getter와 같은 역할
+&lt;jsp:setProperty name="student" property="name" value="홍길동"/&gt;
+&lt;jsp:getProperty name="student" property="name"/&gt;
+
 
 References.
 
@@ -228,6 +282,24 @@ into the {body} of the default.hbs template -->
                     <h2>빈 태그</h2>
 
 <p>Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스</p>
+
+<ul>
+    <li>useBean</li>
+    <li>setProperty</li>
+    <li>getProperty</li>
+</ul>
+
+<h2>useBean</h2>
+<p>특정 Bean을 사용한다고 명시 할떄 사용</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>              <span class="c1">//id(빈이름) , 클래스 이름 , 스코프 범위</span>
+<span class="o">&lt;</span><span class="nl">jsp:</span><span class="n">userBean</span> <span class="n">id</span> <span class="o">=</span><span class="s">"student"</span> <span class="kd">class</span><span class="err">=""</span><span class="nc">com</span><span class="o">.</span><span class="na">javalec</span><span class="o">.</span><span class="na">ex</span><span class="o">.</span><span class="na">Student</span> <span class="n">scope</span><span class="o">=</span><span class="s">"page"</span><span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<h2>set,getProperty</h2>
+<p>java s/getter와 같은 역할</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nl">jsp:</span><span class="n">setProperty</span> <span class="n">name</span><span class="o">=</span><span class="s">"student"</span> <span class="n">property</span><span class="o">=</span><span class="s">"name"</span> <span class="n">value</span><span class="o">=</span><span class="s">"홍길동"</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nl">jsp:</span><span class="n">getProperty</span> <span class="n">name</span><span class="o">=</span><span class="s">"student"</span> <span class="n">property</span><span class="o">=</span><span class="s">"name"</span><span class="o">/&gt;</span>
+</code></pre></div></div>
 
 <h1>References.</h1>
 <ul>
@@ -343,6 +415,8 @@ into the {body} of the default.hbs template -->
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
                                 
                                   
                                     
@@ -508,6 +582,55 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/algorithm-ox-quiz">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/jekyll-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/algorithm-ox-quiz">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Algorithm</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">OX퀴즈</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
