@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-02T23:30:37+09:00</updated>
+  <updated>2020-12-03T22:25:55+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -32,12 +32,110 @@
 
   
     <entry>
+      <title type="html">평균은 넘겠지</title>
+      <link href="https://jaehong2.github.io//beakjoon-4344" rel="alternate" type="text/html" title="평균은 넘겠지" />
+      <published>2020-12-02T20:52:55+09:00</published>
+      <updated>2020-12-02T20:52:55+09:00</updated>
+      <id>https://jaehong2.github.io//beakjoon-4344</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-4344">&lt;h2&gt;평균은 넘겠지&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.StringTokenizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;cm&quot;&gt;/* 1. 테스트 케이스 개수 입력
+* 2. 학생수와 점수 입력
+* 3. 첫번째 입력한값이 학생수 저장
+* 4. 각테스트 케이스마다 합과 평균이상인 학생이 다르므로 초기화
+* 5. 배열에 점수저장 및 점수합, 평균값 계산
+* 6. 각 점수와 평균을 비교해서 평균이 넘으면 count;
+* 7. 평균을 넘은사람/총인원 *100 &amp;amp; 소수점 3째자리 반올림해서 출력.
+*/&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStreamWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;//1&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//2&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringTokenizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//3&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//4&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;//5&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;//6&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;//7&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%.3f&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/4344&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/4344&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">평균은 넘겠지 import java.io.*; import java.util.StringTokenizer; /* 1. 테스트 케이스 개수 입력 * 2. 학생수와 점수 입력 * 3. 첫번째 입력한값이 학생수 저장 * 4. 각테스트 케이스마다 합과 평균이상인 학생이 다르므로 초기화 * 5. 배열에 점수저장 및 점수합, 평균값 계산 * 6. 각 점수와 평균을 비교해서 평균이 넘으면 count; * 7. 평균을 넘은사람/총인원 *100 &amp;amp; 소수점 3째자리 반올림해서 출력. */ public class Main{ public static void main(String args[]) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); StringTokenizer st; //1 int c = Integer.parseInt(br.readLine()); for(int i=0; i&amp;lt;c; i++) { //2 st = new StringTokenizer(br.readLine()); //3 int studentN = Integer.parseInt(st.nextToken()); int[] arr = new int[studentN]; //4 int count =0; int sum=0; //5 for(int j=0; j&amp;lt;studentN; j++) { arr[j] = Integer.parseInt(st.nextToken()); sum += arr[j]; } double avg = (double)(sum/studentN); //6 for(int value : arr) { if(value &amp;gt; avg) { count++; } } //7 String result = String.format(&quot;%.3f&quot;, (((double)count/studentN)*100))+&quot;%&quot;; bw.write(result + &quot;\n&quot;); } bw.flush(); br.close(); bw.close(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/4344&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">OX퀴즈</title>
-      <link href="https://jaehong2.github.io//algorithm-ox-quiz" rel="alternate" type="text/html" title="OX퀴즈" />
+      <link href="https://jaehong2.github.io//beakjoon-8958" rel="alternate" type="text/html" title="OX퀴즈" />
       <published>2020-12-01T23:52:55+09:00</published>
       <updated>2020-12-01T23:52:55+09:00</updated>
-      <id>https://jaehong2.github.io//algorithm-ox-quiz</id>
-      <content type="html" xml:base="https://jaehong2.github.io//algorithm-ox-quiz">&lt;h2&gt;OX 퀴즈&lt;/h2&gt;
+      <id>https://jaehong2.github.io//beakjoon-8958</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-8958">&lt;h2&gt;OX 퀴즈&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -455,12 +553,12 @@
     </entry>
   
     <entry>
-      <title type="html">플러스 사이클</title>
-      <link href="https://jaehong2.github.io//algorithm-pluscycle" rel="alternate" type="text/html" title="플러스 사이클" />
+      <title type="html">더하기 사이클</title>
+      <link href="https://jaehong2.github.io//beakjoon-1110" rel="alternate" type="text/html" title="더하기 사이클" />
       <published>2020-11-24T08:49:00+09:00</published>
       <updated>2020-11-24T08:49:00+09:00</updated>
-      <id>https://jaehong2.github.io//algorithm-pluscycle</id>
-      <content type="html" xml:base="https://jaehong2.github.io//algorithm-pluscycle">&lt;h2&gt;플러스 사이클&lt;/h2&gt;
+      <id>https://jaehong2.github.io//beakjoon-1110</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-1110">&lt;h2&gt;더하기 사이클&lt;/h2&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -519,7 +617,7 @@
       
 
       
-        <summary type="html">플러스 사이클 import java.io.*; public class Main { public static void main(String[] args) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int sum =0; int leftN =0; int rightN =0; int result = n; int a =0; while(true) { leftN = result/10; rightN = result%10; sum = leftN + rightN; result = rightN*10 + sum%10; a++; if(n == result) { break; } } bw.write(a +&quot;\n&quot;); bw.flush(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;</summary>
+        <summary type="html">더하기 사이클 import java.io.*; public class Main { public static void main(String[] args) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int sum =0; int leftN =0; int rightN =0; int result = n; int a =0; while(true) { leftN = result/10; rightN = result%10; sum = leftN + rightN; result = rightN*10 + sum%10; a++; if(n == result) { break; } } bw.write(a +&quot;\n&quot;); bw.flush(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;</summary>
       
 
       
@@ -657,11 +755,11 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
   
     <entry>
       <title type="html">별 찍기 -2</title>
-      <link href="https://jaehong2.github.io//algorithm-star-02" rel="alternate" type="text/html" title="별 찍기 -2" />
+      <link href="https://jaehong2.github.io//beakjoon-2439" rel="alternate" type="text/html" title="별 찍기 -2" />
       <published>2020-11-20T04:01:00+09:00</published>
       <updated>2020-11-20T04:01:00+09:00</updated>
-      <id>https://jaehong2.github.io//algorithm-star-02</id>
-      <content type="html" xml:base="https://jaehong2.github.io//algorithm-star-02">&lt;h2&gt;별찍기 2&lt;/h2&gt;
+      <id>https://jaehong2.github.io//beakjoon-2439</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-2439">&lt;h2&gt;별찍기 2&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -724,11 +822,11 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
   
     <entry>
       <title type="html">피보나치 수열2(fibonacci)</title>
-      <link href="https://jaehong2.github.io//algorithm-fibonacci" rel="alternate" type="text/html" title="피보나치 수열2(fibonacci)" />
+      <link href="https://jaehong2.github.io//beakjoon-2748" rel="alternate" type="text/html" title="피보나치 수열2(fibonacci)" />
       <published>2020-11-20T00:36:22+09:00</published>
       <updated>2020-11-20T00:36:22+09:00</updated>
-      <id>https://jaehong2.github.io//algorithm-fibonacci</id>
-      <content type="html" xml:base="https://jaehong2.github.io//algorithm-fibonacci">&lt;h2&gt;피보나치 수열2&lt;/h2&gt;
+      <id>https://jaehong2.github.io//beakjoon-2748</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-2748">&lt;h2&gt;피보나치 수열2&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Scanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -781,72 +879,6 @@ ex) 삼성 현대 기아회사&lt;/p&gt;
 
       
         <summary type="html">피보나치 수열2 import java.util.Scanner; public class fibonacci { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언 //고정되어있는 값대입 array[0] = 0; array[1] = 1; for(int i=2; i&amp;lt; array.length; i++) { array[i] = array[i-1] + array[i-2]; } System.out.println(array[num]); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2748&amp;gt;</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Servelt 3</title>
-      <link href="https://jaehong2.github.io//jsp-servlet-3.html" rel="alternate" type="text/html" title="Servelt 3" />
-      <published>2020-11-18T09:41:18+09:00</published>
-      <updated>2020-11-18T09:41:18+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-servlet-3.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-servlet-3.html">&lt;h2&gt;Servlet 초기화 파라미터 : ServletConfig&lt;/h2&gt;
-&lt;p&gt;&lt;mark&gt;특정&lt;/mark&gt; Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..&lt;br /&gt;
-    이러한 데이터들을 초기화 파라미터라고 함
-&lt;/p&gt;
-
-&lt;h2&gt;1. web.xml 사용해서 초기화&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.7.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;2. Servlet 파일 사용해서 초기화&lt;/h2&gt;
-&lt;p&gt;해당 Servlet에 @WebInitParam 사용해서 초기화&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.8.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;ServletContext&lt;/h2&gt;
-&lt;p&gt; &lt;mark&gt;모든 서블릿에 &lt;/mark&gt; 데이터를 공유 할 시 (web.xml에 기술)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.9.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;웹어플리케이션 생명주기 감시 : ServletContextListner &lt;/h2&gt;
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.10.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;순서&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.11.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 : ServletContextListner xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나 순서 References. https://www.hanbit.co.kr/</summary>
       
 
       

@@ -185,12 +185,21 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
-    "algorithm-ox-quiz": {
+    "beakjoon-4344": {
+        "title": "평균은 넘겠지",
+            "author": "jaehong",
+            "category": "",
+            "content": "평균은 넘겠지import java.io.*;import java.util.StringTokenizer;/* 1. 테스트 케이스 개수 입력* 2. 학생수와 점수 입력* 3. 첫번째 입력한값이 학생수 저장* 4. 각테스트 케이스마다 합과 평균이상인 학생이 다르므로 초기화* 5. 배열에 점수저장 및 점수합, 평균값 계산* 6. 각 점수와 평균을 비교해서 평균이 넘으면 count;* 7. 평균을 넘은사람/총인원 *100 &amp; 소수점 3째자리 반올림해서 출력.*/public class Main{    public static void main(String args[]) throws IOException{        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        StringTokenizer st;        //1        int c = Integer.parseInt(br.readLine());        for(int i=0; i&lt;c; i++) {            //2            st = new StringTokenizer(br.readLine());            //3            int studentN = Integer.parseInt(st.nextToken());            int[] arr = new int[studentN];            //4            int count =0;            int sum=0;            //5            for(int j=0; j&lt;studentN; j++) {                arr[j] = Integer.parseInt(st.nextToken());                sum += arr[j];            }            double avg = (double)(sum/studentN);            //6            for(int value : arr) {                if(value &gt; avg) {                    count++;                }            }            //7            String result = String.format(\"%.3f\", (((double)count/studentN)*100))+\"%\";            bw.write(result + \"\\n\");        }        bw.flush();        br.close();        bw.close();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/4344&gt;",
+        "url": "/beakjoon-4344"
+    }
+    ,
+    
+    "beakjoon-8958": {
         "title": "OX퀴즈",
             "author": "jaehong",
             "category": "",
             "content": "OX 퀴즈import java.io.*;import java.util.*;public class Main{    public static void main(String args[]) throws IOException {        //1. List를 사용해서 동적배열로 입력받기        //2. 저장된 문자열을 split로 문자로 구분후 문자열배열에 저장        //3.O가 연속될때마다 값이 1증감되고 X를 만나면 다시 0에서 시작        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));        List&lt;Object&gt; Array = new ArrayList&lt;Object&gt;();        int n = Integer.parseInt(br.readLine());        int count =0;        int sum=0;        //1.        for(int i =0; i &lt; n; i++) {            Array.add(br.readLine());        }        //2.        String[] str;        for(Object aa : Array) {            count =0;            sum=0;            str = (aa.toString()).split(\"\");        //3.        for(String s : str) {            if(s.equals(\"O\")) {            sum\t+= ++count;            } else {            count =0;            }        }        bw.write(sum +\"\\n\");        }        br.close();        bw.flush();        bw.close();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/8958&gt;",
-        "url": "/algorithm-ox-quiz"
+        "url": "/beakjoon-8958"
     }
     ,
     
@@ -230,12 +239,12 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "algorithm-pluscycle": {
-        "title": "플러스 사이클",
+    "beakjoon-1110": {
+        "title": "더하기 사이클",
             "author": "jaehong",
             "category": "",
-            "content": "플러스 사이클import java.io.*;public class Main {public static void main(String[] args) throws IOException{    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n =  Integer.parseInt(br.readLine());    int sum =0;    int leftN =0;    int rightN =0;    int result = n;    int a =0;    while(true) {        leftN = result/10;        rightN = result%10;        sum = leftN + rightN;        result = rightN*10 + sum%10;        a++;        if(n == result) {            break;        }    }    bw.write(a +\"\\n\");    bw.flush();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/1110&gt;",
-        "url": "/algorithm-pluscycle"
+            "content": "더하기 사이클import java.io.*;public class Main {public static void main(String[] args) throws IOException{    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n =  Integer.parseInt(br.readLine());    int sum =0;    int leftN =0;    int rightN =0;    int result = n;    int a =0;    while(true) {        leftN = result/10;        rightN = result%10;        sum = leftN + rightN;        result = rightN*10 + sum%10;        a++;        if(n == result) {            break;        }    }    bw.write(a +\"\\n\");    bw.flush();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/1110&gt;",
+        "url": "/beakjoon-1110"
     }
     ,
     
@@ -248,21 +257,21 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "algorithm-star-02": {
+    "beakjoon-2439": {
         "title": "별 찍기 -2",
             "author": "jaehong",
             "category": "",
             "content": "별찍기 2import java.io.*;public class Main {public static void main(String[] args) throws IOException {    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));    int n = Integer.parseInt(br.readLine());    int k = n;    for (int i = 0; i &lt; n; i++) {        for(int j=0; j &lt; n-i-1; j++ ) {          bw.write(\" \");        }         for (int j = 0; j &lt;= i; j++) {          bw.write(\"*\");        }        bw.write(\"\\n\");    }    br.close();    bw.flush();    bw.close();    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/2439&gt;",
-        "url": "/algorithm-star-02"
+        "url": "/beakjoon-2439"
     }
     ,
     
-    "algorithm-fibonacci": {
+    "beakjoon-2748": {
         "title": "피보나치 수열2(fibonacci)",
             "author": "jaehong",
             "category": "",
             "content": "피보나치 수열2import java.util.Scanner;public class fibonacci {public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    int num = sc.nextInt();    long[] array = new long[num+1]; //int 범위(2,147,483,647)를 초과 long으로 선언    //고정되어있는 값대입    array[0] = 0;    array[1] = 1;    for(int i=2; i&lt; array.length; i++) {        array[i] = array[i-1] + array[i-2];    }    System.out.println(array[num]);    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/2748&gt;",
-        "url": "/algorithm-fibonacci"
+        "url": "/beakjoon-2748"
     }
     ,
     
@@ -393,10 +402,10 @@ into the {body} of the default.hbs template -->
     ,
     
     "jekyll-basic": {
-        "title": "jekyll 강좌(1) - jekyll 기본",
+        "title": "처음만든날",
             "author": "jaehong",
             "category": "",
-            "content": "이글은 jekyll에 관한 내용이 있습니다 .",
+            "content": "블로그처음만든날",
         "url": "/jekyll-basic"
     }
     ,
