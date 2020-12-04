@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29ed0dee-828c-4d50-980a-ce3e80b37f60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/jaehong/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author/jaehong/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/jaehong/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/jaehong/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/jaehong/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/jaehong/page2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author/jaehong/page3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/jaehong/page3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/author_archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beakjoon-1110.html" beforeDir="false" afterPath="$PROJECT_DIR$/beakjoon-1110.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beakjoon-2439.html" beforeDir="false" afterPath="$PROJECT_DIR$/beakjoon-2439.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beakjoon-2748.html" beforeDir="false" afterPath="$PROJECT_DIR$/beakjoon-2748.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beakjoon-4344.html" beforeDir="false" afterPath="$PROJECT_DIR$/beakjoon-4344.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beakjoon-8958.html" beforeDir="false" afterPath="$PROJECT_DIR$/beakjoon-8958.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp-design-pattern.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp-design-pattern.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp-singletonPattern.html" beforeDir="false" afterPath="$PROJECT_DIR$/dp-singletonPattern.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-abstract-interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-abstract-interface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-access-modifier.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-access-modifier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-annotation.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-annotation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-constructor.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-constructor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-final.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-getter-setter.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-getter-setter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-inheritance.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-inheritance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-no-parameter-number.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-no-parameter-number.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pakage.html" beforeDir="false" afterPath="$PROJECT_DIR$/java-pakage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-action-tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-action-tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-bean.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-bean.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-cookie.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-cookie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-exception.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-introduce.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-introduce.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-servlet-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-servlet-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-servlet-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-servlet-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsp-servlet-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/jsp-servlet-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/algorithm/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/algorithm/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/algorithm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/algorithm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/git/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/git/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/java/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/java/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag/z/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tag/z/feed.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lCGnJIQ9kIDKm45HedZa7zLhAc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29ed0dee-828c-4d50-980a-ce3e80b37f60" name="Default Changelist" comment="" />
+      <created>1607093824639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607093824639</updated>
+      <workItem from="1607093825728" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

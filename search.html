@@ -185,6 +185,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "beakjoon-4673": {
+        "title": "셀프 넘버",
+            "author": "jaehong",
+            "category": "",
+            "content": "셀프넘버public class Main {    public static void main(String[] args){        int[] check = new int[10001];        for (int i = 0; i&lt;10001;++i) {            int n = sum(i); //            if (n&lt;10001 &amp;&amp; check[n]==0) {                check[n]=1;            }        }        StringBuilder a = new StringBuilder();        for (int i =0; i&lt;10001; ++i) {            if(check[i]==0) {            a.append(i).append('\\n');            }        }        System.out.println(a);}    public static int sum(int number) {        int sum = number;        while (number!=0) {            sum += number%10;            number/=number/10;        }        return sum;    }}문제출처    백준알고리즘 https://www.acmicpc.net/problem/4673&gt;",
+        "url": "/beakjoon-4673"
+    }
+    ,
+    
     "beakjoon-4344": {
         "title": "평균은 넘겠지",
             "author": "jaehong",
