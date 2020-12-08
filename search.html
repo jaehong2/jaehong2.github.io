@@ -134,9 +134,10 @@ into the {body} of the default.hbs template -->
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/java/">Java</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/git/">git</a></li>
+    <li class="nav-python" role="menuitem"><a href="/tag/git/">Git</a></li>
 
     <li class="nav-python" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+    <li class="nav-python" role="menuitem"><a href="/tag/etc/">Etc</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -184,6 +185,24 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "beakjoon-1065": {
+        "title": "한수",
+            "author": "jaehong",
+            "category": "",
+            "content": "한수문제어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다.N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오.입력110출력99처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에    한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여    123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다..문제출처    백준알고리즘 https://www.acmicpc.net/problem/1065&gt;",
+        "url": "/beakjoon-1065"
+    }
+    ,
+    
+    "restapi-html": {
+        "title": "Rest API란 무엇인가..",
+            "author": "jaehong",
+            "category": "",
+            "content": "rest api란 무엇인가.References.    https://www.hanbit.co.kr/",
+        "url": "/restapi.html"
+    }
+    ,
     
     "beakjoon-4673": {
         "title": "셀프 넘버",
@@ -234,7 +253,7 @@ into the {body} of the default.hbs template -->
         "title": "cookie &amp; session",
             "author": "jaehong",
             "category": "",
-            "content": "쿠키와 세션쿠키http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.    쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장     4kb로, 300개까지 데이터 정보를 가질 수 있다.쿠키 문법 쿠키 생성 -&gt; 속성 설정 -&gt; response 객체에 쿠키 탑재    &lt;%    Cookie cookie = new Cookie(\"id\",id); //쿠키 name, value    cookie.setMaxAge(60); //60초간 지속    response.addCookie(cookie); //쿠키탑재    response.sendRedirect(\"abc.jsp\") // 포워딩    %&gt;&lt;!--forwarding 후--&gt;&lt;%    Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체    for(int i=0; i &lt; cookies.length; i++){        String id = cookies[i].getValue();    } 궁금한점 쿠키가 보안상으로 취약한 이유 세션    쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단    서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재)    세션은 서버에서만 접근이 가능 -&gt; 보안이 좋다. , 데이터에 한계가 없다.세션 문법브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&gt; session 자동 생성 -&gt; Session 내부 객체로 속성 설정login.html&lt;form  action =\"loginOk.jsp\" method=\"post\"&gt;    아이디: &lt;input type=\"text\" name =\"id\" size=\"10\"&gt;&lt;br/&gt;    비밀번호: &lt;input type=\"password\" name =\"pw\" size=\"10\"&gt;&lt;br/&gt;    &lt;input type=\"submit\" value=\"로그인\"&gt;&lt;/form&gt;loginOk.jsp&lt;%!    String id,pw;%&gt;&lt;%    id =request.getParameter(\"id\");    pw = request.getParameter(\"pw\");    if(id.equals(\"abcde\")&amp;&amp; pw.equals(\"12345\")){        session.setAttribute(\"id\",id);        response.sendRedirect(\"welcome.jsp\");    }else{        response.sendRedirect(\"login.html\");    }%&gt;welcome.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){        String sName = enumeration.nextElement().toString();        String sValue = (String)session.getAttribute(sName);        if(sValue.equals(\"abcde\")){            out.println(sValue + \"님 안녕하세요.\" +\"&lt;br/&gt;\");        }    }%&gt;logout.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){    String sName = enumeration.nextElement().toString();    String sValue = (String)session.getAttribute(sName);    if(sValue.equals(\"abcde\")) session.removeAttribute(sName);    }%&gt;References.    https://www.hanbit.co.kr/",
+            "content": "쿠키와 세션 그리고 캐쉬쿠키http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.    쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장     4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 생성 -&gt; 속성 설정 -&gt; response 객체에 쿠키 탑재    &lt;%    Cookie cookie = new Cookie(\"id\",id); //쿠키 name, value    cookie.setMaxAge(60); //60초간 지속    response.addCookie(cookie); //쿠키탑재    response.sendRedirect(\"abc.jsp\") // 포워딩    %&gt;&lt;!--forwarding 후--&gt;&lt;%    Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체    for(int i=0; i &lt; cookies.length; i++){        String id = cookies[i].getValue();    } 쿠키의 한계 사용자가 임의로 고치거나 지울수있다. 쿠키가 보안상으로 취약 세션    쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단    서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재)    세션은 서버에서만 접근이 가능 -&gt; 보안이 좋다. , 데이터에 한계가 없다.브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송login.html&lt;form  action =\"loginOk.jsp\" method=\"post\"&gt;    아이디: &lt;input type=\"text\" name =\"id\" size=\"10\"&gt;&lt;br/&gt;    비밀번호: &lt;input type=\"password\" name =\"pw\" size=\"10\"&gt;&lt;br/&gt;    &lt;input type=\"submit\" value=\"로그인\"&gt;&lt;/form&gt;loginOk.jsp&lt;%!    String id,pw;%&gt;&lt;%    id =request.getParameter(\"id\");    pw = request.getParameter(\"pw\");    if(id.equals(\"abcde\")&amp;&amp; pw.equals(\"12345\")){        session.setAttribute(\"id\",id);        response.sendRedirect(\"welcome.jsp\");    }else{        response.sendRedirect(\"login.html\");    }%&gt;welcome.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){        String sName = enumeration.nextElement().toString();        String sValue = (String)session.getAttribute(sName);        if(sValue.equals(\"abcde\")){            out.println(sValue + \"님 안녕하세요.\" +\"&lt;br/&gt;\");        }    }%&gt;logout.jsp&lt;%    Enumeration enumeration = session.getAttributeNames();    while(enumeration.hasMoreElements()){    String sName = enumeration.nextElement().toString();    String sValue = (String)session.getAttribute(sName);    if(sValue.equals(\"abcde\")) session.removeAttribute(sName);    }%&gt;캐쉬가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장    웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에    사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장References.    https://www.hanbit.co.kr/    얄팍한 코딩사전",
         "url": "/jsp-cookie.html"
     }
     ,
@@ -429,10 +448,10 @@ into the {body} of the default.hbs template -->
     ,
     
     "git-basic": {
-        "title": "git 강좌(1) - git 기본",
+        "title": "공사중..",
             "author": "jaehong",
             "category": "",
-            "content": "이글은 git 관한 내용이 있습니다 .",
+            "content": "공사중…",
         "url": "/git-basic"
     }
     

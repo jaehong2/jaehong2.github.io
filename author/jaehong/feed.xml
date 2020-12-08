@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-04T23:56:51+09:00</updated>
+  <updated>2020-12-08T23:58:00+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -30,6 +30,101 @@
   
   
 
+  
+    <entry>
+      <title type="html">한수</title>
+      <link href="https://jaehong2.github.io//beakjoon-1065" rel="alternate" type="text/html" title="한수" />
+      <published>2020-12-08T08:49:55+09:00</published>
+      <updated>2020-12-08T08:49:55+09:00</updated>
+      <id>https://jaehong2.github.io//beakjoon-1065</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-1065">&lt;h2&gt;한수&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;문제&lt;/p&gt;
+
+&lt;p&gt;어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다.&lt;br /&gt;
+N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;p&gt;입력&lt;/p&gt;
+&lt;p&gt;110&lt;/p&gt;
+
+&lt;p&gt;출력&lt;/p&gt;
+&lt;p&gt;99&lt;/p&gt;
+
+&lt;p&gt;처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에&lt;br /&gt;
+    한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여&lt;br /&gt;
+    123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다..
+&lt;/p&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1065&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/1065&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에 한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여 123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다.. 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1065&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Rest API란 무엇인가..</title>
+      <link href="https://jaehong2.github.io//restapi.html" rel="alternate" type="text/html" title="Rest API란 무엇인가.." />
+      <published>2020-12-06T00:12:20+09:00</published>
+      <updated>2020-12-06T00:12:20+09:00</updated>
+      <id>https://jaehong2.github.io//restapi.html</id>
+      <content type="html" xml:base="https://jaehong2.github.io//restapi.html">&lt;h2&gt;rest api란 무엇인가.&lt;/h2&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">rest api란 무엇인가. References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">셀프 넘버</title>
@@ -422,7 +517,7 @@
       <published>2020-11-27T02:02:24+09:00</published>
       <updated>2020-11-27T02:02:24+09:00</updated>
       <id>https://jaehong2.github.io//jsp-cookie.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션&lt;/h1&gt;
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션 그리고 캐쉬&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -433,7 +528,6 @@
     4kb로, 300개까지 데이터 정보를 가질 수 있다.
 &lt;/p&gt;
 
-&lt;h2&gt;쿠키 문법&lt;/h2&gt;
 &lt;p&gt; 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;
@@ -455,8 +549,9 @@
     &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 궁금한점 &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;쿠키가 보안상으로 취약한 이유 &lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 쿠키의 한계 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;사용자가 임의로 고치거나 지울수있다. &lt;/p&gt;
+&lt;p&gt;쿠키가 보안상으로 취약 &lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -468,9 +563,8 @@
 
 &lt;/ul&gt;
 
-&lt;h2&gt;세션 문법&lt;/h2&gt;
 &lt;p&gt;&lt;mark&gt;브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다.&lt;/mark&gt;&lt;/p&gt;
-&lt;p&gt; 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정&lt;/p&gt;
+&lt;p&gt; 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송&lt;/p&gt;
 
 &lt;p&gt;login.html&lt;/p&gt;
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -527,9 +621,16 @@
 &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h2&gt;캐쉬&lt;/h2&gt;
+&lt;p&gt;가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에&lt;/li&gt;
+    &lt;li&gt;사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+    &lt;li a=&quot;&quot; href=&quot;https://www.youtube.com/watch?v=OpoVuwxGRDI/&quot;&gt;얄팍한 코딩사전&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -551,7 +652,7 @@
       
 
       
-        <summary type="html">쿠키와 세션 쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 문법 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 궁금한점 쿠키가 보안상으로 취약한 이유 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 세션 문법 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; References. https://www.hanbit.co.kr/</summary>
+        <summary type="html">쿠키와 세션 그리고 캐쉬 쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 쿠키의 한계 사용자가 임의로 고치거나 지울수있다. 쿠키가 보안상으로 취약 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; 캐쉬 가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장 웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에 사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장 References. https://www.hanbit.co.kr/ 얄팍한 코딩사전</summary>
       
 
       
@@ -693,202 +794,6 @@
 
       
         <summary type="html">더하기 사이클 import java.io.*; public class Main { public static void main(String[] args) throws IOException{ BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int sum =0; int leftN =0; int rightN =0; int result = n; int a =0; while(true) { leftN = result/10; rightN = result%10; sum = leftN + rightN; result = rightN*10 + sum%10; a++; if(n == result) { break; } } bw.write(a +&quot;\n&quot;); bw.flush(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1110&amp;gt;</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">추상클래스와 인터페이스</title>
-      <link href="https://jaehong2.github.io//java-abstract-interface" rel="alternate" type="text/html" title="추상클래스와 인터페이스" />
-      <published>2020-11-21T20:46:00+09:00</published>
-      <updated>2020-11-21T20:46:00+09:00</updated>
-      <id>https://jaehong2.github.io//java-abstract-interface</id>
-      <content type="html" xml:base="https://jaehong2.github.io//java-abstract-interface">&lt;h1&gt;추상클래스와 인터페이스&lt;/h1&gt;
-&lt;hr /&gt;
-
-&lt;h2&gt;추상&lt;/h2&gt;
-&lt;p&gt;실제들 간에 공통되는 특성을 추출&lt;br /&gt;
-ex) 삼성 현대 기아회사&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2&gt;추상클래스&lt;/h2&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;실제 클래스들의 공통되는 &lt;mark&gt;필드&lt;/mark&gt;, &lt;mark&gt;메소드&lt;/mark&gt;를 정의한 클래스&lt;/li&gt;
-    &lt;li&gt;공통된 필드와 메소드 이름을 통일할 목적&lt;/li&gt;
-    &lt;li&gt;부모 클래스로만 사용 되며 , 객체 생성 불가&lt;/li&gt;
-    &lt;li&gt;추상 메서드는 자식 클래스에서 오버라이딩! &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;인터페이스&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.&lt;/li&gt;
-    &lt;li&gt;개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;인터페이스 역할&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.&lt;/li&gt;
-    &lt;li&gt;개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;인터페이스 구성멤버&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;상수, 추상메소드&lt;/li&gt;
-    &lt;li&gt;Java 8 부터는 default 메소드, 정적 메소드&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;상수 필드 선언&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;인터페이스는 상수 필드만 선언가능&lt;/li&gt;
-    &lt;li&gt;인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 &lt;/li&gt;
-    &lt;li&gt;상수명은 대문자&lt;/li&gt;
-    &lt;li&gt;선언과 동시에 초기화 (static 블록을 작성할수없으므로}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;추상 메소드 선언&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;인터페이스의 메소드는 기본적으로 실행 블록이 없는 &lt;mark&gt;추상 메소드&lt;/mark&gt;로 선언한다.&lt;/li&gt;
-    &lt;li&gt;public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MIN_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;volume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;디폴트 메소드 선언&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;자바 8 에서 추가된 인터페이스의 새로운 멤버&lt;/li&gt;
-    &lt;li&gt;[public]이 기본타입으로 default를 붙어야 생성된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 처리&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 해제&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;정적 메소드 선언&lt;/h2&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;emptyBattery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;배터리가 다 소모 되었습니다.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;!-- 출처 --&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">추상클래스와 인터페이스 추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상 메서드는 자식 클래스에서 오버라이딩! 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} 추상 메소드 선언 인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다. public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음 public interface RemoteControl{ int MAX_VOLUME = 10; int MIN_VOLUME =0; public abstract void turnOn(); void turnOff(); //public abstract 생략 void setVolume(int volume); //public abstract 생략 } 디폴트 메소드 선언 자바 8 에서 추가된 인터페이스의 새로운 멤버 [public]이 기본타입으로 default를 붙어야 생성된다. public interface RemoteControl{ default void setMute(boolean mute){ if(mute){ System.out.println(&quot;무음 처리&quot;); }else{ System.out.println(&quot;무음 해제&quot;); } } 정적 메소드 선언 public interface RemoteControl{ static void emptyBattery(){ System.out.println(&quot;배터리가 다 소모 되었습니다.&quot;); } } References. https://www.hanbit.co.kr/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">별 찍기 -2</title>
-      <link href="https://jaehong2.github.io//beakjoon-2439" rel="alternate" type="text/html" title="별 찍기 -2" />
-      <published>2020-11-20T04:01:00+09:00</published>
-      <updated>2020-11-20T04:01:00+09:00</updated>
-      <id>https://jaehong2.github.io//beakjoon-2439</id>
-      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-2439">&lt;h2&gt;별찍기 2&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStreamWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readLine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1&gt;문제출처&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2439&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="algorithm" />
-      
-
-      
-        <summary type="html">별찍기 2 import java.io.*; public class Main { public static void main(String[] args) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); int k = n; for (int i = 0; i &amp;lt; n; i++) { for(int j=0; j &amp;lt; n-i-1; j++ ) { bw.write(&quot; &quot;); } for (int j = 0; j &amp;lt;= i; j++) { bw.write(&quot;*&quot;); } bw.write(&quot;\n&quot;); } br.close(); bw.flush(); bw.close(); } } 문제출처 백준알고리즘 https://www.acmicpc.net/problem/2439&amp;gt;</summary>
       
 
       

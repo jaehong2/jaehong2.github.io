@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/algorithm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-04T23:56:51+09:00</updated>
+  <updated>2020-12-08T23:58:00+09:00</updated>
   <id>https://jaehong2.github.io//tag/algorithm/feed.xml</id>
 
   
@@ -30,6 +30,62 @@
   
   
 
+  
+    <entry>
+      <title type="html">한수</title>
+      <link href="https://jaehong2.github.io//beakjoon-1065" rel="alternate" type="text/html" title="한수" />
+      <published>2020-12-08T08:49:55+09:00</published>
+      <updated>2020-12-08T08:49:55+09:00</updated>
+      <id>https://jaehong2.github.io//beakjoon-1065</id>
+      <content type="html" xml:base="https://jaehong2.github.io//beakjoon-1065">&lt;h2&gt;한수&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;문제&lt;/p&gt;
+
+&lt;p&gt;어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다.&lt;br /&gt;
+N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;p&gt;입력&lt;/p&gt;
+&lt;p&gt;110&lt;/p&gt;
+
+&lt;p&gt;출력&lt;/p&gt;
+&lt;p&gt;99&lt;/p&gt;
+
+&lt;p&gt;처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에&lt;br /&gt;
+    한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여&lt;br /&gt;
+    123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다..
+&lt;/p&gt;
+
+&lt;h1&gt;문제출처&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1065&quot;&gt;백준알고리즘 https://www.acmicpc.net/problem/1065&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="algorithm" />
+      
+
+      
+        <summary type="html">한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에 한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여 123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다.. 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1065&amp;gt;</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">셀프 넘버</title>

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-04T23:56:51+09:00</updated>
+  <updated>2020-12-08T23:58:00+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -160,7 +160,7 @@
       <published>2020-11-27T02:02:24+09:00</published>
       <updated>2020-11-27T02:02:24+09:00</updated>
       <id>https://jaehong2.github.io//jsp-cookie.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션&lt;/h1&gt;
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;h1&gt;쿠키와 세션 그리고 캐쉬&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -171,7 +171,6 @@
     4kb로, 300개까지 데이터 정보를 가질 수 있다.
 &lt;/p&gt;
 
-&lt;h2&gt;쿠키 문법&lt;/h2&gt;
 &lt;p&gt; 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;
@@ -193,8 +192,9 @@
     &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 궁금한점 &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;쿠키가 보안상으로 취약한 이유 &lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 쿠키의 한계 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;사용자가 임의로 고치거나 지울수있다. &lt;/p&gt;
+&lt;p&gt;쿠키가 보안상으로 취약 &lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -206,9 +206,8 @@
 
 &lt;/ul&gt;
 
-&lt;h2&gt;세션 문법&lt;/h2&gt;
 &lt;p&gt;&lt;mark&gt;브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다.&lt;/mark&gt;&lt;/p&gt;
-&lt;p&gt; 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정&lt;/p&gt;
+&lt;p&gt; 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송&lt;/p&gt;
 
 &lt;p&gt;login.html&lt;/p&gt;
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -265,9 +264,16 @@
 &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h2&gt;캐쉬&lt;/h2&gt;
+&lt;p&gt;가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에&lt;/li&gt;
+    &lt;li&gt;사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;http://www.ssitcenter.com/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+    &lt;li a=&quot;&quot; href=&quot;https://www.youtube.com/watch?v=OpoVuwxGRDI/&quot;&gt;얄팍한 코딩사전&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -289,7 +295,7 @@
       
 
       
-        <summary type="html">쿠키와 세션 쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 문법 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 궁금한점 쿠키가 보안상으로 취약한 이유 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 세션 문법 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; session 자동 생성 -&amp;gt; Session 내부 객체로 속성 설정 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; References. https://www.hanbit.co.kr/</summary>
+        <summary type="html">쿠키와 세션 그리고 캐쉬 쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 쿠키의 한계 사용자가 임의로 고치거나 지울수있다. 쿠키가 보안상으로 취약 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; 캐쉬 가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장 웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에 사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장 References. https://www.hanbit.co.kr/ 얄팍한 코딩사전</summary>
       
 
       
