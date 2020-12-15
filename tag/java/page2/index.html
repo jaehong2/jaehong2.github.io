@@ -166,7 +166,7 @@
             <h1 class="site-title">Java</h1>
             <h2 class="site-description">
                 
-    			    A collection of 23 posts
+    			    A collection of 25 posts
                 
             </h2>
         </div>
@@ -181,6 +181,98 @@
             <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/java-abstract-interface">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/java-abstract-interface">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">추상클래스와 인터페이스</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>추상 실제들 간에 공통되는 특성을 추출 ex) 삼성 현대 기아회사 추상클래스 실제 클래스들의 공통되는 필드, 메소드를 정의한 클래스 공통된 필드와 메소드 이름을 통일할 목적 부모 클래스로만 사용 되며 , 객체 생성 불가 추상</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/jsp-servlet-3.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-servlet-3.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Servelt 3</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
 
     <article class="post-card tag-template">
         
@@ -341,7 +433,7 @@
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>상속(Inheritance) 자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근</p>
+                        <p>자식(하위) 클래스가 부모(상위) 클래스의 멤버를 물려받는 것 상속 대상 : 부모의 필드 &amp; 메소드 개발 시간 단축, 객체의 다형성 구현, 코드의 중복성 다운, 유지보수 등 이점!! 상속 대상의 제한 부모클래스의 private 접근 제한을</p>
                     
                 </section>
             </a>
@@ -433,7 +525,7 @@
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>어노테이션(Annotation) 프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한</p>
+                        <p>프로그램에게 추가적인 정보를 제공해주는 메타데이터(metadata)이다. 컴파일러에게 코드 작성 문법에러 체크하도록 정보제공 ex) Override 개발 툴이 빌드나 배치시 코드를 자동으로 생성할 수 있도록 정보 제공 ex) XML 설정 파일을 자동 생성한다거나 배포를 위한 JAR</p>
                     
                 </section>
             </a>
@@ -480,130 +572,6 @@
                 <section class="post-card-excerpt">
                     
                         <p>Getter 일반적으로 클래스선언시 필드는 prvite 접근제한을 한다. (외부로 부터 변경을 막기위해) 때에 따라서 필드를 읽기만 하기 위해 Getter를 사용한다. Getter는 private 필드를의 값을 리턴 하는 구현기술 중 하나이다. getFieldName() 또는 isFieldName() 메소드의 이름을</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/java-access-modifier">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-access-modifier">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">접근 제한자(Access Modifier)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>
-접근 제한자(Access Modifier)
-
-
-    클래스       제한
-    생성자       제한
-    필드와 메소드 제한
-
-
-
-
-public
-
-protected
-
-    
-        같은패키지:default와 동일
-        다른패키지:자식클래스만 접근 허용상속의 개념과 연관
-        클래스 앞에는 선언할수없다. 필드 메서드 생성자는 가능
-    
-
-
-default
-
-private
-
-
-References.
-
-    https://www.hanbit.co.kr/
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/java-pakage">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-pakage">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">패키지(Pakage)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>패키지(Pakage) 상위 패키지와 하위 패키지는 도트(.)로 구분 패키지이름은 소문자 &amp;&amp; 숫자,특수문자 안됨 &amp;&amp; 도메인 역순(com.naver.projectname) 명령 라인 환경에서(CLI) 컴파일 javac XXX.java &lt;-- 이 명령어로 컴파일시 .class는 생기나 패키지는 자동으로 생성안됨 javac -d [패키지가</p>
                     
                 </section>
             </a>

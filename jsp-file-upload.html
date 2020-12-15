@@ -236,7 +236,12 @@ into the {body} of the default.hbs template -->
     <span class="na">String</span> <span class="na">oriFile =</span><span class="err"> </span><span class="s">""</span><span class="err">;</span>
 
     <span class="na">try</span><span class="err">{</span>
-        <span class="err">//</span><span class="na">request</span><span class="err">객체,</span> <span class="err">실제로</span> <span class="err">저장할곳,</span> <span class="na">size</span><span class="err">,</span> <span class="err">파일이름(한글로),</span>
+        <span class="err">//</span><span class="na">MultipartRequest</span><span class="err">객체가</span> <span class="err">파일</span> <span class="err">업로드를</span> <span class="err">담당</span>
+        <span class="err">//</span><span class="na">form</span><span class="err">에서</span> <span class="err">가져온</span> <span class="err">인자값을</span> <span class="err">얻기위해</span>
+        <span class="err">//업로드될</span> <span class="err">위치</span>
+        <span class="err">//업로드</span> <span class="err">최대크기</span> <span class="err">설정</span> <span class="err">초과할경우</span> <span class="na">exception</span>
+        <span class="err">//한글</span>
+        <span class="err">//이름이</span> <span class="err">같은</span> <span class="err">파일을</span> <span class="err">업로드할경우</span> <span class="err">파일이름</span> <span class="err">변환</span>
         <span class="na">MultipartRequest</span> <span class="na">multi =</span><span class="err">  </span><span class="s">new</span> <span class="na">MultipartRequest</span><span class="err">(</span><span class="na">request</span><span class="err">,</span> <span class="na">path</span><span class="err">,</span> <span class="na">size</span><span class="err">,</span> <span class="err">"</span><span class="na">utf-8</span><span class="err">",</span> <span class="na">new</span> <span class="na">DefaultFileRenamePolicy</span><span class="err">());</span>
 
         <span class="na">Enumeration</span> <span class="na">files =</span><span class="err"> </span><span class="s">multi.getFileNames();</span> <span class="err">//올린파일이름들을</span> <span class="err">얻는다.</span>
@@ -244,8 +249,8 @@ into the {body} of the default.hbs template -->
         <span class="na">String</span> <span class="na">str =</span><span class="err"> </span><span class="s">(String)files.nextElement();//파일이름</span> <span class="err">저장</span>
 
 
-        <span class="na">file =</span><span class="err"> </span><span class="s">multi.getFilesystemName(str);</span> <span class="err">//혹시</span> <span class="err">중복되어있을때</span> <span class="err">처리</span>
-        <span class="na">oriFile =</span><span class="err"> </span><span class="s">multi.getOriginalFileName(str);</span> <span class="err">//실제</span> <span class="err">파일이름</span>
+        <span class="na">file =</span><span class="err"> </span><span class="s">multi.getFilesystemName(str);</span> <span class="err">//파일이름이</span> <span class="err">중복되어있을때</span> <span class="err">처리</span>
+        <span class="na">oriFile =</span><span class="err"> </span><span class="s">multi.getOriginalFileName(str);</span>
 
     <span class="err">}</span><span class="na">catch</span><span class="err">(</span><span class="na">Exception</span> <span class="na">e</span><span class="err">){</span>
         <span class="na">e</span><span class="err">.</span><span class="na">printStackTrace</span><span class="err">();</span>
@@ -265,7 +270,8 @@ file upload success;
 
 <h1>References.</h1>
 <ul>
-    <li><a href="http://www.ssitcenter.com/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/" target="_blank" class="tx-link">
+        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</a></li>
 </ul>
 
 
@@ -380,6 +386,24 @@ file upload success;
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/jsp-jstl">JSTL</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/jsp-el.html">EL(Expression Language)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -397,8 +421,6 @@ file upload success;
                                     
                                         
                                         
-                                            <li><a href="/jsp-dbcp.html">dbcp</a></li>
-                                        
                                     
                                   
                                 
@@ -413,8 +435,6 @@ file upload success;
                                   
                                     
                                         
-                                        
-                                            <li><a href="/jsp-bean.html">bean</a></li>
                                         
                                     
                                   
@@ -567,7 +587,7 @@ file upload success;
                         <footer class="read-next-card-footer">
                             <a href="/tag/java/">
                                 
-                                    See all 22 posts  →
+                                    See all 24 posts  →
                                 
                             </a>
                         </footer>
@@ -576,6 +596,55 @@ file upload success;
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/jsp-el.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-el.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">EL(Expression Language)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->

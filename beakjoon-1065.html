@@ -57,7 +57,7 @@
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="한수" />
-    <meta property="og:description" content="한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를" />
+    <meta property="og:description" content="한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 import java.io.*; public class Main { public static void" />
     <meta property="og:url" content="https://JaeHong2.github.io//beakjoon-1065" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/algorithm-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -67,7 +67,7 @@
     <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="한수" />
-    <meta name="twitter:description" content="한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를" />
+    <meta name="twitter:description" content="한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 import java.io.*; public class Main { public static void" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/algorithm-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//beakjoon-1065"
     },
-    "description": "한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를"
+    "description": "한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 import java.io.*; public class Main { public static void"
 }
     </script>
 
@@ -210,11 +210,50 @@ N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수
 <p>110</p>
 
 <p>출력</p>
-<p>99</p>
+<p>99
+<br /></p>
 
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+    <span class="n">BufferedWriter</span> <span class="n">bw</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="n">OutputStreamWriter</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">));</span>
+
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+
+    <span class="n">bw</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">check</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+    <span class="n">bw</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+    <span class="n">br</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="n">bw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">check</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="c1">//정해진입력값에서 한수가 몇개인지</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span> <span class="c1">//100~ 999자리수를 저장하기위한 배열</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span><span class="c1">//  1~ 입력만큼</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="o">)</span> <span class="n">count</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="c1">//1~99는 모두 한수</span>
+            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1000</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span> <span class="c1">//1000은 한수가 아님</span>
+            <span class="k">else</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+                <span class="k">while</span> <span class="o">(</span><span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//일의자리수를 배열에 넣기위한 로직</span>
+                <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">t</span> <span class="o">%</span> <span class="mi">10</span><span class="o">;</span>
+                <span class="n">t</span> <span class="o">/=</span> <span class="mi">10</span><span class="o">;</span>
+                <span class="n">k</span><span class="o">++;</span>
+            <span class="o">}</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">-</span> <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">-</span> <span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">])</span> <span class="c1">//공차가 같으면 한수</span>
+            <span class="n">count</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+        <span class="k">return</span> <span class="n">count</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 <p>처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에<br />
     한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여<br />
-    123은 한수에 포함이 된다. 이 한수의 개수를 출력하는 것이 문제의 정답인데. 어떻게짜야할지 고민이다..
+    123은 한수에 포함이 된다.
 </p>
 
 <h1>문제출처</h1>
@@ -331,6 +370,10 @@ N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수
                         <div class="read-next-card-content">
                             <ul>
                                 
+                                
+                                  
+                                
+                                  
                                 
                                   
                                 
