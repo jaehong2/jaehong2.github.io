@@ -57,7 +57,7 @@
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Servelt 1" />
-    <meta property="og:description" content="JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 Servlet 클래스는 HttpServlet 클래스를 상속받음 public class HelloWorld extends HttpServlet{ } 요청처리 및 응답처리객체를 톰캣에서 받음 protected void doGet(HttpServletRequest request, HttpServletResponse" />
+    <meta property="og:description" content="JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 JSP , Servlet 차이 Servlet Java 코드 안에 HTML 코드 (하나의 클래스) data processing(Controller)에 좋다. Servlet이 수정된 경우 Java 코드를 컴파일(.class" />
     <meta property="og:url" content="https://JaeHong2.github.io//jsp-servlet-1.html" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -67,7 +67,7 @@
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Servelt 1" />
-    <meta name="twitter:description" content="JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 Servlet 클래스는 HttpServlet 클래스를 상속받음 public class HelloWorld extends HttpServlet{ } 요청처리 및 응답처리객체를 톰캣에서 받음 protected void doGet(HttpServletRequest request, HttpServletResponse" />
+    <meta name="twitter:description" content="JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 JSP , Servlet 차이 Servlet Java 코드 안에 HTML 코드 (하나의 클래스) data processing(Controller)에 좋다. Servlet이 수정된 경우 Java 코드를 컴파일(.class" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//jsp-servlet-1.html"
     },
-    "description": "JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 Servlet 클래스는 HttpServlet 클래스를 상속받음 public class HelloWorld extends HttpServlet{ } 요청처리 및 응답처리객체를 톰캣에서 받음 protected void doGet(HttpServletRequest request, HttpServletResponse"
+    "description": "JSP는 무엇이고, Servlet 은 무엇인가?&lt; Servlet Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면 Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대 JSP , Servlet 차이 Servlet Java 코드 안에 HTML 코드 (하나의 클래스) data processing(Controller)에 좋다. Servlet이 수정된 경우 Java 코드를 컴파일(.class"
 }
     </script>
 
@@ -206,11 +206,23 @@ into the {body} of the default.hbs template -->
 <ul>
     <li>Tomcat 위에서 동작하는 java Program .. 더 자세히는 Servlet이 초기화 되는 과정을 보면</li>
     <li>Java 코드 안에 HTML 코드 (하나의 클래스) .. JSP는 반대</li>
-
 </ul>
-<p>
 
-</p>
+<h4>JSP , Servlet 차이</h4>
+<h5>Servlet</h5>
+<ul>
+    <li>Java 코드 안에 HTML 코드 (하나의 클래스)</li>
+    <li>data processing(Controller)에 좋다.</li>
+    <li>Servlet이 수정된 경우 Java 코드를 컴파일(.class 파일 생성)한 후 동적인 페이지를 처리하기 때문에<br /> 전체 코드를 업데이트하고 다시 컴파일한 후 재배포하는 작업이 필요하다. (개발 생산성 저하)</li>
+</ul>
+
+<h5>JSP</h5>
+<ul>
+    <li>Java 언어를 기반으로 하는 Server Side 스크립트 언어</li>
+    <li>HTML 코드 안에 Java 코드</li>
+    <li>Servlet를 보완하고 기술을 확장한 스크립트 방식 표준<br />
+        Servlet의 모든 기능 + 추가적인 기능</li>
+</ul>
 
 <p><mark>Servlet 클래스는 HttpServlet 클래스를 상속받음</mark></p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="kd">extends</span> <span class="n">HttpServlet</span><span class="o">{</span>
@@ -224,20 +236,22 @@ into the {body} of the default.hbs template -->
 <span class="n">PrintWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">();</span>
 </code></pre></div></div>
 
-<h2>GET &amp;P POST방식</h2>
+<h2>GET방식 &amp; POST방식</h2>
 
 <p>클라이언트에서 WAS로 <mark>요청(request)</mark>하는 2가지 방법
 html 태그안에 method = GET or POST 정함</p>
 <p><b>1.GET 방식</b></p>
 <ul>
     <li>서블릿에서 doGet 메소드 호출</li>
-    <li><b>URL값으로 정보가 전송되어 보안취약</b></li>
+    <li>서버에는 최대 240Byte까지 데이터를 전달할 수 있다.</li>
+    <li><b>URL값이 노출되어 보안취약</b></li>
 </ul>
 
 <p><b>2.POST 방식</b></p>
 <ul>
     <li>서블릿에서 doPost 메소드 호출</li>
-    <li><b>header를 이용하여 정보가 전송되어 보안강함</b></li>
+    <li>서버에 전달할 수 있는 데이터 크기에 제한이 없다.</li>
+    <li><b>URL에는 매개변수가 표시되지않는다.</b></li>
 
 </ul>
 
@@ -372,6 +386,15 @@ response.setContentType("html/text"); 이렇게입력시
                                 
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/jsp-board-crud">게시판 CRUD</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
                                 
                                   
                                     
@@ -394,8 +417,6 @@ response.setContentType("html/text"); 이렇게입력시
                                   
                                     
                                         
-                                        
-                                            <li><a href="/jsp-jstl">JSTL</a></li>
                                         
                                     
                                   
@@ -590,7 +611,7 @@ response.setContentType("html/text"); 이렇게입력시
                         <footer class="read-next-card-footer">
                             <a href="/tag/java/">
                                 
-                                    See all 26 posts  →
+                                    See all 27 posts  →
                                 
                             </a>
                         </footer>
