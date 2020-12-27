@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://jaehong2.github.io//tag/spring/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
+  <updated>2020-12-27T23:23:19+09:00</updated>
+  <id>https://jaehong2.github.io//tag/spring/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">오늘의 공부기록 | </title>
+  
+
+  
+    <subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">스프링 소개 &amp;amp; 라이브러리</title>
+      <link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 소개 &amp; 라이브러리" />
+      <published>2020-12-27T03:34:00+09:00</published>
+      <updated>2020-12-27T03:34:00+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-spring-introduce</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+
+&lt;h2&gt;공부 목표&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Spring 파일구조 학습&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://start.spring.io/&quot;&gt;https://start.spring.io/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트&lt;/li&gt;
+    &lt;li&gt;Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다.&lt;/li&gt;
+    &lt;li&gt;과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용&lt;/li&gt;
+    &lt;li&gt;snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님&lt;/li&gt;
+    &lt;li&gt;Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 &lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;SpringWeb&lt;/li&gt;
+            &lt;li&gt;Thymeleaf : 템플릿 엔진 중 하나&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;파일 구조&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;.gradle&lt;/li&gt;
+    &lt;li&gt;.idea : IntelliJ가 사용하는 설정파일&lt;/li&gt;
+    &lt;li&gt; gradle wrapper&lt;/li&gt;
+    &lt;li&gt; src &amp;gt; main, test&lt;br /&gt;
+        메이븐도 기본으로 main test 폴더가 있는데&lt;br /&gt;
+        test에는 test code들과 관련된 소스들이들어가는데,&lt;br /&gt;
+        그만큼 test code가 중요하다! 라고 볼수있음&lt;/li&gt;
+    &lt;li&gt; main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등&lt;/li&gt;
+    &lt;li&gt;bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일&lt;/li&gt; &lt;!-- 중요--&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;라이브러리 살펴보기&lt;/h2&gt;
+&lt;p&gt;
+    기존의 Maven이나 Gradle은 의존관계들을 관리 해준다.&lt;br /&gt;
+    무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된&lt;br /&gt;
+    의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다.&lt;br /&gt;
+    그렇게해서 나중에는 스프링코어까지 당겨온다.
+&lt;/p&gt;
+
+&lt;h4&gt;스프링 부트 라이브러리&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;spring-boot-starter-web&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;spring-boot-starter-tomcat : 톰캣(웹서버)&lt;/li&gt;
+            &lt;li&gt;spring-webmvc: 스프링 웹&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;li&gt;spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view)&lt;/li&gt;
+    &lt;li&gt;spring-boot&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;spring-boot&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;spring-core&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;li&gt;spring-boot-starter-logging&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;logback,slf4j&lt;/li&gt;
+                &lt;/ul&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;테스트 라이브러리 &lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;spring-boot-starter-test&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;junit: 테스트 프레임워크&lt;/li&gt;
+            &lt;li&gt;mockito: 목 라이브러리&lt;/li&gt;
+            &lt;li&gt;assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리&lt;/li&gt;
+            &lt;li&gt;spring-test: 스프링 통합 테스트 지원&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;bulid.gradle&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">공부 목표 Spring 파일구조 학습 https://start.spring.io/ 스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트 Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다. 과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용 snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님 Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 SpringWeb Thymeleaf : 템플릿 엔진 중 하나 파일 구조 .gradle .idea : IntelliJ가 사용하는 설정파일 gradle wrapper src &amp;gt; main, test 메이븐도 기본으로 main test 폴더가 있는데 test에는 test code들과 관련된 소스들이들어가는데, 그만큼 test code가 중요하다! 라고 볼수있음 main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등 bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일 라이브러리 살펴보기 기존의 Maven이나 Gradle은 의존관계들을 관리 해준다. 무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된 의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다. 그렇게해서 나중에는 스프링코어까지 당겨온다. 스프링 부트 라이브러리 spring-boot-starter-web spring-boot-starter-tomcat : 톰캣(웹서버) spring-webmvc: 스프링 웹 spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view) spring-boot spring-boot spring-core spring-boot-starter-logging logback,slf4j 테스트 라이브러리 spring-boot-starter-test junit: 테스트 프레임워크 mockito: 목 라이브러리 assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리 spring-test: 스프링 통합 테스트 지원 bulid.gradle References.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

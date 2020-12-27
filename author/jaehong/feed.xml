@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-25T23:39:06+09:00</updated>
+  <updated>2020-12-27T23:23:19+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -30,6 +30,118 @@
   
   
 
+  
+    <entry>
+      <title type="html">스프링 소개 &amp;amp; 라이브러리</title>
+      <link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 소개 &amp; 라이브러리" />
+      <published>2020-12-27T03:34:00+09:00</published>
+      <updated>2020-12-27T03:34:00+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-spring-introduce</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+
+&lt;h2&gt;공부 목표&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Spring 파일구조 학습&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://start.spring.io/&quot;&gt;https://start.spring.io/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트&lt;/li&gt;
+    &lt;li&gt;Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다.&lt;/li&gt;
+    &lt;li&gt;과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용&lt;/li&gt;
+    &lt;li&gt;snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님&lt;/li&gt;
+    &lt;li&gt;Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 &lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;SpringWeb&lt;/li&gt;
+            &lt;li&gt;Thymeleaf : 템플릿 엔진 중 하나&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;파일 구조&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;.gradle&lt;/li&gt;
+    &lt;li&gt;.idea : IntelliJ가 사용하는 설정파일&lt;/li&gt;
+    &lt;li&gt; gradle wrapper&lt;/li&gt;
+    &lt;li&gt; src &amp;gt; main, test&lt;br /&gt;
+        메이븐도 기본으로 main test 폴더가 있는데&lt;br /&gt;
+        test에는 test code들과 관련된 소스들이들어가는데,&lt;br /&gt;
+        그만큼 test code가 중요하다! 라고 볼수있음&lt;/li&gt;
+    &lt;li&gt; main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등&lt;/li&gt;
+    &lt;li&gt;bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일&lt;/li&gt; &lt;!-- 중요--&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;라이브러리 살펴보기&lt;/h2&gt;
+&lt;p&gt;
+    기존의 Maven이나 Gradle은 의존관계들을 관리 해준다.&lt;br /&gt;
+    무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된&lt;br /&gt;
+    의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다.&lt;br /&gt;
+    그렇게해서 나중에는 스프링코어까지 당겨온다.
+&lt;/p&gt;
+
+&lt;h4&gt;스프링 부트 라이브러리&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;spring-boot-starter-web&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;spring-boot-starter-tomcat : 톰캣(웹서버)&lt;/li&gt;
+            &lt;li&gt;spring-webmvc: 스프링 웹&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;li&gt;spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view)&lt;/li&gt;
+    &lt;li&gt;spring-boot&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;spring-boot&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;spring-core&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;li&gt;spring-boot-starter-logging&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;logback,slf4j&lt;/li&gt;
+                &lt;/ul&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;테스트 라이브러리 &lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;spring-boot-starter-test&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;junit: 테스트 프레임워크&lt;/li&gt;
+            &lt;li&gt;mockito: 목 라이브러리&lt;/li&gt;
+            &lt;li&gt;assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리&lt;/li&gt;
+            &lt;li&gt;spring-test: 스프링 통합 테스트 지원&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;bulid.gradle&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">공부 목표 Spring 파일구조 학습 https://start.spring.io/ 스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트 Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다. 과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용 snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님 Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 SpringWeb Thymeleaf : 템플릿 엔진 중 하나 파일 구조 .gradle .idea : IntelliJ가 사용하는 설정파일 gradle wrapper src &amp;gt; main, test 메이븐도 기본으로 main test 폴더가 있는데 test에는 test code들과 관련된 소스들이들어가는데, 그만큼 test code가 중요하다! 라고 볼수있음 main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등 bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일 라이브러리 살펴보기 기존의 Maven이나 Gradle은 의존관계들을 관리 해준다. 무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된 의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다. 그렇게해서 나중에는 스프링코어까지 당겨온다. 스프링 부트 라이브러리 spring-boot-starter-web spring-boot-starter-tomcat : 톰캣(웹서버) spring-webmvc: 스프링 웹 spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view) spring-boot spring-boot spring-core spring-boot-starter-logging logback,slf4j 테스트 라이브러리 spring-boot-starter-test junit: 테스트 프레임워크 mockito: 목 라이브러리 assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리 spring-test: 스프링 통합 테스트 지원 bulid.gradle References.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">게시판 CRUD</title>
@@ -343,7 +455,9 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
     &lt;li&gt;글 목록을 출력하는 Dao 부분이다.&lt;/li&gt;
     &lt;li&gt;ResultSet은 Select의 결과 값을 저장하는 객체이고, 데이터타입은 dto이며,&lt;br /&gt;
@@ -373,8 +487,6 @@
 
       
 
-      
-        <category term="java" />
       
 
       
@@ -470,6 +582,60 @@
     </entry>
   
     <entry>
+      <title type="html">MVC 패턴</title>
+      <link href="https://jaehong2.github.io//jsp-mvc" rel="alternate" type="text/html" title="MVC 패턴" />
+      <published>2020-12-16T23:17:00+09:00</published>
+      <updated>2020-12-16T23:17:00+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-mvc</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-mvc">&lt;!-- Forwarding --&gt;
+
+&lt;h2&gt;MVC&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Model, View, Controller 약자&lt;/li&gt;
+    &lt;li&gt;각각의 기능들이 상호작용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;mvc model1&lt;/h4&gt;
+&lt;p&gt;View + Controller = .jsp&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.21.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;mvc model2&lt;/h4&gt;
+&lt;p&gt;모두 모듈화 되어있는 형태&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.22.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
+        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">MVC Model, View, Controller 약자 각각의 기능들이 상호작용 mvc model1 View + Controller = .jsp mvc model2 모두 모듈화 되어있는 형태 References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">uri-pattern</title>
       <link href="https://jaehong2.github.io//jsp-uri-pattern" rel="alternate" type="text/html" title="uri-pattern" />
       <published>2020-12-16T23:17:00+09:00</published>
@@ -524,60 +690,6 @@
 
       
         <summary type="html">디렉터리 패턴 서블릿을 만들면 .xml or annotation을 이용해서 mapping 하는 방식을 공부했었는데 디렉터리 형태로 서버의 해당 컴포넌트(서블릿)을 찾아서 실행하는 구조를 디렉터리 패턴이라고 한다. 확장자 패턴 확장자 형태로 서버의 해당 컴포넌트를 찾아서 실행하는 구조 확장자 패턴은 두가지가있다. FrontController 패턴 Command 패턴 FrontController Command References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">MVC 패턴</title>
-      <link href="https://jaehong2.github.io//jsp-mvc" rel="alternate" type="text/html" title="MVC 패턴" />
-      <published>2020-12-16T23:17:00+09:00</published>
-      <updated>2020-12-16T23:17:00+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-mvc</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-mvc">&lt;!-- Forwarding --&gt;
-
-&lt;h2&gt;MVC&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;Model, View, Controller 약자&lt;/li&gt;
-    &lt;li&gt;각각의 기능들이 상호작용&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;mvc model1&lt;/h4&gt;
-&lt;p&gt;View + Controller = .jsp&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.21.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4&gt;mvc model2&lt;/h4&gt;
-&lt;p&gt;모두 모듈화 되어있는 형태&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.22.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">MVC Model, View, Controller 약자 각각의 기능들이 상호작용 mvc model1 View + Controller = .jsp mvc model2 모두 모듈화 되어있는 형태 References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary>
       
 
       
@@ -1143,79 +1255,6 @@ N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수
 
       
         <summary type="html">한수 문제 어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 입력 110 출력 99 import java.io.*; public class Main { public static void main(String args[]) throws IOException { BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); int n = Integer.parseInt(br.readLine()); bw.write(check(n) + &quot;\n&quot;); bw.flush(); br.close(); bw.close(); } static int check(int n) { int count =0; //정해진입력값에서 한수가 몇개인지 int a[] = new int[3]; //100~ 999자리수를 저장하기위한 배열 for(int i=1; i&amp;lt;=n; i++) {// 1~ 입력만큼 if(i &amp;lt; 100 ) count = i; //1~99는 모두 한수 else if(i == 1000) break; //1000은 한수가 아님 else { int k = 0, t = i; while (t &amp;gt; 0) { //일의자리수를 배열에 넣기위한 로직 a[k] = t % 10; t /= 10; k++; } if (a[0] - a[1] == a[1] - a[2]) //공차가 같으면 한수 count++; } } return count; } } 처음에는 문제 이해를 못하였는데 입력값으로 주어진 수 만큼 예를 들어 110이면 1~110만큼 수 중에 한수 즉 123 같이 각 자리의 수만봤을때 1 2 3 이 1씩증가되있으므로 등차수열에 성립이 된다하여 123은 한수에 포함이 된다. 문제출처 백준알고리즘 https://www.acmicpc.net/problem/1065&amp;gt;</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">dbcp</title>
-      <link href="https://jaehong2.github.io//jsp-dbcp.html" rel="alternate" type="text/html" title="dbcp" />
-      <published>2020-12-06T05:11:23+09:00</published>
-      <updated>2020-12-06T05:11:23+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-dbcp.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-dbcp.html">&lt;h1&gt;커넥션 풀&lt;/h1&gt;
-
-&lt;h2&gt;DAO, DTO&lt;/h2&gt;
-&lt;p&gt;DAO: Data Access Object -&amp;gt; DB로 접근해서 로직수행&lt;/p&gt;
-&lt;p&gt;DTO: Data Transfer Object -&amp;gt; DAO를 이용하여 일반적인 변수에 데이터를 할당하여 사용할수도있지만.&lt;br /&gt; 그럴경우 코드가 지저분해진다.
-                                그래서 데이터만을 모아둔 클래스를 별도로 정의한것을 DTO&lt;/p&gt;
-
-&lt;h2&gt;PreparedStatement&lt;/h2&gt;
-&lt;p&gt;sql문 실행을 위해 Statement 객체를 이용했는데, 중복코드가 많아진다는 단점이있어&lt;br /&gt;
-   단점 보안을 위해 PreparedStatement 등장&lt;/p&gt;
-
-&lt;h2&gt;커넥션 풀(DBCP)&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;DB 부하를 막기위해 Connection 객체를 미리 생성하여 사용&lt;/li&gt;
-    &lt;li&gt;tomcat 컨테이너 안 context.xml 파일에 코드 추가&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;context.xml&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Resource&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Container&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;driverClassName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;oracle.jdbc.driver.OracleDriver&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;jdbc:oracle:thin:@localhost:1521:orcl&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;scott&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1234&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;jdbc/Oracle11g&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;javax.sql.DataSource&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;maxActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;maxWait&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1000&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/jsp/jsp.13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">커넥션 풀 DAO, DTO DAO: Data Access Object -&amp;gt; DB로 접근해서 로직수행 DTO: Data Transfer Object -&amp;gt; DAO를 이용하여 일반적인 변수에 데이터를 할당하여 사용할수도있지만. 그럴경우 코드가 지저분해진다. 그래서 데이터만을 모아둔 클래스를 별도로 정의한것을 DTO PreparedStatement sql문 실행을 위해 Statement 객체를 이용했는데, 중복코드가 많아진다는 단점이있어 단점 보안을 위해 PreparedStatement 등장 커넥션 풀(DBCP) DB 부하를 막기위해 Connection 객체를 미리 생성하여 사용 tomcat 컨테이너 안 context.xml 파일에 코드 추가 context.xml &amp;lt;Resource auth=&quot;Container&quot; driverClassName = &quot;oracle.jdbc.driver.OracleDriver&quot; url = &quot;jdbc:oracle:thin:@localhost:1521:orcl&quot; username = &quot;scott&quot; password = &quot;1234&quot; name = &quot;jdbc/Oracle11g&quot; type = &quot;javax.sql.DataSource&quot; maxActive = &quot;50&quot; maxWait = &quot;1000&quot; /&amp;gt; References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary>
       
 
       
