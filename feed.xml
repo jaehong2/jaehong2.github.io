@@ -1,82 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-12-27T23:23:19+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">스프링 소개 &amp;amp; 라이브러리</title><link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 소개 &amp; 라이브러리" /><published>2020-12-27T03:34:00+09:00</published><updated>2020-12-27T03:34:00+09:00</updated><id>https://jaehong2.github.io//jsp-spring-introduce</id><content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2020-12-29T14:07:25+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">스프링 개요</title><link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 개요" /><published>2020-12-27T03:34:00+09:00</published><updated>2020-12-27T03:34:00+09:00</updated><id>https://jaehong2.github.io//jsp-spring-introduce</id><content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
 
 &lt;h2&gt;공부 목표&lt;/h2&gt;
 &lt;ul&gt;
-    &lt;li&gt;Spring 파일구조 학습&lt;/li&gt;
+    &lt;li&gt;Spring 개요&lt;/li&gt;
+    &lt;li&gt;Spring 모듈&lt;/li&gt;
+    &lt;li&gt;Spring 컨테이너(IOC)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://start.spring.io/&quot;&gt;https://start.spring.io/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Spring 프레임워크&lt;/h2&gt;
 &lt;ul&gt;
-    &lt;li&gt;스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트&lt;/li&gt;
-    &lt;li&gt;Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다.&lt;/li&gt;
-    &lt;li&gt;과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용&lt;/li&gt;
-    &lt;li&gt;snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님&lt;/li&gt;
-    &lt;li&gt;Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 &lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;SpringWeb&lt;/li&gt;
-            &lt;li&gt;Thymeleaf : 템플릿 엔진 중 하나&lt;/li&gt;
-        &lt;/ul&gt;
+    &lt;li&gt;프레임 워크는 마치 네이게이션과 같다.&lt;/li&gt;
+    &lt;li&gt;길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;파일 구조&lt;/h2&gt;
+&lt;h4&gt;Spring 에서 제공하는 모듈&lt;/h4&gt;
 &lt;ul&gt;
-    &lt;li&gt;.gradle&lt;/li&gt;
-    &lt;li&gt;.idea : IntelliJ가 사용하는 설정파일&lt;/li&gt;
-    &lt;li&gt; gradle wrapper&lt;/li&gt;
-    &lt;li&gt; src &amp;gt; main, test&lt;br /&gt;
-        메이븐도 기본으로 main test 폴더가 있는데&lt;br /&gt;
-        test에는 test code들과 관련된 소스들이들어가는데,&lt;br /&gt;
-        그만큼 test code가 중요하다! 라고 볼수있음&lt;/li&gt;
-    &lt;li&gt; main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등&lt;/li&gt;
-    &lt;li&gt;bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일&lt;/li&gt; &lt;!-- 중요--&gt;
+    &lt;li&gt;spring-core : DI, IoC 제공&lt;/li&gt;
+    &lt;li&gt;aop : AOP 구현 기능 제공&lt;/li&gt;
+    &lt;li&gt;jdbc : DB를 쉽게 다룰 수 있는 기능 제공&lt;/li&gt;
+    &lt;li&gt;tx : 트랜젝션 관련 기능제공&lt;/li&gt;
+    &lt;li&gt;webmvc : MVC구현 기능 제공&lt;/li&gt;
+    &lt;li&gt;그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;라이브러리 살펴보기&lt;/h2&gt;
-&lt;p&gt;
-    기존의 Maven이나 Gradle은 의존관계들을 관리 해준다.&lt;br /&gt;
-    무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된&lt;br /&gt;
-    의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다.&lt;br /&gt;
-    그렇게해서 나중에는 스프링코어까지 당겨온다.
+&lt;h4&gt;스프링 컨테이너(IoC)&lt;/h4&gt;
+&lt;p&gt;스프링에서 객체를 생성,조립하는 컨테이너로,&lt;br /&gt;
+   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
 &lt;/p&gt;
 
-&lt;h4&gt;스프링 부트 라이브러리&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;spring-boot-starter-web&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;spring-boot-starter-tomcat : 톰캣(웹서버)&lt;/li&gt;
-            &lt;li&gt;spring-webmvc: 스프링 웹&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;li&gt;spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view)&lt;/li&gt;
-    &lt;li&gt;spring-boot&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;spring-boot&lt;/li&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;spring-core&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;li&gt;spring-boot-starter-logging&lt;/li&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;logback,slf4j&lt;/li&gt;
-                &lt;/ul&gt;
-        &lt;/ul&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;테스트 라이브러리 &lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;spring-boot-starter-test&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;junit: 테스트 프레임워크&lt;/li&gt;
-            &lt;li&gt;mockito: 목 라이브러리&lt;/li&gt;
-            &lt;li&gt;assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리&lt;/li&gt;
-            &lt;li&gt;spring-test: 스프링 통합 테스트 지원&lt;/li&gt;
-        &lt;/ul&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;bulid.gradle&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;스프링 파일 구조&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;스프링 프로젝트 Root&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;src&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;main&lt;/li&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;java : .java파일 관리&lt;/li&gt;
+                            &lt;li&gt;resources : 자원관리 폴더 .xml or property file&lt;/li&gt;
+                        &lt;/ul&gt;
+                &lt;/ul&gt;
+            &lt;li&gt;pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를
+                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.&lt;/li&gt;
+        &lt;/ul&gt;
+
+&lt;/ul&gt;
+
+&lt;h4&gt;.xml 파일에서 객체 생성&lt;/h4&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;패키지명.클래스파일명&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;
+    Java에서는 new 키워드를 사용해서 객체를 생성했다.&lt;br /&gt;&lt;br /&gt;
+    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며&lt;br /&gt;
+    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고&lt;br /&gt;
+    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.
+&lt;/p&gt;
+
+&lt;p&gt;
+    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면&lt;br /&gt;
+    1. .xml파일(컨테이너)를 생성&lt;br /&gt;
+    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.&lt;br /&gt;
+    &lt;mark&gt;GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;);&lt;/mark&gt;&lt;br /&gt;&lt;br /&gt;
+
+    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)
+    클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class);&lt;br /&gt;
+    ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class);&lt;br /&gt;
+    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.
+
+&lt;/p&gt;
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 Spring 파일구조 학습 https://start.spring.io/ 스프링 부트기반으로 스프링 프로젝트를 만들어주는 사이트 Maven, Gradle은 필요한 라이브러리를 가지고 오고 빌드 라이프 사이클까지 관리해주는 툴이다. 과거에는 Maven을 많이 사용했지만 요즘에는 Gradle도 많이 사용 snapshot은 만들고있는 버전, M1은 아직 정식 register된 버전이 아님 Dependencies : 스프링부트 기반의 프로젝트를 생성할건데, 어떤 라이브러리를 가져다가 쓸건지 SpringWeb Thymeleaf : 템플릿 엔진 중 하나 파일 구조 .gradle .idea : IntelliJ가 사용하는 설정파일 gradle wrapper src &amp;gt; main, test 메이븐도 기본으로 main test 폴더가 있는데 test에는 test code들과 관련된 소스들이들어가는데, 그만큼 test code가 중요하다! 라고 볼수있음 main &amp;gt; resources는 java파일을 제외한 설정파일(.xml .html)등등 bulid.gradle : 버전 설정하고 라이브러리 사용하기위한 파일 라이브러리 살펴보기 기존의 Maven이나 Gradle은 의존관계들을 관리 해준다. 무슨말이냐면 라이브러리를 하나만 설정해놓아도 그 라이브러리에 관련된 의존관계가 걸려있는 라이브러리를 가지고오고 또 그 라이브러리와 의존관계인 라이브러리를 가지고온다. 그렇게해서 나중에는 스프링코어까지 당겨온다. 스프링 부트 라이브러리 spring-boot-starter-web spring-boot-starter-tomcat : 톰캣(웹서버) spring-webmvc: 스프링 웹 spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(view) spring-boot spring-boot spring-core spring-boot-starter-logging logback,slf4j 테스트 라이브러리 spring-boot-starter-test junit: 테스트 프레임워크 mockito: 목 라이브러리 assertj: 테스트 코드를 좀더 편리하게 작성하도록 도와주는 라이브러리 spring-test: 스프링 통합 테스트 지원 bulid.gradle References.</summary></entry><entry><title type="html">게시판 CRUD</title><link href="https://jaehong2.github.io//jsp-board-crud" rel="alternate" type="text/html" title="게시판 CRUD" /><published>2020-12-22T09:44:00+09:00</published><updated>2020-12-22T09:44:00+09:00</updated><id>https://jaehong2.github.io//jsp-board-crud</id><content type="html" xml:base="https://jaehong2.github.io//jsp-board-crud">&lt;h2&gt;게시판 CRUD&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 Spring 개요 Spring 모듈 Spring 컨테이너(IOC) Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary></entry><entry><title type="html">게시판 CRUD</title><link href="https://jaehong2.github.io//jsp-board-crud" rel="alternate" type="text/html" title="게시판 CRUD" /><published>2020-12-22T09:44:00+09:00</published><updated>2020-12-22T09:44:00+09:00</updated><id>https://jaehong2.github.io//jsp-board-crud</id><content type="html" xml:base="https://jaehong2.github.io//jsp-board-crud">&lt;h2&gt;게시판 CRUD&lt;/h2&gt;
 &lt;p&gt;jsp를 마무리 하면서 전체적인 기능들을 살펴보았다.&lt;/p&gt;
 
 &lt;h4&gt;전체적인 컴포넌트 설계&lt;/h4&gt;
