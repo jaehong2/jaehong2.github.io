@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/spring/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-29T14:07:25+09:00</updated>
+  <updated>2021-01-01T23:28:44+09:00</updated>
   <id>https://jaehong2.github.io//tag/spring/feed.xml</id>
 
   
@@ -32,18 +32,18 @@
 
   
     <entry>
-      <title type="html">스프링 개요</title>
-      <link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 개요" />
-      <published>2020-12-27T03:34:00+09:00</published>
-      <updated>2020-12-27T03:34:00+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-spring-introduce</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+      <title type="html">DI(Dependency Injection)</title>
+      <link href="https://jaehong2.github.io//jsp-spring-di" rel="alternate" type="text/html" title="DI(Dependency Injection)" />
+      <published>2020-12-29T20:45:00+09:00</published>
+      <updated>2020-12-29T20:45:00+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-spring-di</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-spring-di">&lt;!-- Spring 시작 --&gt;
 
 &lt;h2&gt;공부 목표&lt;/h2&gt;
 &lt;ul&gt;
-    &lt;li&gt;Spring 개요&lt;/li&gt;
-    &lt;li&gt;Spring 모듈&lt;/li&gt;
-    &lt;li&gt;Spring 컨테이너(IOC)&lt;/li&gt;
+    &lt;li&gt;DI(Dependency Injection&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Spring 프레임워크&lt;/h2&gt;
@@ -133,7 +133,116 @@
       
 
       
-        <summary type="html">공부 목표 Spring 개요 Spring 모듈 Spring 컨테이너(IOC) Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary>
+        <summary type="html">공부 목표 DI(Dependency Injection Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">스프링 개요</title>
+      <link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 개요" />
+      <published>2020-12-27T03:34:00+09:00</published>
+      <updated>2020-12-27T03:34:00+09:00</updated>
+      <id>https://jaehong2.github.io//jsp-spring-introduce</id>
+      <content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+
+&lt;h2&gt;공부 목표&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Spring 개요&lt;/li&gt;
+    &lt;li&gt;Spring 모듈&lt;/li&gt;
+    &lt;li&gt;Spring 컨테이너(IOC)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Spring 프레임워크&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;프레임 워크는 마치 네이게이션과 같다.&lt;/li&gt;
+    &lt;li&gt;길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Spring 에서 제공하는 모듈&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;spring-core : DI, IoC 제공&lt;/li&gt;
+    &lt;li&gt;aop : AOP 구현 기능 제공&lt;/li&gt;
+    &lt;li&gt;jdbc : DB를 쉽게 다룰 수 있는 기능 제공&lt;/li&gt;
+    &lt;li&gt;tx : 트랜젝션 관련 기능제공&lt;/li&gt;
+    &lt;li&gt;webmvc : MVC구현 기능 제공&lt;/li&gt;
+    &lt;li&gt;그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;스프링 컨테이너(IoC)&lt;/h4&gt;
+&lt;p&gt;스프링에서 객체를 생성,조립하는 컨테이너로,&lt;br /&gt;
+   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;스프링 파일 구조&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;스프링 프로젝트 Root&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;src&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;main&lt;/li&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;java : .java파일 관리&lt;/li&gt;
+                            &lt;li&gt;resources : 자원관리 폴더 .xml or property file&lt;/li&gt;
+                        &lt;/ul&gt;
+                &lt;/ul&gt;
+            &lt;li&gt;pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를
+                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.&lt;/li&gt;
+        &lt;/ul&gt;
+
+&lt;/ul&gt;
+
+&lt;h4&gt;.xml 파일에서 객체 생성&lt;/h4&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;패키지명.클래스파일명&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;
+    Java에서는 new 키워드를 사용해서 객체를 생성했다.&lt;br /&gt;&lt;br /&gt;
+    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며&lt;br /&gt;
+    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고&lt;br /&gt;
+    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.
+&lt;/p&gt;
+
+&lt;p&gt;
+    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면&lt;br /&gt;
+    1. .xml파일(컨테이너)를 생성&lt;br /&gt;
+    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.&lt;br /&gt;
+    &lt;mark&gt;GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;);&lt;/mark&gt;&lt;br /&gt;&lt;br /&gt;
+
+    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)
+    클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class);&lt;br /&gt;
+    ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class);&lt;br /&gt;
+    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.
+
+&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/&quot;&gt;&lt;/a&gt;https://www.inflearn.com/&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">공부 목표 Spring 개요 Spring 모듈 Spring 컨테이너(IOC) Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References. https://www.inflearn.com/</summary>
       
 
       

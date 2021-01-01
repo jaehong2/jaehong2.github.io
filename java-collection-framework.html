@@ -11,7 +11,7 @@
 
 
 
-    <title>Servelt 3</title>
+    <title>컬렉션 프레임워크(Collection FrameWork)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,26 +50,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="모르면 -> 알때까지 -> 공부해서 -> 해낸다." />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://JaeHong2.github.io//jsp-servlet-3.html" />
+    <link rel="canonical" href="https://JaeHong2.github.io//java-collection-framework" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Servelt 3" />
-    <meta property="og:description" content="Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :" />
-    <meta property="og:url" content="https://JaeHong2.github.io//jsp-servlet-3.html" />
-    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
+    <meta property="og:title" content="컬렉션 프레임워크(Collection FrameWork)" />
+    <meta property="og:description" content="컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = "one"; arrObj[1] = "two"; arrObj[2] = "three"; //컴파일" />
+    <meta property="og:url" content="https://JaeHong2.github.io//java-collection-framework" />
+    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/java-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-11-18T09:41:18+09:00" />
-    <meta property="article:modified_time" content="2020-11-18T09:41:18+09:00" />
+    <meta property="article:published_time" content="2020-12-30T01:04:00+09:00" />
+    <meta property="article:modified_time" content="2020-12-30T01:04:00+09:00" />
     <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Servelt 3" />
-    <meta name="twitter:description" content="Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :" />
+    <meta name="twitter:title" content="컬렉션 프레임워크(Collection FrameWork)" />
+    <meta name="twitter:description" content="컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = "one"; arrObj[1] = "two"; arrObj[2] = "three"; //컴파일" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
-    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
+    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/java-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="오늘의 공부기록" />
     <meta name="twitter:label2" content="Filed under" />
@@ -88,18 +88,18 @@
         "name": "오늘의 공부기록",
         "logo": "https://JaeHong2.github.io//"
     },
-    "url": "https://JaeHong2.github.io//jsp-servlet-3.html",
+    "url": "https://JaeHong2.github.io//java-collection-framework",
     "image": {
         "@type": "ImageObject",
-        "url": "https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png",
+        "url": "https://JaeHong2.github.io//assets/built/images/logo/java-logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://JaeHong2.github.io//jsp-servlet-3.html"
+        "@id": "https://JaeHong2.github.io//java-collection-framework"
     },
-    "description": "Servlet 초기화 파라미터 : ServletConfig 특정 Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등.. 이러한 데이터들을 초기화 파라미터라고 함 1. web.xml 사용해서 초기화 2. Servlet 파일 사용해서 초기화 해당 Servlet에 @WebInitParam 사용해서 초기화 ServletContext 모든 서블릿에 데이터를 공유 할 시 (web.xml에 기술) 웹어플리케이션 생명주기 감시 :"
+    "description": "컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = "one"; arrObj[1] = "two"; arrObj[2] = "three"; //컴파일"
 }
     </script>
 
@@ -112,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Servelt 3" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="컬렉션 프레임워크(Collection FrameWork)" href="/feed.xml" />
 
 
 </head>
@@ -178,7 +178,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="18 November 2020">18 November 2020</time>
+                    <time class="post-full-meta-date" datetime="30 December 2020">30 December 2020</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -188,51 +188,139 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Servelt 3</h1>
+                <h1 class="post-full-title">컬렉션 프레임워크(Collection FrameWork)</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2>Servlet 초기화 파라미터 : ServletConfig</h2>
-<p><mark>특정</mark> Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..<br />
-    이러한 데이터들을 초기화 파라미터라고 함
-</p>
+                    <!-- 추상클래스와 인터페이스 -->
 
-<h2>1. web.xml 사용해서 초기화</h2>
-<p><img src="/assets/built/images/jsp/jsp.7.JPG" alt="" /></p>
+<h2>컬렉션 프레임워크란</h2>
+<p>앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다.<br />
+    그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다.</p>
+<hr />
 
-<h2>2. Servlet 파일 사용해서 초기화</h2>
-<p>해당 Servlet에 @WebInitParam 사용해서 초기화</p>
-<p><img src="/assets/built/images/jsp/jsp.8.JPG" alt="" /></p>
+<h4>컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span>
+    <span class="n">String</span><span class="o">[]</span> <span class="n">arrObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">];</span>
+    <span class="n">arrObj</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s">"one"</span><span class="o">;</span>
+    <span class="n">arrObj</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s">"two"</span><span class="o">;</span>
+    <span class="n">arrObj</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s">"three"</span><span class="o">;</span> <span class="c1">//컴파일 에러 1.</span>
+
+    <span class="n">ArraryList</span> <span class="n">al</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArraryList</span><span class="o">();</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"one"</span><span class="o">);</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"two"</span><span class="o">);</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"three"</span><span class="o">);</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">al</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)){</span>
+        <span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">al</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span><span class="c1">//컴파일 에러 2.</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+    <li>위에 코드에서 위에는 일반적인 배열이고 밑에는 ArrayList로 작성하였다.</li>
+    <li>add메서드를 통하여 리스트에 인자로 전달된 객체를 추가하고, get(int index)로 인덱스 위치에 있는 객체를 리턴받는다.</li>
+    <li>분명 al.add("one")에서 문자열을 추가 시켰다고 생각했다. 그래서 문자열을 담으려고 했고 그러나 컴파일에러가
+        난이유는 add 메소드는 어떠한 형태의 데이터타입도 수용할 수 있는 형태의 메소드이기 때문에 인자값이 Object여야한다.
+        왜냐하면 Object는 모든 데이터 타입의 조상? 이기때문이다. 그래서 형변환을 통해 (String)al.get(i) 데이터 타입을 맞춰주어야한다.</li>
+</ul>
+
+<p>그러나 <mark>(String)al.get(i)</mark> 이방식은 옛날 방식이고 <br />
+    타입의 안정성이 떨어진다고 하여<br />
+    컬렉션 프레임워크에서 제네릭이라는 문법적 수단을 채택</p>
+<hr />
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">ArraryList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">al</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArraryList</span><span class="o">()&lt;</span><span class="n">String</span><span class="o">&gt;;</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"one"</span><span class="o">);</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"two"</span><span class="o">);</span>
+    <span class="n">al</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"three"</span><span class="o">);</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">al</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)){</span>
+    <span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">al</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<h2>인터페이스</h2>
+<ul>
+    <li>인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.</li>
+    <li>개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.</li>
+</ul>
+
+<h2>인터페이스 역할</h2>
+<ul>
+    <li>개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.</li>
+    <li>개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)</li>
+</ul>
+
+<h2>인터페이스 구성멤버</h2>
+<ul>
+    <li>상수, 추상메소드</li>
+    <li>Java 8 부터는 default 메소드, 정적 메소드</li>
+</ul>
 
 <hr />
 
-<h2>ServletContext</h2>
-<p> <mark>모든 서블릿에 </mark> 데이터를 공유 할 시 (web.xml에 기술)</p>
-<p><img src="/assets/built/images/jsp/jsp.9.JPG" alt="" /></p>
+<h2>상수 필드 선언</h2>
+<ul>
+    <li>인터페이스는 상수 필드만 선언가능</li>
+    <li>인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 </li>
+    <li>상수명은 대문자</li>
+    <li>선언과 동시에 초기화 (static 블록을 작성할수없으므로}</li>
+</ul>
+
+<h2>추상 메소드 선언</h2>
+<ul>
+    <li>인터페이스의 메소드는 기본적으로 실행 블록이 없는 <mark>추상 메소드</mark>로 선언한다.</li>
+    <li>public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+<span class="kt">int</span> <span class="n">MAX_VOLUME</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">MIN_VOLUME</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">turnOn</span><span class="o">();</span>
+<span class="kt">void</span> <span class="nf">turnOff</span><span class="o">();</span>	<span class="c1">//public abstract 생략</span>
+<span class="kt">void</span> <span class="nf">setVolume</span><span class="o">(</span><span class="kt">int</span> <span class="n">volume</span><span class="o">);</span> <span class="c1">//public abstract 생략</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <hr />
 
-<h2>웹어플리케이션 생명주기 감시 : ServletContextListner </h2>
-<p></p>
+<h2>디폴트 메소드 선언</h2>
+<ul>
+    <li>자바 8 에서 추가된 인터페이스의 새로운 멤버</li>
+    <li>[public]이 기본타입으로 default를 붙어야 생성된다.</li>
+</ul>
 
-<p><b>xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나</b></p>
-<p><img src="/assets/built/images/jsp/jsp.10.JPG" alt="" /></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+    <span class="k">default</span> <span class="kt">void</span> <span class="nf">setMute</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">mute</span><span class="o">){</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">mute</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"무음 처리"</span><span class="o">);</span>
+    <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"무음 해제"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-<h2>순서</h2>
-<p><img src="/assets/built/images/jsp/jsp.11.JPG" alt="" /></p>
+<h2>정적 메소드 선언</h2>
 
-<h1>References.</h1>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RemoteControl</span><span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">emptyBattery</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"배터리가 다 소모 되었습니다."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<!-- 출처 -->
 <h1>References.</h1>
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/" target="_blank" class="tx-link">
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</a></li>
+    <li><a href="https://www.hanbit.co.kr/" target="_blank" class="tx-link">https://www.hanbit.co.kr/</a></li>
 </ul>
 
 
@@ -300,9 +388,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://JaeHong2.github.io//jsp-servlet-3.html';
-                            this.page.identifier = '/jsp-servlet-3.html';
-                            this.page.title = 'Servelt 3';
+                            this.page.url = 'https://JaeHong2.github.io//java-collection-framework';
+                            this.page.identifier = '/java-collection-framework';
+                            this.page.title = '컬렉션 프레임워크(Collection FrameWork)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -349,11 +437,6 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/java-collection-framework">컬렉션 프레임워크(Collection FrameWork)</a></li>
-                                        
-                                    
                                   
                                 
                                   
@@ -386,50 +469,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/jsp-jstl">JSTL</a></li>
                                         
                                     
                                   
@@ -469,6 +509,54 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                     
                                   
                                 
@@ -591,22 +679,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/beakjoon-2748">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/algorithm-logo.jpg)"></div>
+            <a class="post-card-image-link" href="/git-basic">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/git-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/beakjoon-2748">
+            <a class="post-card-content-link" href="/git-basic">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Algorithm</span>
+                                <span class="post-card-tags">Git</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">피보나치 수열2(fibonacci)</h2>
+                    <h2 class="post-card-title">브랜치(Branch)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -643,22 +731,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/jsp-servlet-2.html">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
+            <a class="post-card-image-link" href="/jsp-spring-di">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/spring_boot_logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/jsp-servlet-2.html">
+            <a class="post-card-content-link" href="/jsp-spring-di">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Java</span>
+                                <span class="post-card-tags">Spring</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Servelt 2</h2>
+                    <h2 class="post-card-title">DI(Dependency Injection)</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -702,18 +790,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Servelt 3</div>
+    <div class="floating-header-title">컬렉션 프레임워크(Collection FrameWork)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Servelt+3&amp;url=https://JaeHong2.github.io/jsp-servlet-3.html"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%BB%AC%EB%A0%89%EC%85%98+%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%28Collection+FrameWork%29&amp;url=https://JaeHong2.github.io/java-collection-framework"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/jsp-servlet-3.html"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/java-collection-framework"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

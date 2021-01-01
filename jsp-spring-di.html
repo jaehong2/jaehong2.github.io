@@ -11,7 +11,7 @@
 
 
 
-    <title>오늘의 공부기록</title>
+    <title>DI(Dependency Injection)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,27 +50,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="모르면 -> 알때까지 -> 공부해서 -> 해낸다." />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://JaeHong2.github.io//about/" />
+    <link rel="canonical" href="https://JaeHong2.github.io//jsp-spring-di" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="오늘의 공부기록" />
-    <meta property="og:description" content="{% include jsp/jsp-servlet-3.html%}" />
-    <meta property="og:url" content="https://JaeHong2.github.io//about/" />
-    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/main-image.jpg" />
+    <meta property="og:title" content="DI(Dependency Injection)" />
+    <meta property="og:description" content="공부 목표 DI(Dependency Injection Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc" />
+    <meta property="og:url" content="https://JaeHong2.github.io//jsp-spring-di" />
+    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/spring_boot_logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="" />
-    <meta property="article:modified_time" content="" />
+    <meta property="article:published_time" content="2020-12-29T20:45:00+09:00" />
+    <meta property="article:modified_time" content="2020-12-29T20:45:00+09:00" />
+    <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="오늘의 공부기록" />
-    <meta name="twitter:description" content="{% include jsp/jsp-servlet-3.html%}" />
+    <meta name="twitter:title" content="DI(Dependency Injection)" />
+    <meta name="twitter:description" content="공부 목표 DI(Dependency Injection Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
-    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/main-image.jpg" />
+    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/spring_boot_logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="오늘의 공부기록" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Spring" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -85,18 +88,18 @@
         "name": "오늘의 공부기록",
         "logo": "https://JaeHong2.github.io//"
     },
-    "url": "https://JaeHong2.github.io//about/",
+    "url": "https://JaeHong2.github.io//jsp-spring-di",
     "image": {
         "@type": "ImageObject",
-        "url": "https://JaeHong2.github.io//assets/built/images/main-image.jpg",
+        "url": "https://JaeHong2.github.io//assets/built/images/logo/spring_boot_logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://JaeHong2.github.io//about/"
+        "@id": "https://JaeHong2.github.io//jsp-spring-di"
     },
-    "description": "{% include jsp/jsp-servlet-3.html%}"
+    "description": "공부 목표 DI(Dependency Injection Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc"
 }
     </script>
 
@@ -109,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="오늘의 공부기록" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="DI(Dependency Injection)" href="/feed.xml" />
 
 
 </head>
@@ -171,55 +174,106 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full   no-image">
+        <article class="post-full  tag-spring post tag-java ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=""></time>
+                    <time class="post-full-meta-date" datetime="29 December 2020">29 December 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/spring/'>SPRING</a>
+                            
+                        
                     
                 </section>
-                <h1 class="post-full-title"></h1>
+                <h1 class="post-full-title">DI(Dependency Injection)</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
             
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/spring_boot_logo.jpg)">
+            </figure>
+            
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2>Servlet 초기화 파라미터 : ServletConfig</h2>
-<p><mark>특정</mark> Servlet 생성될 때 초기에 필요한 데이터들이 있다. ex)특정 경로 및 아이디 등..<br />
-    이러한 데이터들을 초기화 파라미터라고 함
+                    <!-- Spring 시작 -->
+
+<h2>공부 목표</h2>
+<ul>
+    <li>DI(Dependency Injection</li>
+    <li></li>
+    <li></li>
+</ul>
+
+<h2>Spring 프레임워크</h2>
+<ul>
+    <li>프레임 워크는 마치 네이게이션과 같다.</li>
+    <li>길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨</li>
+</ul>
+
+<h4>Spring 에서 제공하는 모듈</h4>
+<ul>
+    <li>spring-core : DI, IoC 제공</li>
+    <li>aop : AOP 구현 기능 제공</li>
+    <li>jdbc : DB를 쉽게 다룰 수 있는 기능 제공</li>
+    <li>tx : 트랜젝션 관련 기능제공</li>
+    <li>webmvc : MVC구현 기능 제공</li>
+    <li>그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.</li>
+</ul>
+
+<h4>스프링 컨테이너(IoC)</h4>
+<p>스프링에서 객체를 생성,조립하는 컨테이너로,<br />
+   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
 </p>
 
-<h2>1. web.xml 사용해서 초기화</h2>
-<p><img src="/assets/built/images/jsp/jsp.7.JPG" alt="" /></p>
+<p><img src="assets/built/images/spring_inflearn/spring.1.jpg" /></p>
 
-<h2>2. Servlet 파일 사용해서 초기화</h2>
-<p>해당 Servlet에 @WebInitParam 사용해서 초기화</p>
-<p><img src="/assets/built/images/jsp/jsp.8.JPG" alt="" /></p>
+<h4>스프링 파일 구조</h4>
+<ul>
+    <li>스프링 프로젝트 Root</li>
+        <ul>
+            <li>src</li>
+                <ul>
+                    <li>main</li>
+                        <ul>
+                            <li>java : .java파일 관리</li>
+                            <li>resources : 자원관리 폴더 .xml or property file</li>
+                        </ul>
+                </ul>
+            <li>pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를
+                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.</li>
+        </ul>
 
-<hr />
+</ul>
 
-<h2>ServletContext</h2>
-<p> <mark>모든 서블릿에 </mark> 데이터를 공유 할 시 (web.xml에 기술)</p>
-<p><img src="/assets/built/images/jsp/jsp.9.JPG" alt="" /></p>
+<h4>.xml 파일에서 객체 생성</h4>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;bean</span> <span class="na">id =</span> <span class="s">"id값"</span> <span class="na">class=</span><span class="s">"패키지명.클래스파일명"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+<p>
+    Java에서는 new 키워드를 사용해서 객체를 생성했다.<br /><br />
+    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며<br />
+    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고<br />
+    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.
+</p>
 
-<hr />
+<p>
+    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면<br />
+    1. .xml파일(컨테이너)를 생성<br />
+    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.<br />
+    <mark>GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("classpath:apllicationContext.xml");</mark><br /><br />
 
-<h2>웹어플리케이션 생명주기 감시 : ServletContextListner </h2>
-<p></p>
+    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)
+    클래스명 변수명 = ctx.getBean("빈아이디", 클래스명.class);<br />
+    ex) TranspotationWalk trans = ctx.geBean("tWalk", TranspotationWalk.class);<br />
+    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.
 
-<p><b>xml 파일을 통해 Lisner 지정하거나 or 리스너클래스에 어노테이션 사용하거나</b></p>
-<p><img src="/assets/built/images/jsp/jsp.10.JPG" alt="" /></p>
-
-<h2>순서</h2>
-<p><img src="/assets/built/images/jsp/jsp.11.JPG" alt="" /></p>
-
-<h1>References.</h1>
+</p>
 <h1>References.</h1>
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/" target="_blank" class="tx-link">
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</a></li>
+    <li><a href=""></a></li>
 </ul>
 
 
@@ -260,6 +314,21 @@ into the {body} of the default.hbs template -->
                 <!-- #author-->
                 
                     
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/jaehong">jaehong</a></h4>
+                                
+                                    <p><a href="">공부</a></p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/jaehong">Read More</a>
+                        </div>
+                    
                 
                 <!-- /author  -->
             </footer>
@@ -272,9 +341,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://JaeHong2.github.io//about/';
-                            this.page.identifier = '';
-                            this.page.title = '';
+                            this.page.url = 'https://JaeHong2.github.io//jsp-spring-di';
+                            this.page.identifier = '/jsp-spring-di';
+                            this.page.title = 'DI(Dependency Injection)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -296,11 +365,235 @@ into the {body} of the default.hbs template -->
     <div class="inner">
         <div class="read-next-feed">
             
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/built/images/main-image.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; 오늘의 공부기록 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/spring/">Spring</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/jsp-spring-introduce">스프링 개요</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/spring/">
+                                
+                                    See all 1 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/java-collection-framework">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/java-collection-framework">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">컬렉션 프레임워크(Collection FrameWork)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/jsp-spring-introduce">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/spring_boot_logo.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-spring-introduce">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Spring</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">스프링 개요</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
         </div>
@@ -316,18 +609,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title"></div>
+    <div class="floating-header-title">DI(Dependency Injection)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=&amp;url=https://JaeHong2.github.io/about/"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=DI%28Dependency+Injection%29&amp;url=https://JaeHong2.github.io/jsp-spring-di"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/about/"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/jsp-spring-di"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2020-12-29T14:07:25+09:00</updated>
+  <updated>2021-01-01T23:28:44+09:00</updated>
   <id>https://jaehong2.github.io//tag/java/feed.xml</id>
 
   
@@ -30,6 +30,162 @@
   
   
 
+  
+    <entry>
+      <title type="html">컬렉션 프레임워크(Collection FrameWork)</title>
+      <link href="https://jaehong2.github.io//java-collection-framework" rel="alternate" type="text/html" title="컬렉션 프레임워크(Collection FrameWork)" />
+      <published>2020-12-30T01:04:00+09:00</published>
+      <updated>2020-12-30T01:04:00+09:00</updated>
+      <id>https://jaehong2.github.io//java-collection-framework</id>
+      <content type="html" xml:base="https://jaehong2.github.io//java-collection-framework">&lt;!-- 추상클래스와 인터페이스 --&gt;
+
+&lt;h2&gt;컬렉션 프레임워크란&lt;/h2&gt;
+&lt;p&gt;앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다.&lt;br /&gt;
+    그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h4&gt;컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자&lt;/h4&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arrObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arrObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arrObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;arrObj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;three&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//컴파일 에러 1.&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;ArraryList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArraryList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;three&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//컴파일 에러 2.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+    &lt;li&gt;위에 코드에서 위에는 일반적인 배열이고 밑에는 ArrayList로 작성하였다.&lt;/li&gt;
+    &lt;li&gt;add메서드를 통하여 리스트에 인자로 전달된 객체를 추가하고, get(int index)로 인덱스 위치에 있는 객체를 리턴받는다.&lt;/li&gt;
+    &lt;li&gt;분명 al.add(&quot;one&quot;)에서 문자열을 추가 시켰다고 생각했다. 그래서 문자열을 담으려고 했고 그러나 컴파일에러가
+        난이유는 add 메소드는 어떠한 형태의 데이터타입도 수용할 수 있는 형태의 메소드이기 때문에 인자값이 Object여야한다.
+        왜냐하면 Object는 모든 데이터 타입의 조상? 이기때문이다. 그래서 형변환을 통해 (String)al.get(i) 데이터 타입을 맞춰주어야한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;그러나 &lt;mark&gt;(String)al.get(i)&lt;/mark&gt; 이방식은 옛날 방식이고 &lt;br /&gt;
+    타입의 안정성이 떨어진다고 하여&lt;br /&gt;
+    컬렉션 프레임워크에서 제네릭이라는 문법적 수단을 채택&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;ArraryList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArraryList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;three&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;al&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2&gt;인터페이스&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다.&lt;/li&gt;
+    &lt;li&gt;개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;인터페이스 역할&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함.&lt;/li&gt;
+    &lt;li&gt;개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;인터페이스 구성멤버&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;상수, 추상메소드&lt;/li&gt;
+    &lt;li&gt;Java 8 부터는 default 메소드, 정적 메소드&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;상수 필드 선언&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;인터페이스는 상수 필드만 선언가능&lt;/li&gt;
+    &lt;li&gt;인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 &lt;/li&gt;
+    &lt;li&gt;상수명은 대문자&lt;/li&gt;
+    &lt;li&gt;선언과 동시에 초기화 (static 블록을 작성할수없으므로}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;추상 메소드 선언&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;인터페이스의 메소드는 기본적으로 실행 블록이 없는 &lt;mark&gt;추상 메소드&lt;/mark&gt;로 선언한다.&lt;/li&gt;
+    &lt;li&gt;public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MIN_VOLUME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;volume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//public abstract 생략&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;디폴트 메소드 선언&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;자바 8 에서 추가된 인터페이스의 새로운 멤버&lt;/li&gt;
+    &lt;li&gt;[public]이 기본타입으로 default를 붙어야 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 처리&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;무음 해제&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;정적 메소드 선언&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RemoteControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;emptyBattery&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;배터리가 다 소모 되었습니다.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- 출처 --&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = &quot;one&quot;; arrObj[1] = &quot;two&quot;; arrObj[2] = &quot;three&quot;; //컴파일 에러 1. ArraryList al = new ArraryList(); al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i);//컴파일 에러 2. System.out.println(value); } } 위에 코드에서 위에는 일반적인 배열이고 밑에는 ArrayList로 작성하였다. add메서드를 통하여 리스트에 인자로 전달된 객체를 추가하고, get(int index)로 인덱스 위치에 있는 객체를 리턴받는다. 분명 al.add(&quot;one&quot;)에서 문자열을 추가 시켰다고 생각했다. 그래서 문자열을 담으려고 했고 그러나 컴파일에러가 난이유는 add 메소드는 어떠한 형태의 데이터타입도 수용할 수 있는 형태의 메소드이기 때문에 인자값이 Object여야한다. 왜냐하면 Object는 모든 데이터 타입의 조상? 이기때문이다. 그래서 형변환을 통해 (String)al.get(i) 데이터 타입을 맞춰주어야한다. 그러나 (String)al.get(i) 이방식은 옛날 방식이고 타입의 안정성이 떨어진다고 하여 컬렉션 프레임워크에서 제네릭이라는 문법적 수단을 채택 ArraryList&amp;lt;String&amp;gt; al = new ArraryList()&amp;lt;String&amp;gt;; al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i); System.out.println(value); } 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} 추상 메소드 선언 인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다. public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음 public interface RemoteControl{ int MAX_VOLUME = 10; int MIN_VOLUME =0; public abstract void turnOn(); void turnOff(); //public abstract 생략 void setVolume(int volume); //public abstract 생략 } 디폴트 메소드 선언 자바 8 에서 추가된 인터페이스의 새로운 멤버 [public]이 기본타입으로 default를 붙어야 생성된다. public interface RemoteControl{ default void setMute(boolean mute){ if(mute){ System.out.println(&quot;무음 처리&quot;); }else{ System.out.println(&quot;무음 해제&quot;); } } 정적 메소드 선언 public interface RemoteControl{ static void emptyBattery(){ System.out.println(&quot;배터리가 다 소모 되었습니다.&quot;); } } References. https://www.hanbit.co.kr/</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">uri-pattern</title>
@@ -808,154 +964,6 @@ file upload success;
 
       
         <summary type="html">예외처리 1.페이지 지시자를 통한 예외 처리 &amp;lt;%@ page errorPage = &quot;errorPage.jsp&quot; %&amp;gt; //1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력 &amp;lt;%@ page isErrorPage = &quot;true&quot; %&amp;gt; &amp;lt;!-- 해당page는 error를 받을 수 있습니다.--&amp;gt; &amp;lt;% response.setStatus(200); %&amp;gt; &amp;lt;!-- 200은 정상적인 페이지를 말함--&amp;gt; &amp;lt;body&amp;gt; 예외페이지 입니다.&amp;lt;br/&amp;gt; &amp;lt;% exception.getMessage(); %&amp;gt; &amp;lt;/body&amp;gt; 2.web.xml을 통한 예외 처리 web.xml &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;404&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error404.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; &amp;lt;error-page&amp;gt; &amp;lt;error-code&amp;gt;500&amp;lt;/error-code&amp;gt; &amp;lt;location&amp;gt;/error500.jsp&amp;lt;/location&amp;gt; &amp;lt;/error-page&amp;gt; References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">cookie &amp;amp; session &amp;amp; cache</title>
-      <link href="https://jaehong2.github.io//jsp-cookie.html" rel="alternate" type="text/html" title="cookie &amp; session &amp; cache" />
-      <published>2020-11-27T02:02:24+09:00</published>
-      <updated>2020-11-27T02:02:24+09:00</updated>
-      <id>https://jaehong2.github.io//jsp-cookie.html</id>
-      <content type="html" xml:base="https://jaehong2.github.io//jsp-cookie.html">&lt;!-- cookie session cache --&gt;
-
-&lt;h2&gt;쿠키&lt;/h2&gt;
-
-&lt;p&gt;http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다.&lt;br /&gt;
-    연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다.&lt;br /&gt;
-    쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 &lt;br /&gt;
-    4kb로, 300개까지 데이터 정보를 가질 수 있다.
-&lt;/p&gt;
-
-&lt;p&gt; 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;Cookie&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cookie =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//쿠키&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxAge&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;초간&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;지속&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addCookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//쿠키탑재&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendRedirect&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;abc&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsp&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;포워딩&lt;/span&gt;
-    &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--forwarding 후--&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cookies =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;request.getCookies();&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;포워딩된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;쿠키객체&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;++){&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;cookies[i].getValue();&lt;/span&gt;
-    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; 쿠키의 한계 &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;사용자가 임의로 고치거나 지울수있다. &lt;/p&gt;
-&lt;p&gt;쿠키가 보안상으로 취약 &lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;세션&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단&lt;/li&gt;
-    &lt;li&gt;서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재)&lt;/li&gt;
-    &lt;li&gt;세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다.&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;mark&gt;브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다.&lt;/mark&gt;&lt;/p&gt;
-&lt;p&gt; 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송&lt;/p&gt;
-
-&lt;p&gt;login.html&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;action =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;loginOk.jsp&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    아이디: &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
-    비밀번호: &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pw&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;로그인&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;loginOk.jsp&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%!&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pw&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;12345&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendRedirect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;welcome.jsp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendRedirect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;login.html&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;welcome.jsp&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttributeNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMoreElements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;님 안녕하세요.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;br/&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;logout.jsp&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Enumeration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttributeNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMoreElements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()){&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enumeration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nextElement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;removeAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;캐쉬&lt;/h2&gt;
-&lt;p&gt;가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에&lt;/li&gt;
-    &lt;li&gt;사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
-    &lt;li a=&quot;&quot; href=&quot;https://www.youtube.com/watch?v=OpoVuwxGRDI/&quot;&gt;얄팍한 코딩사전&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터 정보를 가질 수 있다. 쿠키 생성 -&amp;gt; 속성 설정 -&amp;gt; response 객체에 쿠키 탑재 &amp;lt;% Cookie cookie = new Cookie(&quot;id&quot;,id); //쿠키 name, value cookie.setMaxAge(60); //60초간 지속 response.addCookie(cookie); //쿠키탑재 response.sendRedirect(&quot;abc.jsp&quot;) // 포워딩 %&amp;gt; &amp;lt;!--forwarding 후--&amp;gt; &amp;lt;% Cookie[] cookies = request.getCookies(); // 포워딩된 쿠키객체 for(int i=0; i &amp;lt; cookies.length; i++){ String id = cookies[i].getValue(); } 쿠키의 한계 사용자가 임의로 고치거나 지울수있다. 쿠키가 보안상으로 취약 세션 쿠키와 마찬가지로 서버와의 관계를 유지하기 위한 수단 서버상에 객체로 존재 (쿠키는 클라이언트 쪽에 존재) 세션은 서버에서만 접근이 가능 -&amp;gt; 보안이 좋다. , 데이터에 한계가 없다. 브라우저 하나당 하나의 객체를 jsp 컨테이너가 자동으로 생성한다. 클라이언트 요청 -&amp;gt; 서버에서는 기한이 짧은 임시키를 브라우저로보내어 쿠키로저장 -&amp;gt; 클라이언트가 사이트 접속할때마다 http요청에 key를 실어 서버로 전송 login.html &amp;lt;form action =&quot;loginOk.jsp&quot; method=&quot;post&quot;&amp;gt; 아이디: &amp;lt;input type=&quot;text&quot; name =&quot;id&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; 비밀번호: &amp;lt;input type=&quot;password&quot; name =&quot;pw&quot; size=&quot;10&quot;&amp;gt;&amp;lt;br/&amp;gt; &amp;lt;input type=&quot;submit&quot; value=&quot;로그인&quot;&amp;gt; &amp;lt;/form&amp;gt; loginOk.jsp &amp;lt;%! String id,pw; %&amp;gt; &amp;lt;% id =request.getParameter(&quot;id&quot;); pw = request.getParameter(&quot;pw&quot;); if(id.equals(&quot;abcde&quot;)&amp;amp;&amp;amp; pw.equals(&quot;12345&quot;)){ session.setAttribute(&quot;id&quot;,id); response.sendRedirect(&quot;welcome.jsp&quot;); }else{ response.sendRedirect(&quot;login.html&quot;); } %&amp;gt; welcome.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)){ out.println(sValue + &quot;님 안녕하세요.&quot; +&quot;&amp;lt;br/&amp;gt;&quot;); } } %&amp;gt; logout.jsp &amp;lt;% Enumeration enumeration = session.getAttributeNames(); while(enumeration.hasMoreElements()){ String sName = enumeration.nextElement().toString(); String sValue = (String)session.getAttribute(sName); if(sValue.equals(&quot;abcde&quot;)) session.removeAttribute(sName); } %&amp;gt; 캐쉬 가져오는데 비용이 드는 데이터를 한번가져온뒤에는 임시로 저장 웹캐쉬는 이미지정보를 불러올때 데이터사용량도 발생하고 시간도들기에 사용자가 여러번 방문 할듯한 사이트에서는 한번 받아온 데이터를 사용자의 컴퓨터 or 서버에 저장 References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/ 얄팍한 코딩사전</summary>
       
 
       
