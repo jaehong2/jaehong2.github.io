@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/git/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-01-01T23:28:44+09:00</updated>
+  <updated>2021-01-03T20:48:30+09:00</updated>
   <id>https://jaehong2.github.io//tag/git/feed.xml</id>
 
   
@@ -30,6 +30,62 @@
   
   
 
+  
+    <entry>
+      <title type="html">error 403</title>
+      <link href="https://jaehong2.github.io//git-error-403" rel="alternate" type="text/html" title="error 403" />
+      <published>2021-01-03T05:01:00+09:00</published>
+      <updated>2021-01-03T05:01:00+09:00</updated>
+      <id>https://jaehong2.github.io//git-error-403</id>
+      <content type="html" xml:base="https://jaehong2.github.io//git-error-403">&lt;!-- git error --&gt;
+
+&lt;h2&gt;Git requested URL returned Error 403 해결방법&lt;/h2&gt;
+&lt;h4&gt;발생이유&lt;/h4&gt;
+&lt;p&gt;2021년 팀 스터디를 시작하기위해 목표설정을 .md파일에 적고&lt;br /&gt;
+    push 하려는데 &lt;mark&gt;Git requested URL returned Error 403&lt;/mark&gt;에러가 나왔다.!두둥..&lt;br /&gt;
+    서칭을 해보니 발생이유는 다양하다고 하나 나의 경우에는 접근 권한을 부여하지 않아 그런거 같았다.!&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;해결방법&lt;/h4&gt;
+&lt;p&gt;권한을 부여 받고 아래코드로 깃허브 레퍼지토리에 대한 접근 인증을 받으니 해결됬다.&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote set-url origin (git 레포 url)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;
+    그리고 git 레포 url를 가지고올때 ctrl+c +v 했는데 그럴경우 &lt;br /&gt;
+    &lt;mark&gt;fatal: protocol 'https' is not supported&lt;/mark&gt;에러가 발생하였다.
+    붙여넣기시 그대로 문자열이 출력이되지않았다. 결론은 직접쳐보자!!
+&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://cheonjoosung.github.io/blog/git-push-error&quot;&gt;https://cheonjoosung.github.io/blog/git-push-error&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="git" />
+      
+
+      
+        <summary type="html">Git requested URL returned Error 403 해결방법 발생이유 2021년 팀 스터디를 시작하기위해 목표설정을 .md파일에 적고 push 하려는데 Git requested URL returned Error 403에러가 나왔다.!두둥.. 서칭을 해보니 발생이유는 다양하다고 하나 나의 경우에는 접근 권한을 부여하지 않아 그런거 같았다.! 해결방법 권한을 부여 받고 아래코드로 깃허브 레퍼지토리에 대한 접근 인증을 받으니 해결됬다. git remote set-url origin (git 레포 url) 그리고 git 레포 url를 가지고올때 ctrl+c +v 했는데 그럴경우 fatal: protocol 'https' is not supported에러가 발생하였다. 붙여넣기시 그대로 문자열이 출력이되지않았다. 결론은 직접쳐보자!! References. https://cheonjoosung.github.io/blog/git-push-error</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">브랜치(Branch)</title>
