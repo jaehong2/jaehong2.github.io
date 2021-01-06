@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-03T20:48:30+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">error 403</title><link href="https://jaehong2.github.io//git-error-403" rel="alternate" type="text/html" title="error 403" /><published>2021-01-03T05:01:00+09:00</published><updated>2021-01-03T05:01:00+09:00</updated><id>https://jaehong2.github.io//git-error-403</id><content type="html" xml:base="https://jaehong2.github.io//git-error-403">&lt;!-- git error --&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-06T23:59:18+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">error 403</title><link href="https://jaehong2.github.io//git-error-403" rel="alternate" type="text/html" title="error 403" /><published>2021-01-03T05:01:00+09:00</published><updated>2021-01-03T05:01:00+09:00</updated><id>https://jaehong2.github.io//git-error-403</id><content type="html" xml:base="https://jaehong2.github.io//git-error-403">&lt;!-- git error --&gt;
 
 &lt;h2&gt;Git requested URL returned Error 403 해결방법&lt;/h2&gt;
 &lt;h4&gt;발생이유&lt;/h4&gt;
@@ -185,7 +185,31 @@
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.hanbit.co.kr/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;https://www.hanbit.co.kr/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = &quot;one&quot;; arrObj[1] = &quot;two&quot;; arrObj[2] = &quot;three&quot;; //컴파일 에러 1. ArraryList al = new ArraryList(); al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i);//컴파일 에러 2. System.out.println(value); } } 위에 코드에서 위에는 일반적인 배열이고 밑에는 ArrayList로 작성하였다. add메서드를 통하여 리스트에 인자로 전달된 객체를 추가하고, get(int index)로 인덱스 위치에 있는 객체를 리턴받는다. 분명 al.add(&quot;one&quot;)에서 문자열을 추가 시켰다고 생각했다. 그래서 문자열을 담으려고 했고 그러나 컴파일에러가 난이유는 add 메소드는 어떠한 형태의 데이터타입도 수용할 수 있는 형태의 메소드이기 때문에 인자값이 Object여야한다. 왜냐하면 Object는 모든 데이터 타입의 조상? 이기때문이다. 그래서 형변환을 통해 (String)al.get(i) 데이터 타입을 맞춰주어야한다. 그러나 (String)al.get(i) 이방식은 옛날 방식이고 타입의 안정성이 떨어진다고 하여 컬렉션 프레임워크에서 제네릭이라는 문법적 수단을 채택 ArraryList&amp;lt;String&amp;gt; al = new ArraryList()&amp;lt;String&amp;gt;; al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i); System.out.println(value); } 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} 추상 메소드 선언 인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다. public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음 public interface RemoteControl{ int MAX_VOLUME = 10; int MIN_VOLUME =0; public abstract void turnOn(); void turnOff(); //public abstract 생략 void setVolume(int volume); //public abstract 생략 } 디폴트 메소드 선언 자바 8 에서 추가된 인터페이스의 새로운 멤버 [public]이 기본타입으로 default를 붙어야 생성된다. public interface RemoteControl{ default void setMute(boolean mute){ if(mute){ System.out.println(&quot;무음 처리&quot;); }else{ System.out.println(&quot;무음 해제&quot;); } } 정적 메소드 선언 public interface RemoteControl{ static void emptyBattery(){ System.out.println(&quot;배터리가 다 소모 되었습니다.&quot;); } } References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">DI(Dependency Injection)</title><link href="https://jaehong2.github.io//jsp-spring-di" rel="alternate" type="text/html" title="DI(Dependency Injection)" /><published>2020-12-29T20:45:00+09:00</published><updated>2020-12-29T20:45:00+09:00</updated><id>https://jaehong2.github.io//jsp-spring-di</id><content type="html" xml:base="https://jaehong2.github.io//jsp-spring-di">&lt;!-- Spring 시작 --&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">컬렉션 프레임워크란 앞서 배열은 연관되어있는 데이터를 그룹핑해서 관리하기 위한 수단 이라고 배웠었다. 그러나 배열이 가지고 있는 한계(배열의 크기)가 있고 이를 보안한 도구가 컬렉션 프레임워크다. 컬렉션 프레임워크 중 하나인 ArrayList를 살펴보자 public static void main(String args[]){ String[] arrObj = new String[2]; arrObj[0] = &quot;one&quot;; arrObj[1] = &quot;two&quot;; arrObj[2] = &quot;three&quot;; //컴파일 에러 1. ArraryList al = new ArraryList(); al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i);//컴파일 에러 2. System.out.println(value); } } 위에 코드에서 위에는 일반적인 배열이고 밑에는 ArrayList로 작성하였다. add메서드를 통하여 리스트에 인자로 전달된 객체를 추가하고, get(int index)로 인덱스 위치에 있는 객체를 리턴받는다. 분명 al.add(&quot;one&quot;)에서 문자열을 추가 시켰다고 생각했다. 그래서 문자열을 담으려고 했고 그러나 컴파일에러가 난이유는 add 메소드는 어떠한 형태의 데이터타입도 수용할 수 있는 형태의 메소드이기 때문에 인자값이 Object여야한다. 왜냐하면 Object는 모든 데이터 타입의 조상? 이기때문이다. 그래서 형변환을 통해 (String)al.get(i) 데이터 타입을 맞춰주어야한다. 그러나 (String)al.get(i) 이방식은 옛날 방식이고 타입의 안정성이 떨어진다고 하여 컬렉션 프레임워크에서 제네릭이라는 문법적 수단을 채택 ArraryList&amp;lt;String&amp;gt; al = new ArraryList()&amp;lt;String&amp;gt;; al.add(&quot;one&quot;); al.add(&quot;two&quot;); al.add(&quot;three&quot;); for(int i =0 ; i&amp;lt;al.size(); i++)){ String value = al.get(i); System.out.println(value); } 인터페이스 인터페이스란 .. 개발코드와 객체가 서로 통신 하는 접점이다. 개발 코드는 객체의 내부구조를 몰라도 인터페이스의 메소드만 알고있으면된다. 인터페이스 역할 개발 코드가 객체에 종속되지 않게 하여 객체를 교체 할 수 있도록 함. 개발 코드 변경없이 리턴 값 또는 실행 내용이 다양해 질수있다.(다형성) 인터페이스 구성멤버 상수, 추상메소드 Java 8 부터는 default 메소드, 정적 메소드 상수 필드 선언 인터페이스는 상수 필드만 선언가능 인터페이스에 선언된 모든 필드는 public static final(상수)의 특징을 가짐 상수명은 대문자 선언과 동시에 초기화 (static 블록을 작성할수없으므로} 추상 메소드 선언 인터페이스의 메소드는 기본적으로 실행 블록이 없는 추상 메소드로 선언한다. public abstract를 생략하더라도 컴파일 과정에서 자동적으로 붙음 public interface RemoteControl{ int MAX_VOLUME = 10; int MIN_VOLUME =0; public abstract void turnOn(); void turnOff(); //public abstract 생략 void setVolume(int volume); //public abstract 생략 } 디폴트 메소드 선언 자바 8 에서 추가된 인터페이스의 새로운 멤버 [public]이 기본타입으로 default를 붙어야 생성된다. public interface RemoteControl{ default void setMute(boolean mute){ if(mute){ System.out.println(&quot;무음 처리&quot;); }else{ System.out.println(&quot;무음 해제&quot;); } } 정적 메소드 선언 public interface RemoteControl{ static void emptyBattery(){ System.out.println(&quot;배터리가 다 소모 되었습니다.&quot;); } } References. https://www.hanbit.co.kr/</summary></entry><entry><title type="html">DI(Dependency Injection)</title><link href="https://jaehong2.github.io//spring-di-2" rel="alternate" type="text/html" title="DI(Dependency Injection)" /><published>2020-12-29T20:45:00+09:00</published><updated>2020-12-29T20:45:00+09:00</updated><id>https://jaehong2.github.io//spring-di-2</id><content type="html" xml:base="https://jaehong2.github.io//spring-di-2">&lt;!-- Spring 다양한 의존객체 주입 방법 --&gt;
+
+&lt;h2&gt;공부 목표&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;다양한 의존객체 주입 방법에 대해 알아보자!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;생성자를 이용한 의존 객체 주입&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring-di-1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; 왼쪽에 있는 자바코드를 .xml파일로 만든것이다.&lt;br /&gt;
+    생성자에 객체를 주입시 constructor-arg 사용하고 ref에 참조대상을 적는다.
+    즉 객체가 생성될때 studentDao 객체가 주입이된다.
+&lt;/p&gt;
+
+&lt;h4&gt;setter를 이용한 의존객체 주입&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring-di-2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    위와 같이 왼쪽의 자바코드를 .xml파일로 만든것이며 &lt;br /&gt;
+    만들때 property name 속성값을 적을때에 해당하는 setter 이름에서&lt;br /&gt;
+    set을 때고  앞에글자를 소문자로 setJdbcUrl -&amp;gt; jdbcUrl
+&lt;/p&gt;
+&lt;h1&gt;References.&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 다양한 의존객체 주입 방법에 대해 알아보자! 생성자를 이용한 의존 객체 주입 왼쪽에 있는 자바코드를 .xml파일로 만든것이다. 생성자에 객체를 주입시 constructor-arg 사용하고 ref에 참조대상을 적는다. 즉 객체가 생성될때 studentDao 객체가 주입이된다. setter를 이용한 의존객체 주입 위와 같이 왼쪽의 자바코드를 .xml파일로 만든것이며 만들때 property name 속성값을 적을때에 해당하는 setter 이름에서 set을 때고 앞에글자를 소문자로 setJdbcUrl -&amp;gt; jdbcUrl References.</summary></entry><entry><title type="html">DI(Dependency Injection)</title><link href="https://jaehong2.github.io//spring-di" rel="alternate" type="text/html" title="DI(Dependency Injection)" /><published>2020-12-29T20:45:00+09:00</published><updated>2020-12-29T20:45:00+09:00</updated><id>https://jaehong2.github.io//spring-di</id><content type="html" xml:base="https://jaehong2.github.io//spring-di">&lt;!-- Spring 시작 --&gt;
 
 &lt;h2&gt;공부 목표&lt;/h2&gt;
 &lt;ul&gt;
@@ -258,7 +282,7 @@
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 DI(Dependency Injection) 알기 Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary></entry><entry><title type="html">스프링 개요</title><link href="https://jaehong2.github.io//jsp-spring-introduce" rel="alternate" type="text/html" title="스프링 개요" /><published>2020-12-27T03:34:00+09:00</published><updated>2020-12-27T03:34:00+09:00</updated><id>https://jaehong2.github.io//jsp-spring-introduce</id><content type="html" xml:base="https://jaehong2.github.io//jsp-spring-introduce">&lt;!-- Spring 시작 --&gt;
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 DI(Dependency Injection) 알기 Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary></entry><entry><title type="html">스프링 개요</title><link href="https://jaehong2.github.io//spring-introduce" rel="alternate" type="text/html" title="스프링 개요" /><published>2020-12-27T03:34:00+09:00</published><updated>2020-12-27T03:34:00+09:00</updated><id>https://jaehong2.github.io//spring-introduce</id><content type="html" xml:base="https://jaehong2.github.io//spring-introduce">&lt;!-- Spring 시작 --&gt;
 
 &lt;h2&gt;공부 목표&lt;/h2&gt;
 &lt;ul&gt;
@@ -752,118 +776,4 @@
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
         https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">디렉터리 패턴 서블릿을 만들면 .xml or annotation을 이용해서 mapping 하는 방식을 공부했었는데 디렉터리 형태로 서버의 해당 컴포넌트(서블릿)을 찾아서 실행하는 구조를 디렉터리 패턴이라고 한다. 확장자 패턴 확장자 형태로 서버의 해당 컴포넌트를 찾아서 실행하는 구조 확장자 패턴은 두가지가있다. FrontController 패턴 Command 패턴 FrontController Command References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary></entry><entry><title type="html">JSTL</title><link href="https://jaehong2.github.io//jsp-jstl" rel="alternate" type="text/html" title="JSTL" /><published>2020-12-15T03:26:12+09:00</published><updated>2020-12-15T03:26:12+09:00</updated><id>https://jaehong2.github.io//jsp-jstl</id><content type="html" xml:base="https://jaehong2.github.io//jsp-jstl">&lt;!-- JSTL --&gt;
-
-&lt;h2&gt;개요&lt;/h2&gt;
-&lt;p&gt;JSP 경우 HTML 태그와 같이 사용하므로 코드 가독성이 떨어진다.&lt;br /&gt;
-이런 단점을 보완하고자 태그 라이브러리인 JSTL 등장!&lt;br /&gt;&lt;br /&gt;
-Tomcat 컨테이너에 포함 되어있지 않아 별도 설치필요하다.&lt;br /&gt;
-나의 경우 &lt;a href=&quot;http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/&quot;&gt;링크&lt;/a&gt; 여기를 통해서&lt;br /&gt;
-jakarta-taglibs-standard-1.1.2.zip을 다운하였다.&lt;/p&gt;
-&lt;h2&gt;JSTL 라이브러리&lt;/h2&gt;
-&lt;p&gt;JSTL에서는 5가지 라이브러리 제공&lt;/p&gt;
-&lt;ul&gt;
-    &lt;li&gt;Core&lt;/li&gt;
-    &lt;li&gt;XML Processing&lt;/li&gt;
-    &lt;li&gt;I18N formatting&lt;/li&gt;
-    &lt;li&gt;SQL&lt;/li&gt;
-    &lt;li&gt;Functions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Core&lt;/h2&gt;
-&lt;p&gt;기본적인 라이브러리로 출력,제어,반복문 기능들이 포함&lt;br /&gt;&lt;/p&gt;
-&lt;h4&gt;페이지 지시자를 사용한 페이지 속성선언&lt;/h4&gt;
-&lt;p&gt;&amp;lt;%@ taglib uri = http://java.sun.com/jsp/jstl/core prefix=”c” %&amp;gt; 보통 앞글자로 prefix정함&lt;/p&gt;
-
-&lt;h4&gt;출력 태그&lt;/h4&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:out&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;출력값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;기본값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;escapeXml=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true or false&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;변수 설정 태그&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:set&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;변수명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;설정값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;객체&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;scope=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;범위&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;변수 제거 태그&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:remove&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;변수명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;scope=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;범위&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;예외 처리 태그&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:catch&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;변수명&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;제어문(if)&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;조건&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;조건 처리 변수명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;scope=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;범위&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;제어문(switch)&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:choose&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:when&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;조건&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;처리내용&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:when&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:oherwise&amp;gt;&lt;/span&gt;처리 내용&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:oherwise&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:choose&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;반복문(for)문&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:forEach&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itmes=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;객체명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;begin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;시작 인덱스&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;end=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;끝 인덱스&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;step=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;증감식&quot;&lt;/span&gt;
-               &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;변수명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;varStatus=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;상태변수&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;페이지 이동 태그&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:redirect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;url =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4&gt;파라미터 전달 태그&lt;/h4&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:param&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;파라미터명&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;값&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2&gt;예제&lt;/h2&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%@&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;language=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;java&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;contentType=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/html; charset=UTF-8&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;pageEncoding=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%@&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;taglib&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prefix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uri =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://java.sun.com/jsp/jstl/core&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Insert title here&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:set&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;varName&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;varValue&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-varName : &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:out&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${varName }&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:remove&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;varName&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-varName : &lt;span class=&quot;nt&quot;&gt;&amp;lt;c:out&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${varName }&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:catch&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%=&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:catch&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:out&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${error}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${1+2==3}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    1 + 2 = 3
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:if&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;${1+2!=3}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    1 + 2 != 3
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:if&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;c:forEach&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;var=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fEach&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;begin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;end=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;30&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;step=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    ${fEach}
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/c:forEach&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&quot; target=&quot;_blank&quot; class=&quot;tx-link&quot;&gt;
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">개요 JSP 경우 HTML 태그와 같이 사용하므로 코드 가독성이 떨어진다. 이런 단점을 보완하고자 태그 라이브러리인 JSTL 등장! Tomcat 컨테이너에 포함 되어있지 않아 별도 설치필요하다. 나의 경우 링크 여기를 통해서 jakarta-taglibs-standard-1.1.2.zip을 다운하였다. JSTL 라이브러리 JSTL에서는 5가지 라이브러리 제공 Core XML Processing I18N formatting SQL Functions Core 기본적인 라이브러리로 출력,제어,반복문 기능들이 포함 페이지 지시자를 사용한 페이지 속성선언 &amp;lt;%@ taglib uri = http://java.sun.com/jsp/jstl/core prefix=”c” %&amp;gt; 보통 앞글자로 prefix정함 출력 태그 &amp;lt;c:out value=&quot;출력값&quot; default=&quot;기본값&quot; escapeXml=&quot;true or false&quot;/&amp;gt; 변수 설정 태그 &amp;lt;c:set var=&quot;변수명&quot; value=&quot;설정값&quot; target=&quot;객체&quot; property=&quot;값&quot; scope=&quot;범위&quot;/&amp;gt; 변수 제거 태그 &amp;lt;c:remove var=&quot;변수명&quot; scope=&quot;범위&quot;/&amp;gt; 예외 처리 태그 &amp;lt;c:catch var=&quot;변수명&quot;/&amp;gt; 제어문(if) &amp;lt;c:if test=&quot;조건&quot; var=&quot;조건 처리 변수명&quot; scope=&quot;범위&quot;/&amp;gt; 제어문(switch) &amp;lt;c:choose&amp;gt; &amp;lt;c:when test=&quot;조건&quot;&amp;gt;처리내용&amp;lt;/c:when&amp;gt; &amp;lt;c:oherwise&amp;gt;처리 내용&amp;lt;/c:oherwise&amp;gt; &amp;lt;/c:choose&amp;gt; 반복문(for)문 &amp;lt;c:forEach itmes=&quot;객체명&quot; begin=&quot;시작 인덱스&quot; end=&quot;끝 인덱스&quot; step=&quot;증감식&quot; var=&quot;변수명&quot; varStatus=&quot;상태변수&quot;/&amp;gt; 페이지 이동 태그 &amp;lt;c:redirect url =&quot;url&quot;/&amp;gt; 파라미터 전달 태그 &amp;lt;c:param name=&quot;파라미터명&quot; value=&quot;값&quot;/&amp;gt; 예제 &amp;lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&amp;gt; &amp;lt;%@ taglib prefix=&quot;c&quot; uri =&quot;http://java.sun.com/jsp/jstl/core&quot; %&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt; &amp;lt;title&amp;gt;Insert title here&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;c:set var=&quot;varName&quot; value=&quot;varValue&quot;/&amp;gt; varName : &amp;lt;c:out value = &quot;${varName }&quot;/&amp;gt; &amp;lt;br/&amp;gt; &amp;lt;c:remove var = &quot;varName&quot;/&amp;gt; varName : &amp;lt;c:out value =&quot;${varName }&quot;/&amp;gt; &amp;lt;hr/&amp;gt; &amp;lt;c:catch var =&quot;error&quot;&amp;gt; &amp;lt;%=2/0 %&amp;gt; &amp;lt;/c:catch&amp;gt; &amp;lt;br/&amp;gt; &amp;lt;c:out value=&quot;${error}&quot;/&amp;gt; &amp;lt;hr/&amp;gt; &amp;lt;c:if test=&quot;${1+2==3}&quot;&amp;gt; 1 + 2 = 3 &amp;lt;/c:if&amp;gt; &amp;lt;c:if test=&quot;${1+2!=3}&quot;&amp;gt; 1 + 2 != 3 &amp;lt;/c:if&amp;gt; &amp;lt;hr/&amp;gt; &amp;lt;c:forEach var=&quot;fEach&quot; begin=&quot;0&quot; end=&quot;30&quot; step=&quot;3&quot;&amp;gt; ${fEach} &amp;lt;/c:forEach&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="java" /><summary type="html">디렉터리 패턴 서블릿을 만들면 .xml or annotation을 이용해서 mapping 하는 방식을 공부했었는데 디렉터리 형태로 서버의 해당 컴포넌트(서블릿)을 찾아서 실행하는 구조를 디렉터리 패턴이라고 한다. 확장자 패턴 확장자 형태로 서버의 해당 컴포넌트를 찾아서 실행하는 구조 확장자 패턴은 두가지가있다. FrontController 패턴 Command 패턴 FrontController Command References. https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</summary></entry></feed>

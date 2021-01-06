@@ -132,13 +132,12 @@ into the {body} of the default.hbs template -->
             <!-- 메뉴 바-->
 <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <!--<li class="nav-about" role="menuitem"><a href="/about/">About</a></li>-->
+    <li class="nav-python" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
+    <li class="nav-python" role="menuitem"><a href="/tag/git/">Git</a></li>
     <li class="nav-python" role="menuitem"><a href="/tag/java/">Java</a>
     <li class="nav-python" role="menuitem"><a href="/tag/spring/">Spring</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/git/">Git</a></li>
-
-    <li class="nav-python" role="menuitem"><a href="/tag/algorithm/">Algorithm</a></li>
-    <li class="nav-python" role="menuitem"><a href="/tag/etc/">Etc</a></li>
+    <!--<li class="nav-python" role="menuitem"><a href="/tag/etc/">Etc</a></li>-->
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -214,21 +213,30 @@ into the {body} of the default.hbs template -->
     }
     ,
     
-    "jsp-spring-di": {
+    "spring-di-2": {
+        "title": "DI(Dependency Injection)",
+            "author": "jaehong",
+            "category": "",
+            "content": "공부 목표    다양한 의존객체 주입 방법에 대해 알아보자!생성자를 이용한 의존 객체 주입 왼쪽에 있는 자바코드를 .xml파일로 만든것이다.    생성자에 객체를 주입시 constructor-arg 사용하고 ref에 참조대상을 적는다.    즉 객체가 생성될때 studentDao 객체가 주입이된다.setter를 이용한 의존객체 주입    위와 같이 왼쪽의 자바코드를 .xml파일로 만든것이며     만들때 property name 속성값을 적을때에 해당하는 setter 이름에서    set을 때고  앞에글자를 소문자로 setJdbcUrl -&gt; jdbcUrlReferences.    ",
+        "url": "/spring-di-2"
+    }
+    ,
+    
+    "spring-di": {
         "title": "DI(Dependency Injection)",
             "author": "jaehong",
             "category": "",
             "content": "공부 목표    DI(Dependency Injection) 알기Spring 프레임워크    프레임 워크는 마치 네이게이션과 같다.    길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨Spring 에서 제공하는 모듈    spring-core : DI, IoC 제공    aop : AOP 구현 기능 제공    jdbc : DB를 쉽게 다룰 수 있는 기능 제공    tx : 트랜젝션 관련 기능제공    webmvc : MVC구현 기능 제공    그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.스프링 컨테이너(IoC)스프링에서 객체를 생성,조립하는 컨테이너로,   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.스프링 파일 구조    스프링 프로젝트 Root                    src                                    main                                                    java : .java파일 관리                            resources : 자원관리 폴더 .xml or property file                                                    pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.        .xml 파일에서 객체 생성&lt;bean id = \"id값\" class=\"패키지명.클래스파일명\"/&gt;    Java에서는 new 키워드를 사용해서 객체를 생성했다.    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면    1. .xml파일(컨테이너)를 생성    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.    GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(\"classpath:apllicationContext.xml\");    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)    클래스명 변수명 = ctx.getBean(\"빈아이디\", 클래스명.class);    ex) TranspotationWalk trans = ctx.geBean(\"tWalk\", TranspotationWalk.class);    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.References.    ",
-        "url": "/jsp-spring-di"
+        "url": "/spring-di"
     }
     ,
     
-    "jsp-spring-introduce": {
+    "spring-introduce": {
         "title": "스프링 개요",
             "author": "jaehong",
             "category": "",
             "content": "공부 목표    Spring 개요    Spring 모듈    Spring 컨테이너(IOC)Spring 프레임워크    프레임 워크는 마치 네이게이션과 같다.    길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨Spring 에서 제공하는 모듈    spring-core : DI, IoC 제공    aop : AOP 구현 기능 제공    jdbc : DB를 쉽게 다룰 수 있는 기능 제공    tx : 트랜젝션 관련 기능제공    webmvc : MVC구현 기능 제공    그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.스프링 컨테이너(IoC)스프링에서 객체를 생성,조립하는 컨테이너로,   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.스프링 파일 구조    스프링 프로젝트 Root                    src                                    main                                                    java : .java파일 관리                            resources : 자원관리 폴더 .xml or property file                                                    pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.        .xml 파일에서 객체 생성&lt;bean id = \"id값\" class=\"패키지명.클래스파일명\"/&gt;    Java에서는 new 키워드를 사용해서 객체를 생성했다.    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면    1. .xml파일(컨테이너)를 생성    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.    GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(\"classpath:apllicationContext.xml\");    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)    클래스명 변수명 = ctx.getBean(\"빈아이디\", 클래스명.class);    ex) TranspotationWalk trans = ctx.geBean(\"tWalk\", TranspotationWalk.class);    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.References.    https://www.inflearn.com/",
-        "url": "/jsp-spring-introduce"
+        "url": "/spring-introduce"
     }
     ,
     
