@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-23T20:56:43+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">21 01 23</title><link href="https://jaehong2.github.io//pt-3" rel="alternate" type="text/html" title="21 01 23" /><published>2021-01-19T01:00:00+09:00</published><updated>2021-01-19T01:00:00+09:00</updated><id>https://jaehong2.github.io//pt-3</id><content type="html" xml:base="https://jaehong2.github.io//pt-3">&lt;h2 id=&quot;osi-7-layer&quot;&gt;OSI 7 Layer&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-23T21:00:46+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">21 01 23</title><link href="https://jaehong2.github.io//pt-3" rel="alternate" type="text/html" title="21 01 23" /><published>2021-01-19T01:00:00+09:00</published><updated>2021-01-19T01:00:00+09:00</updated><id>https://jaehong2.github.io//pt-3</id><content type="html" xml:base="https://jaehong2.github.io//pt-3">&lt;h2 id=&quot;osi-7-layer&quot;&gt;OSI 7 Layer&lt;/h2&gt;
 
 &lt;h3 id=&quot;osi-7-layer에-대해&quot;&gt;OSI 7 Layer에 대해&lt;/h3&gt;
 &lt;ul&gt;
@@ -115,8 +115,7 @@
 &lt;p&gt;그런데 상자가 수신자를 확인해서 전달해 줄 수 있으면 어떨까?? 이런 기능을 하도록 만든것이
 &lt;img src=&quot;/assets/built/images/pt/week_3/14.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림14&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;스위치 입니다.&lt;/li&gt;
-  &lt;li&gt;스위치는 일종의 컴퓨터로서&lt;/li&gt;
+  &lt;li&gt;스위치 입니다..&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
