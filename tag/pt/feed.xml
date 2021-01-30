@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/pt/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-01-25T23:23:30+09:00</updated>
+  <updated>2021-01-30T20:18:51+09:00</updated>
   <id>https://jaehong2.github.io//tag/pt/feed.xml</id>
 
   
@@ -30,6 +30,148 @@
   
   
 
+  
+    <entry>
+      <title type="html">21 01 30</title>
+      <link href="https://jaehong2.github.io//pt-4" rel="alternate" type="text/html" title="21 01 30" />
+      <published>2021-01-28T01:43:00+09:00</published>
+      <updated>2021-01-28T01:43:00+09:00</updated>
+      <id>https://jaehong2.github.io//pt-4</id>
+      <content type="html" xml:base="https://jaehong2.github.io//pt-4">&lt;h2 id=&quot;주제--tcp-udp&quot;&gt;주제 : TCP, UDP&lt;/h2&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;4계층-transport-layer&quot;&gt;4계층 Transport Layer&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;End Point 간의 데이터 &lt;strong&gt;전송&lt;/strong&gt;을 담당하는 계층&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tcp-transmission-control-protocol&quot;&gt;TCP (Transmission Control Protocol)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;신뢰성&lt;/strong&gt;있는 데이터 통신을 가능하게 해주는 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-특징&quot;&gt;TCP 특징&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection 연결 (3 way-handshake)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;흐름제어(Flow Control) : &lt;strong&gt;데이터 처리 속도를 조절&lt;/strong&gt;하여 수신자의 버퍼 오버플로우를 방지&lt;/li&gt;
+  &lt;li&gt;혼잡제어(Congestion Control) : &lt;strong&gt;네트워크 내의 패킷 수&lt;/strong&gt;가 넘치게 증가하지 않도록 방지&lt;/li&gt;
+  &lt;li&gt;오류감지(Error Detection) : &lt;strong&gt;데이터 전달 중 오류 발생&lt;/strong&gt;시 해당 데이터 &lt;strong&gt;재전송&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;세그먼트segment&quot;&gt;세그먼트(Segment)&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/123.png&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로토콜단 에서 데이터가 처리되고 이동하고 하는데 이때 처리되는 단위를 세그먼트&lt;/li&gt;
+  &lt;li&gt;데이터를 전송 받으면 tcp 프로토콜안에서 데이터를 자르고 &lt;strong&gt;TCP Header&lt;/strong&gt;를 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-header&quot;&gt;TCP Header&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/3.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림3&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-way-handshake&quot;&gt;3-way handshake&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP 3 Way Handshake는 TCP/IP프로토콜을 이용해서 통신을 하는 응용프로그램이 데이터를 전송하기 전에 
+먼저 &lt;strong&gt;정확한 전송을 보장하기 위해 상대방 컴퓨터와 사전에 세션을 수립하는 과정&lt;/strong&gt;을 의미한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-way-handshake-과정&quot;&gt;3-way handshake 과정&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/4.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림4&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[STEP 1]&lt;br /&gt;
+클라이언트는 서버에 접속을 요청하는 SYN 패킷을 보낸다. 
+이때 클라이언트는 SYN 을 보내고 SYN/ACK 응답을 기다리는 SYN_SENT 상태가 되는 것이다.&lt;/li&gt;
+  &lt;li&gt;[STEP 2]&lt;br /&gt;
+서버는 SYN요청을 받고 클라이언트에게 요청을 수락한다는 ACK 와 SYN flag 가 설정된 패킷을 발송하고 A가 다시 ACK으로 응답하기를 기다린다.&lt;br /&gt;
+이때 서버는 SYN_RECEIVED 상태가 된다.&lt;/li&gt;
+  &lt;li&gt;[STEP 3]&lt;br /&gt;
+클라이언트는 서버에게 ACK을 보내고 이후로부터는 연결이 이루어지고 데이터가 오가게 되는것이다. 이때의 B서버 상태가 ESTABLISHED 이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-데이터-전송-방식&quot;&gt;TCP 데이터 전송 방식&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/8.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-way-handshkae-과정&quot;&gt;4-way handshkae 과정&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/5.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림5&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[STEP 1]&lt;br /&gt;
+클라이언트가 연결을 종료하겠다는 FIN플래그를 전송한다.&lt;/li&gt;
+  &lt;li&gt;[STEP 2]&lt;br /&gt;
+서버는 일단 확인메시지를 보내고 자신의 통신이 끝날때까지 기다리는데 이 상태가 TIME_WAIT상태다.&lt;/li&gt;
+  &lt;li&gt;[STEP 3]&lt;br /&gt;
+서버가 통신이 끝났으면 연결이 종료되었다고 클라이언트에게 FIN플래그를 전송한다.&lt;/li&gt;
+  &lt;li&gt;[STEP 4]&lt;br /&gt;
+클라이언트는 확인했다는 메시지를 보낸다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;tcp-문제점&quot;&gt;TCP 문제점&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;신뢰성있는 전송은 보장하지만..&lt;/li&gt;
+  &lt;li&gt;매번 Connection 연결 -&amp;gt; 시간적 손실&lt;/li&gt;
+  &lt;li&gt;패킷을 조금만 손실해도 재전송&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;udp&quot;&gt;UDP&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP 보단 &lt;strong&gt;신뢰성이 떨어&lt;/strong&gt;지지만 &lt;strong&gt;전송 속도가 빠른&lt;/strong&gt; 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;udp-특징&quot;&gt;UDP 특징&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Connectionless(3 way-handshake x)&lt;/li&gt;
+  &lt;li&gt;오류감지(Error Delection)&lt;/li&gt;
+  &lt;li&gt;비교적 데이터의 신뢰성이 중요하지 않을때 사용(ex. 영상 스트리밍)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;udp-header&quot;&gt;UDP Header&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/6.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;udp-데이터-전송-방식&quot;&gt;UDP 데이터 전송 방식&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/7.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림7&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;정리&quot;&gt;정리&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP와 UDP 모두 Header가 존재&lt;/li&gt;
+  &lt;li&gt;포트 번호를 이용해서 데이터를 전달, 데이터 오류 검사를 위한 Checksum이 존재&lt;/li&gt;
+  &lt;li&gt;TCP는 연결이 성공해야 통신이 가능(연결형 프로토콜), 3-way-handshake&lt;/li&gt;
+  &lt;li&gt;UDP는 연결 없이 통신 가능 (비연결형 프로토콜)&lt;/li&gt;
+  &lt;li&gt;신뢰도를 생각한다면 TCP 속도가 중요하면 UDP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References.&lt;/h2&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="pt" />
+      
+
+      
+        <summary type="html">주제 : TCP, UDP</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">21 01 23</title>

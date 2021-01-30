@@ -172,7 +172,7 @@
                 <div class="author-meta">
                     
                     <div class="author-stats">
-                        48 posts <span class="bull">&bull;</span>
+                        50 posts <span class="bull">&bull;</span>
                     </div>
                     
                     
@@ -195,6 +195,137 @@
             <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
+
+    <article class="post-card author-template">
+        
+            <a class="post-card-image-link" href="/jsp-file-upload.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-file-upload.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">file upload</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>fileForm.jsp &lt;form action = "fileFormOk.jsp" method="post" enctype="multipart/form-data"&gt; 파일 : &lt;input type="file" name="file"&gt;&lt;br/&gt; &lt;input type="submit" value="File Upload"&gt; &lt;/form&gt; &lt;input type="file"&gt; : 파일을 선택할 수 있는 창을 만든다. &lt;form method="post"&gt; : 형태로 전송한 폼에 담겨진</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card author-template">
+        
+            <a class="post-card-image-link" href="/jsp-member-crud.html">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/jsp-member-crud.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">회원 CRUD</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>흐름도
+
+
+MemberDao.java
+
+
+login.jsp
+
+
+loginOk.jsp
+
+
+join.jsp
+
+
+joinOk.jsp
+
+
+main.jsp
+
+
+modify.jsp
+
+
+modifyOk.jsp
+
+
+logout.jsp
+
+
+member.js
+
+
+References.
+
+    
+        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
 
     <article class="post-card author-template">
         
@@ -501,98 +632,6 @@ References.
                 <section class="post-card-excerpt">
                     
                         <p>Java언어의 데이터(속성)과 기능(메소드)로 이루어진 클래스 useBean setProperty getProperty useBean 특정 Bean을 사용한다고 명시 할떄 사용 //id(빈이름) , 클래스 이름 , 스코프 범위 &lt;jsp:userBean id ="student" class=""com.javalec.ex.Student scope="page"/&gt; set,getProperty java s/getter와 같은 역할 &lt;jsp:setProperty</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card author-template">
-        
-            <a class="post-card-image-link" href="/jsp-exception.html">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/jsp-exception.html">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">exception</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>예외처리 1.페이지 지시자를 통한 예외 처리 &lt;%@ page errorPage = "errorPage.jsp" %&gt; //1. 해당페이지에서 에러가 발생할시 errorPage.jsp의 내용 출력 &lt;%@ page isErrorPage = "true" %&gt; &lt;!-- 해당page는 error를 받을 수 있습니다.--&gt; &lt;% response.setStatus(200);</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card author-template">
-        
-            <a class="post-card-image-link" href="/jsp-cookie.html">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/jsp-cookie.html">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">cookie & session & cache</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>쿠키 http 프로토콜의 특징은 웹브라우저에 응답 후 관계를 끊는 것이다. 연결이 끊겼을 때 어떤 정보를 지속적으로 유지하기 위한 수단으로 쿠키를 사용한다. 쿠키는 서버에서 생성하여, 생성된 쿠키는 서버가아닌 클라이언트 측에 저장 4kb로, 300개까지 데이터</p>
                     
                 </section>
             </a>

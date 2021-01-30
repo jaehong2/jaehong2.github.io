@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/git/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-01-25T23:23:30+09:00</updated>
+  <updated>2021-01-30T20:18:51+09:00</updated>
   <id>https://jaehong2.github.io//tag/git/feed.xml</id>
 
   
@@ -30,6 +30,49 @@
   
   
 
+  
+    <entry>
+      <title type="html">remote :permission to 에러</title>
+      <link href="https://jaehong2.github.io//git-permission-denied" rel="alternate" type="text/html" title="remote :permission to 에러" />
+      <published>2021-01-26T06:00:00+09:00</published>
+      <updated>2021-01-26T06:00:00+09:00</updated>
+      <id>https://jaehong2.github.io//git-permission-denied</id>
+      <content type="html" xml:base="https://jaehong2.github.io//git-permission-denied">&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    remote: Permission to test01/test01.git denied to xxx.
+    fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다…
+찾아보니&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고,
+    나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때,
+    그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라고 나와있다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="git" />
+      
+
+      
+        <summary type="html">remote: Permission to test01/test01.git denied to xxx. fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403 github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다… 찾아보니 A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고, 나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때, 그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다. 라고 나와있다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">error 403</title>

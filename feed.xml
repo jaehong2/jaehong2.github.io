@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-25T23:23:30+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">빈의 범위</title><link href="https://jaehong2.github.io//Bean" rel="alternate" type="text/html" title="빈의 범위" /><published>2021-01-23T06:10:00+09:00</published><updated>2021-01-23T06:10:00+09:00</updated><id>https://jaehong2.github.io//Bean</id><content type="html" xml:base="https://jaehong2.github.io//Bean">&lt;h2 id=&quot;빈bean의-범위&quot;&gt;빈(Bean)의 범위&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jaehong2.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jaehong2.github.io//" rel="alternate" type="text/html" /><updated>2021-01-30T20:18:51+09:00</updated><id>https://jaehong2.github.io//</id><title type="html">오늘의 공부기록</title><subtitle>모르면 -&gt; 알때까지 -&gt; 공부해서 -&gt; 해낸다.</subtitle><entry><title type="html">21 01 30</title><link href="https://jaehong2.github.io//pt-4" rel="alternate" type="text/html" title="21 01 30" /><published>2021-01-28T01:43:00+09:00</published><updated>2021-01-28T01:43:00+09:00</updated><id>https://jaehong2.github.io//pt-4</id><content type="html" xml:base="https://jaehong2.github.io//pt-4">&lt;h2 id=&quot;주제--tcp-udp&quot;&gt;주제 : TCP, UDP&lt;/h2&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;4계층-transport-layer&quot;&gt;4계층 Transport Layer&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;End Point 간의 데이터 &lt;strong&gt;전송&lt;/strong&gt;을 담당하는 계층&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tcp-transmission-control-protocol&quot;&gt;TCP (Transmission Control Protocol)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;신뢰성&lt;/strong&gt;있는 데이터 통신을 가능하게 해주는 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-특징&quot;&gt;TCP 특징&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection 연결 (3 way-handshake)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;흐름제어(Flow Control) : &lt;strong&gt;데이터 처리 속도를 조절&lt;/strong&gt;하여 수신자의 버퍼 오버플로우를 방지&lt;/li&gt;
+  &lt;li&gt;혼잡제어(Congestion Control) : &lt;strong&gt;네트워크 내의 패킷 수&lt;/strong&gt;가 넘치게 증가하지 않도록 방지&lt;/li&gt;
+  &lt;li&gt;오류감지(Error Detection) : &lt;strong&gt;데이터 전달 중 오류 발생&lt;/strong&gt;시 해당 데이터 &lt;strong&gt;재전송&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;세그먼트segment&quot;&gt;세그먼트(Segment)&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/123.png&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로토콜단 에서 데이터가 처리되고 이동하고 하는데 이때 처리되는 단위를 세그먼트&lt;/li&gt;
+  &lt;li&gt;데이터를 전송 받으면 tcp 프로토콜안에서 데이터를 자르고 &lt;strong&gt;TCP Header&lt;/strong&gt;를 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-header&quot;&gt;TCP Header&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/3.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림3&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-way-handshake&quot;&gt;3-way handshake&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP 3 Way Handshake는 TCP/IP프로토콜을 이용해서 통신을 하는 응용프로그램이 데이터를 전송하기 전에 
+먼저 &lt;strong&gt;정확한 전송을 보장하기 위해 상대방 컴퓨터와 사전에 세션을 수립하는 과정&lt;/strong&gt;을 의미한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-way-handshake-과정&quot;&gt;3-way handshake 과정&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/4.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림4&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[STEP 1]&lt;br /&gt;
+클라이언트는 서버에 접속을 요청하는 SYN 패킷을 보낸다. 
+이때 클라이언트는 SYN 을 보내고 SYN/ACK 응답을 기다리는 SYN_SENT 상태가 되는 것이다.&lt;/li&gt;
+  &lt;li&gt;[STEP 2]&lt;br /&gt;
+서버는 SYN요청을 받고 클라이언트에게 요청을 수락한다는 ACK 와 SYN flag 가 설정된 패킷을 발송하고 A가 다시 ACK으로 응답하기를 기다린다.&lt;br /&gt;
+이때 서버는 SYN_RECEIVED 상태가 된다.&lt;/li&gt;
+  &lt;li&gt;[STEP 3]&lt;br /&gt;
+클라이언트는 서버에게 ACK을 보내고 이후로부터는 연결이 이루어지고 데이터가 오가게 되는것이다. 이때의 B서버 상태가 ESTABLISHED 이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tcp-데이터-전송-방식&quot;&gt;TCP 데이터 전송 방식&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/8.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-way-handshkae-과정&quot;&gt;4-way handshkae 과정&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/5.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림5&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[STEP 1]&lt;br /&gt;
+클라이언트가 연결을 종료하겠다는 FIN플래그를 전송한다.&lt;/li&gt;
+  &lt;li&gt;[STEP 2]&lt;br /&gt;
+서버는 일단 확인메시지를 보내고 자신의 통신이 끝날때까지 기다리는데 이 상태가 TIME_WAIT상태다.&lt;/li&gt;
+  &lt;li&gt;[STEP 3]&lt;br /&gt;
+서버가 통신이 끝났으면 연결이 종료되었다고 클라이언트에게 FIN플래그를 전송한다.&lt;/li&gt;
+  &lt;li&gt;[STEP 4]&lt;br /&gt;
+클라이언트는 확인했다는 메시지를 보낸다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;tcp-문제점&quot;&gt;TCP 문제점&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;신뢰성있는 전송은 보장하지만..&lt;/li&gt;
+  &lt;li&gt;매번 Connection 연결 -&amp;gt; 시간적 손실&lt;/li&gt;
+  &lt;li&gt;패킷을 조금만 손실해도 재전송&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;udp&quot;&gt;UDP&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP 보단 &lt;strong&gt;신뢰성이 떨어&lt;/strong&gt;지지만 &lt;strong&gt;전송 속도가 빠른&lt;/strong&gt; 프로토콜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;udp-특징&quot;&gt;UDP 특징&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Connectionless(3 way-handshake x)&lt;/li&gt;
+  &lt;li&gt;오류감지(Error Delection)&lt;/li&gt;
+  &lt;li&gt;비교적 데이터의 신뢰성이 중요하지 않을때 사용(ex. 영상 스트리밍)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;udp-header&quot;&gt;UDP Header&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/6.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;udp-데이터-전송-방식&quot;&gt;UDP 데이터 전송 방식&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_4/7.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림7&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;정리&quot;&gt;정리&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP와 UDP 모두 Header가 존재&lt;/li&gt;
+  &lt;li&gt;포트 번호를 이용해서 데이터를 전달, 데이터 오류 검사를 위한 Checksum이 존재&lt;/li&gt;
+  &lt;li&gt;TCP는 연결이 성공해야 통신이 가능(연결형 프로토콜), 3-way-handshake&lt;/li&gt;
+  &lt;li&gt;UDP는 연결 없이 통신 가능 (비연결형 프로토콜)&lt;/li&gt;
+  &lt;li&gt;신뢰도를 생각한다면 TCP 속도가 중요하면 UDP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References.&lt;/h2&gt;</content><author><name>jaehong</name></author><category term="pt" /><summary type="html">주제 : TCP, UDP</summary></entry><entry><title type="html">remote :permission to 에러</title><link href="https://jaehong2.github.io//git-permission-denied" rel="alternate" type="text/html" title="remote :permission to 에러" /><published>2021-01-26T06:00:00+09:00</published><updated>2021-01-26T06:00:00+09:00</updated><id>https://jaehong2.github.io//git-permission-denied</id><content type="html" xml:base="https://jaehong2.github.io//git-permission-denied">&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    remote: Permission to test01/test01.git denied to xxx.
+    fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다…
+찾아보니&lt;/p&gt;
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고,
+    나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때,
+    그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라고 나와있다.&lt;/p&gt;</content><author><name>jaehong</name></author><category term="git" /><summary type="html">remote: Permission to test01/test01.git denied to xxx. fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403 github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다… 찾아보니 A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고, 나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때, 그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다. 라고 나와있다.</summary></entry><entry><title type="html">빈의 범위</title><link href="https://jaehong2.github.io//Bean" rel="alternate" type="text/html" title="빈의 범위" /><published>2021-01-23T06:10:00+09:00</published><updated>2021-01-23T06:10:00+09:00</updated><id>https://jaehong2.github.io//Bean</id><content type="html" xml:base="https://jaehong2.github.io//Bean">&lt;h2 id=&quot;빈bean의-범위&quot;&gt;빈(Bean)의 범위&lt;/h2&gt;
 &lt;h4 id=&quot;싱글톤singleton&quot;&gt;싱글톤(SingleTon)&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;컨테이너에서 생성된 Bean객체의 경우 동일한 타입에서는 한개만생성, 즉 getBean으로 호출시 동일한 객체가 반환&lt;/li&gt;
@@ -802,166 +919,43 @@
 
 &lt;h4&gt;@Autowired&lt;/h4&gt;
 &lt;ul&gt;
-    &lt;li&gt;java에서 지원하는 어노테이션, 특정프레임워크에 종속적이지 않음&lt;/li&gt;
+    &lt;li&gt;Spring 지원하는 어노테이션&lt;/li&gt;
     &lt;li&gt;주입하려고 하는 &lt;b&gt;객체의 타입이 일치&lt;/b&gt;하는 객체를 자동으로 주입&lt;/li&gt;
-    &lt;li&gt;찾는 순서 이름-&amp;gt;타입-&amp;gt;@Qualifier-&amp;gt;실패&lt;/li&gt;
+    &lt;li&gt;&lt;context:annotation-config /&gt; 구문을 꼭 xml 설정파일에 추가해야한다.&lt;/li&gt;
+    &lt;li&gt;찾는 순서 : 타입 -&amp;gt; 이름 -&amp;gt; @Qualifier -&amp;gt; 실패&lt;/li&gt;
+    &lt;li&gt;멤버변수, 메소드, 생성자 적용가능&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;@Resource&lt;/h4&gt;
 &lt;ul&gt;
-    &lt;li&gt;프로퍼티(일반변수?)와 메서드에서만 사용가능&lt;/li&gt;
-    &lt;li&gt;생성자에서는 선언 불가&lt;/li&gt;
-    &lt;li&gt;그래서 기본생성자 무조건 만들어주어야함!&lt;/li&gt;
+    &lt;li&gt;Java에서 지원하는 어노테이션 , 프레임워크에 종속적이지 않다.&lt;/li&gt;
+    &lt;li&gt;기본생성자 무조건 만들어주어야함!&lt;/li&gt;
+    &lt;li&gt;이름 -&amp;gt; 타입 -&amp;gt; @Qualifier -&amp;gt; 실패&lt;/li&gt;
+    &lt;li&gt;@Resource(name=&quot;&quot;)으로 직접이름지정 할 수있음&lt;/li&gt;
+    &lt;li&gt;&lt;context:annotation-config /&gt; 구문을 꼭 xml 설정파일에 추가해야한다.&lt;/li&gt;
+    &lt;li&gt;멤버변수, setter 메소드 ||| 생성자는 안됨!&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4&gt;@Inject&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;Java에서 지원하는 어노테이션 , 프레임워크에 종속적이지 않다.&lt;/li&gt;
+    &lt;li&gt;타입 -&amp;gt; @Qualifier-&amp;gt; 이름 -&amp;gt; 실패&lt;/li&gt;
+    &lt;li&gt;Inject를 사용하기 위해서는 maven or gradle에 javax 라이브러리 의존성 추가&lt;/li&gt;
+    &lt;li&gt;java파일에서 @Inject @Named(value=&quot;id값&quot;)으로 bean객체 지정가능&lt;/li&gt;
+    &lt;li&gt;멤버변수, 메소드, 생성자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;@Qulifier&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;동일한 객체가 여러개 있을시&lt;/li&gt;
+    &lt;li&gt;Autowired 사용하면 자동 주입 대상 객체를 판단하지 못해 Exception 발생&lt;/li&gt;
+    &lt;li&gt;그래서 .xml bean태그안에 Qualifier태그로 value 값 명시 후  &lt;/li&gt;
+    &lt;li&gt;Autowired밑에 @Qualifier(&quot;value값&quot;)지정&amp;lt;/li
+&amp;lt;/ul&amp;gt;
+
 &lt;h1&gt;References.&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 다양한 의존객체 주입 방법에 대해 알아보자! 생성자를 이용한 의존 객체 주입 왼쪽에 있는 자바코드를 .xml파일로 만든것이다. 생성자에 객체를 주입시 constructor-arg 사용하고 ref에 참조대상을 적는다. 즉 객체가 생성될때 studentDao 객체가 주입이된다. setter를 이용한 의존객체 주입 위와 같이 왼쪽의 자바코드를 .xml파일로 만든것이며 만들때 property name 속성값을 적을때에 해당하는 setter 이름에서 set을 때고 앞에글자를 소문자로 setJdbcUrl -&amp;gt; jdbcUrl @Autowired java에서 지원하는 어노테이션, 특정프레임워크에 종속적이지 않음 주입하려고 하는 객체의 타입이 일치하는 객체를 자동으로 주입 찾는 순서 이름-&amp;gt;타입-&amp;gt;@Qualifier-&amp;gt;실패 @Resource 프로퍼티(일반변수?)와 메서드에서만 사용가능 생성자에서는 선언 불가 그래서 기본생성자 무조건 만들어주어야함! References.</summary></entry><entry><title type="html">DI(Dependency Injection)</title><link href="https://jaehong2.github.io//spring-di" rel="alternate" type="text/html" title="DI(Dependency Injection)" /><published>2020-12-29T20:45:00+09:00</published><updated>2020-12-29T20:45:00+09:00</updated><id>https://jaehong2.github.io//spring-di</id><content type="html" xml:base="https://jaehong2.github.io//spring-di">&lt;!-- Spring 시작 --&gt;
-
-&lt;h2&gt;공부 목표&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;DI(Dependency Injection) 알기&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Spring 프레임워크&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;프레임 워크는 마치 네이게이션과 같다.&lt;/li&gt;
-    &lt;li&gt;길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h4&gt;Spring 에서 제공하는 모듈&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;spring-core : DI, IoC 제공&lt;/li&gt;
-    &lt;li&gt;aop : AOP 구현 기능 제공&lt;/li&gt;
-    &lt;li&gt;jdbc : DB를 쉽게 다룰 수 있는 기능 제공&lt;/li&gt;
-    &lt;li&gt;tx : 트랜젝션 관련 기능제공&lt;/li&gt;
-    &lt;li&gt;webmvc : MVC구현 기능 제공&lt;/li&gt;
-    &lt;li&gt;그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;스프링 컨테이너(IoC)&lt;/h4&gt;
-&lt;p&gt;스프링에서 객체를 생성,조립하는 컨테이너로,&lt;br /&gt;
-   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4&gt;스프링 파일 구조&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;스프링 프로젝트 Root&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;src&lt;/li&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;main&lt;/li&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;java : .java파일 관리&lt;/li&gt;
-                            &lt;li&gt;resources : 자원관리 폴더 .xml or property file&lt;/li&gt;
-                        &lt;/ul&gt;
-                &lt;/ul&gt;
-            &lt;li&gt;pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를
-                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.&lt;/li&gt;
-        &lt;/ul&gt;
-
-&lt;/ul&gt;
-
-&lt;h4&gt;.xml 파일에서 객체 생성&lt;/h4&gt;
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;패키지명.클래스파일명&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;
-    Java에서는 new 키워드를 사용해서 객체를 생성했다.&lt;br /&gt;&lt;br /&gt;
-    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며&lt;br /&gt;
-    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고&lt;br /&gt;
-    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.
-&lt;/p&gt;
-
-&lt;p&gt;
-    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면&lt;br /&gt;
-    1. .xml파일(컨테이너)를 생성&lt;br /&gt;
-    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.&lt;br /&gt;
-    &lt;mark&gt;GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;);&lt;/mark&gt;&lt;br /&gt;&lt;br /&gt;
-
-    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)
-    클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class);&lt;br /&gt;
-    ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class);&lt;br /&gt;
-    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.
-
-&lt;/p&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 DI(Dependency Injection) 알기 Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References.</summary></entry><entry><title type="html">스프링 개요</title><link href="https://jaehong2.github.io//spring-introduce" rel="alternate" type="text/html" title="스프링 개요" /><published>2020-12-27T03:34:00+09:00</published><updated>2020-12-27T03:34:00+09:00</updated><id>https://jaehong2.github.io//spring-introduce</id><content type="html" xml:base="https://jaehong2.github.io//spring-introduce">&lt;!-- Spring 시작 --&gt;
-
-&lt;h2&gt;공부 목표&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;Spring 개요&lt;/li&gt;
-    &lt;li&gt;Spring 모듈&lt;/li&gt;
-    &lt;li&gt;Spring 컨테이너(IOC)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Spring 프레임워크&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;li&gt;프레임 워크는 마치 네이게이션과 같다.&lt;/li&gt;
-    &lt;li&gt;길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Spring 에서 제공하는 모듈&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;spring-core : DI, IoC 제공&lt;/li&gt;
-    &lt;li&gt;aop : AOP 구현 기능 제공&lt;/li&gt;
-    &lt;li&gt;jdbc : DB를 쉽게 다룰 수 있는 기능 제공&lt;/li&gt;
-    &lt;li&gt;tx : 트랜젝션 관련 기능제공&lt;/li&gt;
-    &lt;li&gt;webmvc : MVC구현 기능 제공&lt;/li&gt;
-    &lt;li&gt;그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;스프링 컨테이너(IoC)&lt;/h4&gt;
-&lt;p&gt;스프링에서 객체를 생성,조립하는 컨테이너로,&lt;br /&gt;
-   컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다.
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/built/images/spring_inflearn/spring.1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4&gt;스프링 파일 구조&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;스프링 프로젝트 Root&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;src&lt;/li&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;main&lt;/li&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;java : .java파일 관리&lt;/li&gt;
-                            &lt;li&gt;resources : 자원관리 폴더 .xml or property file&lt;/li&gt;
-                        &lt;/ul&gt;
-                &lt;/ul&gt;
-            &lt;li&gt;pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를
-                내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다.&lt;/li&gt;
-        &lt;/ul&gt;
-
-&lt;/ul&gt;
-
-&lt;h4&gt;.xml 파일에서 객체 생성&lt;/h4&gt;
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;id값&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;패키지명.클래스파일명&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;
-    Java에서는 new 키워드를 사용해서 객체를 생성했다.&lt;br /&gt;&lt;br /&gt;
-    Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며&lt;br /&gt;
-    객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고&lt;br /&gt;
-    스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다.
-&lt;/p&gt;
-
-&lt;p&gt;
-    bean을 생성했으니 이제 java파일에서 객체를 실행시키려면&lt;br /&gt;
-    1. .xml파일(컨테이너)를 생성&lt;br /&gt;
-    GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다.&lt;br /&gt;
-    &lt;mark&gt;GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;);&lt;/mark&gt;&lt;br /&gt;&lt;br /&gt;
-
-    2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.)
-    클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class);&lt;br /&gt;
-    ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class);&lt;br /&gt;
-    ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다.
-
-&lt;/p&gt;
-&lt;h1&gt;References.&lt;/h1&gt;
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/&quot;&gt;&lt;/a&gt;https://www.inflearn.com/&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 Spring 개요 Spring 모듈 Spring 컨테이너(IOC) Spring 프레임워크 프레임 워크는 마치 네이게이션과 같다. 길 탐색은 네비가 하고 안내를 들은 사용자는 운전만 하면됨 Spring 에서 제공하는 모듈 spring-core : DI, IoC 제공 aop : AOP 구현 기능 제공 jdbc : DB를 쉽게 다룰 수 있는 기능 제공 tx : 트랜젝션 관련 기능제공 webmvc : MVC구현 기능 제공 그리고 이러한 모듈을 사용하려면 .xml 파일등에 명시하면 자동으로 라이브러리를 다운받는다. 스프링 컨테이너(IoC) 스프링에서 객체를 생성,조립하는 컨테이너로, 컨테이너를 통해 생성된 객체를 빈(Bean)이라고 부른다. 스프링 파일 구조 스프링 프로젝트 Root src main java : .java파일 관리 resources : 자원관리 폴더 .xml or property file pom.xml : 각각의 스프링프로젝트는 pom.xml 파일을 가지고있고 외부 repository에 있는 필요한 library를 내가 개발중인 프로젝트에 쉽게 다운로드 할 수 있게 도와주는 파일이다. .xml 파일에서 객체 생성 &amp;lt;bean id = &quot;id값&quot; class=&quot;패키지명.클래스파일명&quot;/&amp;gt; Java에서는 new 키워드를 사용해서 객체를 생성했다. Spring에서는 bean 태그 위에서 자동으로 객체가 생성이 되며 객체가 생성됬다는건 메모리에 로드가 됬다는 이야기이고 스프링에서는 메모리가 로드 된 곳을 스프링컨테이너라고 한다. bean을 생성했으니 이제 java파일에서 객체를 실행시키려면 1. .xml파일(컨테이너)를 생성 GenericXmlApplicationContext 데이터 타입선언 후 객체생성 및 매개변수로는 .xml경로를 설정하면된다. GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:apllicationContext.xml&quot;); 2.컨테이너 안에있는 Bean 객체를 가져다가 쓴다.(객체생성은 컨테이너가 알아서 한다.) 클래스명 변수명 = ctx.getBean(&quot;빈아이디&quot;, 클래스명.class); ex) TranspotationWalk trans = ctx.geBean(&quot;tWalk&quot;, TranspotationWalk.class); ctx.close //자바에서는 외부리소스 사용후 반환 해주어야한다. References. https://www.inflearn.com/</summary></entry></feed>
+&lt;/li&gt;&lt;/ul&gt;</content><author><name>jaehong</name></author><category term="spring" /><summary type="html">공부 목표 다양한 의존객체 주입 방법에 대해 알아보자! 생성자를 이용한 의존 객체 주입 왼쪽에 있는 자바코드를 .xml파일로 만든것이다. 생성자에 객체를 주입시 constructor-arg 사용하고 ref에 참조대상을 적는다. 즉 객체가 생성될때 studentDao 객체가 주입이된다. setter를 이용한 의존객체 주입 위와 같이 왼쪽의 자바코드를 .xml파일로 만든것이며 만들때 property name 속성값을 적을때에 해당하는 setter 이름에서 set을 때고 앞에글자를 소문자로 setJdbcUrl -&amp;gt; jdbcUrl @Autowired Spring 지원하는 어노테이션 주입하려고 하는 객체의 타입이 일치하는 객체를 자동으로 주입 구문을 꼭 xml 설정파일에 추가해야한다. 찾는 순서 : 타입 -&amp;gt; 이름 -&amp;gt; @Qualifier -&amp;gt; 실패 멤버변수, 메소드, 생성자 적용가능 @Resource Java에서 지원하는 어노테이션 , 프레임워크에 종속적이지 않다. 기본생성자 무조건 만들어주어야함! 이름 -&amp;gt; 타입 -&amp;gt; @Qualifier -&amp;gt; 실패 @Resource(name=&quot;&quot;)으로 직접이름지정 할 수있음 구문을 꼭 xml 설정파일에 추가해야한다. 멤버변수, setter 메소드 ||| 생성자는 안됨! @Inject Java에서 지원하는 어노테이션 , 프레임워크에 종속적이지 않다. 타입 -&amp;gt; @Qualifier-&amp;gt; 이름 -&amp;gt; 실패 Inject를 사용하기 위해서는 maven or gradle에 javax 라이브러리 의존성 추가 java파일에서 @Inject @Named(value=&quot;id값&quot;)으로 bean객체 지정가능 멤버변수, 메소드, 생성자 @Qulifier 동일한 객체가 여러개 있을시 Autowired 사용하면 자동 주입 대상 객체를 판단하지 못해 Exception 발생 그래서 .xml bean태그안에 Qualifier태그로 value 값 명시 후 Autowired밑에 @Qualifier(&quot;value값&quot;)지정&amp;lt;/li &amp;lt;/ul&amp;gt; References.</summary></entry></feed>

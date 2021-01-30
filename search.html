@@ -187,6 +187,24 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "pt-4": {
+        "title": "21 01 30",
+            "author": "jaehong",
+            "category": "",
+            "content": "주제 : TCP, UDP4계층 Transport Layer  End Point 간의 데이터 전송을 담당하는 계층TCP (Transmission Control Protocol)  신뢰성있는 데이터 통신을 가능하게 해주는 프로토콜TCP 특징  Connection 연결 (3 way-handshake)  흐름제어(Flow Control) : 데이터 처리 속도를 조절하여 수신자의 버퍼 오버플로우를 방지  혼잡제어(Congestion Control) : 네트워크 내의 패킷 수가 넘치게 증가하지 않도록 방지  오류감지(Error Detection) : 데이터 전달 중 오류 발생시 해당 데이터 재전송세그먼트(Segment)  프로토콜단 에서 데이터가 처리되고 이동하고 하는데 이때 처리되는 단위를 세그먼트  데이터를 전송 받으면 tcp 프로토콜안에서 데이터를 자르고 TCP Header를 추가TCP Header3-way handshake  TCP 3 Way Handshake는 TCP/IP프로토콜을 이용해서 통신을 하는 응용프로그램이 데이터를 전송하기 전에 먼저 정확한 전송을 보장하기 위해 상대방 컴퓨터와 사전에 세션을 수립하는 과정을 의미한다.3-way handshake 과정  [STEP 1]클라이언트는 서버에 접속을 요청하는 SYN 패킷을 보낸다. 이때 클라이언트는 SYN 을 보내고 SYN/ACK 응답을 기다리는 SYN_SENT 상태가 되는 것이다.  [STEP 2]서버는 SYN요청을 받고 클라이언트에게 요청을 수락한다는 ACK 와 SYN flag 가 설정된 패킷을 발송하고 A가 다시 ACK으로 응답하기를 기다린다.이때 서버는 SYN_RECEIVED 상태가 된다.  [STEP 3]클라이언트는 서버에게 ACK을 보내고 이후로부터는 연결이 이루어지고 데이터가 오가게 되는것이다. 이때의 B서버 상태가 ESTABLISHED 이다.TCP 데이터 전송 방식4-way handshkae 과정  [STEP 1]클라이언트가 연결을 종료하겠다는 FIN플래그를 전송한다.  [STEP 2]서버는 일단 확인메시지를 보내고 자신의 통신이 끝날때까지 기다리는데 이 상태가 TIME_WAIT상태다.  [STEP 3]서버가 통신이 끝났으면 연결이 종료되었다고 클라이언트에게 FIN플래그를 전송한다.  [STEP 4]클라이언트는 확인했다는 메시지를 보낸다.TCP 문제점  신뢰성있는 전송은 보장하지만..  매번 Connection 연결 -&gt; 시간적 손실  패킷을 조금만 손실해도 재전송UDP  TCP 보단 신뢰성이 떨어지지만 전송 속도가 빠른 프로토콜UDP 특징  Connectionless(3 way-handshake x)  오류감지(Error Delection)  비교적 데이터의 신뢰성이 중요하지 않을때 사용(ex. 영상 스트리밍)UDP HeaderUDP 데이터 전송 방식정리  TCP와 UDP 모두 Header가 존재  포트 번호를 이용해서 데이터를 전달, 데이터 오류 검사를 위한 Checksum이 존재  TCP는 연결이 성공해야 통신이 가능(연결형 프로토콜), 3-way-handshake  UDP는 연결 없이 통신 가능 (비연결형 프로토콜)  신뢰도를 생각한다면 TCP 속도가 중요하면 UDPReferences.",
+        "url": "/pt-4"
+    }
+    ,
+    
+    "git-permission-denied": {
+        "title": "remote :permission to 에러",
+            "author": "jaehong",
+            "category": "",
+            "content": "    remote: Permission to test01/test01.git denied to xxx.    fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다…찾아보니    A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고,    나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때,    그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다.라고 나와있다.",
+        "url": "/git-permission-denied"
+    }
+    ,
+    
     "bean": {
         "title": "빈의 범위",
             "author": "jaehong",
