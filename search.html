@@ -187,6 +187,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "pt-5": {
+        "title": "21 02 06",
+            "author": "jaehong",
+            "category": "",
+            "content": "주제 : http 0.9 ~ 2.0HTTP 0.9 ~ 2.0HTTP 0.9  요청과 응답이 심플, 확장성이 없음  원 라인 프로토콜이라고도 불림HTTP 1.0  Header  상태 코드  Content-Type Header  특징 : 1 Connection == 1 Request &amp; 1 Response  문제점 : 요청당 Connection 발생(성능저하, 비용증가)HTTP 1.1      Persistent Connection : 지정한 timeout 동안 Connection을 닫지 않는 방식        Pipelining : 하나의 커넥션에서 응답을 기다리지 않고 순차적인 여러 요청을                   연속적으로 보내 순서에 맞춰 응답 받는 방식 (시간 절감)    문제점     첫번째요청이 처리하는 시간이 오래걸리면 두번째요청부터는 기다려야함  연속된 요청일 경우 중복 Header 전송HTTP 2.0  기존 HTTP/1.X 버전의 성능 향상에 초점  표준의 대체가 아닌 확장HTTP 2.0 특징1.Http 메세지 전송 방식의 변화  바이너리 프레이밍 계층 사용 -&gt; 파싱,전송 속도 증가, 오류 발생 가능성 낮아짐  Stream : 연결된 커넥션 사이에서 바이트의 양방향 흐름. 하나 또는 하나 이상의 message를 전송함  Message : 프레임들의 완성된 배열. Request/Response의 논리적인 배열이라고 보면 된다.  Frame : HTTP/2.0 통신에서 가장 작은 단위의 유닛.각각의 frame 은 헤더를 포함하고 있음. 헤더는 현재 전송되는 프레임이 어디에 포함되는 것인지 알려주는 최소 단위.2.Request &amp; Response Multiplexing  요청과 응답이 다중화가 가능해짐  Frame으로 쪼개짐으로서 메세지간의 순서가 사라짐  interleaving(끼워넣기) 방식 또한 제공3.Stream Prioritization  각 스트림에는 1~256 사이의 정수 가중치가 할당될 수 있습니다.  각 스트림에는 다른 스트림에 대한 명시적 종속성이 부여될 수 있습니다.4.Server push  클라이언트가 요청 하지 않은 리소스들을 서버에서 자동 푸쉬5.헤더 압축(Header Compression)  Static dynamic table 도입(중복된 내용은 인덱스만 뽑고, 새로추가된 내용은 허프만 인코딩으로 압축)  헤더의 크기를 줄여 페이지 로드 시간 감소References.https://velog.io/@taesunny/HTTP2HTTP-2.0-%EC%A0%95%EB%A6%AChttps://ijbgo.tistory.com/26https://developer.mozilla.org/ko/docs/Web/HTTPhttps://developers.google.com/web/fundamentals/performance/http2?hl=kohttps://www.youtube.com/watch?v=xcrjamphIp4",
+        "url": "/pt-5"
+    }
+    ,
+    
     "pt-4": {
         "title": "21 01 30",
             "author": "jaehong",
