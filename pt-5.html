@@ -57,7 +57,7 @@
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="21 02 06" />
-    <meta property="og:description" content="주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header 상태 코드 Content-Type Header 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한" />
+    <meta property="og:description" content="주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header가 추가됨(버전, 상태코드, Content-Type Header) 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한" />
     <meta property="og:url" content="https://JaeHong2.github.io//pt-5" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -67,7 +67,7 @@
     <meta property="article:tag" content="Pt" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="21 02 06" />
-    <meta name="twitter:description" content="주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header 상태 코드 Content-Type Header 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한" />
+    <meta name="twitter:description" content="주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header가 추가됨(버전, 상태코드, Content-Type Header) 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta name="twitter:label1" content="Written by" />
@@ -99,7 +99,7 @@
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//pt-5"
     },
-    "description": "주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header 상태 코드 Content-Type Header 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한"
+    "description": "주제 : http 0.9 ~ 2.0 HTTP 0.9 ~ 2.0 HTTP 0.9 요청과 응답이 심플, 확장성이 없음 원 라인 프로토콜이라고도 불림 HTTP 1.0 Header가 추가됨(버전, 상태코드, Content-Type Header) 특징 : 1 Connection == 1 Request &amp; 1 Response 문제점 : 요청당 Connection 발생(성능저하, 비용증가) HTTP 1.1 Persistent Connection : 지정한"
 }
     </script>
 
@@ -218,9 +218,7 @@ into the {body} of the default.hbs template -->
 <h3 id="http-10">HTTP 1.0</h3>
 <p><img src="/assets/built/images/pt/week_5/3.jpg" alt="Alt text" title="그림3" /></p>
 <ul>
-  <li>Header</li>
-  <li>상태 코드</li>
-  <li>Content-Type Header</li>
+  <li>Header가 추가됨(버전, 상태코드, Content-Type Header)</li>
   <li>특징 : 1 Connection == 1 Request &amp; 1 Response</li>
   <li>문제점 : 요청당 Connection 발생(성능저하, 비용증가)</li>
 </ul>
@@ -251,7 +249,7 @@ into the {body} of the default.hbs template -->
 </ul>
 
 <h4 id="http-20-특징">HTTP 2.0 특징</h4>
-<p><strong>1.Http 메세지 전송 방식의 변화</strong>
+<p><strong>1. Http 메세지 전송 방식의 변화</strong>
 <img src="/assets/built/images/pt/week_5/7.jpg" alt="Alt text" title="그림7" /></p>
 <ul>
   <li>바이너리 프레이밍 계층 사용 -&gt; 파싱,전송 속도 증가, 오류 발생 가능성 낮아짐</li>
@@ -265,11 +263,12 @@ into the {body} of the default.hbs template -->
 각각의 frame 은 헤더를 포함하고 있음. 헤더는 현재 전송되는 프레임이 어디에 포함되는 것인지 알려주는 최소 단위.</li>
 </ul>
 
-<p><strong>2.Request &amp; Response Multiplexing</strong>
+<p><strong>2. Request &amp; Response Multiplexing</strong>
 <img src="/assets/built/images/pt/week_5/8.5.jpg" alt="Alt text" title="그림8.5" /></p>
 <ul>
   <li>요청과 응답이 다중화가 가능해짐</li>
   <li>Frame으로 쪼개짐으로서 메세지간의 순서가 사라짐</li>
+  <li>1.1에서 Head Of Line Blocking 문제 해결</li>
   <li>interleaving(끼워넣기) 방식 또한 제공</li>
 </ul>
 
@@ -280,13 +279,13 @@ into the {body} of the default.hbs template -->
 <img src="/assets/built/images/pt/week_5/9.jpg" alt="Alt text" title="그림9" /></li>
 </ul>
 
-<p><strong>4.Server push</strong>
+<p><strong>4. Server push</strong>
 <img src="/assets/built/images/pt/week_5/10.jpg" alt="Alt text" title="그림10" /></p>
 <ul>
   <li>클라이언트가 요청 하지 않은 리소스들을 서버에서 자동 푸쉬</li>
 </ul>
 
-<p><strong>5.헤더 압축(Header Compression)</strong>
+<p><strong>5. 헤더 압축(Header Compression)</strong>
 <img src="/assets/built/images/pt/week_5/11.jpg" alt="Alt text" title="그림11" /></p>
 <ul>
   <li>Static dynamic table 도입(중복된 내용은 인덱스만 뽑고, 새로추가된 내용은 허프만 인코딩으로 압축)</li>
