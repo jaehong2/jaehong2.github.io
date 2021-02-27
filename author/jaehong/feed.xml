@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-02-27T20:51:24+09:00</updated>
+  <updated>2021-02-27T20:55:12+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -37,7 +37,7 @@
       <published>2021-02-26T22:03:00+09:00</published>
       <updated>2021-02-26T22:03:00+09:00</updated>
       <id>https://jaehong2.github.io//pt-8</id>
-      <content type="html" xml:base="https://jaehong2.github.io//pt-8">&lt;h2 id=&quot;주제--백트레킹&quot;&gt;주제 : 백트레킹&lt;/h2&gt;
+      <content type="html" xml:base="https://jaehong2.github.io//pt-8">&lt;h2 id=&quot;주제--백트레킹-mvc패턴&quot;&gt;주제 : 백트레킹, Mvc패턴&lt;/h2&gt;
 
 &lt;hr /&gt;
 &lt;h2 id=&quot;백트레킹이란&quot;&gt;백트레킹이란&lt;/h2&gt;
@@ -233,7 +233,7 @@ MVC2 패턴은 널리 표준으로 사용되는 패턴, &lt;strong&gt;요청을 
       
 
       
-        <summary type="html">주제 : 백트레킹</summary>
+        <summary type="html">주제 : 백트레킹, Mvc패턴</summary>
       
 
       
