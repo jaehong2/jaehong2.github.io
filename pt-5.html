@@ -272,8 +272,9 @@ into the {body} of the default.hbs template -->
   <li>interleaving(끼워넣기) 방식 또한 제공</li>
 </ul>
 
-<p><strong>3.Stream Prioritization</strong></p>
+<p><strong>3. Stream Prioritization</strong></p>
 <ul>
+  <li>리소스간의 전송 우선순위를 설정</li>
   <li>각 스트림에는 1~256 사이의 정수 가중치가 할당될 수 있습니다.</li>
   <li>각 스트림에는 다른 스트림에 대한 명시적 종속성이 부여될 수 있습니다.
 <img src="/assets/built/images/pt/week_5/9.jpg" alt="Alt text" title="그림9" /></li>
@@ -288,6 +289,7 @@ into the {body} of the default.hbs template -->
 <p><strong>5. 헤더 압축(Header Compression)</strong>
 <img src="/assets/built/images/pt/week_5/11.jpg" alt="Alt text" title="그림11" /></p>
 <ul>
+  <li>기존 1.1에서는 header의 중복에 문제가 있었는데 2.0에서 해결</li>
   <li>Static dynamic table 도입(중복된 내용은 인덱스만 뽑고, 새로추가된 내용은 허프만 인코딩으로 압축)</li>
   <li>헤더의 크기를 줄여 페이지 로드 시간 감소</li>
 </ul>
@@ -410,6 +412,15 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/pt-8">21 02 27</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -437,8 +448,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/pt-2">21 01 16</a></li>
                                         
                                     
                                   
@@ -543,7 +552,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/pt/">
                                 
-                                    See all 4 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -552,6 +561,55 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/pt-8">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/pt-8">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Pt</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">21 02 27</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
