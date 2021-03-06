@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-03-06T20:20:27+09:00</updated>
+  <updated>2021-03-06T20:45:29+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -72,27 +72,22 @@ Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술&l
 accept 등을 해야하지만 서블릿 컨테이너는 이러한 기능을 API로 제공하여 복잡한 과정을 생략할 수 있게 해줍니다.
 그래서 개발자가 서블릿에 구현해야 할 &lt;strong&gt;비지니스 로직에 대해서 집중 할 수있게 도와줍니다.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. 서블릿 생명주기(Life Cycle 관리)&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;2. 서블릿 생명주기(Life Cycle 관리)&lt;/strong&gt;&lt;br /&gt;
 서블릿의 시작과 끝을 관리합니다.
 &lt;img src=&quot;/assets/built/images/pt/week_9/2-1.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;요청받음 : 클라이언트가 서비스 요청시 HTTP 프로토콜 기반으로 요청정보가 만들어져 웹서버에 전달&lt;/li&gt;
-  &lt;li&gt;웹서버에서 컨테이너 : 웹서버에서는 전달 받은 요청을 살펴보고 요청받은 정보가 서블릿이라면 서블릿 컨테이너에게 넘김&lt;/li&gt;
-  &lt;li&gt;URL 매핑 확인 : 서블릿 매핑이 담긴 문서(web.xml or @WebServlet)를 참조하여 어떤 URL과 매핑되었는지 확인하고&lt;/li&gt;
-  &lt;li&gt;최초 요청 여부 판단 : 매핑된 서블릿을 실행하는데 컨테이너는 해당 서블릿이 메모리에 있는지 확인하고&lt;/li&gt;
-  &lt;li&gt;서블릿 객체 생성 : 최초의 서블릿이라면 해당 서블릿을 메모리에 로딩하고 서블릿 객체를 생성합니다.&lt;/li&gt;
-  &lt;li&gt;init() 메소드 실행 : init()는 서블릿객체가 생성된 다음에 호출되는 메소드로 서블릿객체의 초기화 작업이 구현되있습니다.&lt;/li&gt;
-  &lt;li&gt;Service 메소드 실행 :  Service 메서드는 HTTP 요청의 METHOD에 대응되는 메서드를 호출한다.(form tag에서 method 부분)&lt;/li&gt;
-  &lt;li&gt;destroy 메소드 실행 : 응답이 끝나면 HttpServletRequest, HttpServletResponse 두 객체를 소멸시킵니다.&lt;/li&gt;
+  &lt;li&gt;요청받음 : 클라이언트가 서비스 요청시 &lt;strong&gt;HTTP 프로토콜 기반으로 요청정보가 만들어져 웹서버&lt;/strong&gt;에 전달&lt;/li&gt;
+  &lt;li&gt;웹서버에서 컨테이너 : 웹서버에서는 전달 받은 요청을 살펴보고 &lt;strong&gt;요청받은 정보가 서블릿이라면 서블릿 컨테이너&lt;/strong&gt;에게 넘김&lt;/li&gt;
+  &lt;li&gt;URL 매핑 확인 : &lt;strong&gt;서블릿 매핑이 담긴 문서(web.xml or @WebServlet)를 참조&lt;/strong&gt;하여 어떤 URL과 매핑되었는지 확인하고&lt;/li&gt;
+  &lt;li&gt;최초 요청 여부 판단 : 매핑된 서블릿을 실행하는데 컨테이너는 해당 &lt;strong&gt;서블릿이 메모리에 있는지 확인&lt;/strong&gt;하고&lt;/li&gt;
+  &lt;li&gt;서블릿 객체 생성 : 최초의 서블릿이라면 해당 &lt;strong&gt;서블릿을 메모리에 로딩하고 서블릿 객체&lt;/strong&gt;를 생성합니다.&lt;/li&gt;
+  &lt;li&gt;init() 메소드 실행 : init()은 서블릿객체가 생성된 다음에 호출되는 메소드로 서블릿객체의 &lt;strong&gt;초기화 작업&lt;/strong&gt;이 구현되있습니다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;HttpRequest,Response 객체 생성&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Service 메소드 실행 : Service 메서드는 &lt;strong&gt;HTTP 요청의 METHOD에 대응되는 메서드를 호출&lt;/strong&gt;한다.(form tag에서 method 부분)&lt;/li&gt;
+  &lt;li&gt;destroy 메소드 실행 : 응답이 끝나면 HttpServletRequest, HttpServletResponse 두 객체를 &lt;strong&gt;소멸&lt;/strong&gt;시킵니다.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;쓰레드-풀thread-pool&quot;&gt;쓰레드 풀(Thread Pool)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_9/2-2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Tomcat 3.2 시점으로 ThreadPool 도입&lt;/li&gt;
-  &lt;li&gt;쓰레드가 무제한 생성되는 것이 아닌 쓰레드 풀(Thread Pool)에 쓰레드를 저장하고 필요시 꺼내어 사용&lt;/li&gt;
-&lt;/ul&gt;
-
+&lt;hr /&gt;
 &lt;h3 id=&quot;jspjava-server-page&quot;&gt;JSP(Java Server Page)&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;JSP란 HTML 코드에 JAVA 코드를 넣어 동적웹페이지를 생성하는 웹어플리케이션 도구&lt;/li&gt;
@@ -109,8 +104,8 @@ accept 등을 해야하지만 서블릿 컨테이너는 이러한 기능을 API�
 &lt;/ol&gt;
 
 &lt;p&gt;## References.&lt;br /&gt;
-&lt;a href=&quot;https://mangkyu.tistory.com/14&quot;&gt;https://mangkyu.tistory.com/14&lt;/a&gt;
-&lt;a href=&quot;https://hackr.io/blog/jsp-interview-questions&quot;&gt;https://hackr.io/blog/jsp-interview-questions&lt;/a&gt;
+&lt;a href=&quot;https://mangkyu.tistory.com/14&quot;&gt;https://mangkyu.tistory.com/14&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://hackr.io/blog/jsp-interview-questions&quot;&gt;https://hackr.io/blog/jsp-interview-questions&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://altera520.github.io/posts&quot;&gt;https://altera520.github.io/posts&lt;/a&gt;&lt;/p&gt;</content>
 
       
