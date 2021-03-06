@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/pt/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-02-27T20:55:12+09:00</updated>
+  <updated>2021-03-06T20:20:27+09:00</updated>
   <id>https://jaehong2.github.io//tag/pt/feed.xml</id>
 
   
@@ -30,6 +30,206 @@
   
   
 
+  
+    <entry>
+      <title type="html">21 03 06 (서블릿, JSP)</title>
+      <link href="https://jaehong2.github.io//pt-9-2" rel="alternate" type="text/html" title="21 03 06 (서블릿, JSP)" />
+      <published>2021-03-03T23:03:00+09:00</published>
+      <updated>2021-03-03T23:03:00+09:00</updated>
+      <id>https://jaehong2.github.io//pt-9-2</id>
+      <content type="html" xml:base="https://jaehong2.github.io//pt-9-2">&lt;h3 id=&quot;1-서블릿servlet&quot;&gt;1. 서블릿(Servlet)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;클라이언트의 요청을 처리하고, 그 결과를 반환하는  &lt;br /&gt;
+Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;서블릿의-특징&quot;&gt;서블릿의 특징&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;클라이언트의 요청에 대해 동적으로 작동하는 웹 어플리케이션 컴포넌트&lt;/li&gt;
+  &lt;li&gt;MVC 패턴에서 Controller로 이용된다.&lt;/li&gt;
+  &lt;li&gt;Java Thread를 이용하여 동작한다.&lt;/li&gt;
+  &lt;li&gt;HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다.&lt;/li&gt;
+  &lt;li&gt;html을 사용하여 요청에 응답 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;HTML 변경 시 Servlet을 재컴파일해야 하는 단점이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;2서블릿-컨테이너servlet-container&quot;&gt;2.서블릿 컨테이너(Servlet Container)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;서블릿을 관리해주는 컨테이너&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;서블릿을 만들었다고 해서 스스로작동하는 것이 아니고, &lt;strong&gt;서블릿을 제어 해주는 역할&lt;/strong&gt;이 필요한데, 
+그 역할을 서블릿 컨테이너가 가짐&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;서블릿-컨테이너의-역할&quot;&gt;서블릿 컨테이너의 역할&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 웹서버와의 통신&lt;/strong&gt;
+서블릿 컨테이너는 서블릿과 웹서버가 손쉽게 통신할 수 있게 해줍니다. 일반적으로 우리는 소켓을 만들고 listen, 
+accept 등을 해야하지만 서블릿 컨테이너는 이러한 기능을 API로 제공하여 복잡한 과정을 생략할 수 있게 해줍니다.
+그래서 개발자가 서블릿에 구현해야 할 &lt;strong&gt;비지니스 로직에 대해서 집중 할 수있게 도와줍니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 서블릿 생명주기(Life Cycle 관리)&lt;/strong&gt;
+서블릿의 시작과 끝을 관리합니다.
+&lt;img src=&quot;/assets/built/images/pt/week_9/2-1.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;요청받음 : 클라이언트가 서비스 요청시 HTTP 프로토콜 기반으로 요청정보가 만들어져 웹서버에 전달&lt;/li&gt;
+  &lt;li&gt;웹서버에서 컨테이너 : 웹서버에서는 전달 받은 요청을 살펴보고 요청받은 정보가 서블릿이라면 서블릿 컨테이너에게 넘김&lt;/li&gt;
+  &lt;li&gt;URL 매핑 확인 : 서블릿 매핑이 담긴 문서(web.xml or @WebServlet)를 참조하여 어떤 URL과 매핑되었는지 확인하고&lt;/li&gt;
+  &lt;li&gt;최초 요청 여부 판단 : 매핑된 서블릿을 실행하는데 컨테이너는 해당 서블릿이 메모리에 있는지 확인하고&lt;/li&gt;
+  &lt;li&gt;서블릿 객체 생성 : 최초의 서블릿이라면 해당 서블릿을 메모리에 로딩하고 서블릿 객체를 생성합니다.&lt;/li&gt;
+  &lt;li&gt;init() 메소드 실행 : init()는 서블릿객체가 생성된 다음에 호출되는 메소드로 서블릿객체의 초기화 작업이 구현되있습니다.&lt;/li&gt;
+  &lt;li&gt;Service 메소드 실행 :  Service 메서드는 HTTP 요청의 METHOD에 대응되는 메서드를 호출한다.(form tag에서 method 부분)&lt;/li&gt;
+  &lt;li&gt;destroy 메소드 실행 : 응답이 끝나면 HttpServletRequest, HttpServletResponse 두 객체를 소멸시킵니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;쓰레드-풀thread-pool&quot;&gt;쓰레드 풀(Thread Pool)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_9/2-2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tomcat 3.2 시점으로 ThreadPool 도입&lt;/li&gt;
+  &lt;li&gt;쓰레드가 무제한 생성되는 것이 아닌 쓰레드 풀(Thread Pool)에 쓰레드를 저장하고 필요시 꺼내어 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jspjava-server-page&quot;&gt;JSP(Java Server Page)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;JSP란 HTML 코드에 JAVA 코드를 넣어 동적웹페이지를 생성하는 웹어플리케이션 도구&lt;/li&gt;
+  &lt;li&gt;JSP는 WAS(Web Application Server)에 의하여 서블릿 클래스로 변환하여 사용됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jsp-동작-과정&quot;&gt;JSP 동작 과정&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_9/2-3.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림3&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;클라이언트로 JSP 파일 요청이 들어오면 .java(Servlet)파일로 &lt;strong&gt;변환(Translation)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;컴파일&lt;/strong&gt;하여 .class 파일이 만들어짐&lt;/li&gt;
+  &lt;li&gt;컴파일된 서블릿 클래스는 서블릿 컨테이너에 의해서 서블릿 객체로 동작.&lt;/li&gt;
+  &lt;li&gt;jspInit, jspService, jspDestory 과정 실행&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;## References.&lt;br /&gt;
+&lt;a href=&quot;https://mangkyu.tistory.com/14&quot;&gt;https://mangkyu.tistory.com/14&lt;/a&gt;
+&lt;a href=&quot;https://hackr.io/blog/jsp-interview-questions&quot;&gt;https://hackr.io/blog/jsp-interview-questions&lt;/a&gt;
+&lt;a href=&quot;https://altera520.github.io/posts&quot;&gt;https://altera520.github.io/posts&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="pt" />
+      
+
+      
+        <summary type="html">1. 서블릿(Servlet)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">21 03 06</title>
+      <link href="https://jaehong2.github.io//pt-9-1" rel="alternate" type="text/html" title="21 03 06" />
+      <published>2021-03-03T22:03:00+09:00</published>
+      <updated>2021-03-03T22:03:00+09:00</updated>
+      <id>https://jaehong2.github.io//pt-9-1</id>
+      <content type="html" xml:base="https://jaehong2.github.io//pt-9-1">&lt;h2 id=&quot;톰캣-버전별-차이&quot;&gt;톰캣 버전별 차이&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/pt/week_9/1.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each version of Tomcat is supported for any stable Java release 
+that meets the requirements of the final column in the table above.  &lt;br /&gt;
+(표에 맞는 Java Version 이상을 사용해야 안정적인 Tomcat 동작을 지원한다.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;apache-tomcat-7x&quot;&gt;Apache Tomcat 7.X&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Please note that although we offer downloads and documentation of older releases,
+such as Apache Tomcat 7.x, we strongly encourage users to use the latest stable version of
+Apache Tomcat whenever possible.&lt;br /&gt;
+(요약 : 7 버전 쓰지마세요.)&lt;br /&gt;
+&lt;b&gt;개선 사항&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Servlet 3.0, JSP 2.2, EL 2.2 and WebSocket 1.1&lt;/strong&gt; 사양 구현&lt;/li&gt;
+    &lt;li&gt;웹 응용 프로그램 메모리 누수 감지 및 예방&lt;/li&gt;
+    &lt;li&gt;CSRF 보호&lt;/li&gt;
+    &lt;li&gt;Manager 및 Host Manager 응용 프로그램의 향상된 보안&lt;/li&gt;
+    &lt;li&gt;리팩토링 (커넥터, 라이프 사이클) 및 많은 내부 코드 정리&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;apache-tomcat-8x&quot;&gt;Apache Tomcat 8.X&lt;/h3&gt;
+&lt;h4 id=&quot;80x&quot;&gt;8.0.X&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Servlet 3.1 , JSP 2.3 , EL 3.0 및 WebSocket 1.1&lt;/strong&gt; 사양 구현&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;현재 Tomcat 8.0은 8.5로 대체&lt;/strong&gt;, 8.0을 쓰고있다면 8.5로 마이그레이션 하세요!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;85x&quot;&gt;8.5.X&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tomcat 8.0.X과 동일한 사양 지원, 또한 &lt;strong&gt;JASPIC 1.1 규격도 구현&lt;/strong&gt;한다.&lt;/li&gt;
+  &lt;li&gt;HTTP/2에 대한 지원 추가(Tomcat Native 라이브러리 필요)&lt;/li&gt;
+  &lt;li&gt;JSSE 커넥터(NIO 및 NIO2)에서 TLS 지원을 위한 OpenSSL 사용 지원 추가&lt;/li&gt;
+  &lt;li&gt;TLS 가상 호스팅(SNI) 지원 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;85에서-제거-된-기술&quot;&gt;8.5에서 제거 된 기술&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTTP 및 AJP 커넥터의 BIO 구현&lt;/li&gt;
+  &lt;li&gt;Comet API 지원&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;apache-tomcat-9x&quot;&gt;Apache Tomcat 9.X&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Servlet 4.0 지원&lt;/li&gt;
+  &lt;li&gt;Http / 2에 지원 추가&lt;/li&gt;
+  &lt;li&gt;JSE 커넥터(NIO 및 NIO2)에서 OpenSSL을 TLS 지원용으로 사용하기 위한 지원 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;apache-tomcat-10x&quot;&gt;Apache Tomcat 10.X&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Servlet 5.0 , JSP 3.0 , EL 4.0, WebSocket 2.0, Authentication 2.0&lt;/strong&gt; 사양 구현&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;## References.&lt;br /&gt;
+&lt;a href=&quot;http://tomcat.apache.org/whichversion.html&quot;&gt;톰캣 공식사이트&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="pt" />
+      
+
+      
+        <summary type="html">톰캣 버전별 차이 Each version of Tomcat is supported for any stable Java release that meets the requirements of the final column in the table above. (표에 맞는 Java Version 이상을 사용해야 안정적인 Tomcat 동작을 지원한다.)</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">21 02 27</title>

@@ -11,7 +11,7 @@
 
 
 
-    <title>jsp 입문</title>
+    <title>21 03 06 (서블릿, JSP)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,30 +50,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="모르면 -> 알때까지 -> 공부해서 -> 해낸다." />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://JaeHong2.github.io//jsp-introduce.html" />
+    <link rel="canonical" href="https://JaeHong2.github.io//pt-9-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="jsp 입문" />
-    <meta property="og:description" content="JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java" />
-    <meta property="og:url" content="https://JaeHong2.github.io//jsp-introduce.html" />
-    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
+    <meta property="og:title" content="21 03 06 (서블릿, JSP)" />
+    <meta property="og:description" content="1. 서블릿(Servlet) 클라이언트의 요청을 처리하고, 그 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술 서블릿의 특징 클라이언트의 요청에 대해 동적으로 작동하는 웹 어플리케이션 컴포넌트 MVC 패턴에서 Controller로 이용된다. Java Thread를 이용하여 동작한다. HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다. html을 사용하여 요청에 응답 할 수 있다. HTML" />
+    <meta property="og:url" content="https://JaeHong2.github.io//pt-9-2" />
+    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2020-11-16T18:33:00+09:00" />
-    <meta property="article:modified_time" content="2020-11-16T18:33:00+09:00" />
-    <meta property="article:tag" content="Java" />
+    <meta property="article:published_time" content="2021-03-03T23:03:00+09:00" />
+    <meta property="article:modified_time" content="2021-03-03T23:03:00+09:00" />
+    <meta property="article:tag" content="Pt" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="jsp 입문" />
-    <meta name="twitter:description" content="JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java" />
+    <meta name="twitter:title" content="21 03 06 (서블릿, JSP)" />
+    <meta name="twitter:description" content="1. 서블릿(Servlet) 클라이언트의 요청을 처리하고, 그 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술 서블릿의 특징 클라이언트의 요청에 대해 동적으로 작동하는 웹 어플리케이션 컴포넌트 MVC 패턴에서 Controller로 이용된다. Java Thread를 이용하여 동작한다. HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다. html을 사용하여 요청에 응답 할 수 있다. HTML" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
-    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png" />
+    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="오늘의 공부기록" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Java" />
+    <meta name="twitter:data2" content="Pt" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -88,18 +88,18 @@
         "name": "오늘의 공부기록",
         "logo": "https://JaeHong2.github.io//"
     },
-    "url": "https://JaeHong2.github.io//jsp-introduce.html",
+    "url": "https://JaeHong2.github.io//pt-9-2",
     "image": {
         "@type": "ImageObject",
-        "url": "https://JaeHong2.github.io//assets/built/images/logo/jsp-logo.png",
+        "url": "https://JaeHong2.github.io//assets/built/images/logo/",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://JaeHong2.github.io//jsp-introduce.html"
+        "@id": "https://JaeHong2.github.io//pt-9-2"
     },
-    "description": "JSP 프로토콜 : 네트워크상에서 약속한 통신 규약 (Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷) IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80) Java 웹 JSP(java"
+    "description": "1. 서블릿(Servlet) 클라이언트의 요청을 처리하고, 그 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술 서블릿의 특징 클라이언트의 요청에 대해 동적으로 작동하는 웹 어플리케이션 컴포넌트 MVC 패턴에서 Controller로 이용된다. Java Thread를 이용하여 동작한다. HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다. html을 사용하여 요청에 응답 할 수 있다. HTML"
 }
     </script>
 
@@ -112,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="jsp 입문" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="21 03 06 (서블릿, JSP)" href="/feed.xml" />
 
 
 </head>
@@ -174,106 +174,106 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-java post tag-java ">
+        <article class="post-full  tag-pt post tag-java ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="16 November 2020">16 November 2020</time>
+                    <time class="post-full-meta-date" datetime=" 3 March 2021"> 3 March 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/java/'>JAVA</a>
+                               <a href='/tag/pt/'>PT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">jsp 입문</h1>
+                <h1 class="post-full-title">21 03 06 (서블릿, JSP)</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1>JSP</h1>
+                    <h3 id="1-서블릿servlet">1. 서블릿(Servlet)</h3>
 
-<hr />
+<blockquote>
+  <p>클라이언트의 요청을 처리하고, 그 결과를 반환하는  <br />
+Servlet 클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술</p>
+</blockquote>
 
+<h3 id="서블릿의-특징">서블릿의 특징</h3>
 <ul>
-    <li>프로토콜 : 네트워크상에서 약속한 통신 규약 </li>
-    <li>(Http:웹 통신규약, FTP: 서버에 파일 올리거나 받을때 , SMTP,POP: 메일 DHCP: 가정에서 사용하는 동적 사설 인터넷)</li>
-    <li>IP: 네트워크 상에서 컴퓨터를 식별할수있는 주소 </li>
-    <li>DNS: IP주소를 인간이 쉽게 외우도록 맵핑한 문자열 </li>
-    <li>Port: 해당 컴퓨터의 구동되고있는 프로그램을 구분할 수 있는 번호 (default로 80)</li>
-</ul>
-
-<h2>Java 웹</h2>
-
-<p><img src="/assets/built/images/jsp/jsp.1.JPG" alt="" /></p>
-<ul>
-    <li>JSP(java Server Page): HTML 파일 내에 JAVA언어를 삽입한 문서</li>
-    <li>Servlet(Server Applet) JAVA언어로 이루어진 웹프로그래밍 문서</li>
-    <li>컴포넌트: JSP, Servlet, HTML 등의 웹 어플리케이션을 구현하기 위한 구성요소</li>
+  <li>클라이언트의 요청에 대해 동적으로 작동하는 웹 어플리케이션 컴포넌트</li>
+  <li>MVC 패턴에서 Controller로 이용된다.</li>
+  <li>Java Thread를 이용하여 동작한다.</li>
+  <li>HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다.</li>
+  <li>html을 사용하여 요청에 응답 할 수 있다.</li>
+  <li>HTML 변경 시 Servlet을 재컴파일해야 하는 단점이 있다.</li>
 </ul>
 
 <hr />
-
-<h2>Jsp 아키텍쳐</h2>
-<p><img src="/assets/built/images/jsp/jsp.2.JPG" alt="" /></p>
-
-<h2>Servlet 특징</h2>
-<ul>
-    <li>동적 웹어플리케이션 컴포넌트</li>
-    <li>.java 확장자</li>
-    <li>java thread 이용하여 동작</li>
-    <li>MVC패턴에서 Controller</li>
-</ul>
-
-<hr />
-
-<h2>맵핑 방법</h2>
-<h3>왜 맵핑을하는가?(Why) :너무 길고, 보안에 노출될수 있기에..</h3>
-<p><br /></p>
+<h3 id="2서블릿-컨테이너servlet-container">2.서블릿 컨테이너(Servlet Container)</h3>
+<blockquote>
+  <p>서블릿을 관리해주는 컨테이너</p>
+</blockquote>
 
 <ul>
-    <li>기존경로: http://localhost:8090/hello/servelt/com.javalec.ex.Helloworld</li>
-    <li>URL맵핑시: http://localhost:8090/hello/HWrold</li>
-    <li>MVC패턴에서 Controller</li>
+  <li>서블릿을 만들었다고 해서 스스로작동하는 것이 아니고, <strong>서블릿을 제어 해주는 역할</strong>이 필요한데, 
+그 역할을 서블릿 컨테이너가 가짐</li>
 </ul>
 
-<p><mark>1. web.xml 이용하는방법</mark></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">servlet</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">servlet</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="n">helloworld</span><span class="o">&lt;/</span><span class="n">servlet</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">servlet</span><span class="o">-</span><span class="kd">class</span><span class="err">&gt;</span><span class="nc">com</span><span class="o">.</span><span class="na">javalec</span><span class="o">.</span><span class="na">ex</span><span class="o">.</span><span class="na">HelloWorld</span><span class="o">&lt;/</span><span class="n">servlet</span><span class="o">-</span><span class="kd">class</span><span class="err">&gt;</span>
-<span class="err">&lt;/</span><span class="nc">servlet</span><span class="o">&gt;</span>
+<h3 id="서블릿-컨테이너의-역할">서블릿 컨테이너의 역할</h3>
 
-<span class="o">&lt;</span><span class="n">servlet</span><span class="o">-</span><span class="n">mapping</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">servlet</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="n">helloworld</span><span class="o">&lt;/</span><span class="n">servlet</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">url</span><span class="o">-</span><span class="n">pattern</span><span class="o">&gt;/</span><span class="n">hw</span><span class="o">&lt;/</span><span class="n">url</span><span class="o">-</span><span class="n">pattern</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">servlet</span><span class="o">-</span><span class="n">mapping</span><span class="o">&gt;</span>
-</code></pre></div></div>
+<p><strong>1. 웹서버와의 통신</strong>
+서블릿 컨테이너는 서블릿과 웹서버가 손쉽게 통신할 수 있게 해줍니다. 일반적으로 우리는 소켓을 만들고 listen, 
+accept 등을 해야하지만 서블릿 컨테이너는 이러한 기능을 API로 제공하여 복잡한 과정을 생략할 수 있게 해줍니다.
+그래서 개발자가 서블릿에 구현해야 할 <strong>비지니스 로직에 대해서 집중 할 수있게 도와줍니다.</strong></p>
+
+<p><strong>2. 서블릿 생명주기(Life Cycle 관리)</strong>
+서블릿의 시작과 끝을 관리합니다.
+<img src="/assets/built/images/pt/week_9/2-1.jpg" alt="Alt text" title="그림1" /></p>
+<ol>
+  <li>요청받음 : 클라이언트가 서비스 요청시 HTTP 프로토콜 기반으로 요청정보가 만들어져 웹서버에 전달</li>
+  <li>웹서버에서 컨테이너 : 웹서버에서는 전달 받은 요청을 살펴보고 요청받은 정보가 서블릿이라면 서블릿 컨테이너에게 넘김</li>
+  <li>URL 매핑 확인 : 서블릿 매핑이 담긴 문서(web.xml or @WebServlet)를 참조하여 어떤 URL과 매핑되었는지 확인하고</li>
+  <li>최초 요청 여부 판단 : 매핑된 서블릿을 실행하는데 컨테이너는 해당 서블릿이 메모리에 있는지 확인하고</li>
+  <li>서블릿 객체 생성 : 최초의 서블릿이라면 해당 서블릿을 메모리에 로딩하고 서블릿 객체를 생성합니다.</li>
+  <li>init() 메소드 실행 : init()는 서블릿객체가 생성된 다음에 호출되는 메소드로 서블릿객체의 초기화 작업이 구현되있습니다.</li>
+  <li>Service 메소드 실행 :  Service 메서드는 HTTP 요청의 METHOD에 대응되는 메서드를 호출한다.(form tag에서 method 부분)</li>
+  <li>destroy 메소드 실행 : 응답이 끝나면 HttpServletRequest, HttpServletResponse 두 객체를 소멸시킵니다.</li>
+</ol>
+
+<h3 id="쓰레드-풀thread-pool">쓰레드 풀(Thread Pool)</h3>
+<p><img src="/assets/built/images/pt/week_9/2-2.jpg" alt="Alt text" title="그림2" /></p>
 <ul>
-    <li>servlet-name : 임의의 이름을 만듬</li>
-    <li>servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력</li>
-    <li>url-parttern: servlet-class의 매핑할 임의의 이름입력. 반드시 <mark>/</mark>로시작해야됨!</li>
+  <li>Tomcat 3.2 시점으로 ThreadPool 도입</li>
+  <li>쓰레드가 무제한 생성되는 것이 아닌 쓰레드 풀(Thread Pool)에 쓰레드를 저장하고 필요시 꺼내어 사용</li>
 </ul>
 
-<p><mark>2. java code의 어노테이션 이용</mark></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@WebServlet</span><span class="o">(</span><span class="s">"/HWorld!!"</span><span class="o">)</span><span class="c1">// servlet 상단에 선언</span>
-</code></pre></div></div>
-
-<p><strong class="subtitle_fontAwesome"> web.xml과 어노테이션 동시사용시 web.xml이 적용된다.  </strong></p>
-
-<h1>References.</h1>
+<h3 id="jspjava-server-page">JSP(Java Server Page)</h3>
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/" target="_blank" class="tx-link">
-        https://www.youtube.com/watch?v=Aw-lOlR0I28&amp;list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph/</a></li>
+  <li>JSP란 HTML 코드에 JAVA 코드를 넣어 동적웹페이지를 생성하는 웹어플리케이션 도구</li>
+  <li>JSP는 WAS(Web Application Server)에 의하여 서블릿 클래스로 변환하여 사용됨</li>
 </ul>
 
+<h3 id="jsp-동작-과정">JSP 동작 과정</h3>
+<p><img src="/assets/built/images/pt/week_9/2-3.jpg" alt="Alt text" title="그림3" /></p>
+<ol>
+  <li>클라이언트로 JSP 파일 요청이 들어오면 .java(Servlet)파일로 <strong>변환(Translation)</strong></li>
+  <li><strong>컴파일</strong>하여 .class 파일이 만들어짐</li>
+  <li>컴파일된 서블릿 클래스는 서블릿 컨테이너에 의해서 서블릿 객체로 동작.</li>
+  <li>jspInit, jspService, jspDestory 과정 실행</li>
+</ol>
+
+<p>## References.<br />
+<a href="https://mangkyu.tistory.com/14">https://mangkyu.tistory.com/14</a>
+<a href="https://hackr.io/blog/jsp-interview-questions">https://hackr.io/blog/jsp-interview-questions</a>
+<a href="https://altera520.github.io/posts">https://altera520.github.io/posts</a></p>
 
                 </div>
             </section>
@@ -339,9 +339,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://JaeHong2.github.io//jsp-introduce.html';
-                            this.page.identifier = '/jsp-introduce.html';
-                            this.page.title = 'jsp 입문';
+                            this.page.url = 'https://JaeHong2.github.io//pt-9-2';
+                            this.page.identifier = '/pt-9-2';
+                            this.page.title = '21 03 06 (서블릿, JSP)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -375,7 +375,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 오늘의 공부기록 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/java/">Java</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/pt/">Pt</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -385,53 +385,14 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
+                                    
                                   
                                 
                                   
                                     
                                         
                                         
-                                            <li><a href="/java-collection-framework">컬렉션 프레임워크(Collection FrameWork)</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/jsp-mvc">MVC 패턴</a></li>
+                                            <li><a href="/pt-9-1">21 03 06</a></li>
                                         
                                     
                                   
@@ -440,7 +401,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/jsp-uri-pattern">uri-pattern</a></li>
+                                            <li><a href="/pt-8">21 02 27</a></li>
                                         
                                     
                                   
@@ -449,75 +410,9 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/pt-5">21 02 06</a></li>
                                         
                                     
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
                                   
                                 
                                   
@@ -553,94 +448,99 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
-                                    
-                                  
                                 
                                   
-                                    
-                                        
-                                        
-                                    
-                                  
                                 
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
                                   
                                 
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                    
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
                                   
                                 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/java/">
+                            <a href="/tag/pt/">
                                 
-                                    See all 27 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -650,55 +550,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/jsp-servlet-1.html">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/jsp-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/jsp-servlet-1.html">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Servelt 1</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -706,22 +557,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/java-inheritance">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/java-logo.jpg)"></div>
+            <a class="post-card-image-link" href="/pt-9-1">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-inheritance">
+            <a class="post-card-content-link" href="/pt-9-1">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Java</span>
+                                <span class="post-card-tags">Pt</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">상속</h2>
+                    <h2 class="post-card-title">21 03 06</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -765,18 +616,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">jsp 입문</div>
+    <div class="floating-header-title">21 03 06 (서블릿, JSP)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=jsp+%EC%9E%85%EB%AC%B8&amp;url=https://JaeHong2.github.io/jsp-introduce.html"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=21+03+06+%28%EC%84%9C%EB%B8%94%EB%A6%BF%2C+JSP%29&amp;url=https://JaeHong2.github.io/pt-9-2"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/jsp-introduce.html"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/pt-9-2"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
