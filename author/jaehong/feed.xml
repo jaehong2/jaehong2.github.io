@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-03-13T20:31:21+09:00</updated>
+  <updated>2021-03-13T20:39:40+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -48,7 +48,7 @@
 &lt;/blockquote&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;여러 규칙 중 어느 것을 적용 하는지에 따라 &lt;br /&gt;
+&lt;p&gt;문자열 인코딩 방식에서 여러 규칙 중 어느 것을 적용 하는지에 따라 &lt;br /&gt;
 글자가 올바르게 표현 될 수도 있고 &lt;strong&gt;깨져서 보일 수도&lt;/strong&gt; 있다.
 &lt;img src=&quot;/assets/built/images/pt/week_10/3.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림3&quot; /&gt;
 깨지는 이유는??&lt;/p&gt;
@@ -67,8 +67,9 @@
 
 &lt;p&gt;그리고 한국에는 유니코드가 등장하기 전 만든 인코딩 방식(EUC-KR)을 쓰는 오래된 시스템도 있습니다.&lt;/p&gt;
 
+&lt;hr /&gt;
 &lt;h3 id=&quot;아스키-코드ascii&quot;&gt;아스키 코드(ASCII)&lt;/h3&gt;
-&lt;p&gt;아스키 코드는 (American Standard Code for Information Interchange)&lt;br /&gt;
+&lt;p&gt;아스키 코드 (American Standard Code for Information Interchange)&lt;br /&gt;
 &lt;img src=&quot;/assets/built/images/pt/week_10/2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;처음&lt;/em&gt;으로 표준을 정립한 문자열 인코딩 방식으로 아직까지 많이 사용&lt;/li&gt;
