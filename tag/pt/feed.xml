@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//tag/pt/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-03-13T20:39:40+09:00</updated>
+  <updated>2021-03-20T20:51:07+09:00</updated>
   <id>https://jaehong2.github.io//tag/pt/feed.xml</id>
 
   
@@ -30,6 +30,132 @@
   
   
 
+  
+    <entry>
+      <title type="html">21 03 20 날짜와 시간</title>
+      <link href="https://jaehong2.github.io//pt-11-1" rel="alternate" type="text/html" title="21 03 20 날짜와 시간" />
+      <published>2021-03-15T19:37:00+09:00</published>
+      <updated>2021-03-15T19:37:00+09:00</updated>
+      <id>https://jaehong2.github.io//pt-11-1</id>
+      <content type="html" xml:base="https://jaehong2.github.io//pt-11-1">&lt;h2 id=&quot;날짜와-시간&quot;&gt;날짜와 시간&lt;/h2&gt;
+&lt;p&gt;프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자!&lt;/p&gt;
+
+&lt;h3 id=&quot;타임스탬프&quot;&gt;타임스탬프&lt;/h3&gt;
+&lt;p&gt;컴퓨터가 시간을 표현하기위해 사용하는 값&lt;br /&gt;
+1970년 1월 1일 0시 0분 0초 부터 1초 단위로 증가&lt;br /&gt;
+1초보다 작은시간(milli,micro)을 타임스탬프의 소수점 자리값으로 가져올수도있음.  &lt;br /&gt;
+그러나 모든 컴퓨터가 1초보다 작은 시간 단위를 지원하는것은 아니라고함&lt;br /&gt;
+&lt;img src=&quot;/assets/built/images/pt/week_11/1.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림1&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;단조시간과-실제시간&quot;&gt;단조시간과 실제시간&lt;/h3&gt;
+&lt;p&gt;컴퓨터가 타임스탬프로 표현할수 있는 시간은 두 종류가 있습니다.&lt;br /&gt;
+하나는 &lt;strong&gt;단조시간&lt;/strong&gt;으로 컴퓨터가 직접계산하는 시간&lt;br /&gt;
+다른하나는 우리가 사용하는 세계의 &lt;em&gt;*실제 시간&lt;/em&gt;입니다.&lt;br /&gt;
+사용용도가 서로다르다고 함&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;단조시간&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;운영체제 or CPU와 같은 하드웨어에서 직접 계산하는 시간&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;불변성을 보장하는 시간 값이 필요할때 사용&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;ex)예를들어 어떤 작업을 10초 또는 1분마다 수행해야될때(동일한 주기로 작업)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;운영체제가 시작한 이후 시점 부터 바뀌지 않은 특징이 있음 -&amp;gt; 사용자가 값을 변경 불가능&lt;/li&gt;
+  &lt;li&gt;시스템 재부팅 이후에는 값이 초기화&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;실제시간&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;실제시간은 벽 시계 시간이라고 부르기도합니다. 우리가 흔히아는 아날로그 시계&lt;/li&gt;
+  &lt;li&gt;물론 실제시간도 컴퓨터가 계산은 하지만&lt;br /&gt;
+주기적으로 서버로 부터 값을 가져와 동기화 하기에 시간이 언제든 바뀔수 있습니다.&lt;br /&gt;
+그래서 단조시간 처럼 일정한 간격의 시간을 측정하기 위해서 사용하기에는 힘듭니다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;실제시간은 실제 세계값과 시간이 일치하기에 한달이 넘는 주기로 수행해야하는 작업에 효율적입니다.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;매달 1일, 특정 날짜에 반드시 실행되야 되는 작업&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;물론 단조시간으로도 한달을 잴 수 있지만, 한달에 마지막 일(28,29,30,31,윤달..)의 다양함    &lt;br /&gt;
+단조시간으로 하면 처리할 부분 증가&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;실제 시간 사용시 주의점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;실제시간은 &lt;strong&gt;외부 환경에 의해서 값이 언제든바뀔수있습니다&lt;/strong&gt;. 시작 값이 잘못설정되어있으면
+작업이 끝나는 시간도 잘못되기때문입니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;그래서 많은 사용 서비스들이 운영체제 구성 단계부터 &lt;strong&gt;모두 같은 서버를 사용하게끔 설정하여&lt;/strong&gt;,&lt;br /&gt;
+시간값이 서로 &lt;strong&gt;동기화 되어있는지&lt;/strong&gt; 주기적으로 확인&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;타임존&quot;&gt;타임존&lt;/h3&gt;
+&lt;p&gt;실제시간을 사용때는 타임존 설정을 꼭 확인!&lt;br /&gt;
+여러 국가를 대상하는 서비스를 개발할때 반드시 타입존을 확인 
+나라마다 표준 시간이 다르기 때문    &lt;br /&gt;
+ex)한국은 UTC+9시간을 기준으로 시간을 표현함&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;타임존 설정을 유의해야하는 이유&lt;/strong&gt;&lt;br /&gt;
+하나의 서버에서 여러 프로그램이 실행하는 경우라면 문제가 없지만
+여러 서버가 서로 다른 타임 존을 사용하는데는 문제가 생길 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;예를들어 A서버는 UTC+9, B서버는 UTC를 사용한다고 가정
+&lt;img src=&quot;/assets/built/images/pt/week_11/2.jpg&quot; alt=&quot;Alt text&quot; title=&quot;그림2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A서버는 오후 9시에 작업을 수행하도록 요청 했지만&lt;br /&gt;
+B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수행되는걸 볼 수 있습니다.&lt;br /&gt;
+위와 같이 두서버간의 차이로 발생한 문제를 방지하기위해&lt;br /&gt;
+여러 프로그램이나 서버간 동일한 타임존 사용!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정리&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;단조시간은 실제 시간으로 사용할 수 없지만, 불변성을 보장함으로 시간의 차이를 표현할때 사용
+    &lt;ul&gt;
+      &lt;li&gt;특정 작업을 수행하는데 걸린 시간을 측정할때&lt;/li&gt;
+      &lt;li&gt;일정한 주기(한달 미만)로 작업을 수행할때&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;실제 시간은 매달 1일 또는 특정 날짜인지 확인 할때(이를 확인한 작업은의 간격은 단조시간 사용해야됨)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;실제 시간을 표기할때&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;실제 시간 값은 서비스를 구성하는 모든서버와 프로그램이 UTC를 사용 또는 동일한 타임존 사용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References.&lt;/h2&gt;
+&lt;p&gt;[학교에서 알려주지 않는 17가지 실무 개발 기술]&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="pt" />
+      
+
+      
+        <summary type="html">날짜와 시간 프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자!</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">21 03 13 문자열 인코딩</title>
