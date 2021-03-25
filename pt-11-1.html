@@ -48,7 +48,7 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="모르면 -> 알때까지 -> 공부해서 -> 해낸다." />
+    <meta name="description" content="기록." />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
     <link rel="canonical" href="https://JaeHong2.github.io//pt-11-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -260,14 +260,14 @@ into the {body} of the default.hbs template -->
 <h3 id="타임존">타임존</h3>
 <p>실제시간을 사용때는 타임존 설정을 꼭 확인!<br />
 여러 국가를 대상하는 서비스를 개발할때 반드시 타입존을 확인 
-나라마다 표준 시간이 다르기 때문    <br />
+나라마다 표준 시간이 다르기 때문
 ex)한국은 UTC+9시간을 기준으로 시간을 표현함</p>
 
 <p><strong>타임존 설정을 유의해야하는 이유</strong><br />
 하나의 서버에서 여러 프로그램이 실행하는 경우라면 문제가 없지만
 여러 서버가 서로 다른 타임 존을 사용하는데는 문제가 생길 수 있습니다.</p>
 
-<p>예를들어 A서버는 UTC+9, B서버는 UTC를 사용한다고 가정
+<p>예를들어 A서버는 UTC+9, B서버는 UTC+0를 사용한다고 가정
 <img src="/assets/built/images/pt/week_11/2.jpg" alt="Alt text" title="그림2" /></p>
 
 <p>A서버는 오후 9시에 작업을 수행하도록 요청 했지만<br />
@@ -404,6 +404,15 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/pt-12-1">21 03 27 정규 표현식</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -427,8 +436,6 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                                   
                                     
                                         
-                                        
-                                            <li><a href="/pt-9-1">21 03 06</a></li>
                                         
                                     
                                   
@@ -572,7 +579,7 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                         <footer class="read-next-card-footer">
                             <a href="/tag/pt/">
                                 
-                                    See all 9 posts  →
+                                    See all 10 posts  →
                                 
                             </a>
                         </footer>
@@ -581,6 +588,55 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/pt-12-1">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/pt-12-1">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Pt</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">21 03 27 정규 표현식</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/jaehong/">jaehong</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
