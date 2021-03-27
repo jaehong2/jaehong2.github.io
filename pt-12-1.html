@@ -57,13 +57,7 @@
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="21 03 27 정규 표현식" />
-    <meta property="og:description" content="정규 표현식
-
-정리
-
-References.
-[학교에서 알려주지 않는 17가지 실무 개발 기술]
-" />
+    <meta property="og:description" content="정규 표현식(Regular expressions) 줄여서 Regex 라고 표현 Regex는 문자열에 어떤 패턴의 문자들이 있는지 찾는데 도움을 줍니다. Metacharacters Metacharacters는 정규표현식의 패턴에서 어떤 문자가 특별한 의미를 갖는 것을 말합니다. 예를 들어, \d는 0에서 9사이의 숫자를 의미합니다. Quantifiers. Quantifiers는 요소들을 얼마나 반복시킬지 정의합니다. Grouping 패턴에 그룹을 지정할 수 있습니다. 그룹은 ()로 지정하며, 그룹을" />
     <meta property="og:url" content="https://JaeHong2.github.io//pt-12-1" />
     <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -73,13 +67,7 @@ References.
     <meta property="article:tag" content="Pt" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="21 03 27 정규 표현식" />
-    <meta name="twitter:description" content="정규 표현식
-
-정리
-
-References.
-[학교에서 알려주지 않는 17가지 실무 개발 기술]
-" />
+    <meta name="twitter:description" content="정규 표현식(Regular expressions) 줄여서 Regex 라고 표현 Regex는 문자열에 어떤 패턴의 문자들이 있는지 찾는데 도움을 줍니다. Metacharacters Metacharacters는 정규표현식의 패턴에서 어떤 문자가 특별한 의미를 갖는 것을 말합니다. 예를 들어, \d는 0에서 9사이의 숫자를 의미합니다. Quantifiers. Quantifiers는 요소들을 얼마나 반복시킬지 정의합니다. Grouping 패턴에 그룹을 지정할 수 있습니다. 그룹은 ()로 지정하며, 그룹을" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
     <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/" />
     <meta name="twitter:label1" content="Written by" />
@@ -111,13 +99,7 @@ References.
         "@type": "WebPage",
         "@id": "https://JaeHong2.github.io//pt-12-1"
     },
-    "description": "정규 표현식
-
-정리
-
-References.
-[학교에서 알려주지 않는 17가지 실무 개발 기술]
-"
+    "description": "정규 표현식(Regular expressions) 줄여서 Regex 라고 표현 Regex는 문자열에 어떤 패턴의 문자들이 있는지 찾는데 도움을 줍니다. Metacharacters Metacharacters는 정규표현식의 패턴에서 어떤 문자가 특별한 의미를 갖는 것을 말합니다. 예를 들어, \d는 0에서 9사이의 숫자를 의미합니다. Quantifiers. Quantifiers는 요소들을 얼마나 반복시킬지 정의합니다. Grouping 패턴에 그룹을 지정할 수 있습니다. 그룹은 ()로 지정하며, 그룹을"
 }
     </script>
 
@@ -217,12 +199,56 @@ into the {body} of the default.hbs template -->
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2 id="정규-표현식">정규 표현식</h2>
+                    <h2 id="정규-표현식regular-expressions">정규 표현식(Regular expressions)</h2>
+<p>줄여서 Regex 라고 표현<br />
+Regex는 문자열에 어떤 패턴의 문자들이 있는지 찾는데 도움을 줍니다.</p>
+
+<h3 id="metacharacters">Metacharacters</h3>
+<p><strong>Metacharacters</strong>는 정규표현식의 패턴에서 어떤 문자가 특별한 의미를 갖는 것을 말합니다.<br />
+예를 들어, \d는 0에서 9사이의 숫자를 의미합니다.
+<img src="/assets/built/images/pt/week_12/2.jpg" alt="Alt text" /></p>
+
+<h3 id="quantifiers">Quantifiers.</h3>
+<p>Quantifiers는 요소들을 얼마나 반복시킬지 정의합니다.<br />
+<img src="/assets/built/images/pt/week_12/3.jpg" alt="Alt text" /></p>
+
+<h3 id="grouping">Grouping</h3>
+<p>패턴에 그룹을 지정할 수 있습니다.
+그룹은 ()로 지정하며, 
+그룹을 표현할 때는 $1처럼 $다음에 그룹의 번호를 입력합니다. 
+패턴에서 가장 왼쪽 그룹이 1번으로 시작합니다.</p>
+
+<h3 id="자주사용하는-정규-표현식">자주사용하는 정규 표현식</h3>
+<p><img src="/assets/built/images/pt/week_12/1.jpg" alt="Alt text" /></p>
+
+<h2 id="정규-표현식-작성방법">정규 표현식 작성방법</h2>
+<p>정규 표현식을 작성하는 방법은 java API의 java.util.regex 패키지 사용<br />
+패키지안에 Pattern Class와 Matcher Class 주로 사용</p>
+
+<p>** 1. Pattern 클래스 **</p>
+
+<h2 id="주요-메서드">주요 메서드</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.regex.Pattern</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RegexExample</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>  <span class="o">{</span>
+    
+            <span class="n">String</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s">"^[0-9]*$"</span><span class="o">;</span>
+            <span class="n">String</span> <span class="n">val</span> <span class="o">=</span> <span class="s">"12345"</span><span class="o">;</span> 
+        
+            <span class="kt">boolean</span> <span class="n">regex</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">pattern</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">regex</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>** 2. Pattern 클래스 **</p>
 
 <p><strong>정리</strong></p>
 
 <h2 id="references">References.</h2>
-<p>[학교에서 알려주지 않는 17가지 실무 개발 기술]</p>
+<p>[학교에서 알려주지 않는 17가지 실무 개발 기술]<br />
+<a href="https://coding-factory.tistory.com/529">https://coding-factory.tistory.com/529</a></p>
 
                 </div>
             </section>
