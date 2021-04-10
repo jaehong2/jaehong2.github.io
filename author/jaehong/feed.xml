@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-04-10T13:40:20+09:00</updated>
+  <updated>2021-04-10T13:50:03+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Spring boot 환경 설정</title>
       <link href="https://jaehong2.github.io//tomcatport" rel="alternate" type="text/html" title="Spring boot 환경 설정" />
-      <published>2021-04-09T04:10:00+09:00</published>
-      <updated>2021-04-09T04:10:00+09:00</updated>
+      <published>2021-04-08T04:10:00+09:00</published>
+      <updated>2021-04-08T04:10:00+09:00</updated>
       <id>https://jaehong2.github.io//tomcatport</id>
       <content type="html" xml:base="https://jaehong2.github.io//tomcatport">&lt;h2 id=&quot;프로젝트-시작-전-환경-설정&quot;&gt;프로젝트 시작 전 환경 설정&lt;/h2&gt;
 
