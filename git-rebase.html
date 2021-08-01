@@ -11,7 +11,7 @@
 
 
 
-    <title>21 03 20 날짜와 시간</title>
+    <title>rebase</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -50,30 +50,48 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="기록." />
     <link rel="shortcut icon" href="https://JaeHong2.github.io//assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://JaeHong2.github.io//pt-11-1" />
+    <link rel="canonical" href="https://JaeHong2.github.io//git-rebase" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="오늘의 공부기록" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="21 03 20 날짜와 시간" />
-    <meta property="og:description" content="날짜와 시간 프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자! 타임스탬프 컴퓨터가 시간을 표현하기위해 사용하는 값 1970년 1월 1일 0시 0분 0초 부터 1초 단위로 증가 1초보다 작은시간(milli,micro)을 타임스탬프의 소수점 자리값으로 가져올수도있음. 그러나 모든 컴퓨터가 1초보다 작은 시간 단위를 지원하는것은 아니라고함 단조시간과 실제시간 컴퓨터가 타임스탬프로 표현할수 있는" />
-    <meta property="og:url" content="https://JaeHong2.github.io//pt-11-1" />
-    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/pt.jpg" />
+    <meta property="og:title" content="rebase" />
+    <meta property="og:description" content="rebase
+
+  A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다.
+  Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다.
+  Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다.
+  Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.
+
+
+
+" />
+    <meta property="og:url" content="https://JaeHong2.github.io//git-rebase" />
+    <meta property="og:image" content="https://JaeHong2.github.io//assets/built/images/logo/git-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-03-15T19:37:00+09:00" />
-    <meta property="article:modified_time" content="2021-03-15T19:37:00+09:00" />
-    <meta property="article:tag" content="Pt" />
+    <meta property="article:published_time" content="2021-08-01T06:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-08-01T06:00:00+09:00" />
+    <meta property="article:tag" content="Git" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="21 03 20 날짜와 시간" />
-    <meta name="twitter:description" content="날짜와 시간 프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자! 타임스탬프 컴퓨터가 시간을 표현하기위해 사용하는 값 1970년 1월 1일 0시 0분 0초 부터 1초 단위로 증가 1초보다 작은시간(milli,micro)을 타임스탬프의 소수점 자리값으로 가져올수도있음. 그러나 모든 컴퓨터가 1초보다 작은 시간 단위를 지원하는것은 아니라고함 단조시간과 실제시간 컴퓨터가 타임스탬프로 표현할수 있는" />
+    <meta name="twitter:title" content="rebase" />
+    <meta name="twitter:description" content="rebase
+
+  A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다.
+  Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다.
+  Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다.
+  Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.
+
+
+
+" />
     <meta name="twitter:url" content="https://JaeHong2.github.io//" />
-    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/pt.jpg" />
+    <meta name="twitter:image" content="https://JaeHong2.github.io//assets/built/images/logo/git-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="오늘의 공부기록" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Pt" />
+    <meta name="twitter:data2" content="Git" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -88,18 +106,27 @@
         "name": "오늘의 공부기록",
         "logo": "https://JaeHong2.github.io//"
     },
-    "url": "https://JaeHong2.github.io//pt-11-1",
+    "url": "https://JaeHong2.github.io//git-rebase",
     "image": {
         "@type": "ImageObject",
-        "url": "https://JaeHong2.github.io//assets/built/images/logo/pt.jpg",
+        "url": "https://JaeHong2.github.io//assets/built/images/logo/git-logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://JaeHong2.github.io//pt-11-1"
+        "@id": "https://JaeHong2.github.io//git-rebase"
     },
-    "description": "날짜와 시간 프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자! 타임스탬프 컴퓨터가 시간을 표현하기위해 사용하는 값 1970년 1월 1일 0시 0분 0초 부터 1초 단위로 증가 1초보다 작은시간(milli,micro)을 타임스탬프의 소수점 자리값으로 가져올수도있음. 그러나 모든 컴퓨터가 1초보다 작은 시간 단위를 지원하는것은 아니라고함 단조시간과 실제시간 컴퓨터가 타임스탬프로 표현할수 있는"
+    "description": "rebase
+
+  A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다.
+  Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다.
+  Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다.
+  Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.
+
+
+
+"
 }
     </script>
 
@@ -112,7 +139,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="21 03 20 날짜와 시간" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="rebase" href="/feed.xml" />
 
 
 </head>
@@ -174,124 +201,40 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-pt post tag-java ">
+        <article class="post-full  tag-git post tag-git ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="15 March 2021">15 March 2021</time>
+                    <time class="post-full-meta-date" datetime=" 1 August 2021"> 1 August 2021</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/pt/'>PT</a>
+                               <a href='/tag/git/'>GIT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">21 03 20 날짜와 시간</h1>
+                <h1 class="post-full-title">rebase</h1>
             </header>
 
             <!-- 블로그들어갈시 이미지 보여줄지 말지
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/pt.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/logo/git-logo.jpg)">
             </figure>
             
             -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2 id="날짜와-시간">날짜와 시간</h2>
-<p>프로그램이 사용하는 시간의 종류와 단위, 나라마다 다른 시차를 어떻게 처리해야하는지 알아보자!</p>
-
-<h3 id="타임스탬프">타임스탬프</h3>
-<p>컴퓨터가 시간을 표현하기위해 사용하는 값<br />
-1970년 1월 1일 0시 0분 0초 부터 1초 단위로 증가<br />
-1초보다 작은시간(milli,micro)을 타임스탬프의 소수점 자리값으로 가져올수도있음.  <br />
-그러나 모든 컴퓨터가 1초보다 작은 시간 단위를 지원하는것은 아니라고함<br />
-<img src="/assets/built/images/pt/week_11/1.jpg" alt="Alt text" title="그림1" /></p>
-
-<hr />
-
-<h3 id="단조시간과-실제시간">단조시간과 실제시간</h3>
-<p>컴퓨터가 타임스탬프로 표현할수 있는 시간은 두 종류가 있습니다.<br />
-하나는 <strong>단조시간</strong>으로 컴퓨터가 직접계산하는 시간<br />
-다른하나는 우리가 사용하는 세계의 <em>*실제 시간</em>입니다.<br />
-사용용도가 서로다르다고 함</p>
-
-<p><strong>단조시간</strong></p>
+                    <h2 id="rebase">rebase</h2>
 <ul>
-  <li>운영체제 or CPU와 같은 하드웨어에서 직접 계산하는 시간</li>
-  <li><strong>불변성을 보장하는 시간 값이 필요할때 사용</strong>
-    <ul>
-      <li>ex)예를들어 어떤 작업을 10초 또는 1분마다 수행해야될때(동일한 주기로 작업)</li>
-    </ul>
-  </li>
-  <li>운영체제가 시작한 이후 시점 부터 바뀌지 않은 특징이 있음 -&gt; 사용자가 값을 변경 불가능</li>
-  <li>시스템 재부팅 이후에는 값이 초기화</li>
+  <li>A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다.</li>
+  <li>Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다.</li>
+  <li>Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다.</li>
+  <li>Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.</li>
 </ul>
 
-<p><strong>실제시간</strong></p>
-<ul>
-  <li>실제시간은 벽 시계 시간이라고 부르기도합니다. 우리가 흔히아는 아날로그 시계</li>
-  <li>물론 실제시간도 컴퓨터가 계산은 하지만<br />
-주기적으로 서버로 부터 값을 가져와 동기화 하기에 시간이 언제든 바뀔수 있습니다.<br />
-그래서 단조시간 처럼 일정한 간격의 시간을 측정하기 위해서 사용하기에는 힘듭니다.</li>
-  <li><strong>실제시간은 실제 세계값과 시간이 일치하기에 한달이 넘는 주기로 수행해야하는 작업에 효율적입니다.</strong>
-    <ul>
-      <li>매달 1일, 특정 날짜에 반드시 실행되야 되는 작업</li>
-    </ul>
-  </li>
-</ul>
-
-<p>물론 단조시간으로도 한달을 잴 수 있지만, 한달에 마지막 일(28,29,30,31,윤달..)의 다양함    <br />
-단조시간으로 하면 처리할 부분 증가</p>
-
-<p><strong>실제 시간 사용시 주의점</strong></p>
-<ul>
-  <li>
-    <p>실제시간은 <strong>외부 환경에 의해서 값이 언제든바뀔수있습니다</strong>. 시작 값이 잘못설정되어있으면
-작업이 끝나는 시간도 잘못되기때문입니다.</p>
-  </li>
-  <li>
-    <p>그래서 많은 사용 서비스들이 운영체제 구성 단계부터 <strong>모두 같은 서버를 사용하게끔 설정하여</strong>,<br />
-시간값이 서로 <strong>동기화 되어있는지</strong> 주기적으로 확인</p>
-  </li>
-</ul>
-
-<h3 id="타임존">타임존</h3>
-<p>실제시간을 사용때는 타임존 설정을 꼭 확인!<br />
-여러 국가를 대상하는 서비스를 개발할때 반드시 타입존을 확인 
-나라마다 표준 시간이 다르기 때문
-ex)한국은 UTC+9시간을 기준으로 시간을 표현함</p>
-
-<p><strong>타임존 설정을 유의해야하는 이유</strong><br />
-하나의 서버에서 여러 프로그램이 실행하는 경우라면 문제가 없지만
-여러 서버가 서로 다른 타임 존을 사용하는데는 문제가 생길 수 있습니다.</p>
-
-<p>예를들어 A서버는 UTC+9, B서버는 UTC+0를 사용한다고 가정
-<img src="/assets/built/images/pt/week_11/2.jpg" alt="Alt text" title="그림2" /></p>
-
-<p>A서버는 오후 9시에 작업을 수행하도록 요청 했지만<br />
-B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수행되는걸 볼 수 있습니다.<br />
-위와 같이 두서버간의 차이로 발생한 문제를 방지하기위해<br />
-여러 프로그램이나 서버간 동일한 타임존 사용!</p>
-
-<p><strong>정리</strong></p>
-<ul>
-  <li>단조시간은 실제 시간으로 사용할 수 없지만, 불변성을 보장함으로 시간의 차이를 표현할때 사용
-    <ul>
-      <li>특정 작업을 수행하는데 걸린 시간을 측정할때</li>
-      <li>일정한 주기(한달 미만)로 작업을 수행할때</li>
-    </ul>
-  </li>
-  <li>실제 시간은 매달 1일 또는 특정 날짜인지 확인 할때(이를 확인한 작업은의 간격은 단조시간 사용해야됨)</li>
-  <li>
-    <p>실제 시간을 표기할때</p>
-  </li>
-  <li>실제 시간 값은 서비스를 구성하는 모든서버와 프로그램이 UTC를 사용 또는 동일한 타임존 사용</li>
-</ul>
-
-<h2 id="references">References.</h2>
-<p>[학교에서 알려주지 않는 17가지 실무 개발 기술]</p>
+<p><img src="/assets/built/images/git/1.jpg" alt="Alt text" /></p>
 
                 </div>
             </section>
@@ -357,9 +300,9 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://JaeHong2.github.io//pt-11-1';
-                            this.page.identifier = '/pt-11-1';
-                            this.page.title = '21 03 20 날짜와 시간';
+                            this.page.url = 'https://JaeHong2.github.io//git-rebase';
+                            this.page.identifier = '/git-rebase';
+                            this.page.title = 'rebase';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -393,7 +336,7 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; 오늘의 공부기록 &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/pt/">Pt</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/git/">Git</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -403,66 +346,21 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                                 
                                 
                                   
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/pt-12-1">21 03 27 정규 표현식</a></li>
-                                        
                                     
                                   
                                 
                                   
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/pt-10-1">21 03 13 문자열 인코딩</a></li>
-                                        
-                                    
+                                
                                   
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/pt-9-2">21 03 06 (서블릿, JSP)</a></li>
-                                        
-                                    
-                                  
                                 
                                   
-                                    
-                                        
-                                        
-                                    
-                                  
                                 
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                    
                                   
                                 
                                   
@@ -473,6 +371,25 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                                     
                                         
                                         
+                                            <li><a href="/git-permission-denied">remote :permission to 에러</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/git-error-403">error 403</a></li>
+                                        
                                     
                                   
                                 
@@ -480,18 +397,9 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
+                                            <li><a href="/git-basic">브랜치(Branch)</a></li>
                                         
                                     
-                                  
-                                
-                                  
-                                
                                   
                                 
                                   
@@ -581,9 +489,9 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/pt/">
+                            <a href="/tag/git/">
                                 
-                                    See all 10 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -593,55 +501,6 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/pt-12-1">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/pt.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/pt-12-1">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Pt</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">21 03 27 정규 표현식</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/logo/author-logo.jpg" alt="jaehong" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/jaehong/">jaehong</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -649,22 +508,22 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/pt-10-1">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/pt.jpg)"></div>
+            <a class="post-card-image-link" href="/tomcatport">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/logo/spring_boot_logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/pt-10-1">
+            <a class="post-card-content-link" href="/tomcatport">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Pt</span>
+                                <span class="post-card-tags">Spring</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">21 03 13 문자열 인코딩</h2>
+                    <h2 class="post-card-title">Spring boot 환경 설정</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -708,18 +567,18 @@ B서버는 UTC+0시간을 기준으로 하기에 18시간 뒤에 작업이 수�
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">21 03 20 날짜와 시간</div>
+    <div class="floating-header-title">rebase</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=21+03+20+%EB%82%A0%EC%A7%9C%EC%99%80+%EC%8B%9C%EA%B0%84&amp;url=https://JaeHong2.github.io/pt-11-1"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=rebase&amp;url=https://JaeHong2.github.io/git-rebase"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/pt-11-1"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://JaeHong2.github.io/git-rebase"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

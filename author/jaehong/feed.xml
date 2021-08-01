@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://jaehong2.github.io//author/jaehong/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://jaehong2.github.io//" rel="alternate" type="text/html" />
-  <updated>2021-06-04T00:52:19+09:00</updated>
+  <updated>2021-08-01T23:57:14+09:00</updated>
   <id>https://jaehong2.github.io//author/jaehong/feed.xml</id>
 
   
@@ -30,6 +30,48 @@
   
   
 
+  
+    <entry>
+      <title type="html">rebase</title>
+      <link href="https://jaehong2.github.io//git-rebase" rel="alternate" type="text/html" title="rebase" />
+      <published>2021-08-01T06:00:00+09:00</published>
+      <updated>2021-08-01T06:00:00+09:00</updated>
+      <id>https://jaehong2.github.io//git-rebase</id>
+      <content type="html" xml:base="https://jaehong2.github.io//git-rebase">&lt;h2 id=&quot;rebase&quot;&gt;rebase&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다.&lt;/li&gt;
+  &lt;li&gt;Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다.&lt;/li&gt;
+  &lt;li&gt;Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다.&lt;/li&gt;
+  &lt;li&gt;Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/built/images/git/1.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>jaehong</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="git" />
+      
+
+      
+        <summary type="html">rebase A branch에서 B branch로 합칠때 Merge or rebase를 사용한다고 한다. Merge, rebase 실행 결과는 같다. 하지만 git history가 달라진다. Merge는 쉽다. 안전하다. 하지만 히스토리가 지저분해질 수 있다고 한다. Rebase는 잘 못사용시 위험 할 수 있지만 history를 깔끔하게 관리 할 수 있다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Spring boot 환경 설정</title>
@@ -1208,49 +1250,6 @@ MVC2 패턴은 널리 표준으로 사용되는 패턴, &lt;strong&gt;요청을 
 
       
         <summary type="html">주제 : TCP, UDP</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">remote :permission to 에러</title>
-      <link href="https://jaehong2.github.io//git-permission-denied" rel="alternate" type="text/html" title="remote :permission to 에러" />
-      <published>2021-01-26T06:00:00+09:00</published>
-      <updated>2021-01-26T06:00:00+09:00</updated>
-      <id>https://jaehong2.github.io//git-permission-denied</id>
-      <content type="html" xml:base="https://jaehong2.github.io//git-permission-denied">&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    remote: Permission to test01/test01.git denied to xxx.
-    fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다…
-찾아보니&lt;/p&gt;
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고,
-    나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때,
-    그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;라고 나와있다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>jaehong</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="git" />
-      
-
-      
-        <summary type="html">remote: Permission to test01/test01.git denied to xxx. fatal: unable to access 'https://github.com/test01/test01.git/': The requested URL returned error: 403 github 연습용 계정을 만들어서 repo 생성후 push하려는데 위와 같은 에러가 나왔다… 찾아보니 A 라는 github 아이디로 '최초' 글로벌 유저 등록을 했고, 나중에 B 라는 아이디로 다시 글로벌 유저등록해서 B 아이디로 push를 진행하려 할 때, 그 push의 시점은 여전히 A 라는 github 아이디를 찾고 있습니다. 라고 나와있다.</summary>
       
 
       
