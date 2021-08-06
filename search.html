@@ -187,6 +187,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "error1": {
+        "title": "Web server failed to start. Port 8080 was already in use 에러",
+            "author": "jaehong",
+            "category": "",
+            "content": "Error: Web server failed to start.Port 8080 was already in usecmd로 build와 jar 파일 실행 해보던 도중 Web server failed to start. Port 8090 was already in use 에러가 발생했다.Intellij에서 포트를 잡고있지도 않았는데..처음에는 cmd 창에서 ctrl+c 서버가 종료 된다고 했는데 안되서 포트를 종료 하는 방법을 찾아보다..해결방법은 프롬프트(CMD)창에서netsat-ano 입력하면현재 실행중인 포트목록이 나오고 빨간색으로 그어져 있는것이 PID 프로세스 아이디?인 40676을 사용해서 종료시켜주면완료!명령어로taskkill /pid 8090 /f 입력시 프로세스가 종료된걸 볼 수 있다.References.https://dundung.tistory.com/148",
+        "url": "/error1"
+    }
+    ,
+    
     "git-rebase": {
         "title": "rebase",
             "author": "jaehong",
